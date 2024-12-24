@@ -1,0 +1,670 @@
+\doxysection{event\+\_\+handler/mouse\+\_\+event\+\_\+handler.h File Reference}
+\hypertarget{mouse__event__handler_8h}{}\label{mouse__event__handler_8h}\index{event\_handler/mouse\_event\_handler.h@{event\_handler/mouse\_event\_handler.h}}
+{\ttfamily \#include \"{}../game/game.\+h\"{}}\newline
+{\ttfamily \#include \"{}../devices/mouse.\+h\"{}}\newline
+Include dependency graph for mouse\+\_\+event\+\_\+handler.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse__event__handler_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse__event__handler_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void() \mbox{\hyperlink{mouse__event__handler_8h_a619cce38fd83ec216944365051d5e335}{mouse\+\_\+event\+\_\+handler}} (struct packet \texorpdfstring{$\ast$}{*}pp)
+\begin{DoxyCompactList}\small\item\em Handles mouse events. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{mouse__event__handler_8h_a8ae73b9c4ddac5172f1a414dd6b7c48b}{move\+\_\+cursor}} (struct packet \texorpdfstring{$\ast$}{*}pp)
+\begin{DoxyCompactList}\small\item\em Handles mouse movement. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{mouse__event__handler_8h_a6b9ced5360f7e67997198ff937fa3b39}{mouse\+\_\+lb\+\_\+pressed}} ()
+\begin{DoxyCompactList}\small\item\em Handles mouse left button pressed. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{mouse__event__handler_8h_aa50ae8c9089146443bd340b3782288ba}{mouse\+\_\+lb\+\_\+pressed\+\_\+game}} (void)
+\begin{DoxyCompactList}\small\item\em Handles mouse left button pressed in game. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{mouse__event__handler_8h_a0ee896911bc842696b1540953b37fed2}{mouse\+\_\+lb\+\_\+released}} ()
+\begin{DoxyCompactList}\small\item\em Handles mouse left button released. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{mouse__event__handler_8h_a918fdfbe62aceb853353c0aa88098545}{mouse\+\_\+lb\+\_\+pressed\+\_\+name}} ()
+\begin{DoxyCompactList}\small\item\em Handles mouse left button pressed in name choosing menu. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{mouse__event__handler_8h_abe8901f45ce3597532025229c629c759}{mouse\+\_\+lb\+\_\+released\+\_\+game}} (void)
+\begin{DoxyCompactList}\small\item\em Handles mouse left button released in game. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{mouse__event__handler_8h_a491647db94759995bf7a53edff54b71e}{mouse\+\_\+mov\+\_\+piece}} (struct packet \texorpdfstring{$\ast$}{*}pp)
+\begin{DoxyCompactList}\small\item\em Moves a piece. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{mouse__event__handler_8h_ac3cb067b0440ffe04a028743a61beb8f}{attempt\+\_\+move}} (uint8\+\_\+t dest\+\_\+row, uint8\+\_\+t dest\+\_\+col)
+\begin{DoxyCompactList}\small\item\em Attempts to move a piece. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{mouse__event__handler_8h_a2de98fa3112d020f8d99716b87dd8cb1}{mouse\+\_\+lb\+\_\+pressed\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Handles mouse left button pressed in menu. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{mouse__event__handler_8h_ad74c3c9f9f061186c165cbfae9438ce6}{move\+\_\+piece\+\_\+back}} (\mbox{\hyperlink{struct_piece}{Piece}} \texorpdfstring{$\ast$}{*}piece)
+\begin{DoxyCompactList}\small\item\em Moves a piece back to its original position. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{mouse__event__handler_8h_aaba7b62c78640c1a2444eab571d3730f}{mouse\+\_\+lb\+\_\+pressed\+\_\+winner}} ()
+\begin{DoxyCompactList}\small\item\em Handles mouse left button pressed in winner screen. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{mouse__event__handler_8h_aa2a08a60de6bb7ff26fd2d5c84c7534a}{mouse\+\_\+lb\+\_\+pressed\+\_\+history}} ()
+\begin{DoxyCompactList}\small\item\em Handles mouse left button pressed in history screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{mouse__event__handler_8h_ac3cb067b0440ffe04a028743a61beb8f}\label{mouse__event__handler_8h_ac3cb067b0440ffe04a028743a61beb8f} 
+\index{mouse\_event\_handler.h@{mouse\_event\_handler.h}!attempt\_move@{attempt\_move}}
+\index{attempt\_move@{attempt\_move}!mouse\_event\_handler.h@{mouse\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{attempt\_move()}{attempt\_move()}}
+{\footnotesize\ttfamily bool attempt\+\_\+move (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{dest\+\_\+row,  }\item[{uint8\+\_\+t}]{dest\+\_\+col }\end{DoxyParamCaption})}
+
+
+
+Attempts to move a piece. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest\+\_\+row} & row to move to \\
+\hline
+{\em dest\+\_\+col} & column to move to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the move was successful 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{mouse__event__handler_8c_source_l00166}{166}} of file \mbox{\hyperlink{mouse__event__handler_8c_source}{mouse\+\_\+event\+\_\+handler.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordflow}{if}\ ((dest\_row\ +\ dest\_col)\%2\ ==\ 1\ \&\&\ \mbox{\hyperlink{board_8c_ad20e11b277c67bede5c2f0aea810822b}{insideBoard}}(dest\_row,dest\_col)\ \&\&\ !\mbox{\hyperlink{board_8c_a16fb663a09087c10c4364f2fef39ede7}{hasPiece}}(dest\_row,dest\_col)\ )\{}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_trajectory}{Trajectory}}*\ trajectory\ =\ \mbox{\hyperlink{board_8c_abdf234d17b5e10bb5906b019f9d313da}{getTrajectory}}(\mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}\ ,\ dest\_row,dest\_col);}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (trajectory\ !=\ NULL)\{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_ab7a4538a6cfde5b8e1a246e084c68c72}{board}}[\mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}-\/>\mbox{\hyperlink{struct_piece_ac6ef7c474f20562cb629c2452ce0631d}{row}}][\mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}-\/>\mbox{\hyperlink{struct_piece_a4017d278fbe40f96214961ab71f17d35}{col}}]\ =\ NULL;}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}-\/>\mbox{\hyperlink{struct_piece_a4017d278fbe40f96214961ab71f17d35}{col}}\ =\ dest\_col;}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}-\/>\mbox{\hyperlink{struct_piece_ac6ef7c474f20562cb629c2452ce0631d}{row}}\ =\ dest\_row;}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{mouse__event__handler_8c_ad74c3c9f9f061186c165cbfae9438ce6}{move\_piece\_back}}(\mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}});}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_ab7a4538a6cfde5b8e1a246e084c68c72}{board}}[\mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}-\/>\mbox{\hyperlink{struct_piece_ac6ef7c474f20562cb629c2452ce0631d}{row}}][\mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}-\/>\mbox{\hyperlink{struct_piece_a4017d278fbe40f96214961ab71f17d35}{col}}]\ =\ \mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}};}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}-\/>\mbox{\hyperlink{struct_piece_a98ddd530a5ffb3ee8242dc5b986aa3c5}{isKing}}\ \&\&\ (\mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}-\/>\mbox{\hyperlink{struct_piece_ac6ef7c474f20562cb629c2452ce0631d}{row}}\ ==\ 7\ ||\ \mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}-\/>\mbox{\hyperlink{struct_piece_ac6ef7c474f20562cb629c2452ce0631d}{row}}\ ==\ 0))\ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{piece_8c_a9bbadfbace1a561a9b018c1a32dc62ef}{promote}}(\mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}});}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_ae891cc379cc1d6f806745cc53e83b09d}{capturePieces}}(trajectory);}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a6b879e9d4394d1f794e12a14cd758c1f}{switchTurn}}();}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a196466caf97613073b2f46a536aeab00}{calculate\_moves}}();}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_ada6cd54dcdb8df73b70d5bdcba415486}{update\_draw\_board}}();}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{board_8c_a025b9ccf02ac7e1b50e8797e750ec116}{isGameOver}}())\{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}\ =\ NULL;}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a6b879e9d4394d1f794e12a14cd758c1f}{switchTurn}}();}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a9deaba51419cfcf0fb430512e8d11b5e}{winner}}\ =\ \mbox{\hyperlink{game_8c_aaca79719959531adcb538aad5a0c53e8}{turn}};}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a58f4ad8c25d6712b21e03fac6fdba17c}{changeState}}(\mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628ad1cb40a0245d392ac672f7bb0c76aa56}{WINNER}});}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}\ =\ NULL;}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00194\ \ \ \ \ \}}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00197\ \ \ \ \ \}}
+\DoxyCodeLine{00198\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse__event__handler_8h_ac3cb067b0440ffe04a028743a61beb8f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse__event__handler_8h_ac3cb067b0440ffe04a028743a61beb8f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mouse__event__handler_8h_a619cce38fd83ec216944365051d5e335}\label{mouse__event__handler_8h_a619cce38fd83ec216944365051d5e335} 
+\index{mouse\_event\_handler.h@{mouse\_event\_handler.h}!mouse\_event\_handler@{mouse\_event\_handler}}
+\index{mouse\_event\_handler@{mouse\_event\_handler}!mouse\_event\_handler.h@{mouse\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_event\_handler()}{mouse\_event\_handler()}}
+{\footnotesize\ttfamily void() mouse\+\_\+event\+\_\+handler (\begin{DoxyParamCaption}\item[{struct packet \texorpdfstring{$\ast$}{*}}]{pp }\end{DoxyParamCaption})}
+
+
+
+Handles mouse events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pp} & pointer to the packet with the mouse event \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{mouse__event__handler_8c_source_l00005}{5}} of file \mbox{\hyperlink{mouse__event__handler_8c_source}{mouse\+\_\+event\+\_\+handler.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordflow}{if}\ (pp-\/>rb\ !=\ rb)\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ rb\ =\ pp-\/>rb;}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{comment}{//if\ (rb\ ==\ true)mouse\_rb\_pressed();}}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{comment}{//else\ mouse\_rb\_released();}}
+\DoxyCodeLine{00011\ \ \ \ \ \}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordflow}{if}\ (pp-\/>lb\ !=\ lb)\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ lb\ =\ pp-\/>lb;}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (lb\ ==\ \textcolor{keyword}{true})\mbox{\hyperlink{mouse__event__handler_8c_a6b9ced5360f7e67997198ff937fa3b39}{mouse\_lb\_pressed}}();}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \mbox{\hyperlink{mouse__event__handler_8c_a0ee896911bc842696b1540953b37fed2}{mouse\_lb\_released}}();}
+\DoxyCodeLine{00016\ \ \ \ \ \}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{mouse__event__handler_8c_a8ae73b9c4ddac5172f1a414dd6b7c48b}{move\_cursor}}(pp);}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{mouse__event__handler_8c_a491647db94759995bf7a53edff54b71e}{mouse\_mov\_piece}}(pp);}
+\DoxyCodeLine{00020\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse__event__handler_8h_a619cce38fd83ec216944365051d5e335_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse__event__handler_8h_a619cce38fd83ec216944365051d5e335_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mouse__event__handler_8h_a6b9ced5360f7e67997198ff937fa3b39}\label{mouse__event__handler_8h_a6b9ced5360f7e67997198ff937fa3b39} 
+\index{mouse\_event\_handler.h@{mouse\_event\_handler.h}!mouse\_lb\_pressed@{mouse\_lb\_pressed}}
+\index{mouse\_lb\_pressed@{mouse\_lb\_pressed}!mouse\_event\_handler.h@{mouse\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_lb\_pressed()}{mouse\_lb\_pressed()}}
+{\footnotesize\ttfamily void() mouse\+\_\+lb\+\_\+pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles mouse left button pressed. 
+
+
+
+Definition at line \mbox{\hyperlink{mouse__event__handler_8c_source_l00037}{37}} of file \mbox{\hyperlink{mouse__event__handler_8c_source}{mouse\+\_\+event\+\_\+handler.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{switch}(\mbox{\hyperlink{game_8c_a70546ef15bc78d3e183760c87a4f2f95}{fase}})\{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628a4c40e60bc71a32b924ce1f08d57f9721}{MENU}}:}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{mouse__event__handler_8c_a2de98fa3112d020f8d99716b87dd8cb1}{mouse\_lb\_pressed\_menu}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628ad50cf309d7568040619ed26ee6835a84}{GAME}}:}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{mouse__event__handler_8c_aa50ae8c9089146443bd340b3782288ba}{mouse\_lb\_pressed\_game}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628a283e4f8f90756c9892871460a0d62a60}{HISTORY}}:}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{mouse__event__handler_8c_aa2a08a60de6bb7ff26fd2d5c84c7534a}{mouse\_lb\_pressed\_history}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628a7a10b5d68d31711288e1fe0fa17dbf4f}{EXIT}}:}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628ad1cb40a0245d392ac672f7bb0c76aa56}{WINNER}}:}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{mouse__event__handler_8c_aaba7b62c78640c1a2444eab571d3730f}{mouse\_lb\_pressed\_winner}}();}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628ade61fd9af662e17286e2966e11148159}{CHOOSE\_NAME}}:}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{mouse__event__handler_8c_a918fdfbe62aceb853353c0aa88098545}{mouse\_lb\_pressed\_name}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse__event__handler_8h_a6b9ced5360f7e67997198ff937fa3b39_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse__event__handler_8h_a6b9ced5360f7e67997198ff937fa3b39_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mouse__event__handler_8h_aa50ae8c9089146443bd340b3782288ba}\label{mouse__event__handler_8h_aa50ae8c9089146443bd340b3782288ba} 
+\index{mouse\_event\_handler.h@{mouse\_event\_handler.h}!mouse\_lb\_pressed\_game@{mouse\_lb\_pressed\_game}}
+\index{mouse\_lb\_pressed\_game@{mouse\_lb\_pressed\_game}!mouse\_event\_handler.h@{mouse\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_lb\_pressed\_game()}{mouse\_lb\_pressed\_game()}}
+{\footnotesize\ttfamily void() mouse\+\_\+lb\+\_\+pressed\+\_\+game (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Handles mouse left button pressed in game. 
+
+
+
+Definition at line \mbox{\hyperlink{mouse__event__handler_8c_source_l00110}{110}} of file \mbox{\hyperlink{mouse__event__handler_8c_source}{mouse\+\_\+event\+\_\+handler.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordflow}{if}\ (cursor\_x\ <\ 200\ ||\ cursor\_x\ >\ 800)\{\ \textcolor{comment}{//\ not\ on\ the\ board\ at\ all}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{game_8c_a1ced84253abfbe73f3dddecc6c04e6dd}{cursor\_x}}\ >=158\ \&\&\ cursor\_x\ <=\ 194\ \&\&\ cursor\_y\ >=\ 414\ \&\&\ \mbox{\hyperlink{game_8c_a74697fe945d4edc7482c382f1082539b}{cursor\_y}}\ <=450)\{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//white\ resigns}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a9deaba51419cfcf0fb430512e8d11b5e}{winner}}\ =\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3}{BLACK}};}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a58f4ad8c25d6712b21e03fac6fdba17c}{changeState}}(\mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628ad1cb40a0245d392ac672f7bb0c76aa56}{WINNER}});}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a1ced84253abfbe73f3dddecc6c04e6dd}{cursor\_x}}\ >=158\ \&\&\ cursor\_x\ <=\ 194\ \&\&\ cursor\_y\ >=\ 150\ \&\&\ \mbox{\hyperlink{game_8c_a74697fe945d4edc7482c382f1082539b}{cursor\_y}}\ <=\ 186)\{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//black\ resigns}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a9deaba51419cfcf0fb430512e8d11b5e}{winner}}\ =\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1ca283fc479650da98250635b9c3c0e7e50}{WHITE}};}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a58f4ad8c25d6712b21e03fac6fdba17c}{changeState}}(\mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628ad1cb40a0245d392ac672f7bb0c76aa56}{WINNER}});}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a1ced84253abfbe73f3dddecc6c04e6dd}{cursor\_x}}\ >=0\ \&\&\ cursor\_x\ <=\ 86\ \&\&\ cursor\_y\ >=\ 281\ \&\&\ \mbox{\hyperlink{game_8c_a74697fe945d4edc7482c382f1082539b}{cursor\_y}}\ <=\ 320)\{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//draw}}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a9deaba51419cfcf0fb430512e8d11b5e}{winner}}\ =\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1ca3ee31cecca7d8247d370588c3d08b1bc}{COLORLESS}};}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a58f4ad8c25d6712b21e03fac6fdba17c}{changeState}}(\mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628ad1cb40a0245d392ac672f7bb0c76aa56}{WINNER}});}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00127\ \ \ \ \ \}}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{int}\ cursor\_current\_row\ =\ \mbox{\hyperlink{game_8c_a74697fe945d4edc7482c382f1082539b}{cursor\_y}}\ /\ 75;}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{int}\ cursor\_current\_col\ =\ (\mbox{\hyperlink{game_8c_a1ced84253abfbe73f3dddecc6c04e6dd}{cursor\_x}}-\/200)/75;}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \mbox{\hyperlink{struct_piece}{Piece}}*\ p\ =\ \mbox{\hyperlink{board_8c_ab7a4538a6cfde5b8e1a246e084c68c72}{board}}[cursor\_current\_row][cursor\_current\_col];}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordflow}{if}\ (p\ !=\ NULL\ \&\&\ p-\/>\mbox{\hyperlink{struct_piece_a4cf5b29a9e13dcb93b616b11160c2abc}{color}}\ ==\ \mbox{\hyperlink{game_8c_aaca79719959531adcb538aad5a0c53e8}{turn}})\{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}\ =\ p;}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ p-\/>\mbox{\hyperlink{struct_piece_a895b6803ce74fe8574d6168d66ac6bb5}{x}}\ =\ \mbox{\hyperlink{game_8c_a1ced84253abfbe73f3dddecc6c04e6dd}{cursor\_x}}\ -\/\ 40;}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ p-\/>\mbox{\hyperlink{struct_piece_a97d61c9e42873e2274620c91178e879b}{y}}\ =\ \mbox{\hyperlink{game_8c_a74697fe945d4edc7482c382f1082539b}{cursor\_y}}\ -\/\ 40;}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_ada6cd54dcdb8df73b70d5bdcba415486}{update\_draw\_board}}();}
+\DoxyCodeLine{00137\ \ \ \ \ \}}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (p\ ==\ NULL)\{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{mouse__event__handler_8c_ac3cb067b0440ffe04a028743a61beb8f}{attempt\_move}}(cursor\_current\_row,cursor\_current\_col);}
+\DoxyCodeLine{00140\ \ \ \ \ \}\ \ \ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}\ =NULL;}
+\DoxyCodeLine{00143\ \ \ \ \ \}}
+\DoxyCodeLine{00144\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse__event__handler_8h_aa50ae8c9089146443bd340b3782288ba_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse__event__handler_8h_aa50ae8c9089146443bd340b3782288ba_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mouse__event__handler_8h_aa2a08a60de6bb7ff26fd2d5c84c7534a}\label{mouse__event__handler_8h_aa2a08a60de6bb7ff26fd2d5c84c7534a} 
+\index{mouse\_event\_handler.h@{mouse\_event\_handler.h}!mouse\_lb\_pressed\_history@{mouse\_lb\_pressed\_history}}
+\index{mouse\_lb\_pressed\_history@{mouse\_lb\_pressed\_history}!mouse\_event\_handler.h@{mouse\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_lb\_pressed\_history()}{mouse\_lb\_pressed\_history()}}
+{\footnotesize\ttfamily void() mouse\+\_\+lb\+\_\+pressed\+\_\+history (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles mouse left button pressed in history screen. 
+
+
+
+Definition at line \mbox{\hyperlink{mouse__event__handler_8c_source_l00059}{59}} of file \mbox{\hyperlink{mouse__event__handler_8c_source}{mouse\+\_\+event\+\_\+handler.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a1ced84253abfbe73f3dddecc6c04e6dd}{cursor\_x}}\ >=\ 18\ \&\&\ cursor\_x\ <=\ 112\ \&\&\ cursor\_y\ >=\ 17\ \&\&\ \mbox{\hyperlink{game_8c_a74697fe945d4edc7482c382f1082539b}{cursor\_y}}\ <=\ 64)\{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ pressed\ back\ button}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a58f4ad8c25d6712b21e03fac6fdba17c}{changeState}}(\mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628a4c40e60bc71a32b924ce1f08d57f9721}{MENU}});}
+\DoxyCodeLine{00063\ \ \ \ \ \}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a1ced84253abfbe73f3dddecc6c04e6dd}{cursor\_x}}\ >=\ 729\ \&\&\ cursor\_x\ <=\ 781\ \&\&\ cursor\_y\ >=\ 174\ \&\&\ \mbox{\hyperlink{game_8c_a74697fe945d4edc7482c382f1082539b}{cursor\_y}}\ <=\ 217)\{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ pressed\ up\ button}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_a933208df950622e857a82625b946727a}{roll\_up}}();}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a1ced84253abfbe73f3dddecc6c04e6dd}{cursor\_x}}\ >=\ 729\ \&\&\ cursor\_x\ <=781\ \&\&\ cursor\_y\ >=\ 433\ \&\&\ \mbox{\hyperlink{game_8c_a74697fe945d4edc7482c382f1082539b}{cursor\_y}}\ <=\ 479)\{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ pressed\ down\ button}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_ab4af141d40f18fd524b677f9a68ba6cc}{roll\_down}}();}
+\DoxyCodeLine{00071\ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse__event__handler_8h_aa2a08a60de6bb7ff26fd2d5c84c7534a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse__event__handler_8h_aa2a08a60de6bb7ff26fd2d5c84c7534a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mouse__event__handler_8h_a2de98fa3112d020f8d99716b87dd8cb1}\label{mouse__event__handler_8h_a2de98fa3112d020f8d99716b87dd8cb1} 
+\index{mouse\_event\_handler.h@{mouse\_event\_handler.h}!mouse\_lb\_pressed\_menu@{mouse\_lb\_pressed\_menu}}
+\index{mouse\_lb\_pressed\_menu@{mouse\_lb\_pressed\_menu}!mouse\_event\_handler.h@{mouse\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_lb\_pressed\_menu()}{mouse\_lb\_pressed\_menu()}}
+{\footnotesize\ttfamily void() mouse\+\_\+lb\+\_\+pressed\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles mouse left button pressed in menu. 
+
+
+
+Definition at line \mbox{\hyperlink{mouse__event__handler_8c_source_l00096}{96}} of file \mbox{\hyperlink{mouse__event__handler_8c_source}{mouse\+\_\+event\+\_\+handler.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a1ced84253abfbe73f3dddecc6c04e6dd}{cursor\_x}}\ >=\ 200\ \&\&\ cursor\_x\ <=\ 600\ \&\&\ cursor\_y\ >=\ 240\ \&\&\ \mbox{\hyperlink{game_8c_a74697fe945d4edc7482c382f1082539b}{cursor\_y}}\ <=\ 320)\ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a58f4ad8c25d6712b21e03fac6fdba17c}{changeState}}(\mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628ade61fd9af662e17286e2966e11148159}{CHOOSE\_NAME}});}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a1ced84253abfbe73f3dddecc6c04e6dd}{cursor\_x}}\ >=\ 200\ \&\&\ cursor\_x\ <=\ 600\ \&\&\ cursor\_y\ >=\ 340\ \&\&\ \mbox{\hyperlink{game_8c_a74697fe945d4edc7482c382f1082539b}{cursor\_y}}\ <=\ 420)\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a58f4ad8c25d6712b21e03fac6fdba17c}{changeState}}(\mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628a283e4f8f90756c9892871460a0d62a60}{HISTORY}});}
+\DoxyCodeLine{00102\ \ \ \ \ \}}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a1ced84253abfbe73f3dddecc6c04e6dd}{cursor\_x}}\ >=\ 200\ \&\&\ cursor\_x\ <=\ 600\ \&\&\ cursor\_y\ >=\ 450\ \&\&\ \mbox{\hyperlink{game_8c_a74697fe945d4edc7482c382f1082539b}{cursor\_y}}\ <=\ 530)\ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a58f4ad8c25d6712b21e03fac6fdba17c}{changeState}}(\mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628a7a10b5d68d31711288e1fe0fa17dbf4f}{EXIT}});}
+\DoxyCodeLine{00105\ \ \ \ \ \}}
+\DoxyCodeLine{00106\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse__event__handler_8h_a2de98fa3112d020f8d99716b87dd8cb1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse__event__handler_8h_a2de98fa3112d020f8d99716b87dd8cb1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mouse__event__handler_8h_a918fdfbe62aceb853353c0aa88098545}\label{mouse__event__handler_8h_a918fdfbe62aceb853353c0aa88098545} 
+\index{mouse\_event\_handler.h@{mouse\_event\_handler.h}!mouse\_lb\_pressed\_name@{mouse\_lb\_pressed\_name}}
+\index{mouse\_lb\_pressed\_name@{mouse\_lb\_pressed\_name}!mouse\_event\_handler.h@{mouse\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_lb\_pressed\_name()}{mouse\_lb\_pressed\_name()}}
+{\footnotesize\ttfamily void() mouse\+\_\+lb\+\_\+pressed\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles mouse left button pressed in name choosing menu. 
+
+
+
+Definition at line \mbox{\hyperlink{mouse__event__handler_8c_source_l00074}{74}} of file \mbox{\hyperlink{mouse__event__handler_8c_source}{mouse\+\_\+event\+\_\+handler.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a1ced84253abfbe73f3dddecc6c04e6dd}{cursor\_x}}\ >=\ 229\ \&\&\ cursor\_x\ <=\ 734\ \&\&\ cursor\_y\ >=\ 203\ \&\&\ \mbox{\hyperlink{game_8c_a74697fe945d4edc7482c382f1082539b}{cursor\_y}}\ <=\ 296)\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a7082db574ba2d2d69ccafb060398b7d8}{name}}\ =\ \mbox{\hyperlink{game_8h_aa5998168cabfb2b2e41151349077812ca4fd01f8f763987a3b970c1d60547a135}{WHITE\_NAME}};}
+\DoxyCodeLine{00077\ \ \ \ \ \}}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a1ced84253abfbe73f3dddecc6c04e6dd}{cursor\_x}}\ >=\ 229\ \&\&\ cursor\_x\ <=\ 734\ \&\&\ cursor\_y\ >=\ 359\ \&\&\ \mbox{\hyperlink{game_8c_a74697fe945d4edc7482c382f1082539b}{cursor\_y}}\ <=\ 452)\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a7082db574ba2d2d69ccafb060398b7d8}{name}}\ =\ \mbox{\hyperlink{game_8h_aa5998168cabfb2b2e41151349077812caf6d7a0199495a2f50e180f8d24e55252}{BLACK\_NAME}};}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a1ced84253abfbe73f3dddecc6c04e6dd}{cursor\_x}}\ >=\ 278\ \&\&\ cursor\_x\ <=\ 522\ \&\&\ cursor\_y\ >=\ 511\ \&\&\ \mbox{\hyperlink{game_8c_a74697fe945d4edc7482c382f1082539b}{cursor\_y}}\ <=\ 586)\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a58f4ad8c25d6712b21e03fac6fdba17c}{changeState}}(\mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628ad50cf309d7568040619ed26ee6835a84}{GAME}});}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordflow}{else}\ \mbox{\hyperlink{game_8c_a7082db574ba2d2d69ccafb060398b7d8}{name}}\ =\ \mbox{\hyperlink{game_8h_aa5998168cabfb2b2e41151349077812ca19f0b039d78ea564ee9379b997e03243}{NO\_NAME}};}
+\DoxyCodeLine{00085\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse__event__handler_8h_a918fdfbe62aceb853353c0aa88098545_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse__event__handler_8h_a918fdfbe62aceb853353c0aa88098545_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mouse__event__handler_8h_aaba7b62c78640c1a2444eab571d3730f}\label{mouse__event__handler_8h_aaba7b62c78640c1a2444eab571d3730f} 
+\index{mouse\_event\_handler.h@{mouse\_event\_handler.h}!mouse\_lb\_pressed\_winner@{mouse\_lb\_pressed\_winner}}
+\index{mouse\_lb\_pressed\_winner@{mouse\_lb\_pressed\_winner}!mouse\_event\_handler.h@{mouse\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_lb\_pressed\_winner()}{mouse\_lb\_pressed\_winner()}}
+{\footnotesize\ttfamily void() mouse\+\_\+lb\+\_\+pressed\+\_\+winner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles mouse left button pressed in winner screen. 
+
+
+
+Definition at line \mbox{\hyperlink{mouse__event__handler_8c_source_l00087}{87}} of file \mbox{\hyperlink{mouse__event__handler_8c_source}{mouse\+\_\+event\+\_\+handler.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a1ced84253abfbe73f3dddecc6c04e6dd}{cursor\_x}}\ >=\ 200\ \&\&\ cursor\_x\ <=\ 600\ \&\&\ cursor\_y\ >=\ 324\ \&\&\ \mbox{\hyperlink{game_8c_a74697fe945d4edc7482c382f1082539b}{cursor\_y}}\ <=\ 404)\ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a58f4ad8c25d6712b21e03fac6fdba17c}{changeState}}(\mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628ad50cf309d7568040619ed26ee6835a84}{GAME}});}
+\DoxyCodeLine{00090\ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a1ced84253abfbe73f3dddecc6c04e6dd}{cursor\_x}}\ >=\ 200\ \&\&\ cursor\_x\ <=\ 600\ \&\&\ cursor\_y\ >=\ 423\ \&\&\ \mbox{\hyperlink{game_8c_a74697fe945d4edc7482c382f1082539b}{cursor\_y}}\ <=\ 503)\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a58f4ad8c25d6712b21e03fac6fdba17c}{changeState}}(\mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628a4c40e60bc71a32b924ce1f08d57f9721}{MENU}});}
+\DoxyCodeLine{00093\ \ \ \ \ \}}
+\DoxyCodeLine{00094\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse__event__handler_8h_aaba7b62c78640c1a2444eab571d3730f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse__event__handler_8h_aaba7b62c78640c1a2444eab571d3730f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mouse__event__handler_8h_a0ee896911bc842696b1540953b37fed2}\label{mouse__event__handler_8h_a0ee896911bc842696b1540953b37fed2} 
+\index{mouse\_event\_handler.h@{mouse\_event\_handler.h}!mouse\_lb\_released@{mouse\_lb\_released}}
+\index{mouse\_lb\_released@{mouse\_lb\_released}!mouse\_event\_handler.h@{mouse\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_lb\_released()}{mouse\_lb\_released()}}
+{\footnotesize\ttfamily void() mouse\+\_\+lb\+\_\+released (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles mouse left button released. 
+
+
+
+Definition at line \mbox{\hyperlink{mouse__event__handler_8c_source_l00148}{148}} of file \mbox{\hyperlink{mouse__event__handler_8c_source}{mouse\+\_\+event\+\_\+handler.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordflow}{switch}(\mbox{\hyperlink{game_8c_a70546ef15bc78d3e183760c87a4f2f95}{fase}})\{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628a4c40e60bc71a32b924ce1f08d57f9721}{MENU}}:}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628ad50cf309d7568040619ed26ee6835a84}{GAME}}:}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{mouse__event__handler_8c_abe8901f45ce3597532025229c629c759}{mouse\_lb\_released\_game}}();}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628a283e4f8f90756c9892871460a0d62a60}{HISTORY}}:}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628a7a10b5d68d31711288e1fe0fa17dbf4f}{EXIT}}:}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628ad1cb40a0245d392ac672f7bb0c76aa56}{WINNER}}:}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628ade61fd9af662e17286e2966e11148159}{CHOOSE\_NAME}}:}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00163\ \ \ \ \ \}}
+\DoxyCodeLine{00164\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse__event__handler_8h_a0ee896911bc842696b1540953b37fed2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse__event__handler_8h_a0ee896911bc842696b1540953b37fed2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mouse__event__handler_8h_abe8901f45ce3597532025229c629c759}\label{mouse__event__handler_8h_abe8901f45ce3597532025229c629c759} 
+\index{mouse\_event\_handler.h@{mouse\_event\_handler.h}!mouse\_lb\_released\_game@{mouse\_lb\_released\_game}}
+\index{mouse\_lb\_released\_game@{mouse\_lb\_released\_game}!mouse\_event\_handler.h@{mouse\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_lb\_released\_game()}{mouse\_lb\_released\_game()}}
+{\footnotesize\ttfamily void() mouse\+\_\+lb\+\_\+released\+\_\+game (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Handles mouse left button released in game. 
+
+
+
+Definition at line \mbox{\hyperlink{mouse__event__handler_8c_source_l00206}{206}} of file \mbox{\hyperlink{mouse__event__handler_8c_source}{mouse\+\_\+event\+\_\+handler.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}\ ==\ NULL)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}-\/>\mbox{\hyperlink{struct_piece_a895b6803ce74fe8574d6168d66ac6bb5}{x}}\ <\ 80\ ||\ \mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}-\/>\mbox{\hyperlink{struct_piece_a895b6803ce74fe8574d6168d66ac6bb5}{x}}\ >\ 720\ ||\ \mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}-\/>\mbox{\hyperlink{struct_piece_a97d61c9e42873e2274620c91178e879b}{y}}\ <\ -\/20\ ||\ \mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}-\/>\mbox{\hyperlink{struct_piece_a97d61c9e42873e2274620c91178e879b}{y}}\ >\ 620)\ \{}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{mouse__event__handler_8c_ad74c3c9f9f061186c165cbfae9438ce6}{move\_piece\_back}}(\mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}});}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00211\ \ \ \ \ \}}
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordtype}{int}\ temp\_x\ =\ (\mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}-\/>\mbox{\hyperlink{struct_piece_a895b6803ce74fe8574d6168d66ac6bb5}{x}}\ +\ 33\ -\/\ 200)\ /75;}
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordtype}{int}\ temp\_y\ =\ (\mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}-\/>\mbox{\hyperlink{struct_piece_a97d61c9e42873e2274620c91178e879b}{y}}\ +\ 33)\ /\ 75;}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{mouse__event__handler_8c_ac3cb067b0440ffe04a028743a61beb8f}{attempt\_move}}(temp\_y,temp\_x))\ \mbox{\hyperlink{mouse__event__handler_8c_ad74c3c9f9f061186c165cbfae9438ce6}{move\_piece\_back}}(\mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}});}
+\DoxyCodeLine{00215\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse__event__handler_8h_abe8901f45ce3597532025229c629c759_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse__event__handler_8h_abe8901f45ce3597532025229c629c759_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mouse__event__handler_8h_a491647db94759995bf7a53edff54b71e}\label{mouse__event__handler_8h_a491647db94759995bf7a53edff54b71e} 
+\index{mouse\_event\_handler.h@{mouse\_event\_handler.h}!mouse\_mov\_piece@{mouse\_mov\_piece}}
+\index{mouse\_mov\_piece@{mouse\_mov\_piece}!mouse\_event\_handler.h@{mouse\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_mov\_piece()}{mouse\_mov\_piece()}}
+{\footnotesize\ttfamily void() mouse\+\_\+mov\+\_\+piece (\begin{DoxyParamCaption}\item[{struct packet \texorpdfstring{$\ast$}{*}}]{pp }\end{DoxyParamCaption})}
+
+
+
+Moves a piece. 
+
+
+
+Definition at line \mbox{\hyperlink{mouse__event__handler_8c_source_l00219}{219}} of file \mbox{\hyperlink{mouse__event__handler_8c_source}{mouse\+\_\+event\+\_\+handler.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}\ !=\ NULL\ \&\&\ lb)\ \{}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}-\/>\mbox{\hyperlink{struct_piece_a895b6803ce74fe8574d6168d66ac6bb5}{x}}\ =\ \mbox{\hyperlink{game_8c_a1ced84253abfbe73f3dddecc6c04e6dd}{cursor\_x}}\ -\/\ 40;}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}-\/>\mbox{\hyperlink{struct_piece_a97d61c9e42873e2274620c91178e879b}{y}}\ =\ \mbox{\hyperlink{game_8c_a74697fe945d4edc7482c382f1082539b}{cursor\_y}}\ -\/\ 40;}
+\DoxyCodeLine{00223\ \ \ \ \ \}}
+\DoxyCodeLine{00224\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse__event__handler_8h_a491647db94759995bf7a53edff54b71e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mouse__event__handler_8h_a8ae73b9c4ddac5172f1a414dd6b7c48b}\label{mouse__event__handler_8h_a8ae73b9c4ddac5172f1a414dd6b7c48b} 
+\index{mouse\_event\_handler.h@{mouse\_event\_handler.h}!move\_cursor@{move\_cursor}}
+\index{move\_cursor@{move\_cursor}!mouse\_event\_handler.h@{mouse\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{move\_cursor()}{move\_cursor()}}
+{\footnotesize\ttfamily void() move\+\_\+cursor (\begin{DoxyParamCaption}\item[{struct packet \texorpdfstring{$\ast$}{*}}]{pp }\end{DoxyParamCaption})}
+
+
+
+Handles mouse movement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pp} & pointer to the packet with the mouse event \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{mouse__event__handler_8c_source_l00022}{22}} of file \mbox{\hyperlink{mouse__event__handler_8c_source}{mouse\+\_\+event\+\_\+handler.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{game_8c_a1ced84253abfbe73f3dddecc6c04e6dd}{cursor\_x}}\ +=\ pp-\/>delta\_x;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a1ced84253abfbe73f3dddecc6c04e6dd}{cursor\_x}}\ <\ 0)}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a1ced84253abfbe73f3dddecc6c04e6dd}{cursor\_x}}\ =\ 0;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a1ced84253abfbe73f3dddecc6c04e6dd}{cursor\_x}}\ >=\ 800)}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a1ced84253abfbe73f3dddecc6c04e6dd}{cursor\_x}}\ =\ 800;}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{game_8c_a74697fe945d4edc7482c382f1082539b}{cursor\_y}}\ -\/=\ pp-\/>delta\_y;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a74697fe945d4edc7482c382f1082539b}{cursor\_y}}\ <\ 0)}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a74697fe945d4edc7482c382f1082539b}{cursor\_y}}\ =\ 0;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a74697fe945d4edc7482c382f1082539b}{cursor\_y}}\ >\ 600)}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a74697fe945d4edc7482c382f1082539b}{cursor\_y}}\ =\ 600;}
+\DoxyCodeLine{00033\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse__event__handler_8h_a8ae73b9c4ddac5172f1a414dd6b7c48b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mouse__event__handler_8h_ad74c3c9f9f061186c165cbfae9438ce6}\label{mouse__event__handler_8h_ad74c3c9f9f061186c165cbfae9438ce6} 
+\index{mouse\_event\_handler.h@{mouse\_event\_handler.h}!move\_piece\_back@{move\_piece\_back}}
+\index{move\_piece\_back@{move\_piece\_back}!mouse\_event\_handler.h@{mouse\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{move\_piece\_back()}{move\_piece\_back()}}
+{\footnotesize\ttfamily void() move\+\_\+piece\+\_\+back (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{piece }\end{DoxyParamCaption})}
+
+
+
+Moves a piece back to its original position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em piece} & pointer to the piece to move back \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{mouse__event__handler_8c_source_l00200}{200}} of file \mbox{\hyperlink{mouse__event__handler_8c_source}{mouse\+\_\+event\+\_\+handler.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keywordflow}{if}\ (piece\ ==\ NULL)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00202\ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a895b6803ce74fe8574d6168d66ac6bb5}{x}}\ =\ piece-\/>\mbox{\hyperlink{struct_piece_a4017d278fbe40f96214961ab71f17d35}{col}}*75\ +\ 200;}
+\DoxyCodeLine{00203\ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a97d61c9e42873e2274620c91178e879b}{y}}\ =\ piece-\/>\mbox{\hyperlink{struct_piece_ac6ef7c474f20562cb629c2452ce0631d}{row}}*75;}
+\DoxyCodeLine{00204\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse__event__handler_8h_ad74c3c9f9f061186c165cbfae9438ce6_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,5 @@
+<map id="add_trajectory_copy" name="add_trajectory_copy">
+<area shape="rect" id="Node000001" title="Adds a copy of a trajectory to the array of trajectories." alt="" coords="5,5,144,31"/>
+<area shape="rect" id="Node000002" href="$board_8c.html#a90470a95ffa5acb52c32afdfaedb0d6b" title="Adds a trajectory to the array of trajectories." alt="" coords="192,5,295,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,16,177,16,177,21,144,21"/>
+</map>

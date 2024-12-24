@@ -1,0 +1,13 @@
+<map id="kbd_restore" name="kbd_restore">
+<area shape="rect" id="Node000001" title="Restores the keyboard to its&#39; original state." alt="" coords="5,31,95,56"/>
+<area shape="rect" id="Node000002" href="$_k_b_c_8c.html#a72fbcf4ba83c3ea35461be5675a1277d" title="Reads the output buffer from the keyboard." alt="" coords="143,55,267,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,48,128,53,128,58,95,53"/>
+<area shape="rect" id="Node000005" href="$_k_b_c_8c.html#a95d45e37519eb9a678f9a4badf1482d3" title="Writes the input to the keyboard." alt="" coords="145,5,265,31"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="95,34,130,28,131,33,95,39"/>
+<area shape="rect" id="Node000003" href="$_k_b_c_8c.html#a783c73c7acfacf481d616e56650195df" title="Reads the status register." alt="" coords="315,5,432,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="251,51,313,33,314,38,252,57"/>
+<area shape="rect" id="Node000004" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title=" " alt="" coords="480,31,571,56"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="267,60,465,45,466,51,268,66"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="433,25,466,31,465,36,432,31"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="265,16,301,16,301,21,265,21"/>
+</map>

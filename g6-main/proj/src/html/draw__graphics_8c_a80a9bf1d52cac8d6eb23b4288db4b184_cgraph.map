@@ -1,0 +1,17 @@
+<map id="draw_result_screen" name="draw_result_screen">
+<area shape="rect" id="Node000001" title="Draws the result screen." alt="" coords="5,56,140,82"/>
+<area shape="rect" id="Node000002" href="$draw__graphics_8c.html#a28a1c081b70b5c12894ae09f80a0b848" title="Draws a checker piece." alt="" coords="188,5,290,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,53,180,33,181,38,118,58"/>
+<area shape="rect" id="Node000003" href="$video_8c.html#a978b99877ebdb731d2787c1456c341c0" title="Draws a .xpm image." alt="" coords="338,56,457,82"/>
+<area shape="poly" id="edge8_Node000001_Node000003" title=" " alt="" coords="140,66,323,66,323,72,140,72"/>
+<area shape="rect" id="Node000005" href="$draw__graphics_8c.html#a1764e22633ce78c7cbb835f2bb0f2bac" title="Draws a string." alt="" coords="195,107,283,132"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="118,80,181,99,180,104,116,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="282,29,342,48,341,54,281,34"/>
+<area shape="rect" id="Node000004" href="$video_8c.html#ab0332ee565f978f725c021b4eb35958e" title="Draws pixel." alt="" coords="685,81,806,107"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="458,70,670,86,670,91,458,76"/>
+<area shape="rect" id="Node000006" href="$draw__graphics_8c.html#abedef77b00c316e162554bce0344fa54" title="Draws a character." alt="" coords="343,107,453,132"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="283,117,328,117,328,122,283,122"/>
+<area shape="rect" id="Node000007" href="$video_8c.html#ab0a758b9f8ea20f9bb5fb4ca77f021e5" title="Draws a character." alt="" coords="505,107,637,132"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="453,117,490,117,490,122,453,122"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="637,107,669,103,670,108,638,113"/>
+</map>

@@ -1,0 +1,391 @@
+\doxysection{game/history.c File Reference}
+\hypertarget{history_8c}{}\label{history_8c}\index{game/history.c@{game/history.c}}
+{\ttfamily \#include \"{}history.\+h\"{}}\newline
+Include dependency graph for history.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{history_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void() \mbox{\hyperlink{history_8c_ab4af141d40f18fd524b677f9a68ba6cc}{roll\+\_\+down}} ()
+\begin{DoxyCompactList}\small\item\em Rolls down the history. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{history_8c_a933208df950622e857a82625b946727a}{roll\+\_\+up}} ()
+\begin{DoxyCompactList}\small\item\em Rolls up the history. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{history_8c_af4bcea2cd0974b3563d9023f25a7beb5}{save\+\_\+match\+\_\+record}} (\mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} \mbox{\hyperlink{game_8c_a9deaba51419cfcf0fb430512e8d11b5e}{winner}}, long int black\+\_\+remain\+\_\+time, long int white\+\_\+remain\+\_\+time, char \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{game_8c_ae6439bcf42c914cdb59213277f001892}{black\+\_\+name}}, char \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{game_8c_ace6dbe6f73e3ceafa52a94af5cd39944}{white\+\_\+name}}, \mbox{\hyperlink{struct_time}{Time}} start\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Saves a match record. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_match_record}{Match\+Record}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{history_8c_a3750ca5f0469a87bcea1a523cd990cd3}{get\+Match\+Record}} (int index)
+\begin{DoxyCompactList}\small\item\em Gets a match record. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{history_8c_a430dfdf5895b99b13d24f0cd542eda06}{load\+\_\+history}} ()
+\begin{DoxyCompactList}\small\item\em Loads the history from the file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{history_8c_a09b7d2a829665d653cefbe0bea795603}{save\+\_\+history}} ()
+\begin{DoxyCompactList}\small\item\em Saves the history to the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\+\_\+matches}} = 0
+\item 
+\mbox{\hyperlink{struct_match_record}{Match\+Record}} \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}} \mbox{[}30\mbox{]}
+\item 
+int \mbox{\hyperlink{history_8c_af40ece271ce4aa75aecf64fac92e3b25}{oldest\+\_\+match\+\_\+index}} = 0
+\item 
+int \mbox{\hyperlink{history_8c_ae1517d80b170a8baa197d6f9bfbb88d9}{index\+\_\+first\+\_\+match\+\_\+being\+\_\+shown}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{history_8c_a3750ca5f0469a87bcea1a523cd990cd3}\label{history_8c_a3750ca5f0469a87bcea1a523cd990cd3} 
+\index{history.c@{history.c}!getMatchRecord@{getMatchRecord}}
+\index{getMatchRecord@{getMatchRecord}!history.c@{history.c}}
+\doxysubsubsection{\texorpdfstring{getMatchRecord()}{getMatchRecord()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_match_record}{Match\+Record}} \texorpdfstring{$\ast$}{*} get\+Match\+Record (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Gets a match record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & the index of the match record \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the match record 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{history_8c_source_l00030}{30}} of file \mbox{\hyperlink{history_8c_source}{history.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}\ ==\ 0\ ||\ index\ >=\ \mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}})\{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}\ <\ 30)\{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \&\mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[index];}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordflow}{return}\ \&\mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[(\mbox{\hyperlink{history_8c_af40ece271ce4aa75aecf64fac92e3b25}{oldest\_match\_index}}\ +\ index)\ \%\ 30];}
+\DoxyCodeLine{00038\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{history_8c_a3750ca5f0469a87bcea1a523cd990cd3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{history_8c_a430dfdf5895b99b13d24f0cd542eda06}\label{history_8c_a430dfdf5895b99b13d24f0cd542eda06} 
+\index{history.c@{history.c}!load\_history@{load\_history}}
+\index{load\_history@{load\_history}!history.c@{history.c}}
+\doxysubsubsection{\texorpdfstring{load\_history()}{load\_history()}}
+{\footnotesize\ttfamily void load\+\_\+history (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads the history from the file. 
+
+
+
+Definition at line \mbox{\hyperlink{history_8c_source_l00040}{40}} of file \mbox{\hyperlink{history_8c_source}{history.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{char}\ file\_dir[256];\ \textcolor{comment}{//\ Store\ the\ directory\ containing\ the\ current\ file}}
+\DoxyCodeLine{00043\ \ \ \ \ strcpy(file\_dir,\ dirname(\_\_FILE\_\_));}
+\DoxyCodeLine{00044\ \ \ \ \ strcat(file\_dir,\ \textcolor{stringliteral}{"{}/../resources/history.csv"{}});}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{char}\ real\_file\_dir[256];}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordflow}{if}\ (realpath(file\_dir,\ real\_file\_dir)\ ==\ NULL)\{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Failed\ to\ resolve\ the\ absolute\ path\ of\ the\ project\ root\ directory.\(\backslash\)n"{}});}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ FILE\ *file\ =\ fopen(real\_file\_dir,\ \textcolor{stringliteral}{"{}r"{}});}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordflow}{if}\ (file\ ==\ NULL)\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Error\ opening\ file:\ \%s\(\backslash\)n"{}},\ real\_file\_dir);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00055\ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{char}\ buffer[256];}
+\DoxyCodeLine{00058\ \ \ \ \ fgets(buffer,\ \textcolor{keyword}{sizeof}(buffer),\ file);\ \textcolor{comment}{//\ Skip\ header}}
+\DoxyCodeLine{00059\ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordflow}{while}\ (fgets(buffer,\ \textcolor{keyword}{sizeof}(buffer),\ file))\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}\ >=\ 30)\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *token\ =\ strtok(buffer,\ \textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (token\ ==\ NULL)\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ strncpy(\mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}].white\_player\_name,\ token,\ 20);}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ token\ =\ strtok(NULL,\ \textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (token\ ==\ NULL)\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ strncpy(\mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}].black\_player\_name,\ token,\ 20);}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ token\ =\ strtok(NULL,\ \textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (token\ ==\ NULL)\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (strcmp(token,\ \textcolor{stringliteral}{"{}BLACK"{}})\ ==\ 0)\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}].\mbox{\hyperlink{struct_match_record_aa4ba0725774ad9d8cfa6f69df7279bbd}{winner}}\ =\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3}{BLACK}};}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (strcmp(token,\ \textcolor{stringliteral}{"{}WHITE"{}})\ ==\ 0)\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}].\mbox{\hyperlink{struct_match_record_aa4ba0725774ad9d8cfa6f69df7279bbd}{winner}}\ =\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1ca283fc479650da98250635b9c3c0e7e50}{WHITE}};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ token\ =\ strtok(NULL,\ \textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (token\ ==\ NULL)\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ sscanf(token,\ \textcolor{stringliteral}{"{}\%hu-\/\%hu-\/\%hu"{}},}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}].start\_time.year,}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}].\mbox{\hyperlink{struct_match_record_a630ab468f07a9ebd780f727b359dd31c}{start\_time}}.\mbox{\hyperlink{struct_time_a851e70710f3b58c46e1636ce554d23ee}{month}},}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}].\mbox{\hyperlink{struct_match_record_a630ab468f07a9ebd780f727b359dd31c}{start\_time}}.\mbox{\hyperlink{struct_time_adc6c9605317382a56b244a4ceb725075}{day}});}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ token\ =\ strtok(NULL,\ \textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (token\ ==\ NULL)\ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}].\mbox{\hyperlink{struct_match_record_a19a80e03aba24aaa1119c8bacb439381}{black\_remain\_time}}\ =\ strtol(token,\ NULL,\ 10);}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ token\ =\ strtok(NULL,\ \textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (token\ ==\ NULL)\ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}].\mbox{\hyperlink{struct_match_record_a0e922d654bbd28a457ab8f09a5f33778}{white\_remain\_time}}\ =\ strtol(token,\ NULL,\ 10);}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}++;}
+\DoxyCodeLine{00112\ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \ \ \ \ \mbox{\hyperlink{history_8c_af40ece271ce4aa75aecf64fac92e3b25}{oldest\_match\_index}}\ =\ \mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}\ \%\ 30;}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ fclose(file);}
+\DoxyCodeLine{00116\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{history_8c_a430dfdf5895b99b13d24f0cd542eda06_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{history_8c_ab4af141d40f18fd524b677f9a68ba6cc}\label{history_8c_ab4af141d40f18fd524b677f9a68ba6cc} 
+\index{history.c@{history.c}!roll\_down@{roll\_down}}
+\index{roll\_down@{roll\_down}!history.c@{history.c}}
+\doxysubsubsection{\texorpdfstring{roll\_down()}{roll\_down()}}
+{\footnotesize\ttfamily void() roll\+\_\+down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Rolls down the history. 
+
+
+
+Definition at line \mbox{\hyperlink{history_8c_source_l00010}{10}} of file \mbox{\hyperlink{history_8c_source}{history.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{history_8c_ae1517d80b170a8baa197d6f9bfbb88d9}{index\_first\_match\_being\_shown}}\ >\ 0)\ \mbox{\hyperlink{history_8c_ae1517d80b170a8baa197d6f9bfbb88d9}{index\_first\_match\_being\_shown}}-\/-\/;}
+\DoxyCodeLine{00012\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{history_8c_ab4af141d40f18fd524b677f9a68ba6cc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{history_8c_a933208df950622e857a82625b946727a}\label{history_8c_a933208df950622e857a82625b946727a} 
+\index{history.c@{history.c}!roll\_up@{roll\_up}}
+\index{roll\_up@{roll\_up}!history.c@{history.c}}
+\doxysubsubsection{\texorpdfstring{roll\_up()}{roll\_up()}}
+{\footnotesize\ttfamily void() roll\+\_\+up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Rolls up the history. 
+
+
+
+Definition at line \mbox{\hyperlink{history_8c_source_l00013}{13}} of file \mbox{\hyperlink{history_8c_source}{history.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{history_8c_ae1517d80b170a8baa197d6f9bfbb88d9}{index\_first\_match\_being\_shown}}\ <\ \mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}\ -\/\ 3)\ \mbox{\hyperlink{history_8c_ae1517d80b170a8baa197d6f9bfbb88d9}{index\_first\_match\_being\_shown}}++;}
+\DoxyCodeLine{00015\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{history_8c_a933208df950622e857a82625b946727a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{history_8c_a09b7d2a829665d653cefbe0bea795603}\label{history_8c_a09b7d2a829665d653cefbe0bea795603} 
+\index{history.c@{history.c}!save\_history@{save\_history}}
+\index{save\_history@{save\_history}!history.c@{history.c}}
+\doxysubsubsection{\texorpdfstring{save\_history()}{save\_history()}}
+{\footnotesize\ttfamily void save\+\_\+history (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Saves the history to the file. 
+
+
+
+Definition at line \mbox{\hyperlink{history_8c_source_l00120}{120}} of file \mbox{\hyperlink{history_8c_source}{history.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{char}\ file\_dir[256];\ \textcolor{comment}{//\ Store\ the\ directory\ containing\ the\ current\ file}}
+\DoxyCodeLine{00122\ \ \ \ \ strcpy(file\_dir,\ dirname(\_\_FILE\_\_));}
+\DoxyCodeLine{00123\ \ \ \ \ strcat(file\_dir,\ \textcolor{stringliteral}{"{}/../resources/history.csv"{}});}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{char}\ real\_file\_dir[256];}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordflow}{if}\ (realpath(file\_dir,\ real\_file\_dir)\ ==\ NULL)\{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Failed\ to\ resolve\ the\ absolute\ path\ of\ the\ project\ root\ directory.\(\backslash\)n"{}});}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00129\ \ \ \ \ \}}
+\DoxyCodeLine{00130\ \ \ \ \ FILE\ *file\ =\ fopen(real\_file\_dir,\ \textcolor{stringliteral}{"{}w"{}});}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordflow}{if}\ (file\ ==\ NULL)\ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Error\ opening\ file:\ \%s\(\backslash\)n"{}},\ real\_file\_dir);}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00134\ \ \ \ \ \}}
+\DoxyCodeLine{00135\ \ \ \ \ }
+\DoxyCodeLine{00136\ \ \ \ \ fprintf(file,\ \textcolor{stringliteral}{"{}White\ Player,Black\ Player,Winner,Start\ Time,Black\ Remaining\ Time,White\ Remaining\ Time\(\backslash\)n"{}});}
+\DoxyCodeLine{00137\ \ \ \ \ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}};\ i++)\ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ fprintf(file,\ \textcolor{stringliteral}{"{}\%s,\%s,\%s,\%hu-\/\%hu-\/\%hu,\%ld,\%ld\(\backslash\)n"{}},}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[i].white\_player\_name,}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[i].black\_player\_name,}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[i].\mbox{\hyperlink{game_8c_a9deaba51419cfcf0fb430512e8d11b5e}{winner}}\ ==\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3}{BLACK}}\ ?\ \textcolor{stringliteral}{"{}BLACK"{}}\ :\ \textcolor{stringliteral}{"{}WHITE"{}},}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[i].start\_time.year,}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[i].start\_time.month,}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[i].start\_time.day,}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[i].black\_remain\_time,}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[i].white\_remain\_time);}
+\DoxyCodeLine{00148\ \ \ \ \ \}}
+\DoxyCodeLine{00149\ \ \ \ \ }
+\DoxyCodeLine{00150\ \ \ \ \ fclose(file);}
+\DoxyCodeLine{00151\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{history_8c_a09b7d2a829665d653cefbe0bea795603_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{history_8c_af4bcea2cd0974b3563d9023f25a7beb5}\label{history_8c_af4bcea2cd0974b3563d9023f25a7beb5} 
+\index{history.c@{history.c}!save\_match\_record@{save\_match\_record}}
+\index{save\_match\_record@{save\_match\_record}!history.c@{history.c}}
+\doxysubsubsection{\texorpdfstring{save\_match\_record()}{save\_match\_record()}}
+{\footnotesize\ttfamily void save\+\_\+match\+\_\+record (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{winner,  }\item[{long int}]{black\+\_\+remain\+\_\+time,  }\item[{long int}]{white\+\_\+remain\+\_\+time,  }\item[{char \texorpdfstring{$\ast$}{*}}]{black\+\_\+name,  }\item[{char \texorpdfstring{$\ast$}{*}}]{white\+\_\+name,  }\item[{\mbox{\hyperlink{struct_time}{Time}}}]{start\+\_\+time }\end{DoxyParamCaption})}
+
+
+
+Saves a match record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em winner} & the winner of the match \\
+\hline
+{\em black\+\_\+remain\+\_\+time} & the remaining time of the black player \\
+\hline
+{\em white\+\_\+remain\+\_\+time} & the remaining time of the white player \\
+\hline
+{\em black\+\_\+name} & the name of the black player \\
+\hline
+{\em white\+\_\+name} & the name of the white player \\
+\hline
+{\em start\+\_\+time} & the time the match started \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{history_8c_source_l00017}{17}} of file \mbox{\hyperlink{history_8c_source}{history.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}\ <\ 30)\{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}++;}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_af40ece271ce4aa75aecf64fac92e3b25}{oldest\_match\_index}}].\mbox{\hyperlink{struct_match_record_aa4ba0725774ad9d8cfa6f69df7279bbd}{winner}}\ =\ \mbox{\hyperlink{game_8c_a9deaba51419cfcf0fb430512e8d11b5e}{winner}};}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_af40ece271ce4aa75aecf64fac92e3b25}{oldest\_match\_index}}].\mbox{\hyperlink{struct_match_record_a19a80e03aba24aaa1119c8bacb439381}{black\_remain\_time}}\ =\ black\_remain\_time;}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_af40ece271ce4aa75aecf64fac92e3b25}{oldest\_match\_index}}].\mbox{\hyperlink{struct_match_record_a0e922d654bbd28a457ab8f09a5f33778}{white\_remain\_time}}\ =\ white\_remain\_time;}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_af40ece271ce4aa75aecf64fac92e3b25}{oldest\_match\_index}}].\mbox{\hyperlink{struct_match_record_a630ab468f07a9ebd780f727b359dd31c}{start\_time}}\ =\ start\_time;}
+\DoxyCodeLine{00025\ \ \ \ \ strcpy(\mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_af40ece271ce4aa75aecf64fac92e3b25}{oldest\_match\_index}}].black\_player\_name,\ \mbox{\hyperlink{game_8c_ae6439bcf42c914cdb59213277f001892}{black\_name}});}
+\DoxyCodeLine{00026\ \ \ \ \ strcpy(\mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_af40ece271ce4aa75aecf64fac92e3b25}{oldest\_match\_index}}].white\_player\_name,\ \mbox{\hyperlink{game_8c_ace6dbe6f73e3ceafa52a94af5cd39944}{white\_name}});}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{history_8c_af40ece271ce4aa75aecf64fac92e3b25}{oldest\_match\_index}}\ =\ (\mbox{\hyperlink{history_8c_af40ece271ce4aa75aecf64fac92e3b25}{oldest\_match\_index}}\ +\ 1)\ \%\ 30;}
+\DoxyCodeLine{00028\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{history_8c_af4bcea2cd0974b3563d9023f25a7beb5_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}\label{history_8c_abfc1db0f347b2e243c80b15abb01dc0a} 
+\index{history.c@{history.c}!history@{history}}
+\index{history@{history}!history.c@{history.c}}
+\doxysubsubsection{\texorpdfstring{history}{history}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_match_record}{Match\+Record}} history\mbox{[}30\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{history_8c_source_l00004}{4}} of file \mbox{\hyperlink{history_8c_source}{history.\+c}}.
+
+\Hypertarget{history_8c_ae1517d80b170a8baa197d6f9bfbb88d9}\label{history_8c_ae1517d80b170a8baa197d6f9bfbb88d9} 
+\index{history.c@{history.c}!index\_first\_match\_being\_shown@{index\_first\_match\_being\_shown}}
+\index{index\_first\_match\_being\_shown@{index\_first\_match\_being\_shown}!history.c@{history.c}}
+\doxysubsubsection{\texorpdfstring{index\_first\_match\_being\_shown}{index\_first\_match\_being\_shown}}
+{\footnotesize\ttfamily int index\+\_\+first\+\_\+match\+\_\+being\+\_\+shown = 0}
+
+
+
+Definition at line \mbox{\hyperlink{history_8c_source_l00007}{7}} of file \mbox{\hyperlink{history_8c_source}{history.\+c}}.
+
+\Hypertarget{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}\label{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f} 
+\index{history.c@{history.c}!num\_matches@{num\_matches}}
+\index{num\_matches@{num\_matches}!history.c@{history.c}}
+\doxysubsubsection{\texorpdfstring{num\_matches}{num\_matches}}
+{\footnotesize\ttfamily int num\+\_\+matches = 0}
+
+
+
+Definition at line \mbox{\hyperlink{history_8c_source_l00003}{3}} of file \mbox{\hyperlink{history_8c_source}{history.\+c}}.
+
+\Hypertarget{history_8c_af40ece271ce4aa75aecf64fac92e3b25}\label{history_8c_af40ece271ce4aa75aecf64fac92e3b25} 
+\index{history.c@{history.c}!oldest\_match\_index@{oldest\_match\_index}}
+\index{oldest\_match\_index@{oldest\_match\_index}!history.c@{history.c}}
+\doxysubsubsection{\texorpdfstring{oldest\_match\_index}{oldest\_match\_index}}
+{\footnotesize\ttfamily int oldest\+\_\+match\+\_\+index = 0}
+
+
+
+Definition at line \mbox{\hyperlink{history_8c_source_l00005}{5}} of file \mbox{\hyperlink{history_8c_source}{history.\+c}}.
+

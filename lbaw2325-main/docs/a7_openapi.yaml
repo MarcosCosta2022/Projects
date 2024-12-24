@@ -1,0 +1,403 @@
+openapi: 3.0.0
+
+info:
+ version: '2.0'
+ title: 'Web API for Thinker'
+ description: 'Web Resources Specification (A9) for Thinker'
+
+servers:
+- url: https://lbaw2325.lbaw.fe.up.pt
+  description: Production server
+
+externalDocs:
+ description: Find more info here.
+ url: https://git.fe.up.pt/lbaw/lbaw2324/lbaw2325/-/wikis/eap
+
+tags:
+ - name: 'M01: Authentication'
+ - name: 'M02: Users'
+ - name: 'M03: Posts'
+ - name: 'M04: Search'
+
+paths:
+
+###############################Authentication###############################
+
+####login
+  /login:
+    get:
+      operationId: R101
+      summary: 'R101: Login Form'
+      description: 'Provide login form. Access: PUB'
+      tags:
+        - 'M01: Authentication'
+      responses:
+        '200':
+          description: 'Ok. Show log-in UI'
+    post:
+      operationId: R102
+      summary: 'R102: Login Action'
+      description: 'Processes the login form submission. Access: PUB'
+      tags:
+        - 'M01: Authentication'
+      
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                email:          # <!--- form field name
+                  type: string
+                password:    # <!--- form field name
+                  type: string
+              required:
+                - email
+                - password
+
+      responses:
+        '302':
+          description: 'Redirect after processing the login credentials.'
+          headers:
+            Location:
+              schema:
+                type: string
+              examples:
+                302Success:
+                  description: 'Successful authentication. Redirect to home.'
+                  value: '/home'
+                302Error:
+                  description: 'Invalid credentials. Redirect to login form.'
+                  value: '/login'
+
+####logout
+  /logout:
+
+    post:
+      operationId: R103
+      summary: 'R103: Logout Action'
+      description: 'Logout the current authenticated used. Access: USR, ADM'´
+      tags:
+        - 'M01: Authentication'
+      responses:
+        '302':
+          description: 'Redirect after processing logout.'
+          headers:
+            Location:
+              schema:
+                type: string
+              examples:
+                302Success:
+                  description: 'Successful logout. Redirect to login page.'
+                  value: '/login'
+
+## Register
+  /register:
+    get:
+      operationId: R104
+      summary: 'R104: Register Form'
+      description: 'Provide new user registration form. Access: PUB'
+      tags:
+        - 'M01: Authentication'
+      responses:
+        '200':
+          description: 'Ok. Show sign-up UI'
+    
+    post:
+      operationId: R105
+      summary: 'R105: Register Action'
+      description: 'Processes the new user registration form submission. Access: PUB'
+      tags:
+        - 'M01: Authentication and Individual Profile'
+
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                firstName:          # <!--- form field name
+                  type: string
+                lastName:    # <!--- form field name
+                  type: string
+                username:
+                  type: string
+                email:    # <!--- form field name
+                  type: string
+                password:    # <!--- form field name
+                  type: string
+                confirm_password:    # <!--- form field name
+                  type: string
+                birthdate:
+                  type: string
+                  format: date
+              required:
+                - firstName
+                - lastName
+                - username
+                - email
+                - password
+                - confirm_password
+                - birthdate
+
+      responses:
+        '302':
+          description: 'Redirect after processing the new user information.'
+          headers:
+            Location:
+              schema:
+                type: string
+              examples:
+                302Success:
+                  description: 'Successful authentication. Redirect to home.'
+                  value: '/home'
+                302Error:
+                  description: 'Invalid credentials. Redirect to login form.'
+                  value: '/register'
+        '400':
+          description: 'Bad Request. Invalid form data.'
+        '409':
+          description: 'Conflict. User already exists.'
+
+###############################Users###############################
+
+  /users/{id}:
+    get:
+      operationId: R201
+      summary: 'R201: Get User Profile'
+      description: 'Show user profile. Access: USR, ADM'
+      tags:
+        - 'M02: Users'
+      
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+
+      responses:
+        '200':
+          description: 'Ok. Show user profile UI'
+        '404':
+          description: 'Not Found. User does not exist.'
+    
+    post:
+      operationId: R202
+      summary: 'R202: Update User Profile'
+      description: 'Update user profile. Access: USR, ADM'
+      tags:
+        - 'M01: Authentication'
+
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+      
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                firstName:          # <!--- form field name
+                  type: string
+                lastName:    # <!--- form field name
+                  type: string
+                bio:
+                  type: string
+              required:
+                - firstName
+                - lastName
+                - bio
+      responses:
+        '302':
+          description: 'Redirect after processing the new user information.'
+          headers:
+            Location:
+              schema:
+                type: string
+              examples:
+                302Success:
+                  description: 'Successful authentication. Redirect to user profile.'
+                  value: '/users/{id}'
+                302Error:
+                  description: 'Invalid credentials. Redirect to edit form.'
+                  value: '/users/{id}/edit'
+        '400':
+          description: 'Bad Request. Invalid form data.'
+        '404':
+          description: 'Not Found. User does not exist.'
+
+
+      
+###############################Posts###############################
+
+  /api/post:
+    post:
+      operationId: R301
+      summary: 'R301: Create Post'
+      description: 'Create post. Access: USR, ADM'
+      tags:
+        - 'M03: Posts'
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                content:          # <!--- form field name
+                  type: string
+                time:    # <!--- form field name
+                  type: integer
+                picture:
+                  type: string
+                  format: binary
+              required:
+                - content
+                - time
+        
+      responses:
+        '302':
+          description: 'Redirect after processing the new post information.'
+          headers:
+            Location:
+              schema:
+                type: string
+              examples:
+                302Success:
+                  description: 'Successful update. Redirect to home.'
+                  value: '/home'
+                302Error:
+                  description: 'Invalid credentials. Redirect to create post form.'
+                  value: '/post/create'
+
+  /api/post/{id}:
+
+    put:
+      operationId: R302
+      summary: 'R302: Update Post'
+      description: 'Update post. Access: USR, ADM'
+      tags:
+        - 'M03: Posts'
+
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+      
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                content:    # <!--- form field name
+                  type: string
+                time:    # <!--- form field name
+                  type: integer
+                picture:
+                  type: string
+                  format: binary
+              required:
+                - content
+                - time
+
+      responses:
+        '302':
+          description: 'Redirect after processing the new post information.'
+          headers:
+            Location:
+              schema:
+                type: string
+              examples:
+                302Success:
+                  description: 'Successful update. Redirect to home.'
+                  value: '/home'
+                302Error:
+                  description: 'Invalid credentials. Redirect to post edit form.'
+                  value: '/post/{id}'
+    delete:
+      requestId: R303
+      summary: 'R303: Delete Post'
+      description: 'Delete post. Access: USR, ADM'
+      tags:
+        - 'M03: Posts'
+      
+      paremeters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+
+      responses:
+        '302':
+          description: 'Redirect after processing the new post information.'
+          headers:
+            Location:
+              schema:
+                type: string
+              examples:
+                302Success:
+                  description: 'Successful update. Redirect to home.'
+                  value: '/home'
+                302Error:
+                  description: 'Invalid credentials. Redirect to home.'
+                  value: '/home'
+    
+
+###############################Search###############################
+
+
+  /search:
+    get:
+      operationId: R401
+      summary: 'R401: Search'
+      description: 'Search. Access: PUB, USR, ADM'
+      tags:
+        - 'M04: Search'
+      
+      parameters:
+        - in: query
+          name: query
+          schema:
+            type: string
+          required: true
+      
+      responses:
+        '200':
+          description: 'Ok. Show search UI'
+        '404':
+          description: 'Not Found. Search does not exist.'
+
+      
+
+
+
+        
+      
+
+          
+                
+
+        
+
+
+
+                
+
+
+
+
+
+

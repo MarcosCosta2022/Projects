@@ -1,0 +1,559 @@
+\doxysection{devices/video.c File Reference}
+\hypertarget{video_8c}{}\label{video_8c}\index{devices/video.c@{devices/video.c}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/lab5.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \"{}video.\+h\"{}}\newline
+Include dependency graph for video.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{video_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{video_8c_aa83603ceda0ca2ebdba9e79a2db9f339}{video\+\_\+get\+\_\+mode\+\_\+info}} (uint16\+\_\+t mode, vbe\+\_\+mode\+\_\+info\+\_\+t \texorpdfstring{$\ast$}{*}vmi\+\_\+p)
+\begin{DoxyCompactList}\small\item\em Gets the mode info of the video card mode. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{video_8c_a08d087a863e56db42b778915be8abeba}{video\+\_\+map\+\_\+phys\+\_\+mem}} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Maps the physical memory to the virtual memory. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{video_8c_abf6484fd059638dc0bde985ef437f3c2}{update\+\_\+screen}} ()
+\begin{DoxyCompactList}\small\item\em Updates the screen. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{video_8c_ab061370420a382b61c034c72a4edbc69}{video\+\_\+change\+\_\+mode}} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Changes the video mode. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*}() \mbox{\hyperlink{video_8c_afa0e432c3ebeefc29a59abc4d22918df}{vg\+\_\+init}} (uint16\+\_\+t mode)
+\item 
+int() \mbox{\hyperlink{video_8c_a5e5b25bd525250f61f40b9e9f212d5e6}{vg\+\_\+draw\+\_\+hline}} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t len, uint32\+\_\+t color)
+\item 
+int() \mbox{\hyperlink{video_8c_a99d2da2559e11200c6b40c469e9977ec}{vg\+\_\+draw\+\_\+rectangle}} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t width, uint16\+\_\+t height, uint32\+\_\+t color)
+\item 
+int() \mbox{\hyperlink{video_8c_a229934fe854471c3f5db925a213ebbb8}{video\+\_\+exit}} (void)
+\begin{DoxyCompactList}\small\item\em Exit video mode. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{video_8c_ab0332ee565f978f725c021b4eb35958e}{video\+\_\+draw\+\_\+pixel}} (uint16\+\_\+t x, uint16\+\_\+t y, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draws pixel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{video_8c_ab0a758b9f8ea20f9bb5fb4ca77f021e5}{vg\+\_\+draw\+\_\+character}} (xpm\+\_\+image\+\_\+t \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{draw__graphics_8c_a632b0a796c388aa5cf8a762ff0790256}{font}}, uint32\+\_\+t char\+\_\+index, uint32\+\_\+t x, uint32\+\_\+t y, uint32\+\_\+t color, uint8\+\_\+t scale)
+\begin{DoxyCompactList}\small\item\em Draws a character. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{video_8c_a978b99877ebdb731d2787c1456c341c0}{video\+\_\+draw\+\_\+xpm}} (int x, int y, xpm\+\_\+image\+\_\+t \texorpdfstring{$\ast$}{*}img)
+\begin{DoxyCompactList}\small\item\em Draws a .xpm image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{video_8c_abf6484fd059638dc0bde985ef437f3c2}\label{video_8c_abf6484fd059638dc0bde985ef437f3c2} 
+\index{video.c@{video.c}!update\_screen@{update\_screen}}
+\index{update\_screen@{update\_screen}!video.c@{video.c}}
+\doxysubsubsection{\texorpdfstring{update\_screen()}{update\_screen()}}
+{\footnotesize\ttfamily int update\+\_\+screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the screen. 
+
+\begin{DoxyReturn}{Returns}
+0 if successful, 1 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{video_8c_source_l00067}{67}} of file \mbox{\hyperlink{video_8c_source}{video.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ memcpy(video\_mem,\ double\_buffer,\ h\_res\ *\ v\_res\ *\ (vmi.BytesPerScanLine\ /\ vmi.XResolution));}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00070\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8c_abf6484fd059638dc0bde985ef437f3c2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video_8c_ab0a758b9f8ea20f9bb5fb4ca77f021e5}\label{video_8c_ab0a758b9f8ea20f9bb5fb4ca77f021e5} 
+\index{video.c@{video.c}!vg\_draw\_character@{vg\_draw\_character}}
+\index{vg\_draw\_character@{vg\_draw\_character}!video.c@{video.c}}
+\doxysubsubsection{\texorpdfstring{vg\_draw\_character()}{vg\_draw\_character()}}
+{\footnotesize\ttfamily void vg\+\_\+draw\+\_\+character (\begin{DoxyParamCaption}\item[{xpm\+\_\+image\+\_\+t \texorpdfstring{$\ast$}{*}}]{font,  }\item[{uint32\+\_\+t}]{char\+\_\+index,  }\item[{uint32\+\_\+t}]{x,  }\item[{uint32\+\_\+t}]{y,  }\item[{uint32\+\_\+t}]{color,  }\item[{uint8\+\_\+t}]{scale }\end{DoxyParamCaption})}
+
+
+
+Draws a character. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em font} & Font to draw in \\
+\hline
+{\em char\+\_\+index} & Char being drawn \\
+\hline
+{\em x} & x position \\
+\hline
+{\em y} & y position \\
+\hline
+{\em color} & Color to draw in \\
+\hline
+{\em scale} & Size of the character \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{video_8c_source_l00139}{139}} of file \mbox{\hyperlink{video_8c_source}{video.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ >=\ h\_res\ ||\ y\ >=\ v\_res\ )}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00142\ \ \ \ \ uint16\_t\ ox\ =\ x;}
+\DoxyCodeLine{00143\ \ \ \ \ uint8\_t\ bytes\_per\_pixel\ =\ \mbox{\hyperlink{draw__graphics_8c_a632b0a796c388aa5cf8a762ff0790256}{font}}-\/>size\ /\ (\mbox{\hyperlink{draw__graphics_8c_a632b0a796c388aa5cf8a762ff0790256}{font}}-\/>width\ *\ \mbox{\hyperlink{draw__graphics_8c_a632b0a796c388aa5cf8a762ff0790256}{font}}-\/>height);}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ uint8\_t\ char\_width\ =\ 6;}
+\DoxyCodeLine{00146\ \ \ \ \ uint8\_t\ char\_height\ =\ 7;}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ uint32\_t\ chars\_per\_line\ =\ \mbox{\hyperlink{draw__graphics_8c_a632b0a796c388aa5cf8a762ff0790256}{font}}-\/>width\ /\ char\_width;}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ uint8\_t*\ char\_addr\ =\ \mbox{\hyperlink{draw__graphics_8c_a632b0a796c388aa5cf8a762ff0790256}{font}}-\/>bytes\ +\ (char\_index/chars\_per\_line)*(\mbox{\hyperlink{draw__graphics_8c_a632b0a796c388aa5cf8a762ff0790256}{font}}-\/>width*bytes\_per\_pixel*char\_height)\ +\ (char\_index\%chars\_per\_line)*char\_width*bytes\_per\_pixel;}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ char\_height;\ i++)\ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ char\_width;\ j++)\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ pixel\_color\ =\ 0;}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ memcpy(\&pixel\_color,\ char\_addr\ +\ (i\ *\ \mbox{\hyperlink{draw__graphics_8c_a632b0a796c388aa5cf8a762ff0790256}{font}}-\/>width\ +\ j)\ *\ bytes\_per\_pixel,\ bytes\_per\_pixel);}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pixel\_color\ <=\ 0x00ffffff)\ \{}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ scale;\ k++)\ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ l\ =\ 0;\ l\ <\ scale;\ l++)\ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{video_8c_ab0332ee565f978f725c021b4eb35958e}{video\_draw\_pixel}}(x\ +\ l,\ y\ +\ k,\ color);}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ x\ +=\ scale;}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ y\ +=\ scale;}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ x\ =\ ox;}
+\DoxyCodeLine{00168\ \ \ \ \ \}}
+\DoxyCodeLine{00169\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{video_8c_ab0a758b9f8ea20f9bb5fb4ca77f021e5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8c_ab0a758b9f8ea20f9bb5fb4ca77f021e5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video_8c_a5e5b25bd525250f61f40b9e9f212d5e6}\label{video_8c_a5e5b25bd525250f61f40b9e9f212d5e6} 
+\index{video.c@{video.c}!vg\_draw\_hline@{vg\_draw\_hline}}
+\index{vg\_draw\_hline@{vg\_draw\_hline}!video.c@{video.c}}
+\doxysubsubsection{\texorpdfstring{vg\_draw\_hline()}{vg\_draw\_hline()}}
+{\footnotesize\ttfamily int() vg\+\_\+draw\+\_\+hline (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint16\+\_\+t}]{len,  }\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{video_8c_source_l00096}{96}} of file \mbox{\hyperlink{video_8c_source}{video.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ len;\ i++)\{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{video_8c_ab0332ee565f978f725c021b4eb35958e}{video\_draw\_pixel}}(x\ +\ i,\ y,\ color);}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00101\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{video_8c_a5e5b25bd525250f61f40b9e9f212d5e6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8c_a5e5b25bd525250f61f40b9e9f212d5e6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video_8c_a99d2da2559e11200c6b40c469e9977ec}\label{video_8c_a99d2da2559e11200c6b40c469e9977ec} 
+\index{video.c@{video.c}!vg\_draw\_rectangle@{vg\_draw\_rectangle}}
+\index{vg\_draw\_rectangle@{vg\_draw\_rectangle}!video.c@{video.c}}
+\doxysubsubsection{\texorpdfstring{vg\_draw\_rectangle()}{vg\_draw\_rectangle()}}
+{\footnotesize\ttfamily int() vg\+\_\+draw\+\_\+rectangle (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint16\+\_\+t}]{width,  }\item[{uint16\+\_\+t}]{height,  }\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{video_8c_source_l00103}{103}} of file \mbox{\hyperlink{video_8c_source}{video.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ >=\ h\_res\ ||\ y\ >=\ v\_res\ )\ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ +\ width\ >=\ h\_res)\ width\ =\ h\_res\ -\/\ x;}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordflow}{if}\ (y\ +\ height\ >=\ v\_res)\ height\ =\ v\_res\ -\/\ y;}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ height;\ i++)\{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{video_8c_a5e5b25bd525250f61f40b9e9f212d5e6}{vg\_draw\_hline}}(x,\ y\ +\ i,\ width,\ color);}
+\DoxyCodeLine{00109\ \ \ \ \ \}}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00111\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8c_a99d2da2559e11200c6b40c469e9977ec_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8c_a99d2da2559e11200c6b40c469e9977ec_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video_8c_afa0e432c3ebeefc29a59abc4d22918df}\label{video_8c_afa0e432c3ebeefc29a59abc4d22918df} 
+\index{video.c@{video.c}!vg\_init@{vg\_init}}
+\index{vg\_init@{vg\_init}!video.c@{video.c}}
+\doxysubsubsection{\texorpdfstring{vg\_init()}{vg\_init()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*}() vg\+\_\+init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{video_8c_source_l00088}{88}} of file \mbox{\hyperlink{video_8c_source}{video.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{video_8c_ab061370420a382b61c034c72a4edbc69}{video\_change\_mode}}(mode)\ !=\ OK)}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{video_8c_a08d087a863e56db42b778915be8abeba}{video\_map\_phys\_mem}}(mode)\ !=\ OK)}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordflow}{return}\ video\_mem;}
+\DoxyCodeLine{00094\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{video_8c_afa0e432c3ebeefc29a59abc4d22918df_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{video_8c_afa0e432c3ebeefc29a59abc4d22918df_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video_8c_ab061370420a382b61c034c72a4edbc69}\label{video_8c_ab061370420a382b61c034c72a4edbc69} 
+\index{video.c@{video.c}!video\_change\_mode@{video\_change\_mode}}
+\index{video\_change\_mode@{video\_change\_mode}!video.c@{video.c}}
+\doxysubsubsection{\texorpdfstring{video\_change\_mode()}{video\_change\_mode()}}
+{\footnotesize\ttfamily int() video\+\_\+change\+\_\+mode (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Changes the video mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & mode to change to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if sucessful, 1 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{video_8c_source_l00072}{72}} of file \mbox{\hyperlink{video_8c_source}{video.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ reg86\_t\ r86;}
+\DoxyCodeLine{00074\ \ \ \ \ memset(\&r86,\ 0,\ \textcolor{keyword}{sizeof}(r86));\ \ \ \textcolor{comment}{/*\ zero\ the\ structure\ */}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ r86.intno\ =\ \mbox{\hyperlink{_v_b_e2__0_8h_afeeffe52c8fd59db7c61cf8b02042dbf}{INT}};\ \textcolor{comment}{/*\ BIOS\ video\ services\ */}}
+\DoxyCodeLine{00077\ \ \ \ \ r86.ah\ =\ \mbox{\hyperlink{_v_b_e2__0_8h_a7376fc123d2bb830fae15b92d9990762}{AH\_VBE}};\ \ \ \ \textcolor{comment}{/*\ Set\ Video\ Mode\ function\ */}}
+\DoxyCodeLine{00078\ \ \ \ \ r86.al\ =\ \mbox{\hyperlink{_v_b_e2__0_8h_ab32156e1d72cb92b120bb16883c87eea}{SET\_VBE\_MODE}};\ \ \ \ \textcolor{comment}{/*\ 80x25\ text\ mode\ */}}
+\DoxyCodeLine{00079\ \ \ \ \ r86.bx\ =\ mode\ |\ BIT(14);\ \textcolor{comment}{/*\ set\ bit\ 14:\ linear\ framebuffer\ */}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{if}(\ sys\_int86(\&r86)\ !=\ OK\ )\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)tvg\_exit():\ sys\_int86()\ failed\ \(\backslash\)n"{}});}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00084\ \ \ \ \ \}}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;\ }
+\DoxyCodeLine{00086\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8c_ab061370420a382b61c034c72a4edbc69_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video_8c_ab0332ee565f978f725c021b4eb35958e}\label{video_8c_ab0332ee565f978f725c021b4eb35958e} 
+\index{video.c@{video.c}!video\_draw\_pixel@{video\_draw\_pixel}}
+\index{video\_draw\_pixel@{video\_draw\_pixel}!video.c@{video.c}}
+\doxysubsubsection{\texorpdfstring{video\_draw\_pixel()}{video\_draw\_pixel()}}
+{\footnotesize\ttfamily void() video\+\_\+draw\+\_\+pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Draws pixel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x position \\
+\hline
+{\em y} & y position \\
+\hline
+{\em color} & color to draw in \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{video_8c_source_l00130}{130}} of file \mbox{\hyperlink{video_8c_source}{video.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ >=\ h\_res\ ||\ y\ >=\ v\_res\ ||\ x\ <\ 0\ ||\ y\ <\ 0)}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{char}\ *pixel\ =\ (double\_buffer\ +\ (y\ *\ h\_res\ +\ x)\ *\ (vmi.BytesPerScanLine\ /\ vmi.XResolution));}
+\DoxyCodeLine{00134\ \ \ \ \ memcpy(pixel,\ \&color,\ vmi.BytesPerScanLine\ /\ vmi.XResolution);}
+\DoxyCodeLine{00135\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8c_ab0332ee565f978f725c021b4eb35958e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video_8c_a978b99877ebdb731d2787c1456c341c0}\label{video_8c_a978b99877ebdb731d2787c1456c341c0} 
+\index{video.c@{video.c}!video\_draw\_xpm@{video\_draw\_xpm}}
+\index{video\_draw\_xpm@{video\_draw\_xpm}!video.c@{video.c}}
+\doxysubsubsection{\texorpdfstring{video\_draw\_xpm()}{video\_draw\_xpm()}}
+{\footnotesize\ttfamily void() video\+\_\+draw\+\_\+xpm (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{xpm\+\_\+image\+\_\+t \texorpdfstring{$\ast$}{*}}]{img }\end{DoxyParamCaption})}
+
+
+
+Draws a .xpm image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x position \\
+\hline
+{\em y} & y position \\
+\hline
+{\em img} & image to draw \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{video_8c_source_l00171}{171}} of file \mbox{\hyperlink{video_8c_source}{video.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{int}\ width\ =\ img-\/>width;}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{int}\ height\ =\ img-\/>height;}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordflow}{if}\ (x>=(\textcolor{keywordtype}{int})h\_res\ ||\ y>=(\textcolor{keywordtype}{int})v\_res\ ||\ x\ +\ width\ <\ 0\ ||\ y\ +\ height\ <\ 0)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \ \ \ \ uint64\_t\ cnt\ =\ 0;}
+\DoxyCodeLine{00178\ \ \ \ \ uint16\_t\ ox\ =\ x;}
+\DoxyCodeLine{00179\ \ \ \ \ uint8\_t\ bpp\ =\ img-\/>size\ /\ (img-\/>width\ *\ img-\/>height);}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ height;\ i++)\ \{}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ width;\ j++)\ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ color\ =\ 0;}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ memcpy(\&color,\ img-\/>bytes\ +\ (cnt*bpp),\ bpp);}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (color\ <=\ 0x00ffffff)\ \mbox{\hyperlink{video_8c_ab0332ee565f978f725c021b4eb35958e}{video\_draw\_pixel}}(x,y,color);}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ x++;}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ cnt++;}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ y++;}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ x\ =\ ox;}
+\DoxyCodeLine{00190\ \ \ \ \ \}}
+\DoxyCodeLine{00191\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{video_8c_a978b99877ebdb731d2787c1456c341c0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8c_a978b99877ebdb731d2787c1456c341c0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video_8c_a229934fe854471c3f5db925a213ebbb8}\label{video_8c_a229934fe854471c3f5db925a213ebbb8} 
+\index{video.c@{video.c}!video\_exit@{video\_exit}}
+\index{video\_exit@{video\_exit}!video.c@{video.c}}
+\doxysubsubsection{\texorpdfstring{video\_exit()}{video\_exit()}}
+{\footnotesize\ttfamily int() video\+\_\+exit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Exit video mode. 
+
+\begin{DoxyReturn}{Returns}
+0 if successful, 1 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{video_8c_source_l00113}{113}} of file \mbox{\hyperlink{video_8c_source}{video.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00114\ \ \ \ \ free(double\_buffer);}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ reg86\_t\ r86;}
+\DoxyCodeLine{00117\ \ \ \ \ memset(\&r86,\ 0,\ \textcolor{keyword}{sizeof}(r86));\ \ \ \textcolor{comment}{/*\ zero\ the\ structure\ */}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ r86.intno\ =\ \mbox{\hyperlink{_v_b_e2__0_8h_afeeffe52c8fd59db7c61cf8b02042dbf}{INT}};\ \textcolor{comment}{/*\ BIOS\ video\ services\ */}}
+\DoxyCodeLine{00120\ \ \ \ \ r86.ah\ =\ \mbox{\hyperlink{_v_b_e2__0_8h_a341716d2e3683a384373d7d31b5b705b}{AH\_CGA}};\ \ \ \ \textcolor{comment}{/*\ Set\ Video\ Mode\ function\ */}}
+\DoxyCodeLine{00121\ \ \ \ \ r86.al\ =\ \mbox{\hyperlink{_v_b_e2__0_8h_a6d748c5848b4d6894a2c4d2c5a4d5a1a}{CGA\_MODE}};\ \ \ \ \textcolor{comment}{/*\ 80x25\ text\ mode\ */}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordflow}{if}(\ sys\_int86(\&r86)\ !=\ OK\ )\ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)tvg\_exit():\ sys\_int86()\ failed\ \(\backslash\)n"{}});}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00126\ \ \ \ \ \}}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00128\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{video_8c_a229934fe854471c3f5db925a213ebbb8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video_8c_aa83603ceda0ca2ebdba9e79a2db9f339}\label{video_8c_aa83603ceda0ca2ebdba9e79a2db9f339} 
+\index{video.c@{video.c}!video\_get\_mode\_info@{video\_get\_mode\_info}}
+\index{video\_get\_mode\_info@{video\_get\_mode\_info}!video.c@{video.c}}
+\doxysubsubsection{\texorpdfstring{video\_get\_mode\_info()}{video\_get\_mode\_info()}}
+{\footnotesize\ttfamily int() video\+\_\+get\+\_\+mode\+\_\+info (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode,  }\item[{vbe\+\_\+mode\+\_\+info\+\_\+t \texorpdfstring{$\ast$}{*}}]{vmi\+\_\+p }\end{DoxyParamCaption})}
+
+
+
+Gets the mode info of the video card mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & mode to get info from \\
+\hline
+{\em vmi\+\_\+p} & pointer to the struct where the info will be stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, 1 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{video_8c_source_l00019}{19}} of file \mbox{\hyperlink{video_8c_source}{video.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ reg86\_t\ r86;}
+\DoxyCodeLine{00021\ \ \ \ \ memset(\&r86,\ 0,\ \textcolor{keyword}{sizeof}(r86));}
+\DoxyCodeLine{00022\ \ \ \ \ r86.intno\ =\ \mbox{\hyperlink{_v_b_e2__0_8h_afeeffe52c8fd59db7c61cf8b02042dbf}{INT}};\ \textcolor{comment}{/*\ BIOS\ video\ services\ */}}
+\DoxyCodeLine{00023\ \ \ \ \ r86.ah\ =\ \mbox{\hyperlink{_v_b_e2__0_8h_a7376fc123d2bb830fae15b92d9990762}{AH\_VBE}};}
+\DoxyCodeLine{00024\ \ \ \ \ r86.al\ =\ \mbox{\hyperlink{_v_b_e2__0_8h_ac3faf02beab492e13687e9f10efb6ca4}{GET\_VBE\_MODE\_INFO}};}
+\DoxyCodeLine{00025\ \ \ \ \ r86.cx\ =\ mode;}
+\DoxyCodeLine{00026\ \ \ \ \ r86.es\ =\ PB2BASE((uint64\_t)\ \&vmi\_p);\ \textcolor{comment}{//\ probably\ wrong}}
+\DoxyCodeLine{00027\ \ \ \ \ r86.di\ =\ PB2OFF((uint64\_t)\ \&vmi\_p);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{if}\ (sys\_int86(\&r86)\ !=\ OK)\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)tvg\_exit():\ sys\_int86()\ failed\ \(\backslash\)n"{}});}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00034\ \}}
+
+\end{DoxyCode}
+\Hypertarget{video_8c_a08d087a863e56db42b778915be8abeba}\label{video_8c_a08d087a863e56db42b778915be8abeba} 
+\index{video.c@{video.c}!video\_map\_phys\_mem@{video\_map\_phys\_mem}}
+\index{video\_map\_phys\_mem@{video\_map\_phys\_mem}!video.c@{video.c}}
+\doxysubsubsection{\texorpdfstring{video\_map\_phys\_mem()}{video\_map\_phys\_mem()}}
+{\footnotesize\ttfamily int() video\+\_\+map\+\_\+phys\+\_\+mem (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Maps the physical memory to the virtual memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & mode to map \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, 1 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{video_8c_source_l00036}{36}} of file \mbox{\hyperlink{video_8c_source}{video.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ vbe\_mode\_info\_t\ vmi\_p;}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{if}\ (vbe\_get\_mode\_info(mode,\ \&vmi\_p)!=\ OK)\textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00039\ \ \ \ \ h\_res\ =\ vmi\_p.XResolution;}
+\DoxyCodeLine{00040\ \ \ \ \ v\_res\ =\ vmi\_p.YResolution;}
+\DoxyCodeLine{00041\ \ \ \ \ bits\_per\_pixel\ =\ vmi\_p.BitsPerPixel;}
+\DoxyCodeLine{00042\ \ \ \ \ vmi\ =\ vmi\_p;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{struct\ }minix\_mem\_range\ mr;}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ r;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ phys\_bytes\ base\ =\ vmi\_p.PhysBasePtr;}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ size\ =\ h\_res\ *\ v\_res\ *\ (vmi.BytesPerScanLine\ /\ vmi.XResolution);}
+\DoxyCodeLine{00049\ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{/*\ Allow\ memory\ mapping\ */}}
+\DoxyCodeLine{00051\ \ \ \ \ mr.mr\_base\ =\ base;}
+\DoxyCodeLine{00052\ \ \ \ \ mr.mr\_limit\ =\ base\ +\ size;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordflow}{if}(\ OK\ !=\ (r\ =\ sys\_privctl(SELF,\ SYS\_PRIV\_ADD\_MEM,\ \&mr)))}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ panic(\textcolor{stringliteral}{"{}sys\_privctl\ (ADD\_MEM)\ failed:\ \%d\(\backslash\)n"{}},\ r);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{/*\ Map\ memory\ */}}
+\DoxyCodeLine{00058\ \ \ \ \ video\_mem\ =\ vm\_map\_phys(SELF,\ (\textcolor{keywordtype}{void}\ *)mr.mr\_base,\ size);}
+\DoxyCodeLine{00059\ \ \ \ \ double\_buffer\ =\ malloc(size);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordflow}{if}(video\_mem\ ==\ MAP\_FAILED)}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ panic(\textcolor{stringliteral}{"{}couldn't\ map\ video\ memory"{}});}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00065\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8c_a08d087a863e56db42b778915be8abeba_icgraph}
+\end{center}
+\end{figure}

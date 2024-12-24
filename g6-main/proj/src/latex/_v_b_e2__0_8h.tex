@@ -1,0 +1,363 @@
+\doxysection{devices/\+VBE2\+\_\+0.h File Reference}
+\hypertarget{_v_b_e2__0_8h}{}\label{_v_b_e2__0_8h}\index{devices/VBE2\_0.h@{devices/VBE2\_0.h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_v_b_e2__0_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_afeeffe52c8fd59db7c61cf8b02042dbf}{INT}}~0x10
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_a7376fc123d2bb830fae15b92d9990762}{AH\+\_\+\+VBE}}~0x4F
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_a6d748c5848b4d6894a2c4d2c5a4d5a1a}{CGA\+\_\+\+MODE}}~0x03
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_a341716d2e3683a384373d7d31b5b705b}{AH\+\_\+\+CGA}}~0x00
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_a6a585d53337740c8f0cf67924e493b93}{SUPORTED\+\_\+\+FUNC}}~0x4f
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_a5126539fbdf27a4bfab6940feb56bf3b}{SUCCES}}~0x00
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_abb508ea8227673f419e9fe3a86c30d8e}{FAIL}}~0x01
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_a88622ac4fa62cd8faf8beabd551e5412}{UNSUPORTED\+\_\+\+FUNC\+\_\+\+IN\+\_\+\+CURRENT\+\_\+\+HW\+\_\+\+CONFIG}}~0x02
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_ab830b4102aee203208cf1cc96a1a8aa0}{UNSUPORTED\+\_\+\+FUNC\+\_\+\+IN\+\_\+\+CURRENT\+\_\+\+VID\+\_\+\+MODE}}~0x03
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_a6b98835652d10f923cf25ca17c17b423}{GRAPHICS\+\_\+\+MODE\+\_\+105}}~0x105
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_a77ceb5ad57cfe3bbdeefe188cb1a0f0d}{GRAPHICS\+\_\+\+MODE\+\_\+110}}~0x110
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_aeba621a0393419824ec64a01d6343bd9}{GRAPHICS\+\_\+\+MODE\+\_\+115}}~0x115
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_a55d35aceec85eb9f5be0299e9737762d}{GRAPHICS\+\_\+\+MODE\+\_\+11A}}~0x11A
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_a215e54ac5193b0eb655b9adc056f1a84}{GRAPHICS\+\_\+\+MODE\+\_\+14C}}~0x14C
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_acbb1e5e9b91d58f76eb6c0554f03fc8c}{GET\+\_\+\+VBE\+\_\+\+CONTROLLER\+\_\+\+INFO}}~0x00
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_ac3faf02beab492e13687e9f10efb6ca4}{GET\+\_\+\+VBE\+\_\+\+MODE\+\_\+\+INFO}}~0x01
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_ab32156e1d72cb92b120bb16883c87eea}{SET\+\_\+\+VBE\+\_\+\+MODE}}~0x02
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_a57d38b6a8b4cbf48610698d0aa3f235c}{LINEAR\+\_\+\+FRAME\+\_\+\+BUFFER\+\_\+\+MODEL}}~BIT(14)
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_abb7f0ec731b2585bceb8dbeaa9a357bb}{DIRECT\+\_\+\+COLOR\+\_\+\+MODEL}}~0x06
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_aa594a7951d5b123295baf787ca642fe0}{FIRST\+\_\+\+N\+\_\+\+BITS}}(n)~((1 $<$$<$ n) -\/ 1)
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_aa9732a31f97de6fe2211561a3847e7fc}{R}}(x)~((x $>$$>$ 16) \& 0x\+FF)
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_a542b12af0d18d79eddffd5d5cd08617d}{G}}(x)~((x $>$$>$ 8) \& 0x\+FF)
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_a7b96e3a863c6ef1b261c051574113e7c}{B}}(x)~(x \& 0x\+FF)
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_ada3b877a17bccbdb8aed3afedde97753}{R\+\_\+\+BITS}}~0x00\+FF0000
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_a785122e4252aa82b9fa6891216321222}{G\+\_\+\+BITS}}~0x0000\+FF00
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_ad889e14369e7c17021a8bb8eb36a36cb}{B\+\_\+\+BITS}}~0x000000\+FF
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_a3960e784c7c8e6c83ba671b3702fb67f}{R\+\_\+\+OFFSET}}~16
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_aa2e9054ba9acdbdcb1c991fc8c2286d4}{G\+\_\+\+OFFSET}}~8
+\item 
+\#define \mbox{\hyperlink{_v_b_e2__0_8h_a6c116f4575d27d102053dbc576117fa4}{B\+\_\+\+OFFSET}}~0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_v_b_e2__0_8h_a341716d2e3683a384373d7d31b5b705b}\label{_v_b_e2__0_8h_a341716d2e3683a384373d7d31b5b705b} 
+\index{VBE2\_0.h@{VBE2\_0.h}!AH\_CGA@{AH\_CGA}}
+\index{AH\_CGA@{AH\_CGA}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{AH\_CGA}{AH\_CGA}}
+{\footnotesize\ttfamily \#define AH\+\_\+\+CGA~0x00}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00007}{7}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_a7376fc123d2bb830fae15b92d9990762}\label{_v_b_e2__0_8h_a7376fc123d2bb830fae15b92d9990762} 
+\index{VBE2\_0.h@{VBE2\_0.h}!AH\_VBE@{AH\_VBE}}
+\index{AH\_VBE@{AH\_VBE}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{AH\_VBE}{AH\_VBE}}
+{\footnotesize\ttfamily \#define AH\+\_\+\+VBE~0x4F}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00005}{5}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_a7b96e3a863c6ef1b261c051574113e7c}\label{_v_b_e2__0_8h_a7b96e3a863c6ef1b261c051574113e7c} 
+\index{VBE2\_0.h@{VBE2\_0.h}!B@{B}}
+\index{B@{B}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{B}{B}}
+{\footnotesize\ttfamily \#define B(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(x \& 0x\+FF)}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00036}{36}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_ad889e14369e7c17021a8bb8eb36a36cb}\label{_v_b_e2__0_8h_ad889e14369e7c17021a8bb8eb36a36cb} 
+\index{VBE2\_0.h@{VBE2\_0.h}!B\_BITS@{B\_BITS}}
+\index{B\_BITS@{B\_BITS}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{B\_BITS}{B\_BITS}}
+{\footnotesize\ttfamily \#define B\+\_\+\+BITS~0x000000\+FF}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00040}{40}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_a6c116f4575d27d102053dbc576117fa4}\label{_v_b_e2__0_8h_a6c116f4575d27d102053dbc576117fa4} 
+\index{VBE2\_0.h@{VBE2\_0.h}!B\_OFFSET@{B\_OFFSET}}
+\index{B\_OFFSET@{B\_OFFSET}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{B\_OFFSET}{B\_OFFSET}}
+{\footnotesize\ttfamily \#define B\+\_\+\+OFFSET~0}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00044}{44}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_a6d748c5848b4d6894a2c4d2c5a4d5a1a}\label{_v_b_e2__0_8h_a6d748c5848b4d6894a2c4d2c5a4d5a1a} 
+\index{VBE2\_0.h@{VBE2\_0.h}!CGA\_MODE@{CGA\_MODE}}
+\index{CGA\_MODE@{CGA\_MODE}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{CGA\_MODE}{CGA\_MODE}}
+{\footnotesize\ttfamily \#define CGA\+\_\+\+MODE~0x03}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00006}{6}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_abb7f0ec731b2585bceb8dbeaa9a357bb}\label{_v_b_e2__0_8h_abb7f0ec731b2585bceb8dbeaa9a357bb} 
+\index{VBE2\_0.h@{VBE2\_0.h}!DIRECT\_COLOR\_MODEL@{DIRECT\_COLOR\_MODEL}}
+\index{DIRECT\_COLOR\_MODEL@{DIRECT\_COLOR\_MODEL}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{DIRECT\_COLOR\_MODEL}{DIRECT\_COLOR\_MODEL}}
+{\footnotesize\ttfamily \#define DIRECT\+\_\+\+COLOR\+\_\+\+MODEL~0x06}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00029}{29}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_abb508ea8227673f419e9fe3a86c30d8e}\label{_v_b_e2__0_8h_abb508ea8227673f419e9fe3a86c30d8e} 
+\index{VBE2\_0.h@{VBE2\_0.h}!FAIL@{FAIL}}
+\index{FAIL@{FAIL}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{FAIL}{FAIL}}
+{\footnotesize\ttfamily \#define FAIL~0x01}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00012}{12}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_aa594a7951d5b123295baf787ca642fe0}\label{_v_b_e2__0_8h_aa594a7951d5b123295baf787ca642fe0} 
+\index{VBE2\_0.h@{VBE2\_0.h}!FIRST\_N\_BITS@{FIRST\_N\_BITS}}
+\index{FIRST\_N\_BITS@{FIRST\_N\_BITS}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{FIRST\_N\_BITS}{FIRST\_N\_BITS}}
+{\footnotesize\ttfamily \#define FIRST\+\_\+\+N\+\_\+\+BITS(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})~((1 $<$$<$ n) -\/ 1)}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00032}{32}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_a542b12af0d18d79eddffd5d5cd08617d}\label{_v_b_e2__0_8h_a542b12af0d18d79eddffd5d5cd08617d} 
+\index{VBE2\_0.h@{VBE2\_0.h}!G@{G}}
+\index{G@{G}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{G}{G}}
+{\footnotesize\ttfamily \#define G(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~((x $>$$>$ 8) \& 0x\+FF)}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00035}{35}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_a785122e4252aa82b9fa6891216321222}\label{_v_b_e2__0_8h_a785122e4252aa82b9fa6891216321222} 
+\index{VBE2\_0.h@{VBE2\_0.h}!G\_BITS@{G\_BITS}}
+\index{G\_BITS@{G\_BITS}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{G\_BITS}{G\_BITS}}
+{\footnotesize\ttfamily \#define G\+\_\+\+BITS~0x0000\+FF00}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00039}{39}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_aa2e9054ba9acdbdcb1c991fc8c2286d4}\label{_v_b_e2__0_8h_aa2e9054ba9acdbdcb1c991fc8c2286d4} 
+\index{VBE2\_0.h@{VBE2\_0.h}!G\_OFFSET@{G\_OFFSET}}
+\index{G\_OFFSET@{G\_OFFSET}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{G\_OFFSET}{G\_OFFSET}}
+{\footnotesize\ttfamily \#define G\+\_\+\+OFFSET~8}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00043}{43}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_acbb1e5e9b91d58f76eb6c0554f03fc8c}\label{_v_b_e2__0_8h_acbb1e5e9b91d58f76eb6c0554f03fc8c} 
+\index{VBE2\_0.h@{VBE2\_0.h}!GET\_VBE\_CONTROLLER\_INFO@{GET\_VBE\_CONTROLLER\_INFO}}
+\index{GET\_VBE\_CONTROLLER\_INFO@{GET\_VBE\_CONTROLLER\_INFO}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{GET\_VBE\_CONTROLLER\_INFO}{GET\_VBE\_CONTROLLER\_INFO}}
+{\footnotesize\ttfamily \#define GET\+\_\+\+VBE\+\_\+\+CONTROLLER\+\_\+\+INFO~0x00}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00023}{23}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_ac3faf02beab492e13687e9f10efb6ca4}\label{_v_b_e2__0_8h_ac3faf02beab492e13687e9f10efb6ca4} 
+\index{VBE2\_0.h@{VBE2\_0.h}!GET\_VBE\_MODE\_INFO@{GET\_VBE\_MODE\_INFO}}
+\index{GET\_VBE\_MODE\_INFO@{GET\_VBE\_MODE\_INFO}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{GET\_VBE\_MODE\_INFO}{GET\_VBE\_MODE\_INFO}}
+{\footnotesize\ttfamily \#define GET\+\_\+\+VBE\+\_\+\+MODE\+\_\+\+INFO~0x01}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00024}{24}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_a6b98835652d10f923cf25ca17c17b423}\label{_v_b_e2__0_8h_a6b98835652d10f923cf25ca17c17b423} 
+\index{VBE2\_0.h@{VBE2\_0.h}!GRAPHICS\_MODE\_105@{GRAPHICS\_MODE\_105}}
+\index{GRAPHICS\_MODE\_105@{GRAPHICS\_MODE\_105}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{GRAPHICS\_MODE\_105}{GRAPHICS\_MODE\_105}}
+{\footnotesize\ttfamily \#define GRAPHICS\+\_\+\+MODE\+\_\+105~0x105}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00016}{16}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_a77ceb5ad57cfe3bbdeefe188cb1a0f0d}\label{_v_b_e2__0_8h_a77ceb5ad57cfe3bbdeefe188cb1a0f0d} 
+\index{VBE2\_0.h@{VBE2\_0.h}!GRAPHICS\_MODE\_110@{GRAPHICS\_MODE\_110}}
+\index{GRAPHICS\_MODE\_110@{GRAPHICS\_MODE\_110}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{GRAPHICS\_MODE\_110}{GRAPHICS\_MODE\_110}}
+{\footnotesize\ttfamily \#define GRAPHICS\+\_\+\+MODE\+\_\+110~0x110}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00017}{17}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_aeba621a0393419824ec64a01d6343bd9}\label{_v_b_e2__0_8h_aeba621a0393419824ec64a01d6343bd9} 
+\index{VBE2\_0.h@{VBE2\_0.h}!GRAPHICS\_MODE\_115@{GRAPHICS\_MODE\_115}}
+\index{GRAPHICS\_MODE\_115@{GRAPHICS\_MODE\_115}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{GRAPHICS\_MODE\_115}{GRAPHICS\_MODE\_115}}
+{\footnotesize\ttfamily \#define GRAPHICS\+\_\+\+MODE\+\_\+115~0x115}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00018}{18}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_a55d35aceec85eb9f5be0299e9737762d}\label{_v_b_e2__0_8h_a55d35aceec85eb9f5be0299e9737762d} 
+\index{VBE2\_0.h@{VBE2\_0.h}!GRAPHICS\_MODE\_11A@{GRAPHICS\_MODE\_11A}}
+\index{GRAPHICS\_MODE\_11A@{GRAPHICS\_MODE\_11A}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{GRAPHICS\_MODE\_11A}{GRAPHICS\_MODE\_11A}}
+{\footnotesize\ttfamily \#define GRAPHICS\+\_\+\+MODE\+\_\+11A~0x11A}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00019}{19}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_a215e54ac5193b0eb655b9adc056f1a84}\label{_v_b_e2__0_8h_a215e54ac5193b0eb655b9adc056f1a84} 
+\index{VBE2\_0.h@{VBE2\_0.h}!GRAPHICS\_MODE\_14C@{GRAPHICS\_MODE\_14C}}
+\index{GRAPHICS\_MODE\_14C@{GRAPHICS\_MODE\_14C}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{GRAPHICS\_MODE\_14C}{GRAPHICS\_MODE\_14C}}
+{\footnotesize\ttfamily \#define GRAPHICS\+\_\+\+MODE\+\_\+14C~0x14C}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00020}{20}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_afeeffe52c8fd59db7c61cf8b02042dbf}\label{_v_b_e2__0_8h_afeeffe52c8fd59db7c61cf8b02042dbf} 
+\index{VBE2\_0.h@{VBE2\_0.h}!INT@{INT}}
+\index{INT@{INT}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{INT}{INT}}
+{\footnotesize\ttfamily \#define INT~0x10}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00004}{4}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_a57d38b6a8b4cbf48610698d0aa3f235c}\label{_v_b_e2__0_8h_a57d38b6a8b4cbf48610698d0aa3f235c} 
+\index{VBE2\_0.h@{VBE2\_0.h}!LINEAR\_FRAME\_BUFFER\_MODEL@{LINEAR\_FRAME\_BUFFER\_MODEL}}
+\index{LINEAR\_FRAME\_BUFFER\_MODEL@{LINEAR\_FRAME\_BUFFER\_MODEL}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{LINEAR\_FRAME\_BUFFER\_MODEL}{LINEAR\_FRAME\_BUFFER\_MODEL}}
+{\footnotesize\ttfamily \#define LINEAR\+\_\+\+FRAME\+\_\+\+BUFFER\+\_\+\+MODEL~BIT(14)}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00027}{27}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_aa9732a31f97de6fe2211561a3847e7fc}\label{_v_b_e2__0_8h_aa9732a31f97de6fe2211561a3847e7fc} 
+\index{VBE2\_0.h@{VBE2\_0.h}!R@{R}}
+\index{R@{R}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{R}{R}}
+{\footnotesize\ttfamily \#define R(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~((x $>$$>$ 16) \& 0x\+FF)}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00034}{34}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_ada3b877a17bccbdb8aed3afedde97753}\label{_v_b_e2__0_8h_ada3b877a17bccbdb8aed3afedde97753} 
+\index{VBE2\_0.h@{VBE2\_0.h}!R\_BITS@{R\_BITS}}
+\index{R\_BITS@{R\_BITS}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{R\_BITS}{R\_BITS}}
+{\footnotesize\ttfamily \#define R\+\_\+\+BITS~0x00\+FF0000}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00038}{38}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_a3960e784c7c8e6c83ba671b3702fb67f}\label{_v_b_e2__0_8h_a3960e784c7c8e6c83ba671b3702fb67f} 
+\index{VBE2\_0.h@{VBE2\_0.h}!R\_OFFSET@{R\_OFFSET}}
+\index{R\_OFFSET@{R\_OFFSET}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{R\_OFFSET}{R\_OFFSET}}
+{\footnotesize\ttfamily \#define R\+\_\+\+OFFSET~16}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00042}{42}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_ab32156e1d72cb92b120bb16883c87eea}\label{_v_b_e2__0_8h_ab32156e1d72cb92b120bb16883c87eea} 
+\index{VBE2\_0.h@{VBE2\_0.h}!SET\_VBE\_MODE@{SET\_VBE\_MODE}}
+\index{SET\_VBE\_MODE@{SET\_VBE\_MODE}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{SET\_VBE\_MODE}{SET\_VBE\_MODE}}
+{\footnotesize\ttfamily \#define SET\+\_\+\+VBE\+\_\+\+MODE~0x02}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00025}{25}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_a5126539fbdf27a4bfab6940feb56bf3b}\label{_v_b_e2__0_8h_a5126539fbdf27a4bfab6940feb56bf3b} 
+\index{VBE2\_0.h@{VBE2\_0.h}!SUCCES@{SUCCES}}
+\index{SUCCES@{SUCCES}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{SUCCES}{SUCCES}}
+{\footnotesize\ttfamily \#define SUCCES~0x00}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00011}{11}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_a6a585d53337740c8f0cf67924e493b93}\label{_v_b_e2__0_8h_a6a585d53337740c8f0cf67924e493b93} 
+\index{VBE2\_0.h@{VBE2\_0.h}!SUPORTED\_FUNC@{SUPORTED\_FUNC}}
+\index{SUPORTED\_FUNC@{SUPORTED\_FUNC}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{SUPORTED\_FUNC}{SUPORTED\_FUNC}}
+{\footnotesize\ttfamily \#define SUPORTED\+\_\+\+FUNC~0x4f}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00010}{10}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_a88622ac4fa62cd8faf8beabd551e5412}\label{_v_b_e2__0_8h_a88622ac4fa62cd8faf8beabd551e5412} 
+\index{VBE2\_0.h@{VBE2\_0.h}!UNSUPORTED\_FUNC\_IN\_CURRENT\_HW\_CONFIG@{UNSUPORTED\_FUNC\_IN\_CURRENT\_HW\_CONFIG}}
+\index{UNSUPORTED\_FUNC\_IN\_CURRENT\_HW\_CONFIG@{UNSUPORTED\_FUNC\_IN\_CURRENT\_HW\_CONFIG}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{UNSUPORTED\_FUNC\_IN\_CURRENT\_HW\_CONFIG}{UNSUPORTED\_FUNC\_IN\_CURRENT\_HW\_CONFIG}}
+{\footnotesize\ttfamily \#define UNSUPORTED\+\_\+\+FUNC\+\_\+\+IN\+\_\+\+CURRENT\+\_\+\+HW\+\_\+\+CONFIG~0x02}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00013}{13}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+
+\Hypertarget{_v_b_e2__0_8h_ab830b4102aee203208cf1cc96a1a8aa0}\label{_v_b_e2__0_8h_ab830b4102aee203208cf1cc96a1a8aa0} 
+\index{VBE2\_0.h@{VBE2\_0.h}!UNSUPORTED\_FUNC\_IN\_CURRENT\_VID\_MODE@{UNSUPORTED\_FUNC\_IN\_CURRENT\_VID\_MODE}}
+\index{UNSUPORTED\_FUNC\_IN\_CURRENT\_VID\_MODE@{UNSUPORTED\_FUNC\_IN\_CURRENT\_VID\_MODE}!VBE2\_0.h@{VBE2\_0.h}}
+\doxysubsubsection{\texorpdfstring{UNSUPORTED\_FUNC\_IN\_CURRENT\_VID\_MODE}{UNSUPORTED\_FUNC\_IN\_CURRENT\_VID\_MODE}}
+{\footnotesize\ttfamily \#define UNSUPORTED\+\_\+\+FUNC\+\_\+\+IN\+\_\+\+CURRENT\+\_\+\+VID\+\_\+\+MODE~0x03}
+
+
+
+Definition at line \mbox{\hyperlink{_v_b_e2__0_8h_source_l00014}{14}} of file \mbox{\hyperlink{_v_b_e2__0_8h_source}{VBE2\+\_\+0.\+h}}.
+

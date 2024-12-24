@@ -1,0 +1,1095 @@
+\doxysection{game/board.c File Reference}
+\hypertarget{board_8c}{}\label{board_8c}\index{game/board.c@{game/board.c}}
+{\ttfamily \#include \"{}board.\+h\"{}}\newline
+Include dependency graph for board.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{board_8c_a21e8719a38fd9b485d449579692ded62}{destroy\+\_\+board}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the board. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{board_8c_a025b9ccf02ac7e1b50e8797e750ec116}{is\+Game\+Over}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the game is over. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_trajectory}{Trajectory}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{board_8c_a90470a95ffa5acb52c32afdfaedb0d6b}{add\+\_\+trajectory}} ()
+\begin{DoxyCompactList}\small\item\em Adds a trajectory to the array of trajectories. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_trajectory}{Trajectory}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{board_8c_a8f8c442b372b0044baef767846ce0c85}{add\+\_\+trajectory\+\_\+copy}} (\mbox{\hyperlink{struct_trajectory}{Trajectory}} \texorpdfstring{$\ast$}{*}trajectory)
+\begin{DoxyCompactList}\small\item\em Adds a copy of a trajectory to the array of trajectories. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_trajectory}{Trajectory}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{board_8c_a3711c73e458cc00131947d98bb2450dc}{add\+\_\+trajectory\+\_\+piece}} (\mbox{\hyperlink{struct_piece}{Piece}} \texorpdfstring{$\ast$}{*}piece)
+\begin{DoxyCompactList}\small\item\em Adds a trajectory to an array of trajectories of a piece. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_move}{Move}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{board_8c_a167a078502fe9e0bebb7cb182f9b4b11}{add\+\_\+move}} (\mbox{\hyperlink{struct_trajectory}{Trajectory}} \texorpdfstring{$\ast$}{*}t)
+\begin{DoxyCompactList}\small\item\em Adds a move to a trajectory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{board_8c_a9cc3000982f33ddcd2952ec8d602dc02}{remove\+\_\+move}} (\mbox{\hyperlink{struct_trajectory}{Trajectory}} \texorpdfstring{$\ast$}{*}t)
+\begin{DoxyCompactList}\small\item\em Removes a move from a trajectory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_trajectory}{Trajectory}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{board_8c_abdf234d17b5e10bb5906b019f9d313da}{get\+Trajectory}} (\mbox{\hyperlink{struct_piece}{Piece}} \texorpdfstring{$\ast$}{*}piece, int end\+\_\+row, int end\+\_\+col)
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{struct_trajectory}{Trajectory} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{board_8c_a196466caf97613073b2f46a536aeab00}{calculate\+\_\+moves}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the moves of all the pieces. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{board_8c_a3f702599a3dc16396e142e0c50a87321}{current\+\_\+row}} (\mbox{\hyperlink{struct_trajectory}{Trajectory}} \texorpdfstring{$\ast$}{*}t)
+\begin{DoxyCompactList}\small\item\em Returns the current row of a trajectory. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{board_8c_a643b00b2ad2f337bc85e012a5e8470c0}{current\+\_\+col}} (\mbox{\hyperlink{struct_trajectory}{Trajectory}} \texorpdfstring{$\ast$}{*}t)
+\begin{DoxyCompactList}\small\item\em Returns the current column of a trajectory. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{board_8c_ad20e11b277c67bede5c2f0aea810822b}{inside\+Board}} (int row, int col)
+\begin{DoxyCompactList}\small\item\em Checks if a position is inside the board. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{board_8c_a16fb663a09087c10c4364f2fef39ede7}{has\+Piece}} (int row, int col)
+\begin{DoxyCompactList}\small\item\em Checks if a piece exists in a position. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{board_8c_a98c4983c9a3b64e19652292d0e528327}{has\+Enemy\+Piece}} (int row, int col, \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} c)
+\begin{DoxyCompactList}\small\item\em Checks if a piece is an enemy. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{board_8c_a48d410f354013beb13e7a9009ccee6fa}{has\+Allied\+Piece}} (int row, int col, \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} c)
+\begin{DoxyCompactList}\small\item\em Checks if a piece is allied. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{board_8c_a7de21db3a3efa590179541304d7901a9}{clear\+\_\+trajectories}} ()
+\begin{DoxyCompactList}\small\item\em Clears the trajectories. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{board_8c_a40b3b38a837449a04128b9c255e43c2a}{calculate\+\_\+piece\+\_\+moves}} (\mbox{\hyperlink{struct_trajectory}{Trajectory}} \texorpdfstring{$\ast$}{*}t)
+\begin{DoxyCompactList}\small\item\em Calculates the moves of a piece. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{board_8c_a8ed9dd5e9c9e940055fc2fda0bb4d220}{init\+\_\+board}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{board_8c_ae891cc379cc1d6f806745cc53e83b09d}{capture\+Pieces}} (\mbox{\hyperlink{struct_trajectory}{Trajectory}} \texorpdfstring{$\ast$}{*}t)
+\begin{DoxyCompactList}\small\item\em Captures the pieces in a trajectory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_piece}{Piece}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{board_8c_ab7a4538a6cfde5b8e1a246e084c68c72}{board}} \mbox{[}8\mbox{]}\mbox{[}8\mbox{]}
+\item 
+\mbox{\hyperlink{struct_piece}{Piece}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{board_8c_a4439dd9a93a0c191e4a514540d97c76b}{pieces}} \mbox{[}24\mbox{]}
+\item 
+\mbox{\hyperlink{struct_piece}{Piece}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\+\_\+piece}} = NULL
+\item 
+\mbox{\hyperlink{struct_trajectory}{Trajectory}} \mbox{\hyperlink{board_8c_a75f3a9c4ee37c341da26bc899fe1f3f1}{all\+\_\+moves}} \mbox{[}150\mbox{]}
+\item 
+int \mbox{\hyperlink{board_8c_ad6061628183a69346f2529f4170f0cd8}{num\+\_\+moves}}
+\item 
+int \mbox{\hyperlink{board_8c_a53e5299d3b97c47fb1e6e9b89020f39b}{captures}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{board_8c_a167a078502fe9e0bebb7cb182f9b4b11}\label{board_8c_a167a078502fe9e0bebb7cb182f9b4b11} 
+\index{board.c@{board.c}!add\_move@{add\_move}}
+\index{add\_move@{add\_move}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{add\_move()}{add\_move()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_move}{Move}} \texorpdfstring{$\ast$}{*} add\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_trajectory}{Trajectory}} \texorpdfstring{$\ast$}{*}}]{t }\end{DoxyParamCaption})}
+
+
+
+Adds a move to a trajectory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \doxylink{struct_trajectory}{Trajectory} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Move\texorpdfstring{$\ast$}{*} being added 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{board_8c_source_l00056}{56}} of file \mbox{\hyperlink{board_8c_source}{board.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordflow}{if}\ (t-\/>\mbox{\hyperlink{struct_trajectory_a095f7a71e91ff50730c34b2074c23b9d}{num\_moves}}\ >=\ 8)\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \&t-\/>\mbox{\hyperlink{struct_trajectory_a48845b1a230e3822a4820b0741803bf6}{moves}}[0];}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{struct_move}{Move}}*\ move\ =\ \&t-\/>\mbox{\hyperlink{struct_trajectory_a48845b1a230e3822a4820b0741803bf6}{moves}}[t-\/>\mbox{\hyperlink{struct_trajectory_a095f7a71e91ff50730c34b2074c23b9d}{num\_moves}}];}
+\DoxyCodeLine{00061\ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_a318a43aa622cd8a882965a1814e5cdd4}{end\_row}}\ =\ 0;}
+\DoxyCodeLine{00062\ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_aba405a0f310265c9782a9c9b92b0a6e0}{end\_col}}\ =\ 0;}
+\DoxyCodeLine{00063\ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_ab9cdf7d77b4ba6028ea20ae90a54db88}{piece\_captured}}\ =\ NULL;}
+\DoxyCodeLine{00064\ \ \ \ \ t-\/>\mbox{\hyperlink{struct_trajectory_a095f7a71e91ff50730c34b2074c23b9d}{num\_moves}}++;}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordflow}{return}\ move;}
+\DoxyCodeLine{00066\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_a167a078502fe9e0bebb7cb182f9b4b11_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{board_8c_a90470a95ffa5acb52c32afdfaedb0d6b}\label{board_8c_a90470a95ffa5acb52c32afdfaedb0d6b} 
+\index{board.c@{board.c}!add\_trajectory@{add\_trajectory}}
+\index{add\_trajectory@{add\_trajectory}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{add\_trajectory()}{add\_trajectory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_trajectory}{Trajectory}} \texorpdfstring{$\ast$}{*} add\+\_\+trajectory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Adds a trajectory to the array of trajectories. 
+
+\begin{DoxyReturn}{Returns}
+Added trajectory 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{board_8c_source_l00028}{28}} of file \mbox{\hyperlink{board_8c_source}{board.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{board_8c_ad6061628183a69346f2529f4170f0cd8}{num\_moves}}\ >=\ 150)\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \&\mbox{\hyperlink{board_8c_a75f3a9c4ee37c341da26bc899fe1f3f1}{all\_moves}}[0];}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{struct_trajectory}{Trajectory}}*\ trajectory\ =\ \&\mbox{\hyperlink{board_8c_a75f3a9c4ee37c341da26bc899fe1f3f1}{all\_moves}}[\mbox{\hyperlink{board_8c_ad6061628183a69346f2529f4170f0cd8}{num\_moves}}];}
+\DoxyCodeLine{00033\ \ \ \ \ trajectory-\/>\mbox{\hyperlink{struct_trajectory_a095f7a71e91ff50730c34b2074c23b9d}{num\_moves}}\ =\ 0;}
+\DoxyCodeLine{00034\ \ \ \ \ trajectory-\/>\mbox{\hyperlink{struct_trajectory_a799e67180a72b24337949c7e8b141891}{piece}}\ =\ NULL;}
+\DoxyCodeLine{00035\ \ \ \ \ trajectory-\/>\mbox{\hyperlink{struct_trajectory_a83d7ead01f6f719e1a8ffe4678839b12}{isCapturing}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{board_8c_ad6061628183a69346f2529f4170f0cd8}{num\_moves}}++;}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordflow}{return}\ trajectory;}
+\DoxyCodeLine{00038\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_a90470a95ffa5acb52c32afdfaedb0d6b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{board_8c_a8f8c442b372b0044baef767846ce0c85}\label{board_8c_a8f8c442b372b0044baef767846ce0c85} 
+\index{board.c@{board.c}!add\_trajectory\_copy@{add\_trajectory\_copy}}
+\index{add\_trajectory\_copy@{add\_trajectory\_copy}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{add\_trajectory\_copy()}{add\_trajectory\_copy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_trajectory}{Trajectory}} \texorpdfstring{$\ast$}{*} add\+\_\+trajectory\+\_\+copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_trajectory}{Trajectory}} \texorpdfstring{$\ast$}{*}}]{trajectory }\end{DoxyParamCaption})}
+
+
+
+Adds a copy of a trajectory to the array of trajectories. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trajectory} & trajectory to copy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the added trajectory 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{board_8c_source_l00040}{40}} of file \mbox{\hyperlink{board_8c_source}{board.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{struct_trajectory}{Trajectory}}*\ new\_trajectory\ =\ \mbox{\hyperlink{board_8c_a90470a95ffa5acb52c32afdfaedb0d6b}{add\_trajectory}}();}
+\DoxyCodeLine{00042\ \ \ \ \ new\_trajectory-\/>\mbox{\hyperlink{struct_trajectory_a799e67180a72b24337949c7e8b141891}{piece}}\ =\ trajectory-\/>\mbox{\hyperlink{struct_trajectory_a799e67180a72b24337949c7e8b141891}{piece}};}
+\DoxyCodeLine{00043\ \ \ \ \ new\_trajectory-\/>\mbox{\hyperlink{struct_trajectory_a095f7a71e91ff50730c34b2074c23b9d}{num\_moves}}\ =\ trajectory-\/>\mbox{\hyperlink{struct_trajectory_a095f7a71e91ff50730c34b2074c23b9d}{num\_moves}};}
+\DoxyCodeLine{00044\ \ \ \ \ new\_trajectory-\/>\mbox{\hyperlink{struct_trajectory_a83d7ead01f6f719e1a8ffe4678839b12}{isCapturing}}\ =\ trajectory-\/>\mbox{\hyperlink{struct_trajectory_a83d7ead01f6f719e1a8ffe4678839b12}{isCapturing}};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ trajectory-\/>\mbox{\hyperlink{struct_trajectory_a095f7a71e91ff50730c34b2074c23b9d}{num\_moves}};\ i++)}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ new\_trajectory-\/>\mbox{\hyperlink{struct_trajectory_a48845b1a230e3822a4820b0741803bf6}{moves}}[i]\ =\ trajectory-\/>\mbox{\hyperlink{struct_trajectory_a48845b1a230e3822a4820b0741803bf6}{moves}}[i];}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordflow}{return}\ new\_trajectory;}
+\DoxyCodeLine{00048\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{board_8c_a8f8c442b372b0044baef767846ce0c85_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_a8f8c442b372b0044baef767846ce0c85_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{board_8c_a3711c73e458cc00131947d98bb2450dc}\label{board_8c_a3711c73e458cc00131947d98bb2450dc} 
+\index{board.c@{board.c}!add\_trajectory\_piece@{add\_trajectory\_piece}}
+\index{add\_trajectory\_piece@{add\_trajectory\_piece}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{add\_trajectory\_piece()}{add\_trajectory\_piece()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_trajectory}{Trajectory}} \texorpdfstring{$\ast$}{*} add\+\_\+trajectory\+\_\+piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{piece }\end{DoxyParamCaption})}
+
+
+
+Adds a trajectory to an array of trajectories of a piece. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em piece} & piece to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Added trajectory 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{board_8c_source_l00050}{50}} of file \mbox{\hyperlink{board_8c_source}{board.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{struct_trajectory}{Trajectory}}*\ new\_trajectory\ =\ \mbox{\hyperlink{board_8c_a90470a95ffa5acb52c32afdfaedb0d6b}{add\_trajectory}}();}
+\DoxyCodeLine{00052\ \ \ \ \ new\_trajectory-\/>\mbox{\hyperlink{struct_trajectory_a799e67180a72b24337949c7e8b141891}{piece}}\ =\ piece;}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordflow}{return}\ new\_trajectory;}
+\DoxyCodeLine{00054\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{board_8c_a3711c73e458cc00131947d98bb2450dc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{board_8c_a196466caf97613073b2f46a536aeab00}\label{board_8c_a196466caf97613073b2f46a536aeab00} 
+\index{board.c@{board.c}!calculate\_moves@{calculate\_moves}}
+\index{calculate\_moves@{calculate\_moves}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{calculate\_moves()}{calculate\_moves()}}
+{\footnotesize\ttfamily void calculate\+\_\+moves (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates the moves of all the pieces. 
+
+
+
+Definition at line \mbox{\hyperlink{board_8c_source_l00082}{82}} of file \mbox{\hyperlink{board_8c_source}{board.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{//\ Clear\ all\ previous\ moves}}
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{board_8c_ad6061628183a69346f2529f4170f0cd8}{num\_moves}}\ =\ 0;}
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{board_8c_a53e5299d3b97c47fb1e6e9b89020f39b}{captures}}\ =\ 0;}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{//\ Loop\ over\ all\ squares\ on\ the\ board}}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{int}\ off\ =\ 0;}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_aaca79719959531adcb538aad5a0c53e8}{turn}}\ ==\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1ca283fc479650da98250635b9c3c0e7e50}{WHITE}})\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ off\ =\ 12;}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+\DoxyCodeLine{00092\ \ \ \ \ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 12;\ i++)\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_piece}{Piece}}*\ piece\ =\ \mbox{\hyperlink{board_8c_a4439dd9a93a0c191e4a514540d97c76b}{pieces}}[i\ +\ off];}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (piece-\/>\mbox{\hyperlink{struct_piece_a018c7ca7ee7c12c88b59c064ce7d7d6a}{isCaptured}})\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};\ \ \textcolor{comment}{//\ This\ piece\ is\ captured,\ so\ skip\ it}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_trajectory}{Trajectory}}\ t;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ t.\mbox{\hyperlink{struct_trajectory_a799e67180a72b24337949c7e8b141891}{piece}}\ =\ piece;}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ t.\mbox{\hyperlink{struct_trajectory_a83d7ead01f6f719e1a8ffe4678839b12}{isCapturing}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ t.\mbox{\hyperlink{struct_trajectory_a095f7a71e91ff50730c34b2074c23b9d}{num\_moves}}\ =\ 0;}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a40b3b38a837449a04128b9c255e43c2a}{calculate\_piece\_moves}}(\&t);}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \ \ }
+\DoxyCodeLine{00105\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_a196466caf97613073b2f46a536aeab00_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_a196466caf97613073b2f46a536aeab00_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{board_8c_a40b3b38a837449a04128b9c255e43c2a}\label{board_8c_a40b3b38a837449a04128b9c255e43c2a} 
+\index{board.c@{board.c}!calculate\_piece\_moves@{calculate\_piece\_moves}}
+\index{calculate\_piece\_moves@{calculate\_piece\_moves}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{calculate\_piece\_moves()}{calculate\_piece\_moves()}}
+{\footnotesize\ttfamily void calculate\+\_\+piece\+\_\+moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_trajectory}{Trajectory}} \texorpdfstring{$\ast$}{*}}]{t }\end{DoxyParamCaption})}
+
+
+
+Calculates the moves of a piece. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \doxylink{struct_trajectory}{Trajectory} to calculate the moves \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{board_8c_source_l00151}{151}} of file \mbox{\hyperlink{board_8c_source}{board.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00152\ \ \ \ \ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordflow}{if}\ (!t-\/>\mbox{\hyperlink{struct_trajectory_a83d7ead01f6f719e1a8ffe4678839b12}{isCapturing}}\ \&\&\ t-\/>\mbox{\hyperlink{struct_trajectory_a095f7a71e91ff50730c34b2074c23b9d}{num\_moves}}\ >0)\{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a8f8c442b372b0044baef767846ce0c85}{add\_trajectory\_copy}}(t);}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00156\ \ \ \ \ \}}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{bool}\ isComplete\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00159\ \ \ \ \ \mbox{\hyperlink{struct_piece}{Piece}}\ *piece\ =\ t-\/>\mbox{\hyperlink{struct_trajectory_a799e67180a72b24337949c7e8b141891}{piece}};}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{int}\ row\ =\ \mbox{\hyperlink{board_8c_a3f702599a3dc16396e142e0c50a87321}{current\_row}}(t);}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{int}\ col\ =\ \mbox{\hyperlink{board_8c_a643b00b2ad2f337bc85e012a5e8470c0}{current\_col}}(t);}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \ \ \ \ }
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordflow}{if}\ (piece-\/>\mbox{\hyperlink{struct_piece_a98ddd530a5ffb3ee8242dc5b986aa3c5}{isKing}})\{}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0\ ;\ i\ <\ 4\ ;\ i++)\{}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dy\ =\ (i\ \%\ 2\ ==\ 0)\ ?\ 1\ :\ -\/1;}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dx\ =\ (i\ <\ 2)\ ?\ 1\ :\ -\/1;}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ for\ capturing\ moves\ to\ the\ bottom-\/left}}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ new\_row\ =\ row\ +\ dy;}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ new\_col\ =\ col\ +\ dx;}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_piece}{Piece}}*\ captured\_piece\ =\ NULL;}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{board_8c_ad20e11b277c67bede5c2f0aea810822b}{insideBoard}}(new\_row,new\_col)\ \&\&\ !\mbox{\hyperlink{board_8c_a48d410f354013beb13e7a9009ccee6fa}{hasAlliedPiece}}(new\_row,new\_col,piece-\/>\mbox{\hyperlink{struct_piece_a4cf5b29a9e13dcb93b616b11160c2abc}{color}})\ \&\&\ captured\_piece\ ==\ NULL)\{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{board_8c_a98c4983c9a3b64e19652292d0e528327}{hasEnemyPiece}}(new\_row,new\_col,piece-\/>\mbox{\hyperlink{struct_piece_a4cf5b29a9e13dcb93b616b11160c2abc}{color}}))\{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ captured\_piece\ =\ \mbox{\hyperlink{board_8c_ab7a4538a6cfde5b8e1a246e084c68c72}{board}}[new\_row][new\_col];}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ new\_row\ +=\ dy;}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ new\_col\ +=\ dx;}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (captured\_piece\ ==\ NULL)\{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//backtracking}}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_ab7a4538a6cfde5b8e1a246e084c68c72}{board}}[captured\_piece-\/>\mbox{\hyperlink{struct_piece_ac6ef7c474f20562cb629c2452ce0631d}{row}}][captured\_piece-\/>\mbox{\hyperlink{struct_piece_a4017d278fbe40f96214961ab71f17d35}{col}}]\ =\ NULL;}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_move}{Move}}*\ move\ =\ \mbox{\hyperlink{board_8c_a167a078502fe9e0bebb7cb182f9b4b11}{add\_move}}(t);}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_a88139ee6072681592b0a6c472edc6fef}{start\_row}}\ =\ row;}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_a6fa09bd7e6e5cc5623cb5ba4ee804631}{start\_col}}\ =\ col;}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_ab9cdf7d77b4ba6028ea20ae90a54db88}{piece\_captured}}\ =\ captured\_piece;}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{board_8c_ad20e11b277c67bede5c2f0aea810822b}{insideBoard}}(new\_row,new\_col)\ \&\&\ !\mbox{\hyperlink{board_8c_a16fb663a09087c10c4364f2fef39ede7}{hasPiece}}(new\_row,new\_col))\{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isComplete\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ t-\/>\mbox{\hyperlink{struct_trajectory_a83d7ead01f6f719e1a8ffe4678839b12}{isCapturing}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_a318a43aa622cd8a882965a1814e5cdd4}{end\_row}}\ =\ new\_row;}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_aba405a0f310265c9782a9c9b92b0a6e0}{end\_col}}\ =\ new\_col;}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a40b3b38a837449a04128b9c255e43c2a}{calculate\_piece\_moves}}(t);}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ new\_row\ +=\ dy;}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ new\_col\ +=\ dx;}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_ab7a4538a6cfde5b8e1a246e084c68c72}{board}}[captured\_piece-\/>\mbox{\hyperlink{struct_piece_ac6ef7c474f20562cb629c2452ce0631d}{row}}][captured\_piece-\/>\mbox{\hyperlink{struct_piece_a4017d278fbe40f96214961ab71f17d35}{col}}]\ =\ captured\_piece;}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a9cc3000982f33ddcd2952ec8d602dc02}{remove\_move}}(t);}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00206\ \ \ \ \ \}}
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordflow}{else}\ \{\ \textcolor{comment}{//isnt\ king}}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ delta\ =\ (piece-\/>\mbox{\hyperlink{struct_piece_a4cf5b29a9e13dcb93b616b11160c2abc}{color}}\ ==\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1ca283fc479650da98250635b9c3c0e7e50}{WHITE}})\ ?\ -\/1\ :\ 1;}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ for\ capturing\ moves\ to\ the\ left}}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ new\_row\ =\ row\ +\ delta;}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ new\_col\ =\ col\ -\/\ 1;}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dest\_row\ =\ row\ +\ 2\ *\ delta;}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dest\_col\ =\ col\ -\/\ 2;}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{board_8c_ad20e11b277c67bede5c2f0aea810822b}{insideBoard}}(dest\_row,dest\_col)\ \&\&\ \mbox{\hyperlink{board_8c_a98c4983c9a3b64e19652292d0e528327}{hasEnemyPiece}}(new\_row,new\_col,piece-\/>\mbox{\hyperlink{struct_piece_a4cf5b29a9e13dcb93b616b11160c2abc}{color}})\ \&\&\ !\mbox{\hyperlink{board_8c_a16fb663a09087c10c4364f2fef39ede7}{hasPiece}}(dest\_row,dest\_col))\{}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ isComplete\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ t-\/>\mbox{\hyperlink{struct_trajectory_a83d7ead01f6f719e1a8ffe4678839b12}{isCapturing}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_piece}{Piece}}*\ captured\_piece\ =\ \mbox{\hyperlink{board_8c_ab7a4538a6cfde5b8e1a246e084c68c72}{board}}[new\_row][new\_col];}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_ab7a4538a6cfde5b8e1a246e084c68c72}{board}}[captured\_piece-\/>\mbox{\hyperlink{struct_piece_ac6ef7c474f20562cb629c2452ce0631d}{row}}][captured\_piece-\/>\mbox{\hyperlink{struct_piece_a4017d278fbe40f96214961ab71f17d35}{col}}]\ =\ NULL;}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_move}{Move}}*\ move\ =\ \mbox{\hyperlink{board_8c_a167a078502fe9e0bebb7cb182f9b4b11}{add\_move}}(t);}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_a88139ee6072681592b0a6c472edc6fef}{start\_row}}\ =\ row;}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_a6fa09bd7e6e5cc5623cb5ba4ee804631}{start\_col}}\ =\ col;}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_a318a43aa622cd8a882965a1814e5cdd4}{end\_row}}\ =\ dest\_row;}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_aba405a0f310265c9782a9c9b92b0a6e0}{end\_col}}\ =\ dest\_col;}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_ab9cdf7d77b4ba6028ea20ae90a54db88}{piece\_captured}}\ =\ captured\_piece;}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a40b3b38a837449a04128b9c255e43c2a}{calculate\_piece\_moves}}(t);}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_ab7a4538a6cfde5b8e1a246e084c68c72}{board}}[captured\_piece-\/>\mbox{\hyperlink{struct_piece_ac6ef7c474f20562cb629c2452ce0631d}{row}}][captured\_piece-\/>\mbox{\hyperlink{struct_piece_a4017d278fbe40f96214961ab71f17d35}{col}}]\ =\ captured\_piece;}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a9cc3000982f33ddcd2952ec8d602dc02}{remove\_move}}(t);}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ for\ capturing\ moves\ to\ the\ right}}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ new\_row\ =\ row\ +\ delta;}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ new\_col\ =\ col\ +\ 1;}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ dest\_row\ =\ row\ +\ 2\ *\ delta;}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ dest\_col\ =\ col\ +\ 2;}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{board_8c_ad20e11b277c67bede5c2f0aea810822b}{insideBoard}}(dest\_row,dest\_col)\ \&\&\ \mbox{\hyperlink{board_8c_a98c4983c9a3b64e19652292d0e528327}{hasEnemyPiece}}(new\_row,new\_col,piece-\/>\mbox{\hyperlink{struct_piece_a4cf5b29a9e13dcb93b616b11160c2abc}{color}})\ \&\&\ !\mbox{\hyperlink{board_8c_a16fb663a09087c10c4364f2fef39ede7}{hasPiece}}(dest\_row,dest\_col))\{}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ isComplete\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ t-\/>\mbox{\hyperlink{struct_trajectory_a83d7ead01f6f719e1a8ffe4678839b12}{isCapturing}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_piece}{Piece}}*\ captured\_piece\ =\ \mbox{\hyperlink{board_8c_ab7a4538a6cfde5b8e1a246e084c68c72}{board}}[new\_row][new\_col];}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_ab7a4538a6cfde5b8e1a246e084c68c72}{board}}[captured\_piece-\/>\mbox{\hyperlink{struct_piece_ac6ef7c474f20562cb629c2452ce0631d}{row}}][captured\_piece-\/>\mbox{\hyperlink{struct_piece_a4017d278fbe40f96214961ab71f17d35}{col}}]\ =\ NULL;}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_move}{Move}}*\ move\ =\ \mbox{\hyperlink{board_8c_a167a078502fe9e0bebb7cb182f9b4b11}{add\_move}}(t);}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_a88139ee6072681592b0a6c472edc6fef}{start\_row}}\ =\ row;}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_a6fa09bd7e6e5cc5623cb5ba4ee804631}{start\_col}}\ =\ col;}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_a318a43aa622cd8a882965a1814e5cdd4}{end\_row}}\ =\ dest\_row;}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_aba405a0f310265c9782a9c9b92b0a6e0}{end\_col}}\ =\ dest\_col;}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_ab9cdf7d77b4ba6028ea20ae90a54db88}{piece\_captured}}\ =\ captured\_piece;}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a40b3b38a837449a04128b9c255e43c2a}{calculate\_piece\_moves}}(t);}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_ab7a4538a6cfde5b8e1a246e084c68c72}{board}}[captured\_piece-\/>\mbox{\hyperlink{struct_piece_ac6ef7c474f20562cb629c2452ce0631d}{row}}][captured\_piece-\/>\mbox{\hyperlink{struct_piece_a4017d278fbe40f96214961ab71f17d35}{col}}]\ =\ captured\_piece;}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a9cc3000982f33ddcd2952ec8d602dc02}{remove\_move}}(t);}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00251\ \ \ \ \ \}}
+\DoxyCodeLine{00252\ \ \ \ \ }
+\DoxyCodeLine{00253\ \ \ \ \ }
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00255\ \ \ \ \ \textcolor{comment}{//\ Check\ for\ non-\/capturing\ moves}}
+\DoxyCodeLine{00256\ \ \ \ \ \textcolor{keywordflow}{if}\ (!t-\/>\mbox{\hyperlink{struct_trajectory_a83d7ead01f6f719e1a8ffe4678839b12}{isCapturing}}\ \&\&\ \mbox{\hyperlink{board_8c_a53e5299d3b97c47fb1e6e9b89020f39b}{captures}}\ ==\ 0)\{}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (piece-\/>\mbox{\hyperlink{struct_piece_a98ddd530a5ffb3ee8242dc5b986aa3c5}{isKing}})\{}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0\ ;\ i\ <\ 4\ ;\ i++)\{}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dy\ =\ (i\ \%\ 2\ ==\ 0)\ ?\ 1\ :\ -\/1;}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dx\ =\ (i\ <\ 2)\ ?\ 1\ :\ -\/1;}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ new\_row\ =\ row\ +\ dy;}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ new\_col\ =\ col\ +\ dx;}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_move}{Move}}*\ move\ =\ \mbox{\hyperlink{board_8c_a167a078502fe9e0bebb7cb182f9b4b11}{add\_move}}(t);}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_a88139ee6072681592b0a6c472edc6fef}{start\_row}}\ =\ row;}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_a6fa09bd7e6e5cc5623cb5ba4ee804631}{start\_col}}\ =\ col;}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{board_8c_ad20e11b277c67bede5c2f0aea810822b}{insideBoard}}(new\_row,new\_col)\ \&\&\ !\mbox{\hyperlink{board_8c_a16fb663a09087c10c4364f2fef39ede7}{hasPiece}}(new\_row,new\_col))\{}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isComplete\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_a318a43aa622cd8a882965a1814e5cdd4}{end\_row}}\ =\ new\_row;}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_aba405a0f310265c9782a9c9b92b0a6e0}{end\_col}}\ =\ new\_col;}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a40b3b38a837449a04128b9c255e43c2a}{calculate\_piece\_moves}}(t);}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ new\_row\ +=\ dy;}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ new\_col\ +=\ dx;}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a9cc3000982f33ddcd2952ec8d602dc02}{remove\_move}}(t);}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ delta\ =\ (piece-\/>\mbox{\hyperlink{struct_piece_a4cf5b29a9e13dcb93b616b11160c2abc}{color}}\ ==\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1ca283fc479650da98250635b9c3c0e7e50}{WHITE}})\ ?\ -\/1\ :\ 1;}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ new\_row\ =\ row\ +\ delta;}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ new\_col\ =\ col\ -\/\ 1;}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{board_8c_ad20e11b277c67bede5c2f0aea810822b}{insideBoard}}(new\_row,new\_col)\ \&\&\ !\mbox{\hyperlink{board_8c_a16fb663a09087c10c4364f2fef39ede7}{hasPiece}}(new\_row,new\_col))\{}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isComplete\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_move}{Move}}*\ move\ =\ \mbox{\hyperlink{board_8c_a167a078502fe9e0bebb7cb182f9b4b11}{add\_move}}(t);}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_a88139ee6072681592b0a6c472edc6fef}{start\_row}}\ =\ row;}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_a6fa09bd7e6e5cc5623cb5ba4ee804631}{start\_col}}\ =\ col;}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_a318a43aa622cd8a882965a1814e5cdd4}{end\_row}}\ =\ new\_row;}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_aba405a0f310265c9782a9c9b92b0a6e0}{end\_col}}\ =\ new\_col;}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a40b3b38a837449a04128b9c255e43c2a}{calculate\_piece\_moves}}(t);}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a9cc3000982f33ddcd2952ec8d602dc02}{remove\_move}}(t);}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ new\_row\ =\ row\ +\ delta;}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ new\_col\ =\ col\ +\ 1;}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{board_8c_ad20e11b277c67bede5c2f0aea810822b}{insideBoard}}(new\_row,new\_col)\ \&\&\ !\mbox{\hyperlink{board_8c_a16fb663a09087c10c4364f2fef39ede7}{hasPiece}}(new\_row,new\_col))\{}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isComplete\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_move}{Move}}*\ move\ =\ \mbox{\hyperlink{board_8c_a167a078502fe9e0bebb7cb182f9b4b11}{add\_move}}(t);}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_a88139ee6072681592b0a6c472edc6fef}{start\_row}}\ =\ row;}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_a6fa09bd7e6e5cc5623cb5ba4ee804631}{start\_col}}\ =\ col;}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_a318a43aa622cd8a882965a1814e5cdd4}{end\_row}}\ =\ new\_row;}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_aba405a0f310265c9782a9c9b92b0a6e0}{end\_col}}\ =\ new\_col;}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a40b3b38a837449a04128b9c255e43c2a}{calculate\_piece\_moves}}(t);}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a9cc3000982f33ddcd2952ec8d602dc02}{remove\_move}}(t);}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00306\ \ \ \ \ \}}
+\DoxyCodeLine{00307\ }
+\DoxyCodeLine{00308\ \ \ \ \ \textcolor{keywordflow}{if}\ (isComplete\ \&\&\ t-\/>\mbox{\hyperlink{struct_trajectory_a095f7a71e91ff50730c34b2074c23b9d}{num\_moves}}\ >\ 0)\{}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (t-\/>\mbox{\hyperlink{struct_trajectory_a83d7ead01f6f719e1a8ffe4678839b12}{isCapturing}}\ \&\&\ t-\/>\mbox{\hyperlink{struct_trajectory_a095f7a71e91ff50730c34b2074c23b9d}{num\_moves}}\ >\ \mbox{\hyperlink{board_8c_a53e5299d3b97c47fb1e6e9b89020f39b}{captures}})\{}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a53e5299d3b97c47fb1e6e9b89020f39b}{captures}}\ =\ t-\/>\mbox{\hyperlink{struct_trajectory_a095f7a71e91ff50730c34b2074c23b9d}{num\_moves}};}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a7de21db3a3efa590179541304d7901a9}{clear\_trajectories}}();}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (t-\/>\mbox{\hyperlink{struct_trajectory_a83d7ead01f6f719e1a8ffe4678839b12}{isCapturing}}\ \&\&\ t-\/>\mbox{\hyperlink{struct_trajectory_a095f7a71e91ff50730c34b2074c23b9d}{num\_moves}}\ ==\ \mbox{\hyperlink{board_8c_a53e5299d3b97c47fb1e6e9b89020f39b}{captures}})\{}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a8f8c442b372b0044baef767846ce0c85}{add\_trajectory\_copy}}(t);}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{board_8c_a53e5299d3b97c47fb1e6e9b89020f39b}{captures}}\ ==\ 0)\{}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a8f8c442b372b0044baef767846ce0c85}{add\_trajectory\_copy}}(t);}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00319\ \ \ \ \ \}}
+\DoxyCodeLine{00320\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_a40b3b38a837449a04128b9c255e43c2a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_a40b3b38a837449a04128b9c255e43c2a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{board_8c_ae891cc379cc1d6f806745cc53e83b09d}\label{board_8c_ae891cc379cc1d6f806745cc53e83b09d} 
+\index{board.c@{board.c}!capturePieces@{capturePieces}}
+\index{capturePieces@{capturePieces}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{capturePieces()}{capturePieces()}}
+{\footnotesize\ttfamily void capture\+Pieces (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_trajectory}{Trajectory}} \texorpdfstring{$\ast$}{*}}]{t }\end{DoxyParamCaption})}
+
+
+
+Captures the pieces in a trajectory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \doxylink{struct_trajectory}{Trajectory} to capture the pieces \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{board_8c_source_l00363}{363}} of file \mbox{\hyperlink{board_8c_source}{board.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00364\ \ \ \ \ \textcolor{keywordflow}{if}\ (t-\/>\mbox{\hyperlink{struct_trajectory_a83d7ead01f6f719e1a8ffe4678839b12}{isCapturing}})\{}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0\ ;\ i\ <\ t-\/>\mbox{\hyperlink{struct_trajectory_a095f7a71e91ff50730c34b2074c23b9d}{num\_moves}}\ ;\ i++)\{}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_move}{Move}}*\ move\ =\ \&t-\/>\mbox{\hyperlink{struct_trajectory_a48845b1a230e3822a4820b0741803bf6}{moves}}[i];}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_aaca79719959531adcb538aad5a0c53e8}{turn}}\ ==\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1ca283fc479650da98250635b9c3c0e7e50}{WHITE}})\ \mbox{\hyperlink{game_8c_a0359d6089e0f8af3a3af63a640644cd5}{white\_score}}++;}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \mbox{\hyperlink{game_8c_ad55e591f5f90e62961138c329a639c38}{black\_score}}++;}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (move-\/>\mbox{\hyperlink{struct_move_ab9cdf7d77b4ba6028ea20ae90a54db88}{piece\_captured}}\ !=\ NULL)\{}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ move-\/>\mbox{\hyperlink{struct_move_ab9cdf7d77b4ba6028ea20ae90a54db88}{piece\_captured}}-\/>\mbox{\hyperlink{struct_piece_a018c7ca7ee7c12c88b59c064ce7d7d6a}{isCaptured}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_ab7a4538a6cfde5b8e1a246e084c68c72}{board}}[move-\/>\mbox{\hyperlink{struct_move_ab9cdf7d77b4ba6028ea20ae90a54db88}{piece\_captured}}-\/>\mbox{\hyperlink{struct_piece_ac6ef7c474f20562cb629c2452ce0631d}{row}}][move-\/>\mbox{\hyperlink{struct_move_ab9cdf7d77b4ba6028ea20ae90a54db88}{piece\_captured}}-\/>\mbox{\hyperlink{struct_piece_a4017d278fbe40f96214961ab71f17d35}{col}}]\ =\ NULL;}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00374\ \ \ \ \ \}}
+\DoxyCodeLine{00375\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_ae891cc379cc1d6f806745cc53e83b09d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{board_8c_a7de21db3a3efa590179541304d7901a9}\label{board_8c_a7de21db3a3efa590179541304d7901a9} 
+\index{board.c@{board.c}!clear\_trajectories@{clear\_trajectories}}
+\index{clear\_trajectories@{clear\_trajectories}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{clear\_trajectories()}{clear\_trajectories()}}
+{\footnotesize\ttfamily void clear\+\_\+trajectories (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears the trajectories. 
+
+
+
+Definition at line \mbox{\hyperlink{board_8c_source_l00147}{147}} of file \mbox{\hyperlink{board_8c_source}{board.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \mbox{\hyperlink{board_8c_ad6061628183a69346f2529f4170f0cd8}{num\_moves}}\ =\ 0;}
+\DoxyCodeLine{00149\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_a7de21db3a3efa590179541304d7901a9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{board_8c_a643b00b2ad2f337bc85e012a5e8470c0}\label{board_8c_a643b00b2ad2f337bc85e012a5e8470c0} 
+\index{board.c@{board.c}!current\_col@{current\_col}}
+\index{current\_col@{current\_col}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{current\_col()}{current\_col()}}
+{\footnotesize\ttfamily int current\+\_\+col (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_trajectory}{Trajectory}} \texorpdfstring{$\ast$}{*}}]{t }\end{DoxyParamCaption})}
+
+
+
+Returns the current column of a trajectory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & trajectory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current column of the trajectory 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{board_8c_source_l00114}{114}} of file \mbox{\hyperlink{board_8c_source}{board.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordflow}{if}\ (t-\/>\mbox{\hyperlink{struct_trajectory_a095f7a71e91ff50730c34b2074c23b9d}{num\_moves}}\ ==\ 0)\ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ t-\/>\mbox{\hyperlink{struct_trajectory_a799e67180a72b24337949c7e8b141891}{piece}}-\/>\mbox{\hyperlink{struct_piece_a4017d278fbe40f96214961ab71f17d35}{col}};}
+\DoxyCodeLine{00117\ \ \ \ \ \}}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordflow}{return}\ t-\/>\mbox{\hyperlink{struct_trajectory_a48845b1a230e3822a4820b0741803bf6}{moves}}[t-\/>\mbox{\hyperlink{struct_trajectory_a095f7a71e91ff50730c34b2074c23b9d}{num\_moves}}-\/1].\mbox{\hyperlink{struct_move_aba405a0f310265c9782a9c9b92b0a6e0}{end\_col}};}
+\DoxyCodeLine{00119\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_a643b00b2ad2f337bc85e012a5e8470c0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{board_8c_a3f702599a3dc16396e142e0c50a87321}\label{board_8c_a3f702599a3dc16396e142e0c50a87321} 
+\index{board.c@{board.c}!current\_row@{current\_row}}
+\index{current\_row@{current\_row}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{current\_row()}{current\_row()}}
+{\footnotesize\ttfamily int current\+\_\+row (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_trajectory}{Trajectory}} \texorpdfstring{$\ast$}{*}}]{t }\end{DoxyParamCaption})}
+
+
+
+Returns the current row of a trajectory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & trajectory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current row of the trajectory 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{board_8c_source_l00107}{107}} of file \mbox{\hyperlink{board_8c_source}{board.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordflow}{if}\ (t-\/>\mbox{\hyperlink{struct_trajectory_a095f7a71e91ff50730c34b2074c23b9d}{num\_moves}}\ ==\ 0)\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ t-\/>\mbox{\hyperlink{struct_trajectory_a799e67180a72b24337949c7e8b141891}{piece}}-\/>\mbox{\hyperlink{struct_piece_ac6ef7c474f20562cb629c2452ce0631d}{row}};}
+\DoxyCodeLine{00110\ \ \ \ \ \}}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordflow}{return}\ t-\/>\mbox{\hyperlink{struct_trajectory_a48845b1a230e3822a4820b0741803bf6}{moves}}[t-\/>\mbox{\hyperlink{struct_trajectory_a095f7a71e91ff50730c34b2074c23b9d}{num\_moves}}-\/1].\mbox{\hyperlink{struct_move_a318a43aa622cd8a882965a1814e5cdd4}{end\_row}};}
+\DoxyCodeLine{00112\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_a3f702599a3dc16396e142e0c50a87321_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{board_8c_a21e8719a38fd9b485d449579692ded62}\label{board_8c_a21e8719a38fd9b485d449579692ded62} 
+\index{board.c@{board.c}!destroy\_board@{destroy\_board}}
+\index{destroy\_board@{destroy\_board}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{destroy\_board()}{destroy\_board()}}
+{\footnotesize\ttfamily void destroy\+\_\+board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroys the board. 
+
+
+
+Definition at line \mbox{\hyperlink{board_8c_source_l00015}{15}} of file \mbox{\hyperlink{board_8c_source}{board.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordflow}{for}(i\ =\ 0;\ i\ <\ 24;\ i++)\{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{board_8c_a4439dd9a93a0c191e4a514540d97c76b}{pieces}}[i]\ !=\ NULL)\{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ free(\mbox{\hyperlink{board_8c_a4439dd9a93a0c191e4a514540d97c76b}{pieces}}[i]);}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \}}
+\DoxyCodeLine{00022\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_a21e8719a38fd9b485d449579692ded62_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{board_8c_abdf234d17b5e10bb5906b019f9d313da}\label{board_8c_abdf234d17b5e10bb5906b019f9d313da} 
+\index{board.c@{board.c}!getTrajectory@{getTrajectory}}
+\index{getTrajectory@{getTrajectory}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{getTrajectory()}{getTrajectory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_trajectory}{Trajectory}} \texorpdfstring{$\ast$}{*} get\+Trajectory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{piece,  }\item[{int}]{end\+\_\+row,  }\item[{int}]{end\+\_\+col }\end{DoxyParamCaption})}
+
+
+
+Get the \doxylink{struct_trajectory}{Trajectory} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em piece} & piece to get the trajectory \\
+\hline
+{\em end\+\_\+row} & row to end the trajectory \\
+\hline
+{\em end\+\_\+col} & column to end the trajectory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Trajectory\texorpdfstring{$\ast$}{*} of the piece 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{board_8c_source_l00072}{72}} of file \mbox{\hyperlink{board_8c_source}{board.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{board_8c_ad6061628183a69346f2529f4170f0cd8}{num\_moves}};\ i++)\ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_trajectory}{Trajectory}}*\ t\ =\ \&\mbox{\hyperlink{board_8c_a75f3a9c4ee37c341da26bc899fe1f3f1}{all\_moves}}[i];}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (t-\/>\mbox{\hyperlink{struct_trajectory_a799e67180a72b24337949c7e8b141891}{piece}}\ ==\ piece\ \&\&\ t-\/>\mbox{\hyperlink{struct_trajectory_a48845b1a230e3822a4820b0741803bf6}{moves}}[t-\/>\mbox{\hyperlink{struct_trajectory_a095f7a71e91ff50730c34b2074c23b9d}{num\_moves}}-\/1].\mbox{\hyperlink{struct_move_a318a43aa622cd8a882965a1814e5cdd4}{end\_row}}\ ==\ end\_row\ \&\&\ t-\/>\mbox{\hyperlink{struct_trajectory_a48845b1a230e3822a4820b0741803bf6}{moves}}[t-\/>\mbox{\hyperlink{struct_trajectory_a095f7a71e91ff50730c34b2074c23b9d}{num\_moves}}-\/1].\mbox{\hyperlink{struct_move_aba405a0f310265c9782a9c9b92b0a6e0}{end\_col}}\ ==\ end\_col)\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ t;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00080\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_abdf234d17b5e10bb5906b019f9d313da_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{board_8c_a48d410f354013beb13e7a9009ccee6fa}\label{board_8c_a48d410f354013beb13e7a9009ccee6fa} 
+\index{board.c@{board.c}!hasAlliedPiece@{hasAlliedPiece}}
+\index{hasAlliedPiece@{hasAlliedPiece}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{hasAlliedPiece()}{hasAlliedPiece()}}
+{\footnotesize\ttfamily bool has\+Allied\+Piece (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{\mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{c }\end{DoxyParamCaption})}
+
+
+
+Checks if a piece is allied. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & row of the piece \\
+\hline
+{\em col} & column of the piece \\
+\hline
+{\em c} & color of the piece \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the piece is allied, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{board_8c_source_l00138}{138}} of file \mbox{\hyperlink{board_8c_source}{board.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{board_8c_ab7a4538a6cfde5b8e1a246e084c68c72}{board}}[row][col]\ !=\ NULL)\{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{board_8c_ab7a4538a6cfde5b8e1a246e084c68c72}{board}}[row][col]-\/>color\ ==\ c)\{}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00143\ \ \ \ \ \}}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00145\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_a48d410f354013beb13e7a9009ccee6fa_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{board_8c_a98c4983c9a3b64e19652292d0e528327}\label{board_8c_a98c4983c9a3b64e19652292d0e528327} 
+\index{board.c@{board.c}!hasEnemyPiece@{hasEnemyPiece}}
+\index{hasEnemyPiece@{hasEnemyPiece}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{hasEnemyPiece()}{hasEnemyPiece()}}
+{\footnotesize\ttfamily bool has\+Enemy\+Piece (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{\mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{c }\end{DoxyParamCaption})}
+
+
+
+Checks if a piece is an enemy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & row of the piece \\
+\hline
+{\em col} & column of the piece \\
+\hline
+{\em c} & color of the piece \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the piece is an enemy, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{board_8c_source_l00129}{129}} of file \mbox{\hyperlink{board_8c_source}{board.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{board_8c_ab7a4538a6cfde5b8e1a246e084c68c72}{board}}[row][col]\ !=\ NULL)\{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{board_8c_ab7a4538a6cfde5b8e1a246e084c68c72}{board}}[row][col]-\/>color\ !=\ c)\{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00134\ \ \ \ \ \}}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00136\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_a98c4983c9a3b64e19652292d0e528327_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{board_8c_a16fb663a09087c10c4364f2fef39ede7}\label{board_8c_a16fb663a09087c10c4364f2fef39ede7} 
+\index{board.c@{board.c}!hasPiece@{hasPiece}}
+\index{hasPiece@{hasPiece}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{hasPiece()}{hasPiece()}}
+{\footnotesize\ttfamily bool has\+Piece (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+
+
+Checks if a piece exists in a position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & row of the piece \\
+\hline
+{\em col} & column of the piece \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the piece exists, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{board_8c_source_l00125}{125}} of file \mbox{\hyperlink{board_8c_source}{board.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{board_8c_ab7a4538a6cfde5b8e1a246e084c68c72}{board}}[row][col]\ !=\ NULL;}
+\DoxyCodeLine{00127\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_a16fb663a09087c10c4364f2fef39ede7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{board_8c_a8ed9dd5e9c9e940055fc2fda0bb4d220}\label{board_8c_a8ed9dd5e9c9e940055fc2fda0bb4d220} 
+\index{board.c@{board.c}!init\_board@{init\_board}}
+\index{init\_board@{init\_board}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{init\_board()}{init\_board()}}
+{\footnotesize\ttfamily void init\+\_\+board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the board. 
+
+
+
+Definition at line \mbox{\hyperlink{board_8c_source_l00322}{322}} of file \mbox{\hyperlink{board_8c_source}{board.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00323\ \ \ \ \ \mbox{\hyperlink{game_8c_a5566e6568ea277a508f909b32a2d99bc}{white\_time}}\ =\ 10\ *\ 60\ *\ 60;}
+\DoxyCodeLine{00324\ \ \ \ \ \mbox{\hyperlink{game_8c_ad2942906e1bafe30b74a620b6bfb0bc8}{black\_time}}\ =\ 10\ *\ 60\ *\ 60;\ }
+\DoxyCodeLine{00325\ \ \ \ \ \mbox{\hyperlink{game_8c_a0359d6089e0f8af3a3af63a640644cd5}{white\_score}}\ =\ 0;}
+\DoxyCodeLine{00326\ \ \ \ \ \mbox{\hyperlink{game_8c_ad55e591f5f90e62961138c329a639c38}{black\_score}}\ =\ 0;}
+\DoxyCodeLine{00327\ \ \ \ \ \mbox{\hyperlink{game_8c_aaca79719959531adcb538aad5a0c53e8}{turn}}\ =\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1ca283fc479650da98250635b9c3c0e7e50}{WHITE}};}
+\DoxyCodeLine{00328\ \ \ \ \ \mbox{\hyperlink{board_8c_a53e5299d3b97c47fb1e6e9b89020f39b}{captures}}\ =\ 0;}
+\DoxyCodeLine{00329\ \ \ \ \ \mbox{\hyperlink{board_8c_ad6061628183a69346f2529f4170f0cd8}{num\_moves}}\ =\ 0;}
+\DoxyCodeLine{00330\ \ \ \ \ \mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}\ =\ NULL;}
+\DoxyCodeLine{00331\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j;}
+\DoxyCodeLine{00332\ \ \ \ \ \textcolor{keywordflow}{for}(i\ =\ 0;\ i\ <\ 8;\ i++)\{}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j\ =\ 0;\ j\ <\ 8;\ j++)\{}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_ab7a4538a6cfde5b8e1a246e084c68c72}{board}}[i][j]\ =\ NULL;}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00336\ \ \ \ \ \}}
+\DoxyCodeLine{00337\ \ \ \ \ \textcolor{keywordflow}{for}(i\ =\ 0;\ i\ <\ 24;\ i++)\{}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a4439dd9a93a0c191e4a514540d97c76b}{pieces}}[i]\ =\ NULL;}
+\DoxyCodeLine{00339\ \ \ \ \ \}}
+\DoxyCodeLine{00340\ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ 0;}
+\DoxyCodeLine{00341\ \ \ \ \ \textcolor{keywordflow}{for}(i\ =\ 0;\ i\ <\ 3;\ i++)\{}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j\ =\ 0;\ j\ <\ 8;\ j++)\{}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((i\ +\ j)\ \%\ 2\ ==\ 1)\{}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_ab7a4538a6cfde5b8e1a246e084c68c72}{board}}[i][j]\ =\ \mbox{\hyperlink{piece_8c_aabf9e8dc1805608072457dc2efa5b2a7}{createPiece}}(j\ *\ 600/8\ +\ 200,\ i\ *\ 600/8,\ i,\ j,\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3}{BLACK}},\ \textcolor{keyword}{false},\ \&\mbox{\hyperlink{draw__graphics_8c_a9b6b60ce68305da4c81e90d89826db21}{black\_checker}});}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a4439dd9a93a0c191e4a514540d97c76b}{pieces}}[index]\ =\ \mbox{\hyperlink{board_8c_ab7a4538a6cfde5b8e1a246e084c68c72}{board}}[i][j];}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ index++;}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00349\ \ \ \ \ \}}
+\DoxyCodeLine{00350\ }
+\DoxyCodeLine{00351\ \ \ \ \ \textcolor{keywordflow}{for}(i\ =\ 5;\ i\ <\ 8;\ i++)\{}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j\ =\ 0;\ j\ <\ 8;\ j++)\{}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((i\ +\ j)\ \%\ 2\ ==\ 1)\{}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_ab7a4538a6cfde5b8e1a246e084c68c72}{board}}[i][j]\ =\ \mbox{\hyperlink{piece_8c_aabf9e8dc1805608072457dc2efa5b2a7}{createPiece}}(j\ *\ 600/8\ +200,\ i\ *\ 600/8,\ i,\ j,\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1ca283fc479650da98250635b9c3c0e7e50}{WHITE}},\ \textcolor{keyword}{false},\ \&\mbox{\hyperlink{draw__graphics_8c_ac98839962dc945736e4fb43caddc26b0}{white\_checker}});}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{board_8c_a4439dd9a93a0c191e4a514540d97c76b}{pieces}}[index]\ =\ \mbox{\hyperlink{board_8c_ab7a4538a6cfde5b8e1a246e084c68c72}{board}}[i][j];}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ index++;}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00359\ \ \ \ \ \}}
+\DoxyCodeLine{00360\ \ \ \ \ \mbox{\hyperlink{board_8c_a196466caf97613073b2f46a536aeab00}{calculate\_moves}}();}
+\DoxyCodeLine{00361\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_a8ed9dd5e9c9e940055fc2fda0bb4d220_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_a8ed9dd5e9c9e940055fc2fda0bb4d220_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{board_8c_ad20e11b277c67bede5c2f0aea810822b}\label{board_8c_ad20e11b277c67bede5c2f0aea810822b} 
+\index{board.c@{board.c}!insideBoard@{insideBoard}}
+\index{insideBoard@{insideBoard}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{insideBoard()}{insideBoard()}}
+{\footnotesize\ttfamily bool inside\+Board (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+
+
+Checks if a position is inside the board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & row of the position \\
+\hline
+{\em col} & column of the position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the position is inside the board, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{board_8c_source_l00121}{121}} of file \mbox{\hyperlink{board_8c_source}{board.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordflow}{return}\ row\ >=\ 0\ \&\&\ row\ <\ 8\ \&\&\ col\ >=\ 0\ \&\&\ col\ <\ 8;}
+\DoxyCodeLine{00123\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_ad20e11b277c67bede5c2f0aea810822b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{board_8c_a025b9ccf02ac7e1b50e8797e750ec116}\label{board_8c_a025b9ccf02ac7e1b50e8797e750ec116} 
+\index{board.c@{board.c}!isGameOver@{isGameOver}}
+\index{isGameOver@{isGameOver}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{isGameOver()}{isGameOver()}}
+{\footnotesize\ttfamily bool is\+Game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the game is over. 
+
+\begin{DoxyReturn}{Returns}
+true if the game is over, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{board_8c_source_l00024}{24}} of file \mbox{\hyperlink{board_8c_source}{board.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{board_8c_ad6061628183a69346f2529f4170f0cd8}{num\_moves}}\ ==\ 0;}
+\DoxyCodeLine{00026\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_a025b9ccf02ac7e1b50e8797e750ec116_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{board_8c_a9cc3000982f33ddcd2952ec8d602dc02}\label{board_8c_a9cc3000982f33ddcd2952ec8d602dc02} 
+\index{board.c@{board.c}!remove\_move@{remove\_move}}
+\index{remove\_move@{remove\_move}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{remove\_move()}{remove\_move()}}
+{\footnotesize\ttfamily void remove\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_trajectory}{Trajectory}} \texorpdfstring{$\ast$}{*}}]{t }\end{DoxyParamCaption})}
+
+
+
+Removes a move from a trajectory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & trajectory \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{board_8c_source_l00068}{68}} of file \mbox{\hyperlink{board_8c_source}{board.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ t-\/>\mbox{\hyperlink{struct_trajectory_a095f7a71e91ff50730c34b2074c23b9d}{num\_moves}}-\/-\/;}
+\DoxyCodeLine{00070\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_a9cc3000982f33ddcd2952ec8d602dc02_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{board_8c_a75f3a9c4ee37c341da26bc899fe1f3f1}\label{board_8c_a75f3a9c4ee37c341da26bc899fe1f3f1} 
+\index{board.c@{board.c}!all\_moves@{all\_moves}}
+\index{all\_moves@{all\_moves}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{all\_moves}{all\_moves}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_trajectory}{Trajectory}} all\+\_\+moves\mbox{[}150\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{board_8c_source_l00011}{11}} of file \mbox{\hyperlink{board_8c_source}{board.\+c}}.
+
+\Hypertarget{board_8c_ab7a4538a6cfde5b8e1a246e084c68c72}\label{board_8c_ab7a4538a6cfde5b8e1a246e084c68c72} 
+\index{board.c@{board.c}!board@{board}}
+\index{board@{board}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{board}{board}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_piece}{Piece}}\texorpdfstring{$\ast$}{*} board\mbox{[}8\mbox{]}\mbox{[}8\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{board_8c_source_l00005}{5}} of file \mbox{\hyperlink{board_8c_source}{board.\+c}}.
+
+\Hypertarget{board_8c_a53e5299d3b97c47fb1e6e9b89020f39b}\label{board_8c_a53e5299d3b97c47fb1e6e9b89020f39b} 
+\index{board.c@{board.c}!captures@{captures}}
+\index{captures@{captures}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{captures}{captures}}
+{\footnotesize\ttfamily int captures = 0}
+
+
+
+Definition at line \mbox{\hyperlink{board_8c_source_l00013}{13}} of file \mbox{\hyperlink{board_8c_source}{board.\+c}}.
+
+\Hypertarget{board_8c_ad6061628183a69346f2529f4170f0cd8}\label{board_8c_ad6061628183a69346f2529f4170f0cd8} 
+\index{board.c@{board.c}!num\_moves@{num\_moves}}
+\index{num\_moves@{num\_moves}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{num\_moves}{num\_moves}}
+{\footnotesize\ttfamily int num\+\_\+moves}
+
+
+
+Definition at line \mbox{\hyperlink{board_8c_source_l00012}{12}} of file \mbox{\hyperlink{board_8c_source}{board.\+c}}.
+
+\Hypertarget{board_8c_a4439dd9a93a0c191e4a514540d97c76b}\label{board_8c_a4439dd9a93a0c191e4a514540d97c76b} 
+\index{board.c@{board.c}!pieces@{pieces}}
+\index{pieces@{pieces}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{pieces}{pieces}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_piece}{Piece}}\texorpdfstring{$\ast$}{*} pieces\mbox{[}24\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{board_8c_source_l00007}{7}} of file \mbox{\hyperlink{board_8c_source}{board.\+c}}.
+
+\Hypertarget{board_8c_a09da077207c4c32abd079e452cacbc1d}\label{board_8c_a09da077207c4c32abd079e452cacbc1d} 
+\index{board.c@{board.c}!selected\_piece@{selected\_piece}}
+\index{selected\_piece@{selected\_piece}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{selected\_piece}{selected\_piece}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_piece}{Piece}}\texorpdfstring{$\ast$}{*} selected\+\_\+piece = NULL}
+
+
+
+Definition at line \mbox{\hyperlink{board_8c_source_l00009}{9}} of file \mbox{\hyperlink{board_8c_source}{board.\+c}}.
+

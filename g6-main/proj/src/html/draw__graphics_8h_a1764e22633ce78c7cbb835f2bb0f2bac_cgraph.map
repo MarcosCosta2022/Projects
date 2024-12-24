@@ -1,0 +1,9 @@
+<map id="draw_string" name="draw_string">
+<area shape="rect" id="Node000001" title="Draws a string." alt="" coords="5,5,94,31"/>
+<area shape="rect" id="Node000002" href="$draw__graphics_8c.html#abedef77b00c316e162554bce0344fa54" title="Draws a character." alt="" coords="142,5,252,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,16,127,16,127,21,94,21"/>
+<area shape="rect" id="Node000003" href="$video_8c.html#ab0a758b9f8ea20f9bb5fb4ca77f021e5" title="Draws a character." alt="" coords="300,5,431,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="253,16,285,16,285,21,253,21"/>
+<area shape="rect" id="Node000004" href="$video_8c.html#ab0332ee565f978f725c021b4eb35958e" title="Draws pixel." alt="" coords="479,5,601,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="432,16,464,16,464,21,432,21"/>
+</map>

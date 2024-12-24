@@ -1,0 +1,19 @@
+import io;
+
+class CompileArrayAccessAndAllocation {
+
+    public static void main(String[] args) {
+        int i;
+        int[] j;
+        String k;
+
+        // test array access
+        k = args[0];
+        io.println(j[9]);
+
+        // test array allocation
+        j[0] = 1;
+        j[1] = 2;
+
+    }
+}

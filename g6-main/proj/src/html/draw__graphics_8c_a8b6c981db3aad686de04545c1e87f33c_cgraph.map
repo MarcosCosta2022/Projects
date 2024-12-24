@@ -1,0 +1,7 @@
+<map id="draw_menu" name="draw_menu">
+<area shape="rect" id="Node000001" title="Draws the menu." alt="" coords="5,5,94,31"/>
+<area shape="rect" id="Node000002" href="$video_8c.html#a978b99877ebdb731d2787c1456c341c0" title="Draws a .xpm image." alt="" coords="142,5,261,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,16,127,16,127,21,94,21"/>
+<area shape="rect" id="Node000003" href="$video_8c.html#ab0332ee565f978f725c021b4eb35958e" title="Draws pixel." alt="" coords="309,5,430,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="262,16,294,16,294,21,262,21"/>
+</map>

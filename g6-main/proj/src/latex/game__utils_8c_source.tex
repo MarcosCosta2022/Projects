@@ -1,0 +1,54 @@
+\doxysection{game\+\_\+utils.\+c}
+\hypertarget{game__utils_8c_source}{}\label{game__utils_8c_source}\index{game/game\_utils.c@{game/game\_utils.c}}
+\mbox{\hyperlink{game__utils_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{game__utils_8h}{game\_utils.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00003}\mbox{\hyperlink{game__utils_8c_a4f017f51874e2df61091a589c98aa54c}{00003}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game__utils_8c_a4f017f51874e2df61091a589c98aa54c}{get\_keys}}()\ \{}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00005}00005\ \ \ \ \ memset(\mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}},\ 0,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}));}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00007}00007\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_a2e092124f706e9898a26f3d0c6dd33d3}{A\_KEY}}]\ =\ \textcolor{charliteral}{'A'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00008}00008\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_ad17571f139195fb7361f6293b791744d}{B\_KEY}}]\ =\ \textcolor{charliteral}{'B'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00009}00009\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_adfb2653969987357f3abaaa3c3bdde54}{C\_KEY}}]\ =\ \textcolor{charliteral}{'C'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00010}00010\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_a23c8dc1c6696b91ba6b96f2dca53b7ba}{D\_KEY}}]\ =\ \textcolor{charliteral}{'D'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00011}00011\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_ab0b927b3a09eaa32f8a4d36d822e38e3}{E\_KEY}}]\ =\ \textcolor{charliteral}{'E'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00012}00012\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_ad584448031fad147de7c07cb425b583c}{F\_KEY}}]\ =\ \textcolor{charliteral}{'F'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00013}00013\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_a82f468fa5d01499717ebb6c2336ffa14}{G\_KEY}}]\ =\ \textcolor{charliteral}{'G'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00014}00014\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_ab454741f32a91feca20d2dda1c15e3dc}{H\_KEY}}]\ =\ \textcolor{charliteral}{'H'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00015}00015\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_a2c2fd95e748cf3ec6322b35a89fc53bf}{I\_KEY}}]\ =\ \textcolor{charliteral}{'I'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00016}00016\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_ac06553a93547334a545098a6ae60ab4f}{J\_KEY}}]\ =\ \textcolor{charliteral}{'J'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00017}00017\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_a1d4c75734307f98fc096e756ffac6852}{K\_KEY}}]\ =\ \textcolor{charliteral}{'K'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00018}00018\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_a01d053c0e426921f363d45be6c052c39}{L\_KEY}}]\ =\ \textcolor{charliteral}{'L'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00019}00019\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_aefb17eeead0329261a24903952388df9}{M\_KEY}}]\ =\ \textcolor{charliteral}{'M'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00020}00020\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_a7c1125941195a92532d3a8039804f348}{N\_KEY}}]\ =\ \textcolor{charliteral}{'N'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00021}00021\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_a63950988373606fe6b8264da12363bd9}{O\_KEY}}]\ =\ \textcolor{charliteral}{'O'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00022}00022\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_a694eafa85c419c8ad91dc382650eb481}{P\_KEY}}]\ =\ \textcolor{charliteral}{'P'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_a3d8aa05967b559c3e0d0f9f5ce3eacfb}{Q\_KEY}}]\ =\ \textcolor{charliteral}{'Q'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00024}00024\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_a75ac3acba95812a4be896446cd3051b4}{R\_KEY}}]\ =\ \textcolor{charliteral}{'R'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_a38916d959d471a2781d390910271b6b5}{S\_KEY}}]\ =\ \textcolor{charliteral}{'S'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_a77d5459649c5af68a94ef9f378f8eb63}{T\_KEY}}]\ =\ \textcolor{charliteral}{'T'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_ad42a93716460f8a0020a8a93d606ff54}{U\_KEY}}]\ =\ \textcolor{charliteral}{'U'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00028}00028\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_aa4205a597a74f91c04f5e096f2934355}{V\_KEY}}]\ =\ \textcolor{charliteral}{'V'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00029}00029\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_a8cb726577cd35fc0582744b2270e192f}{W\_KEY}}]\ =\ \textcolor{charliteral}{'W'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00030}00030\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_a416bc7f282396f298c821ce248960641}{X\_KEY}}]\ =\ \textcolor{charliteral}{'X'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00031}00031\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_af1c95fc803a5d97f5a67dc3146daccaa}{Y\_KEY}}]\ =\ \textcolor{charliteral}{'Y'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00032}00032\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_a0ea0953e6e1b70f697bf6aab7da4ca9e}{Z\_KEY}}]\ =\ \textcolor{charliteral}{'Z'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00034}00034\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_ad67440cfa48dfa0bcf25806cf592877f}{ZERO\_KEY}}]\ =\ \textcolor{charliteral}{'0'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00035}00035\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_a334f1097343867e39c66459ae23f0a69}{ONE\_KEY}}]\ =\ \textcolor{charliteral}{'1'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00036}00036\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_ad9380e88f8d0ae57bd76e2613353b3a2}{TWO\_KEY}}]\ =\ \textcolor{charliteral}{'2'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_ab49b3d62e8424a36994b2f6825cbd2d2}{THREE\_KEY}}]\ =\ \textcolor{charliteral}{'3'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00038}00038\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_a9599b17ce3bcdd9c360972254d24f0f5}{FOUR\_KEY}}]\ =\ \textcolor{charliteral}{'4'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_a70b3fea4fde12eca78bb1393e9b5d7d3}{FIVE\_KEY}}]\ =\ \textcolor{charliteral}{'5'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00040}00040\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_a485371dec443a36f18548bae8a4c7548}{SIX\_KEY}}]\ =\ \textcolor{charliteral}{'6'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00041}00041\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_a1bc5733730b29110fb3bb1257755074d}{SEVEN\_KEY}}]\ =\ \textcolor{charliteral}{'7'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00042}00042\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_ad41d18026b44a6d3138a8b5afd787b66}{EIGHT\_KEY}}]\ =\ \textcolor{charliteral}{'8'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00043}00043\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_a0e2f3e8ad7ffdb245275b5d772e93802}{NINE\_KEY}}]\ =\ \textcolor{charliteral}{'9'};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00044}00044\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00045}00045\ \ \ \ \ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[\mbox{\hyperlink{i8042_8h_a5ff6e798033f03e74730e99f01936f84}{SPACE}}]\ =\ \textcolor{charliteral}{'\ '};}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00047}00047\ \}}
+\DoxyCodeLine{\Hypertarget{game__utils_8c_source_l00048}00048\ }
+
+\end{DoxyCode}

@@ -1,0 +1,54 @@
+\doxysection{board.\+h}
+\hypertarget{board_8h_source}{}\label{board_8h_source}\index{game/board.h@{game/board.h}}
+\mbox{\hyperlink{board_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ BOARD\_H}}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ BOARD\_H}}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{game_8h}{game.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{piece_8h}{piece.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00009}00009\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_piece}{Piece}}*\ \mbox{\hyperlink{board_8h_ab7a4538a6cfde5b8e1a246e084c68c72}{board}}[8][8];}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00011}00011\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_piece}{Piece}}*\ \mbox{\hyperlink{board_8h_a4439dd9a93a0c191e4a514540d97c76b}{pieces}}[24];}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00013}00013\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_piece}{Piece}}*\ \mbox{\hyperlink{board_8h_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}};}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00018}00018\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{board_8h_a8ed9dd5e9c9e940055fc2fda0bb4d220}{init\_board}}();}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00023}00023\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{board_8h_a21e8719a38fd9b485d449579692ded62}{destroy\_board}}();}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00025}00025\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_trajectory}{Trajectory}}\ \mbox{\hyperlink{board_8h_a75f3a9c4ee37c341da26bc899fe1f3f1}{all\_moves}}[150];}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00026}00026\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{board_8h_ad6061628183a69346f2529f4170f0cd8}{num\_moves}};}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00027}00027\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{board_8h_a53e5299d3b97c47fb1e6e9b89020f39b}{captures}};}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00033}00033\ \mbox{\hyperlink{struct_trajectory}{Trajectory}}*\ \mbox{\hyperlink{board_8h_a90470a95ffa5acb52c32afdfaedb0d6b}{add\_trajectory}}();}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00039}00039\ \mbox{\hyperlink{struct_trajectory}{Trajectory}}*\ \mbox{\hyperlink{board_8h_a8f8c442b372b0044baef767846ce0c85}{add\_trajectory\_copy}}(\mbox{\hyperlink{struct_trajectory}{Trajectory}}*\ trajectory);}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00046}00046\ \mbox{\hyperlink{struct_trajectory}{Trajectory}}*\ \mbox{\hyperlink{board_8h_a3711c73e458cc00131947d98bb2450dc}{add\_trajectory\_piece}}(\mbox{\hyperlink{struct_piece}{Piece}}*\ piece);}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00052}00052\ \mbox{\hyperlink{struct_move}{Move}}*\ \mbox{\hyperlink{board_8h_a167a078502fe9e0bebb7cb182f9b4b11}{add\_move}}(\mbox{\hyperlink{struct_trajectory}{Trajectory}}*\ t);}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00057}00057\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{board_8h_a9cc3000982f33ddcd2952ec8d602dc02}{remove\_move}}(\mbox{\hyperlink{struct_trajectory}{Trajectory}}*\ t);}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00061}00061\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{board_8h_a196466caf97613073b2f46a536aeab00}{calculate\_moves}}();}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00067}00067\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{board_8h_a3f702599a3dc16396e142e0c50a87321}{current\_row}}(\mbox{\hyperlink{struct_trajectory}{Trajectory}}*\ t);}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00073}00073\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{board_8h_a643b00b2ad2f337bc85e012a5e8470c0}{current\_col}}(\mbox{\hyperlink{struct_trajectory}{Trajectory}}*\ t)\ ;}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00080}00080\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{board_8h_ad20e11b277c67bede5c2f0aea810822b}{insideBoard}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col);}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00087}00087\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{board_8h_a16fb663a09087c10c4364f2fef39ede7}{hasPiece}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col);}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00096}00096\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{board_8h_a98c4983c9a3b64e19652292d0e528327}{hasEnemyPiece}}(\textcolor{keywordtype}{int}\ row\ ,\textcolor{keywordtype}{int}\ col\ ,\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}\ c);}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00105}00105\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{board_8h_a48d410f354013beb13e7a9009ccee6fa}{hasAlliedPiece}}(\textcolor{keywordtype}{int}\ row\ ,\textcolor{keywordtype}{int}\ col\ ,\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}\ c);}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00110}00110\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{board_8h_a7de21db3a3efa590179541304d7901a9}{clear\_trajectories}}();}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00115}00115\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{board_8h_a40b3b38a837449a04128b9c255e43c2a}{calculate\_piece\_moves}}(\mbox{\hyperlink{struct_trajectory}{Trajectory}}*\ t);}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00124}00124\ \mbox{\hyperlink{struct_trajectory}{Trajectory}}*\ \mbox{\hyperlink{board_8h_abdf234d17b5e10bb5906b019f9d313da}{getTrajectory}}(\mbox{\hyperlink{struct_piece}{Piece}}*\ piece,\ \textcolor{keywordtype}{int}\ end\_row,\ \textcolor{keywordtype}{int}\ end\_col);}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00130}00130\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{board_8h_ae891cc379cc1d6f806745cc53e83b09d}{capturePieces}}(\mbox{\hyperlink{struct_trajectory}{Trajectory}}*\ t);}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00136}00136\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{board_8h_a025b9ccf02ac7e1b50e8797e750ec116}{isGameOver}}();}
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00137}00137\ }
+\DoxyCodeLine{\Hypertarget{board_8h_source_l00138}00138\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

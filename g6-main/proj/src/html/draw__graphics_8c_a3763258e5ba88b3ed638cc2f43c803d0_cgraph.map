@@ -1,0 +1,14 @@
+<map id="draw_name_screen" name="draw_name_screen">
+<area shape="rect" id="Node000001" title="Draws the name screen." alt="" coords="5,31,140,56"/>
+<area shape="rect" id="Node000002" href="$draw__graphics_8c.html#a1764e22633ce78c7cbb835f2bb0f2bac" title="Draws a string." alt="" coords="188,5,276,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,30,172,25,173,30,141,35"/>
+<area shape="rect" id="Node000006" href="$video_8c.html#a978b99877ebdb731d2787c1456c341c0" title="Draws a .xpm image." alt="" coords="324,56,443,82"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="140,46,310,60,309,66,140,52"/>
+<area shape="rect" id="Node000003" href="$draw__graphics_8c.html#abedef77b00c316e162554bce0344fa54" title="Draws a character." alt="" coords="329,5,439,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="276,16,313,16,313,21,276,21"/>
+<area shape="rect" id="Node000004" href="$video_8c.html#ab0a758b9f8ea20f9bb5fb4ca77f021e5" title="Draws a character." alt="" coords="491,5,623,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="439,16,476,16,476,21,439,21"/>
+<area shape="rect" id="Node000005" href="$video_8c.html#ab0332ee565f978f725c021b4eb35958e" title="Draws pixel." alt="" coords="671,31,792,56"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="624,25,656,30,655,35,623,30"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="444,62,656,46,656,52,444,67"/>
+</map>

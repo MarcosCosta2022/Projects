@@ -1,0 +1,28 @@
+<map id="calculate_moves" name="calculate_moves">
+<area shape="rect" id="Node000001" title="Calculates the moves of all the pieces." alt="" coords="5,228,125,254"/>
+<area shape="rect" id="Node000002" href="$board_8c.html#a40b3b38a837449a04128b9c255e43c2a" title="Calculates the moves of a piece." alt="" coords="173,228,330,254"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,238,158,238,158,244,125,244"/>
+<area shape="poly" id="edge5_Node000002_Node000002" title=" " alt="" coords="220,229,214,219,218,210,230,204,251,201,275,204,286,211,284,216,273,209,251,207,232,209,221,213,219,219,224,226"/>
+<area shape="rect" id="Node000003" href="$board_8c.html#a167a078502fe9e0bebb7cb182f9b4b11" title="Adds a move to a trajectory." alt="" coords="407,5,488,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="255,227,270,190,296,140,331,87,353,62,376,40,391,31,394,35,380,44,356,66,335,90,300,143,275,192,260,229"/>
+<area shape="rect" id="Node000004" href="$board_8c.html#a8f8c442b372b0044baef767846ce0c85" title="Adds a copy of a trajectory to the array of trajectories." alt="" coords="378,55,516,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="258,226,303,162,337,123,376,89,384,85,386,89,380,94,341,127,307,165,263,229"/>
+<area shape="rect" id="Node000006" href="$board_8c.html#a7de21db3a3efa590179541304d7901a9" title="Clears the trajectories." alt="" coords="387,104,507,130"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="264,225,312,184,377,139,387,133,389,138,379,143,315,188,268,229"/>
+<area shape="rect" id="Node000007" href="$board_8c.html#a643b00b2ad2f337bc85e012a5e8470c0" title="Returns the current column of a trajectory." alt="" coords="405,153,490,179"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="283,225,377,188,392,182,394,187,379,193,285,230"/>
+<area shape="rect" id="Node000008" href="$board_8c.html#a3f702599a3dc16396e142e0c50a87321" title="Returns the current row of a trajectory." alt="" coords="403,203,492,228"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="330,228,388,220,389,226,330,233"/>
+<area shape="rect" id="Node000009" href="$board_8c.html#a48d410f354013beb13e7a9009ccee6fa" title="Checks if a piece is allied." alt="" coords="394,252,501,278"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="330,248,379,254,379,259,330,253"/>
+<area shape="rect" id="Node000010" href="$board_8c.html#a98c4983c9a3b64e19652292d0e528327" title="Checks if a piece is an enemy." alt="" coords="389,301,505,327"/>
+<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="286,252,379,288,394,293,392,298,377,293,285,257"/>
+<area shape="rect" id="Node000011" href="$board_8c.html#a16fb663a09087c10c4364f2fef39ede7" title="Checks if a piece exists in a position." alt="" coords="410,351,485,376"/>
+<area shape="poly" id="edge11_Node000002_Node000011" title=" " alt="" coords="268,252,315,293,379,337,397,345,395,350,377,342,312,297,264,256"/>
+<area shape="rect" id="Node000012" href="$board_8c.html#ad20e11b277c67bede5c2f0aea810822b" title="Checks if a position is inside the board." alt="" coords="403,400,492,426"/>
+<area shape="poly" id="edge12_Node000002_Node000012" title=" " alt="" coords="263,252,307,316,341,354,380,387,390,393,387,398,376,391,337,358,303,319,258,255"/>
+<area shape="rect" id="Node000013" href="$board_8c.html#a9cc3000982f33ddcd2952ec8d602dc02" title="Removes a move from a trajectory." alt="" coords="396,449,499,475"/>
+<area shape="poly" id="edge13_Node000002_Node000013" title=" " alt="" coords="260,253,275,289,300,338,335,391,380,436,385,440,382,444,376,440,331,394,296,341,270,291,255,255"/>
+<area shape="rect" id="Node000005" href="$board_8c.html#a90470a95ffa5acb52c32afdfaedb0d6b" title="Adds a trajectory to the array of trajectories." alt="" coords="564,55,668,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="517,65,549,65,549,70,517,70"/>
+</map>

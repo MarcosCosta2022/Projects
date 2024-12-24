@@ -1,0 +1,15 @@
+<map id="mouse_disable_data_reporting" name="mouse_disable_data_reporting">
+<area shape="rect" id="Node000001" title="Disables data reporting." alt="" coords="5,23,146,64"/>
+<area shape="rect" id="Node000002" href="$mouse_8c.html#a4d3acee0b9a97e26872d4af9f237a98c" title="Writes a command to the mouse." alt="" coords="194,31,353,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,41,179,41,179,46,146,46"/>
+<area shape="rect" id="Node000003" href="$_k_b_c_8c.html#a72fbcf4ba83c3ea35461be5675a1277d" title="Reads the output buffer from the keyboard." alt="" coords="401,55,525,80"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="354,51,387,55,386,60,353,56"/>
+<area shape="rect" id="Node000006" href="$_k_b_c_8c.html#a95d45e37519eb9a678f9a4badf1482d3" title="Writes the input to the keyboard." alt="" coords="404,5,523,31"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="353,30,388,25,389,31,354,35"/>
+<area shape="rect" id="Node000004" href="$_k_b_c_8c.html#a783c73c7acfacf481d616e56650195df" title="Reads the status register." alt="" coords="573,5,691,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="509,51,571,33,572,38,511,57"/>
+<area shape="rect" id="Node000005" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title=" " alt="" coords="739,31,829,56"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="526,60,724,45,724,51,526,66"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="691,25,724,31,724,36,691,31"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="523,16,559,16,559,21,523,21"/>
+</map>

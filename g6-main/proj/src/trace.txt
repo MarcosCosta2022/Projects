@@ -1,0 +1,80 @@
+@lcflib.a:2019, lcf_start
+  proj_main_loop(argc, argv)
+> proj_main_loop(0, [NULL])
+  @/home/lcom/labs/g6/proj/src/devices/int_manager.c:14, init
+    timer_subscribe_int(&timer_bit_no)
+  > timer_subscribe_int(addr: 0xeffff7b7 [0])
+    @/home/lcom/labs/g6/proj/src/devices/timer.c:42, timer_subscribe_int
+      sys_irqsetpolicy(TIMER0_IRQ, IRQ_REENABLE, &timer_hook_id)
+    > sys_irqsetpolicy(0, 1, addr: 0x823bef8 [0])
+    < sys_irqsetpolicy(0, 1, addr: 0x823bef8 [10]) -> (ret: 0)
+  < timer_subscribe_int(addr: 0xeffff7b7 [0]) -> (ret: 0)
+  @/home/lcom/labs/g6/proj/src/devices/keyboard.c:9, kbd_subscribe_int
+    sys_irqsetpolicy(KBD_IRQ_LINE, IRQ_REENABLE | IRQ_EXCLUSIVE, &kbd_hook_id)
+  > sys_irqsetpolicy(1, 3, addr: 0x823a414 [1])
+  < sys_irqsetpolicy(1, 3, addr: 0x823a414 [11]) -> (ret: 0)
+  @/home/lcom/labs/g6/proj/src/devices/mouse.c:32, mouse_subscribe_int
+    sys_irqsetpolicy(MOUSE_IRQ_LINE, IRQ_REENABLE | IRQ_EXCLUSIVE, &mouse_hook_id)
+  > sys_irqsetpolicy(12, 3, addr: 0x823a410 [2])
+  < sys_irqsetpolicy(12, 3, addr: 0x823a410 [12]) -> (ret: 0)
+  @/home/lcom/labs/g6/proj/src/devices/utils.c:17, util_sys_inb
+    sys_inb(port, &temp)
+  > sys_inb(0x64, addr: 0xeffff740)
+  < sys_inb(0x64, addr: 0xeffff740 [0x1c = 0b00011100])
+  @/home/lcom/labs/g6/proj/src/devices/KBC.c:27, KBC_write_input
+    sys_outb(port, input)
+  > sys_outb(0x64, 0xd4 = 0b11010100)
+  @/home/lcom/labs/g6/proj/src/devices/utils.c:17, util_sys_inb
+    sys_inb(port, &temp)
+  > sys_inb(0x64, addr: 0xeffff740)
+  < sys_inb(0x64, addr: 0xeffff740 [0x1c = 0b00011100])
+  @/home/lcom/labs/g6/proj/src/devices/KBC.c:27, KBC_write_input
+    sys_outb(port, input)
+  > sys_outb(0x60, 0xf4 = 0b11110100)
+  @/home/lcom/labs/g6/proj/src/devices/utils.c:17, util_sys_inb
+    sys_inb(port, &temp)
+  > sys_inb(0x64, addr: 0xeffff744)
+  < sys_inb(0x64, addr: 0xeffff744 [0x3d = 0b00111101])
+  @/home/lcom/labs/g6/proj/src/devices/utils.c:17, util_sys_inb
+    sys_inb(port, &temp)
+  > sys_inb(0x60, addr: 0xeffff744)
+  < sys_inb(0x60, addr: 0xeffff744 [0xfa = 0b11111010])
+  @/home/lcom/labs/g6/proj/src/devices/int_manager.c:26, init
+    vg_init(0x115)
+  > vg_init(0x115)
+    @/home/lcom/labs/g6/proj/src/devices/video.c:81, video_change_mode
+      sys_int86(&r86)
+    > sys_int86(addr: 0xeffff6b0 [AX: 4f02, BX: 4115, CX: 0000, DX: 0000, ES: 0000, DI: 0000])
+    < sys_int86(addr: 0xeffff6b0 [AX: 004f, BX: 4115, CX: 0000, DX: 0000, ES: 0000, DI: 0000]) -> (ret: 0)
+    @/home/lcom/labs/g6/proj/src/devices/video.c:38, video_map_phys_mem
+      vbe_get_mode_info(mode, &vmi_p)
+    > vbe_get_mode_info(0x115, addr: 0xeffff578)
+    < vbe_get_mode_info(0x115, addr: 0xeffff578 [0xe0000000, 800x600, 8:8:8 (24) <1.37329 MiB>]) -> (ret: 0)
+    @/home/lcom/labs/g6/proj/src/devices/video.c:54, video_map_phys_mem
+      sys_privctl(SELF, SYS_PRIV_ADD_MEM, &mr)
+    > sys_privctl(SELF, SYS_PRIV_ADD_MEM, addr: 0xeffff570 [0xe0000000 - 0xe015f900 <1.37329 MiB>])
+    < sys_privctl(SELF, SYS_PRIV_ADD_MEM, &mr) -> (ret: 0)
+    @/home/lcom/labs/g6/proj/src/devices/video.c:58, video_map_phys_mem
+      vm_map_phys(SELF, (void *)mr.mr_base, size)
+    < vm_map_phys(SELF, addr: 0xe0000000, 1.37329 MiB) -> (ret: 0xef89b000)
+  < vg_init(0x115) -> (ret: 0xef89b000)
+  @/home/lcom/labs/g6/proj/src/game/draw_graphics.c:45, load_xpms
+    xpm_load(cursor_xpm, XPM_8_8_8_8, &cursor)
+  > xpm_load(addr: 0x823a418, XPM_8_8_8_8, addr: 0x8257eac)
+  < xpm_load(addr: 0x823a418, XPM_8_8_8_8, addr: 0x8257eac [15x25 : 1500 bytes]) -> (ret: 0x8264000)
+  @/home/lcom/labs/g6/proj/src/game/draw_graphics.c:46, load_xpms
+    xpm_load(white_queen_xpm, XPM_8_8_8_8, &white_king)
+  > xpm_load(addr: 0x823a48c, XPM_8_8_8_8, addr: 0x8257e9c)
+  < xpm_load(addr: 0x823a48c, XPM_8_8_8_8, addr: 0x8257e9c [75x75 : 22500 bytes]) -> (ret: 0x8266000)
+  @/home/lcom/labs/g6/proj/src/game/draw_graphics.c:47, load_xpms
+    xpm_load(white_checker_xpm, XPM_8_8_8_8, &white_checker)
+  > xpm_load(addr: 0x823a920, XPM_8_8_8_8, addr: 0x8257e8c)
+  < xpm_load(addr: 0x823a920, XPM_8_8_8_8, addr: 0x8257e8c [75x75 : 22500 bytes]) -> (ret: 0x826c000)
+  @/home/lcom/labs/g6/proj/src/game/draw_graphics.c:48, load_xpms
+    xpm_load(black_queen_xpm, XPM_8_8_8_8, &black_king)
+  > xpm_load(addr: 0x823abbc, XPM_8_8_8_8, addr: 0x8257e7c)
+  < xpm_load(addr: 0x823abbc, XPM_8_8_8_8, addr: 0x8257e7c [75x75 : 22500 bytes]) -> (ret: 0x83d4000)
+  @/home/lcom/labs/g6/proj/src/game/draw_graphics.c:49, load_xpms
+    xpm_load(black_checker_xpm, XPM_8_8_8_8, &black_checker)
+  > xpm_load(addr: 0x823b05c, XPM_8_8_8_8, addr: 0x8257ebc)
+  < xpm_load(addr: 0x823b05c, XPM_8_8_8_8, addr: 0x8257ebc [75x75 : 22500 bytes]) -> (ret: 0x83da000)

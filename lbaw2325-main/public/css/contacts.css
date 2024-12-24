@@ -1,0 +1,39 @@
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1200px;
+ position: center;
+}
+#contacts {
+    padding: 20px;
+}
+
+#contacts h1 {
+    margin-bottom: 30px;
+}
+
+.team-section h2 {
+    margin-bottom: 20px;
+    color: #18bc9c; /* Flatly's theme color for emphasis */
+}
+
+.team-list {
+    list-style: none;
+    padding: 0;
+}
+
+.team-list li {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.team-info h3 {
+    color: #2c3e50; /* Flatly's dark shade */
+    margin-bottom: 5px;
+}
+
+.team-info p {
+    margin-bottom: 0;
+    font-style: italic;
+    color: #95a5a6; /* Flatly's gray shade */
+}

@@ -1,0 +1,156 @@
+\doxysection{event\+\_\+handler/timer\+\_\+event\+\_\+handler.h File Reference}
+\hypertarget{timer__event__handler_8h}{}\label{timer__event__handler_8h}\index{event\_handler/timer\_event\_handler.h@{event\_handler/timer\_event\_handler.h}}
+{\ttfamily \#include \"{}../devices/timer.\+h\"{}}\newline
+{\ttfamily \#include \"{}../game/draw\+\_\+graphics.\+h\"{}}\newline
+Include dependency graph for timer\+\_\+event\+\_\+handler.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer__event__handler_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer__event__handler_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void() \mbox{\hyperlink{timer__event__handler_8h_afab0a66cce2c57da5f6e38503410ea1d}{timer\+\_\+event\+\_\+handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles timer events. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{timer__event__handler_8h_aa4783bc8e555a03b7f26ce2f58a808e7}{update\+\_\+sprites}} ()
+\begin{DoxyCompactList}\small\item\em Updates sprites. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{timer__event__handler_8h_afab0a66cce2c57da5f6e38503410ea1d}\label{timer__event__handler_8h_afab0a66cce2c57da5f6e38503410ea1d} 
+\index{timer\_event\_handler.h@{timer\_event\_handler.h}!timer\_event\_handler@{timer\_event\_handler}}
+\index{timer\_event\_handler@{timer\_event\_handler}!timer\_event\_handler.h@{timer\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{timer\_event\_handler()}{timer\_event\_handler()}}
+{\footnotesize\ttfamily void() timer\+\_\+event\+\_\+handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles timer events. 
+
+
+
+Definition at line \mbox{\hyperlink{timer__event__handler_8c_source_l00003}{3}} of file \mbox{\hyperlink{timer__event__handler_8c_source}{timer\+\_\+event\+\_\+handler.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00004\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a70546ef15bc78d3e183760c87a4f2f95}{fase}}\ ==\ \mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628ad50cf309d7568040619ed26ee6835a84}{GAME}})\{}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_aaca79719959531adcb538aad5a0c53e8}{turn}}\ ==\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1ca283fc479650da98250635b9c3c0e7e50}{WHITE}})\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a5566e6568ea277a508f909b32a2d99bc}{white\_time}}\ -\/=2;}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a5566e6568ea277a508f909b32a2d99bc}{white\_time}}\ ==\ 0)\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a9deaba51419cfcf0fb430512e8d11b5e}{winner}}\ =\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3}{BLACK}};}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a58f4ad8c25d6712b21e03fac6fdba17c}{changeState}}(\mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628ad1cb40a0245d392ac672f7bb0c76aa56}{WINNER}});}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_ad2942906e1bafe30b74a620b6bfb0bc8}{black\_time}}\ -\/=2;}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_ad2942906e1bafe30b74a620b6bfb0bc8}{black\_time}}\ ==\ 0)\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a9deaba51419cfcf0fb430512e8d11b5e}{winner}}\ =\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1ca283fc479650da98250635b9c3c0e7e50}{WHITE}};}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a58f4ad8c25d6712b21e03fac6fdba17c}{changeState}}(\mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628ad1cb40a0245d392ac672f7bb0c76aa56}{WINNER}});}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{timer__event__handler_8c_aa4783bc8e555a03b7f26ce2f58a808e7}{update\_sprites}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a58530c2091e5cc9fb6a5ec67aee2b850}{draw\_graphics}}();}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_abb180da0d359d9dd5c05536f5ad20f0c}{\_update\_screen}}();}
+\DoxyCodeLine{00023\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer__event__handler_8h_afab0a66cce2c57da5f6e38503410ea1d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer__event__handler_8h_afab0a66cce2c57da5f6e38503410ea1d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{timer__event__handler_8h_aa4783bc8e555a03b7f26ce2f58a808e7}\label{timer__event__handler_8h_aa4783bc8e555a03b7f26ce2f58a808e7} 
+\index{timer\_event\_handler.h@{timer\_event\_handler.h}!update\_sprites@{update\_sprites}}
+\index{update\_sprites@{update\_sprites}!timer\_event\_handler.h@{timer\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{update\_sprites()}{update\_sprites()}}
+{\footnotesize\ttfamily void() update\+\_\+sprites (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates sprites. 
+
+
+
+Definition at line \mbox{\hyperlink{timer__event__handler_8c_source_l00025}{25}} of file \mbox{\hyperlink{timer__event__handler_8c_source}{timer\+\_\+event\+\_\+handler.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{game_8c_a7c4988f3343262d4d8d26923af00d1f7}{num\_sprites}};\ i++)\{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_piece_sprite}{PieceSprite}}*\ sprite\ =\ \&\mbox{\hyperlink{game_8c_a0fe09b3858b8c61f07a8c5290a54699f}{sprites}}[i];}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_piece}{Piece}}*\ piece\ =\ sprite-\/>\mbox{\hyperlink{struct_piece_sprite_a5867f03b175005754ee4fcf2185b8e18}{piece}};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a895b6803ce74fe8574d6168d66ac6bb5}{x}}\ +=\ sprite-\/>\mbox{\hyperlink{struct_piece_sprite_adb361ed1850786f255f38e7ad4762c00}{velocity\_x}};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a97d61c9e42873e2274620c91178e879b}{y}}\ +=\ sprite-\/>\mbox{\hyperlink{struct_piece_sprite_ab3bb8de5b6e329f5baffe3a502e80e51}{velocity\_y}};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sprite-\/>\mbox{\hyperlink{struct_piece_sprite_adb361ed1850786f255f38e7ad4762c00}{velocity\_x}}\ >\ 0\ \&\&\ piece-\/>\mbox{\hyperlink{struct_piece_a895b6803ce74fe8574d6168d66ac6bb5}{x}}\ >=\ sprite-\/>\mbox{\hyperlink{struct_piece_sprite_a7a928400aaf5c91d073ede265e4f7ab9}{destination\_x}})\{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a895b6803ce74fe8574d6168d66ac6bb5}{x}}\ =\ sprite-\/>\mbox{\hyperlink{struct_piece_sprite_a7a928400aaf5c91d073ede265e4f7ab9}{destination\_x}};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ sprite-\/>\mbox{\hyperlink{struct_piece_sprite_adb361ed1850786f255f38e7ad4762c00}{velocity\_x}}\ =\ 0;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (sprite-\/>\mbox{\hyperlink{struct_piece_sprite_adb361ed1850786f255f38e7ad4762c00}{velocity\_x}}\ <\ 0\ \&\&\ piece-\/>\mbox{\hyperlink{struct_piece_a895b6803ce74fe8574d6168d66ac6bb5}{x}}\ <=\ sprite-\/>\mbox{\hyperlink{struct_piece_sprite_a7a928400aaf5c91d073ede265e4f7ab9}{destination\_x}})\{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a895b6803ce74fe8574d6168d66ac6bb5}{x}}\ =\ sprite-\/>\mbox{\hyperlink{struct_piece_sprite_a7a928400aaf5c91d073ede265e4f7ab9}{destination\_x}};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ sprite-\/>\mbox{\hyperlink{struct_piece_sprite_adb361ed1850786f255f38e7ad4762c00}{velocity\_x}}\ =\ 0;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sprite-\/>\mbox{\hyperlink{struct_piece_sprite_ab3bb8de5b6e329f5baffe3a502e80e51}{velocity\_y}}\ >\ 0\ \&\&\ piece-\/>\mbox{\hyperlink{struct_piece_a97d61c9e42873e2274620c91178e879b}{y}}\ >=\ sprite-\/>\mbox{\hyperlink{struct_piece_sprite_a45a8b4274512075c16bbb39a9c687cb7}{destination\_y}})\{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a97d61c9e42873e2274620c91178e879b}{y}}\ =\ sprite-\/>\mbox{\hyperlink{struct_piece_sprite_a45a8b4274512075c16bbb39a9c687cb7}{destination\_y}};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ sprite-\/>\mbox{\hyperlink{struct_piece_sprite_ab3bb8de5b6e329f5baffe3a502e80e51}{velocity\_y}}\ =\ 0;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (sprite-\/>\mbox{\hyperlink{struct_piece_sprite_ab3bb8de5b6e329f5baffe3a502e80e51}{velocity\_y}}\ <\ 0\ \&\&\ piece-\/>\mbox{\hyperlink{struct_piece_a97d61c9e42873e2274620c91178e879b}{y}}\ <=\ sprite-\/>\mbox{\hyperlink{struct_piece_sprite_a45a8b4274512075c16bbb39a9c687cb7}{destination\_y}})\{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a97d61c9e42873e2274620c91178e879b}{y}}\ =\ sprite-\/>\mbox{\hyperlink{struct_piece_sprite_a45a8b4274512075c16bbb39a9c687cb7}{destination\_y}};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ sprite-\/>\mbox{\hyperlink{struct_piece_sprite_ab3bb8de5b6e329f5baffe3a502e80e51}{velocity\_y}}\ =\ 0;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a70546ef15bc78d3e183760c87a4f2f95}{fase}}\ ==\ \mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628ad1cb40a0245d392ac672f7bb0c76aa56}{WINNER}})\{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a0fe09b3858b8c61f07a8c5290a54699f}{sprites}}[0].velocity\_x\ ==\ 0\ \&\&\ \mbox{\hyperlink{game_8c_a0fe09b3858b8c61f07a8c5290a54699f}{sprites}}[1].velocity\_x\ ==\ 0)\{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a9deaba51419cfcf0fb430512e8d11b5e}{winner}}\ ==\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3}{BLACK}})\{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a0fe09b3858b8c61f07a8c5290a54699f}{sprites}}[0].\mbox{\hyperlink{struct_piece_sprite_a7a928400aaf5c91d073ede265e4f7ab9}{destination\_x}}\ =\ 125;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a0fe09b3858b8c61f07a8c5290a54699f}{sprites}}[0].\mbox{\hyperlink{struct_piece_sprite_adb361ed1850786f255f38e7ad4762c00}{velocity\_x}}\ =\ -\/15;}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a0fe09b3858b8c61f07a8c5290a54699f}{sprites}}[1].\mbox{\hyperlink{struct_piece_sprite_a7a928400aaf5c91d073ede265e4f7ab9}{destination\_x}}\ =\ 810;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a0fe09b3858b8c61f07a8c5290a54699f}{sprites}}[1].\mbox{\hyperlink{struct_piece_sprite_adb361ed1850786f255f38e7ad4762c00}{velocity\_x}}\ =\ 20;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a9deaba51419cfcf0fb430512e8d11b5e}{winner}}\ ==\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1ca283fc479650da98250635b9c3c0e7e50}{WHITE}})\{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a0fe09b3858b8c61f07a8c5290a54699f}{sprites}}[0].\mbox{\hyperlink{struct_piece_sprite_a7a928400aaf5c91d073ede265e4f7ab9}{destination\_x}}\ =\ -\/85;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a0fe09b3858b8c61f07a8c5290a54699f}{sprites}}[0].\mbox{\hyperlink{struct_piece_sprite_adb361ed1850786f255f38e7ad4762c00}{velocity\_x}}\ =\ -\/20;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a0fe09b3858b8c61f07a8c5290a54699f}{sprites}}[1].\mbox{\hyperlink{struct_piece_sprite_a7a928400aaf5c91d073ede265e4f7ab9}{destination\_x}}\ =\ 600;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a0fe09b3858b8c61f07a8c5290a54699f}{sprites}}[1].\mbox{\hyperlink{struct_piece_sprite_adb361ed1850786f255f38e7ad4762c00}{velocity\_x}}\ =\ 15;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a0fe09b3858b8c61f07a8c5290a54699f}{sprites}}[0].\mbox{\hyperlink{struct_piece_sprite_a7a928400aaf5c91d073ede265e4f7ab9}{destination\_x}}\ =\ 125;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a0fe09b3858b8c61f07a8c5290a54699f}{sprites}}[0].\mbox{\hyperlink{struct_piece_sprite_adb361ed1850786f255f38e7ad4762c00}{velocity\_x}}\ =\ -\/15;}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a0fe09b3858b8c61f07a8c5290a54699f}{sprites}}[1].\mbox{\hyperlink{struct_piece_sprite_a7a928400aaf5c91d073ede265e4f7ab9}{destination\_x}}\ =\ 600;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a0fe09b3858b8c61f07a8c5290a54699f}{sprites}}[1].\mbox{\hyperlink{struct_piece_sprite_adb361ed1850786f255f38e7ad4762c00}{velocity\_x}}\ =\ 15;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer__event__handler_8h_aa4783bc8e555a03b7f26ce2f58a808e7_icgraph}
+\end{center}
+\end{figure}

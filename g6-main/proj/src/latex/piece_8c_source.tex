@@ -1,0 +1,37 @@
+\doxysection{piece.\+c}
+\hypertarget{piece_8c_source}{}\label{piece_8c_source}\index{game/piece.c@{game/piece.c}}
+\mbox{\hyperlink{piece_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{piece_8h}{piece.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00004}\mbox{\hyperlink{piece_8c_aabf9e8dc1805608072457dc2efa5b2a7}{00004}}\ \mbox{\hyperlink{struct_piece}{Piece}}*\ \mbox{\hyperlink{piece_8c_aabf9e8dc1805608072457dc2efa5b2a7}{createPiece}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col,\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}\ color,\ \textcolor{keywordtype}{bool}\ isKing,\ xpm\_image\_t*\ image)\{}
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00005}00005\ \ \ \ \ \mbox{\hyperlink{struct_piece}{Piece}}*\ piece\ =\ (\mbox{\hyperlink{struct_piece}{Piece}}*)\ malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_piece}{Piece}}));}
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00006}00006\ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a895b6803ce74fe8574d6168d66ac6bb5}{x}}\ =\ x;}
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00007}00007\ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a97d61c9e42873e2274620c91178e879b}{y}}\ =\ y;}
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00008}00008\ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_ac6ef7c474f20562cb629c2452ce0631d}{row}}\ =\ row;}
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00009}00009\ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a4017d278fbe40f96214961ab71f17d35}{col}}\ =\ col;}
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00010}00010\ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a4cf5b29a9e13dcb93b616b11160c2abc}{color}}\ =\ color;}
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00011}00011\ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a98ddd530a5ffb3ee8242dc5b986aa3c5}{isKing}}\ =\ isKing;}
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00012}00012\ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a623a9a57ec7f25a0bef4f66b35f7d46b}{image}}\ =\ image;}
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00013}00013\ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a018c7ca7ee7c12c88b59c064ce7d7d6a}{isCaptured}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00014}00014\ \ \ \ \ \textcolor{keywordflow}{return}\ piece;}
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00015}00015\ \}}
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00017}\mbox{\hyperlink{piece_8c_a9bbadfbace1a561a9b018c1a32dc62ef}{00017}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{piece_8c_a9bbadfbace1a561a9b018c1a32dc62ef}{promote}}(\mbox{\hyperlink{struct_piece}{Piece}}*\ piece)\{}
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00018}00018\ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a98ddd530a5ffb3ee8242dc5b986aa3c5}{isKing}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{if}(piece-\/>\mbox{\hyperlink{struct_piece_a4cf5b29a9e13dcb93b616b11160c2abc}{color}}\ ==\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1ca283fc479650da98250635b9c3c0e7e50}{WHITE}})\{}
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00020}00020\ \ \ \ \ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a623a9a57ec7f25a0bef4f66b35f7d46b}{image}}\ =\ \&\mbox{\hyperlink{draw__graphics_8c_ad3c4eb0800627b4ce1bdac19bef9ef9f}{white\_king}};}
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00021}00021\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00022}00022\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00023}00023\ \ \ \ \ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a623a9a57ec7f25a0bef4f66b35f7d46b}{image}}\ =\ \&\mbox{\hyperlink{draw__graphics_8c_af506c99bd1c7bacf13859dd666ea5de6}{black\_king}};}
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00024}00024\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00025}00025\ \}}
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00027}\mbox{\hyperlink{piece_8c_a25b4e1a5539ffd998aeb00a3f99ec4b9}{00027}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{piece_8c_a25b4e1a5539ffd998aeb00a3f99ec4b9}{capture}}(\mbox{\hyperlink{struct_piece}{Piece}}*\ piece)\{}
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00028}00028\ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a018c7ca7ee7c12c88b59c064ce7d7d6a}{isCaptured}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{piece_8c_source_l00031}00031\ }
+
+\end{DoxyCode}

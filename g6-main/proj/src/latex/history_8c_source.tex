@@ -1,0 +1,158 @@
+\doxysection{history.\+c}
+\hypertarget{history_8c_source}{}\label{history_8c_source}\index{game/history.c@{game/history.c}}
+\mbox{\hyperlink{history_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{history_8h}{history.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00003}\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{00003}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}\ \ =\ 0;}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00004}\mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{00004}}\ \mbox{\hyperlink{struct_match_record}{MatchRecord}}\ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[30];\ \textcolor{comment}{//only\ saves\ up\ to\ 30\ matches}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00005}\mbox{\hyperlink{history_8c_af40ece271ce4aa75aecf64fac92e3b25}{00005}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{history_8c_af40ece271ce4aa75aecf64fac92e3b25}{oldest\_match\_index}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00007}\mbox{\hyperlink{history_8c_ae1517d80b170a8baa197d6f9bfbb88d9}{00007}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{history_8c_ae1517d80b170a8baa197d6f9bfbb88d9}{index\_first\_match\_being\_shown}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00010}\mbox{\hyperlink{history_8c_ab4af141d40f18fd524b677f9a68ba6cc}{00010}}\ void\ (\mbox{\hyperlink{history_8c_ab4af141d40f18fd524b677f9a68ba6cc}{roll\_down}})()\{}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00011}00011\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{history_8c_ae1517d80b170a8baa197d6f9bfbb88d9}{index\_first\_match\_being\_shown}}\ >\ 0)\ \mbox{\hyperlink{history_8c_ae1517d80b170a8baa197d6f9bfbb88d9}{index\_first\_match\_being\_shown}}-\/-\/;}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00012}00012\ \}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00013}\mbox{\hyperlink{history_8c_a933208df950622e857a82625b946727a}{00013}}\ void\ (\mbox{\hyperlink{history_8c_a933208df950622e857a82625b946727a}{roll\_up}})()\{}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00014}00014\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{history_8c_ae1517d80b170a8baa197d6f9bfbb88d9}{index\_first\_match\_being\_shown}}\ <\ \mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}\ -\/\ 3)\ \mbox{\hyperlink{history_8c_ae1517d80b170a8baa197d6f9bfbb88d9}{index\_first\_match\_being\_shown}}++;}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00015}00015\ \}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00017}\mbox{\hyperlink{history_8c_af4bcea2cd0974b3563d9023f25a7beb5}{00017}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{history_8c_af4bcea2cd0974b3563d9023f25a7beb5}{save\_match\_record}}(\mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}\ \mbox{\hyperlink{game_8c_a9deaba51419cfcf0fb430512e8d11b5e}{winner}},\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ black\_remain\_time,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ white\_remain\_time\ ,\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{game_8c_ae6439bcf42c914cdb59213277f001892}{black\_name}},\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{game_8c_ace6dbe6f73e3ceafa52a94af5cd39944}{white\_name}}\ ,\ \mbox{\hyperlink{struct_time}{Time}}\ start\_time)\{}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00018}00018\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}\ <\ 30)\{}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00019}00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}++;}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00020}00020\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00021}00021\ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_af40ece271ce4aa75aecf64fac92e3b25}{oldest\_match\_index}}].\mbox{\hyperlink{struct_match_record_aa4ba0725774ad9d8cfa6f69df7279bbd}{winner}}\ =\ \mbox{\hyperlink{game_8c_a9deaba51419cfcf0fb430512e8d11b5e}{winner}};}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00022}00022\ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_af40ece271ce4aa75aecf64fac92e3b25}{oldest\_match\_index}}].\mbox{\hyperlink{struct_match_record_a19a80e03aba24aaa1119c8bacb439381}{black\_remain\_time}}\ =\ black\_remain\_time;}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_af40ece271ce4aa75aecf64fac92e3b25}{oldest\_match\_index}}].\mbox{\hyperlink{struct_match_record_a0e922d654bbd28a457ab8f09a5f33778}{white\_remain\_time}}\ =\ white\_remain\_time;}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00024}00024\ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_af40ece271ce4aa75aecf64fac92e3b25}{oldest\_match\_index}}].\mbox{\hyperlink{struct_match_record_a630ab468f07a9ebd780f727b359dd31c}{start\_time}}\ =\ start\_time;}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00025}00025\ \ \ \ \ strcpy(\mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_af40ece271ce4aa75aecf64fac92e3b25}{oldest\_match\_index}}].black\_player\_name,\ \mbox{\hyperlink{game_8c_ae6439bcf42c914cdb59213277f001892}{black\_name}});}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00026}00026\ \ \ \ \ strcpy(\mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_af40ece271ce4aa75aecf64fac92e3b25}{oldest\_match\_index}}].white\_player\_name,\ \mbox{\hyperlink{game_8c_ace6dbe6f73e3ceafa52a94af5cd39944}{white\_name}});}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{history_8c_af40ece271ce4aa75aecf64fac92e3b25}{oldest\_match\_index}}\ =\ (\mbox{\hyperlink{history_8c_af40ece271ce4aa75aecf64fac92e3b25}{oldest\_match\_index}}\ +\ 1)\ \%\ 30;}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00028}00028\ \}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00030}\mbox{\hyperlink{history_8c_a3750ca5f0469a87bcea1a523cd990cd3}{00030}}\ \mbox{\hyperlink{struct_match_record}{MatchRecord}}*\ \mbox{\hyperlink{history_8c_a3750ca5f0469a87bcea1a523cd990cd3}{getMatchRecord}}(\textcolor{keywordtype}{int}\ index)\{}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00031}00031\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}\ ==\ 0\ ||\ index\ >=\ \mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}})\{}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00033}00033\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}\ <\ 30)\{}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \&\mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[index];}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00037}00037\ \ \ \ \ \textcolor{keywordflow}{return}\ \&\mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[(\mbox{\hyperlink{history_8c_af40ece271ce4aa75aecf64fac92e3b25}{oldest\_match\_index}}\ +\ index)\ \%\ 30];}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00038}00038\ \}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00040}\mbox{\hyperlink{history_8c_a430dfdf5895b99b13d24f0cd542eda06}{00040}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{history_8c_a430dfdf5895b99b13d24f0cd542eda06}{load\_history}}()\ \{}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00041}00041\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00042}00042\ \ \ \ \ \textcolor{keywordtype}{char}\ file\_dir[256];\ \textcolor{comment}{//\ Store\ the\ directory\ containing\ the\ current\ file}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00043}00043\ \ \ \ \ strcpy(file\_dir,\ dirname(\_\_FILE\_\_));}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00044}00044\ \ \ \ \ strcat(file\_dir,\ \textcolor{stringliteral}{"{}/../resources/history.csv"{}});}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00046}00046\ \ \ \ \ \textcolor{keywordtype}{char}\ real\_file\_dir[256];}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00047}00047\ \ \ \ \ \textcolor{keywordflow}{if}\ (realpath(file\_dir,\ real\_file\_dir)\ ==\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00048}00048\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Failed\ to\ resolve\ the\ absolute\ path\ of\ the\ project\ root\ directory.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00051}00051\ \ \ \ \ FILE\ *file\ =\ fopen(real\_file\_dir,\ \textcolor{stringliteral}{"{}r"{}});}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00052}00052\ \ \ \ \ \textcolor{keywordflow}{if}\ (file\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00053}00053\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Error\ opening\ file:\ \%s\(\backslash\)n"{}},\ real\_file\_dir);}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00055}00055\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00056}00056\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00057}00057\ \ \ \ \ \textcolor{keywordtype}{char}\ buffer[256];}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00058}00058\ \ \ \ \ fgets(buffer,\ \textcolor{keyword}{sizeof}(buffer),\ file);\ \textcolor{comment}{//\ Skip\ header}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00059}00059\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00060}00060\ \ \ \ \ \textcolor{keywordflow}{while}\ (fgets(buffer,\ \textcolor{keyword}{sizeof}(buffer),\ file))\ \{}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}\ >=\ 30)\ \{}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00063}00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00064}00064\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *token\ =\ strtok(buffer,\ \textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (token\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00068}00068\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00069}00069\ \ \ \ \ \ \ \ \ strncpy(\mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}].white\_player\_name,\ token,\ 20);}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00070}00070\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00071}00071\ \ \ \ \ \ \ \ \ token\ =\ strtok(NULL,\ \textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (token\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00074}00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00075}00075\ \ \ \ \ \ \ \ \ strncpy(\mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}].black\_player\_name,\ token,\ 20);}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00076}00076\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00077}00077\ \ \ \ \ \ \ \ \ token\ =\ strtok(NULL,\ \textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (token\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00080}00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (strcmp(token,\ \textcolor{stringliteral}{"{}BLACK"{}})\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}].\mbox{\hyperlink{struct_match_record_aa4ba0725774ad9d8cfa6f69df7279bbd}{winner}}\ =\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3}{BLACK}};}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00083}00083\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (strcmp(token,\ \textcolor{stringliteral}{"{}WHITE"{}})\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}].\mbox{\hyperlink{struct_match_record_aa4ba0725774ad9d8cfa6f69df7279bbd}{winner}}\ =\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1ca283fc479650da98250635b9c3c0e7e50}{WHITE}};}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00085}00085\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00087}00087\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00088}00088\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00089}00089\ \ \ \ \ \ \ \ \ token\ =\ strtok(NULL,\ \textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (token\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00092}00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00093}00093\ \ \ \ \ \ \ \ \ sscanf(token,\ \textcolor{stringliteral}{"{}\%hu-\/\%hu-\/\%hu"{}},}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}].start\_time.year,}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}].\mbox{\hyperlink{struct_match_record_a630ab468f07a9ebd780f727b359dd31c}{start\_time}}.\mbox{\hyperlink{struct_time_a851e70710f3b58c46e1636ce554d23ee}{month}},}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}].\mbox{\hyperlink{struct_match_record_a630ab468f07a9ebd780f727b359dd31c}{start\_time}}.\mbox{\hyperlink{struct_time_adc6c9605317382a56b244a4ceb725075}{day}});}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00097}00097\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00098}00098\ \ \ \ \ \ \ \ \ token\ =\ strtok(NULL,\ \textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (token\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00101}00101\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00102}00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}].\mbox{\hyperlink{struct_match_record_a19a80e03aba24aaa1119c8bacb439381}{black\_remain\_time}}\ =\ strtol(token,\ NULL,\ 10);}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00103}00103\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00104}00104\ \ \ \ \ \ \ \ \ token\ =\ strtok(NULL,\ \textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (token\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00107}00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00108}00108\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}].\mbox{\hyperlink{struct_match_record_a0e922d654bbd28a457ab8f09a5f33778}{white\_remain\_time}}\ =\ strtol(token,\ NULL,\ 10);}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00109}00109\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00111}00111\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}++;}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00112}00112\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00113}00113\ \ \ \ \ \mbox{\hyperlink{history_8c_af40ece271ce4aa75aecf64fac92e3b25}{oldest\_match\_index}}\ =\ \mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}\ \%\ 30;}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00115}00115\ \ \ \ \ fclose(file);}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00116}00116\ \}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00120}\mbox{\hyperlink{history_8c_a09b7d2a829665d653cefbe0bea795603}{00120}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{history_8c_a09b7d2a829665d653cefbe0bea795603}{save\_history}}()\ \{}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00121}00121\ \ \ \ \ \textcolor{keywordtype}{char}\ file\_dir[256];\ \textcolor{comment}{//\ Store\ the\ directory\ containing\ the\ current\ file}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00122}00122\ \ \ \ \ strcpy(file\_dir,\ dirname(\_\_FILE\_\_));}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00123}00123\ \ \ \ \ strcat(file\_dir,\ \textcolor{stringliteral}{"{}/../resources/history.csv"{}});}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00125}00125\ \ \ \ \ \textcolor{keywordtype}{char}\ real\_file\_dir[256];}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00126}00126\ \ \ \ \ \textcolor{keywordflow}{if}\ (realpath(file\_dir,\ real\_file\_dir)\ ==\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00127}00127\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Failed\ to\ resolve\ the\ absolute\ path\ of\ the\ project\ root\ directory.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00128}00128\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00129}00129\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00130}00130\ \ \ \ \ FILE\ *file\ =\ fopen(real\_file\_dir,\ \textcolor{stringliteral}{"{}w"{}});}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00131}00131\ \ \ \ \ \textcolor{keywordflow}{if}\ (file\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00132}00132\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Error\ opening\ file:\ \%s\(\backslash\)n"{}},\ real\_file\_dir);}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00133}00133\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00134}00134\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00135}00135\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00136}00136\ \ \ \ \ fprintf(file,\ \textcolor{stringliteral}{"{}White\ Player,Black\ Player,Winner,Start\ Time,Black\ Remaining\ Time,White\ Remaining\ Time\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00137}00137\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00138}00138\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00139}00139\ \ \ \ \ \ \ \ \ fprintf(file,\ \textcolor{stringliteral}{"{}\%s,\%s,\%s,\%hu-\/\%hu-\/\%hu,\%ld,\%ld\(\backslash\)n"{}},}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[i].white\_player\_name,}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[i].black\_player\_name,}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[i].\mbox{\hyperlink{game_8c_a9deaba51419cfcf0fb430512e8d11b5e}{winner}}\ ==\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3}{BLACK}}\ ?\ \textcolor{stringliteral}{"{}BLACK"{}}\ :\ \textcolor{stringliteral}{"{}WHITE"{}},}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[i].\mbox{\hyperlink{struct_match_record_a630ab468f07a9ebd780f727b359dd31c}{start\_time}}.\mbox{\hyperlink{struct_time_a2cad6a957612ff2a63dde0b00d61a140}{year}},}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[i].\mbox{\hyperlink{struct_match_record_a630ab468f07a9ebd780f727b359dd31c}{start\_time}}.\mbox{\hyperlink{struct_time_a851e70710f3b58c46e1636ce554d23ee}{month}},}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[i].\mbox{\hyperlink{struct_match_record_a630ab468f07a9ebd780f727b359dd31c}{start\_time}}.\mbox{\hyperlink{struct_time_adc6c9605317382a56b244a4ceb725075}{day}},}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[i].\mbox{\hyperlink{struct_match_record_a19a80e03aba24aaa1119c8bacb439381}{black\_remain\_time}},}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[i].\mbox{\hyperlink{struct_match_record_a0e922d654bbd28a457ab8f09a5f33778}{white\_remain\_time}});}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00148}00148\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00149}00149\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00150}00150\ \ \ \ \ fclose(file);}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00151}00151\ \}}
+\DoxyCodeLine{\Hypertarget{history_8c_source_l00152}00152\ }
+
+\end{DoxyCode}

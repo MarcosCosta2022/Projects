@@ -1,0 +1,14 @@
+<map id="mouse_write_command" name="mouse_write_command">
+<area shape="rect" id="Node000001" title="Writes a command to the mouse." alt="" coords="529,42,689,68"/>
+<area shape="rect" id="Node000002" href="$mouse_8c.html#a7e311379d4d64f88873ef8ade5c82a25" title="Disables data reporting." alt="" coords="302,5,442,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="514,46,442,37,442,32,515,41"/>
+<area shape="rect" id="Node000005" href="$mouse_8c.html#a70b60dfed85db39dd7c8c5a856dc2a3d" title="Enables data reporting." alt="" coords="262,70,481,96"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="515,69,482,73,481,67,514,63"/>
+<area shape="rect" id="Node000003" href="$int__manager_8c.html#a5660953c43c447e3e57c44f7eacf432e" title="Function executed on program end, unsubscribes interrupts and overall resets MINIX to its&#39; default mo..." alt="" coords="162,16,214,41"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="287,30,215,31,215,25,287,24"/>
+<area shape="rect" id="Node000004" href="$proj_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,42,114,68"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="147,39,115,46,114,41,146,34"/>
+<area shape="rect" id="Node000006" href="$int__manager_8c.html#a6611da0eaaaa020ce5748914abff7828" title="Function called at program start, enables interrupts, intializes videocard, loads xpms and initialize..." alt="" coords="169,66,207,92"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="247,83,207,82,207,77,247,78"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="154,75,114,68,115,63,155,70"/>
+</map>

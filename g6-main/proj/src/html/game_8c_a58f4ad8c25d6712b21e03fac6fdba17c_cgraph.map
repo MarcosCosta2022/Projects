@@ -1,0 +1,53 @@
+<map id="changeState" name="changeState">
+<area shape="rect" id="Node000001" title="Changes the state of the game." alt="" coords="5,351,100,376"/>
+<area shape="rect" id="Node000002" href="$board_8c.html#a21e8719a38fd9b485d449579692ded62" title="Destroys the board." alt="" coords="151,276,255,302"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,348,146,310,156,306,158,311,149,315,79,352"/>
+<area shape="rect" id="Node000003" href="$game_8c.html#a4f202337f90040263c518c9fbc82d2f3" title="Destroys the sprites." alt="" coords="148,325,258,351"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="100,353,132,347,133,353,101,358"/>
+<area shape="rect" id="Node000004" href="$board_8c.html#a8ed9dd5e9c9e940055fc2fda0bb4d220" title="Initializes the board." alt="" coords="164,375,242,400"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="101,368,150,376,149,382,100,374"/>
+<area shape="rect" id="Node000019" href="$game_8c.html#a95aab8bc841892db6f016befe73f80a1" title="Initializes the winner." alt="" coords="161,424,245,450"/>
+<area shape="poly" id="edge19_Node000001_Node000019" title=" " alt="" coords="80,375,149,410,158,415,156,420,146,415,77,379"/>
+<area shape="rect" id="Node000005" href="$board_8c.html#a196466caf97613073b2f46a536aeab00" title="Calculates the moves of all the pieces." alt="" coords="314,276,433,302"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="235,372,257,361,341,308,344,313,259,366,238,377"/>
+<area shape="rect" id="Node000018" href="$piece_8c.html#aabf9e8dc1805608072457dc2efa5b2a7" title="Create a Piece object." alt="" coords="329,375,419,400"/>
+<area shape="poly" id="edge18_Node000004_Node000018" title=" " alt="" coords="242,385,314,385,314,390,242,390"/>
+<area shape="rect" id="Node000006" href="$board_8c.html#a40b3b38a837449a04128b9c255e43c2a" title="Calculates the moves of a piece." alt="" coords="489,252,647,278"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="433,279,474,274,475,279,434,284"/>
+<area shape="poly" id="edge9_Node000006_Node000006" title=" " alt="" coords="535,253,529,243,533,234,546,227,568,225,593,228,605,236,602,240,591,233,568,231,548,233,537,237,534,243,540,250"/>
+<area shape="rect" id="Node000007" href="$board_8c.html#a167a078502fe9e0bebb7cb182f9b4b11" title="Adds a move to a trajectory." alt="" coords="723,5,805,31"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="571,251,584,210,609,154,645,93,667,65,693,40,708,30,711,35,696,44,671,69,649,96,614,156,589,212,576,253"/>
+<area shape="rect" id="Node000008" href="$board_8c.html#a8f8c442b372b0044baef767846ce0c85" title="Adds a copy of a trajectory to the array of trajectories." alt="" coords="695,55,833,80"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="573,250,590,218,616,175,651,129,693,89,699,85,702,90,696,94,655,133,620,178,594,220,578,253"/>
+<area shape="rect" id="Node000010" href="$board_8c.html#a7de21db3a3efa590179541304d7901a9" title="Clears the trajectories." alt="" coords="704,104,824,130"/>
+<area shape="poly" id="edge10_Node000006_Node000010" title=" " alt="" coords="577,250,624,197,657,166,693,139,702,134,704,138,696,143,660,170,627,201,581,253"/>
+<area shape="rect" id="Node000011" href="$board_8c.html#a643b00b2ad2f337bc85e012a5e8470c0" title="Returns the current column of a trajectory." alt="" coords="721,153,807,179"/>
+<area shape="poly" id="edge11_Node000006_Node000011" title=" " alt="" coords="588,249,635,219,693,188,706,182,708,187,696,193,638,224,590,254"/>
+<area shape="rect" id="Node000012" href="$board_8c.html#a3f702599a3dc16396e142e0c50a87321" title="Returns the current row of a trajectory." alt="" coords="719,203,809,228"/>
+<area shape="poly" id="edge12_Node000006_Node000012" title=" " alt="" coords="621,249,704,228,706,233,623,254"/>
+<area shape="rect" id="Node000013" href="$board_8c.html#a48d410f354013beb13e7a9009ccee6fa" title="Checks if a piece is allied." alt="" coords="710,252,818,278"/>
+<area shape="poly" id="edge13_Node000006_Node000013" title=" " alt="" coords="647,262,695,262,695,268,647,268"/>
+<area shape="rect" id="Node000014" href="$board_8c.html#a98c4983c9a3b64e19652292d0e528327" title="Checks if a piece is an enemy." alt="" coords="706,301,822,327"/>
+<area shape="poly" id="edge14_Node000006_Node000014" title=" " alt="" coords="623,276,696,294,695,300,621,281"/>
+<area shape="rect" id="Node000015" href="$board_8c.html#a16fb663a09087c10c4364f2fef39ede7" title="Checks if a piece exists in a position." alt="" coords="726,351,802,376"/>
+<area shape="poly" id="edge15_Node000006_Node000015" title=" " alt="" coords="590,276,638,306,696,337,713,344,711,349,694,342,635,310,588,281"/>
+<area shape="rect" id="Node000016" href="$board_8c.html#ad20e11b277c67bede5c2f0aea810822b" title="Checks if a position is inside the board." alt="" coords="719,400,809,426"/>
+<area shape="poly" id="edge16_Node000006_Node000016" title=" " alt="" coords="581,276,627,329,660,360,696,387,707,393,704,397,693,391,657,364,624,333,577,280"/>
+<area shape="rect" id="Node000017" href="$board_8c.html#a9cc3000982f33ddcd2952ec8d602dc02" title="Removes a move from a trajectory." alt="" coords="712,449,816,475"/>
+<area shape="poly" id="edge17_Node000006_Node000017" title=" " alt="" coords="578,277,594,309,620,352,655,397,696,436,702,440,699,444,693,440,651,400,616,355,590,312,573,279"/>
+<area shape="rect" id="Node000009" href="$board_8c.html#a90470a95ffa5acb52c32afdfaedb0d6b" title="Adds a trajectory to the array of trajectories." alt="" coords="881,55,984,80"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="833,65,866,65,866,70,833,70"/>
+<area shape="poly" id="edge20_Node000019_Node000018" title=" " alt="" coords="244,422,313,402,315,407,246,427"/>
+<area shape="rect" id="Node000020" href="$piece_8c.html#a9bbadfbace1a561a9b018c1a32dc62ef" title="Makes a piece a king." alt="" coords="340,424,408,450"/>
+<area shape="poly" id="edge21_Node000019_Node000020" title=" " alt="" coords="245,434,325,434,325,440,245,440"/>
+<area shape="rect" id="Node000021" href="$rtc_8c.html#a9cfbfcb4b0b62e6acd00fb33c9b6b793" title="Yields a Time like type struct that contains the time taken from the RTC." alt="" coords="324,473,424,499"/>
+<area shape="poly" id="edge22_Node000019_Node000021" title=" " alt="" coords="246,446,314,466,312,471,244,451"/>
+<area shape="rect" id="Node000025" href="$history_8c.html#af4bcea2cd0974b3563d9023f25a7beb5" title="Saves a match record." alt="" coords="306,523,441,548"/>
+<area shape="poly" id="edge26_Node000019_Node000025" title=" " alt="" coords="221,448,259,478,307,509,317,514,315,519,305,514,256,483,218,452"/>
+<area shape="rect" id="Node000022" href="$rtc_8c.html#a13a4e87785409aac48125001245f0f16" title="Read from the RTC data register on addr." alt="" coords="518,473,618,499"/>
+<area shape="poly" id="edge23_Node000021_Node000022" title=" " alt="" coords="424,484,503,484,503,489,424,489"/>
+<area shape="rect" id="Node000024" href="$rtc_8c.html#a793e4961c088e1842f29b37af4e37b5c" title="Write data to the RTC address register." alt="" coords="516,523,620,548"/>
+<area shape="poly" id="edge25_Node000021_Node000024" title=" " alt="" coords="425,496,502,516,501,521,424,501"/>
+<area shape="rect" id="Node000023" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title=" " alt="" coords="719,499,809,524"/>
+<area shape="poly" id="edge24_Node000022_Node000023" title=" " alt="" coords="619,490,705,501,704,507,618,495"/>
+</map>

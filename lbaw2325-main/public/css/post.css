@@ -1,0 +1,100 @@
+/* ... (Previous CSS styles) ... */
+
+.comments-section .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.comment {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.comment img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.no-comments {
+    text-align: center;
+    color: #6c757d;
+    margin-top: 20px;
+}
+/* Container for the Edit Post Form */
+.container {
+    max-width: 600px; /* Adjust the width as needed */
+}
+
+/* Card Styling */
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #555;
+}
+
+.form-control, .form-control-file {
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Image Preview */
+#picturePreview {
+    display: block;
+    margin-top: 1rem;
+    max-width: 100%; /* Responsive Image */
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Submit Button */
+.btn-primary {
+    color: #fff;
+    background-color: #34485c;
+    border-color: #34485c;
+}
+
+.btn-primary:hover {
+    background-color: #2c3e50;
+    border-color: #2c3e50;
+}
+
+/* Error Messages */
+.text-danger {
+    color: #dc3545; /* Bootstrap default danger color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+}
+
+
+.page-header{
+    display: none;
+}

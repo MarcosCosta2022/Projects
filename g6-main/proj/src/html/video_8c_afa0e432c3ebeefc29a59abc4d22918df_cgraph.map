@@ -1,0 +1,7 @@
+<map id="vg_init" name="vg_init">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,65,56"/>
+<area shape="rect" id="Node000002" href="$video_8c.html#ab061370420a382b61c034c72a4edbc69" title="Changes the video mode." alt="" coords="120,5,261,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,36,105,29,106,35,65,41"/>
+<area shape="rect" id="Node000003" href="$video_8c.html#a08d087a863e56db42b778915be8abeba" title="Maps the physical memory to the virtual memory." alt="" coords="113,55,268,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="65,45,98,50,97,56,65,51"/>
+</map>

@@ -1,0 +1,204 @@
+\doxysection{devices/\+KBC.h File Reference}
+\hypertarget{_k_b_c_8h}{}\label{_k_b_c_8h}\index{devices/KBC.h@{devices/KBC.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \"{}i8042.\+h\"{}}\newline
+Include dependency graph for KBC.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{_k_b_c_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_k_b_c_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{_k_b_c_8h_a72fbcf4ba83c3ea35461be5675a1277d}{KBC\+\_\+read\+\_\+output}} (int port, uint8\+\_\+t \texorpdfstring{$\ast$}{*}output)
+\begin{DoxyCompactList}\small\item\em Reads the output buffer from the keyboard controller. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{_k_b_c_8h_a783c73c7acfacf481d616e56650195df}{KBC\+\_\+get\+\_\+status}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}st)
+\begin{DoxyCompactList}\small\item\em Reads the status from the keyboard controller. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{_k_b_c_8h_a95d45e37519eb9a678f9a4badf1482d3}{KBC\+\_\+write\+\_\+input}} (int port, uint8\+\_\+t input)
+\begin{DoxyCompactList}\small\item\em Writes a command to the keyboard controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_k_b_c_8h_a783c73c7acfacf481d616e56650195df}\label{_k_b_c_8h_a783c73c7acfacf481d616e56650195df} 
+\index{KBC.h@{KBC.h}!KBC\_get\_status@{KBC\_get\_status}}
+\index{KBC\_get\_status@{KBC\_get\_status}!KBC.h@{KBC.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_get\_status()}{KBC\_get\_status()}}
+{\footnotesize\ttfamily int() KBC\+\_\+get\+\_\+status (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{st }\end{DoxyParamCaption})}
+
+
+
+Reads the status from the keyboard controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em st} & pointer to the variable where the status will be stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, 1 otherwise
+\end{DoxyReturn}
+Reads the status from the keyboard controller.
+
+Definition at line \mbox{\hyperlink{_k_b_c_8c_source_l00048}{48}} of file \mbox{\hyperlink{_k_b_c_8c_source}{KBC.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{utils_8c_a79a031a8611f5b2d6afa4158e92b0fb4}{util\_sys\_inb}}(\mbox{\hyperlink{i8042_8h_a0b4e336aad52f96e65dd212f76675d8d}{KBC\_STATUS\_REG}},st);}
+\DoxyCodeLine{00050\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{_k_b_c_8h_a783c73c7acfacf481d616e56650195df_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_k_b_c_8h_a783c73c7acfacf481d616e56650195df_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_k_b_c_8h_a72fbcf4ba83c3ea35461be5675a1277d}\label{_k_b_c_8h_a72fbcf4ba83c3ea35461be5675a1277d} 
+\index{KBC.h@{KBC.h}!KBC\_read\_output@{KBC\_read\_output}}
+\index{KBC\_read\_output@{KBC\_read\_output}!KBC.h@{KBC.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_read\_output()}{KBC\_read\_output()}}
+{\footnotesize\ttfamily int() KBC\+\_\+read\+\_\+output (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{output }\end{DoxyParamCaption})}
+
+
+
+Reads the output buffer from the keyboard controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & register to read from \\
+\hline
+{\em output} & pointer to the variable where the output will be stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, 1 otherwise
+\end{DoxyReturn}
+Reads the output buffer from the keyboard controller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Port to read from \\
+\hline
+{\em output} & Output to read \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_k_b_c_8c_source_l00008}{8}} of file \mbox{\hyperlink{_k_b_c_8c_source}{KBC.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00009\ \ \ \ \ uint8\_t\ st;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ count\ =\ \mbox{\hyperlink{i8042_8h_a7e1856ac7c6ed757978fc30bb92ace74}{MAX\_ATTEMPTS}}\ ;\ count\ >\ 0\ ;\ count-\/-\/)\{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_k_b_c_8c_a783c73c7acfacf481d616e56650195df}{KBC\_get\_status}}(\&st);}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ st\ \&\ \mbox{\hyperlink{i8042_8h_a5f2144f5b632518bcba6ae0e0ea8c8d0}{OUTPUT\_BUFFER\_FULL}})\{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{utils_8c_a79a031a8611f5b2d6afa4158e92b0fb4}{util\_sys\_inb}}(port\ ,\ output))\ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (st\ \&\ (\mbox{\hyperlink{i8042_8h_aefc48d416c882f06edaf6d01779d4d74}{TIMEOUT\_ERROR}}\ |\ \mbox{\hyperlink{i8042_8h_a81d2ca6759f3f3bf04556b7558aea6bc}{PARITY\_ERROR}}))\{\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ tickdelay(micros\_to\_ticks(\mbox{\hyperlink{i8042_8h_a62249e384b997229a3e2ae74ade334e2}{DELAY}}));}
+\DoxyCodeLine{00023\ \ \ \ \ \}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00025\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_k_b_c_8h_a72fbcf4ba83c3ea35461be5675a1277d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_k_b_c_8h_a72fbcf4ba83c3ea35461be5675a1277d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_k_b_c_8h_a95d45e37519eb9a678f9a4badf1482d3}\label{_k_b_c_8h_a95d45e37519eb9a678f9a4badf1482d3} 
+\index{KBC.h@{KBC.h}!KBC\_write\_input@{KBC\_write\_input}}
+\index{KBC\_write\_input@{KBC\_write\_input}!KBC.h@{KBC.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_write\_input()}{KBC\_write\_input()}}
+{\footnotesize\ttfamily int() KBC\+\_\+write\+\_\+input (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{uint8\+\_\+t}]{input }\end{DoxyParamCaption})}
+
+
+
+Writes a command to the keyboard controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & register to write to \\
+\hline
+{\em input} & command to be written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful, 1 otherwise
+\end{DoxyReturn}
+Writes a command to the keyboard controller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Port to write to \\
+\hline
+{\em input} & Input to write \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_k_b_c_8c_source_l00032}{32}} of file \mbox{\hyperlink{_k_b_c_8c_source}{KBC.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ uint8\_t\ st;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ count\ =\ \mbox{\hyperlink{i8042_8h_a7e1856ac7c6ed757978fc30bb92ace74}{MAX\_ATTEMPTS}}\ ;\ count\ >\ 0\ ;\ count-\/-\/)\{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_k_b_c_8c_a783c73c7acfacf481d616e56650195df}{KBC\_get\_status}}(\&st);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!(st\ \&\ \mbox{\hyperlink{i8042_8h_a8b6f3924789338f54449d1484a3c57cf}{INPUT\_BUFFER\_FULL}}))\{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sys\_outb(port,\ input);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ tickdelay(micros\_to\_ticks(\mbox{\hyperlink{i8042_8h_a62249e384b997229a3e2ae74ade334e2}{DELAY}}));}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00042\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_k_b_c_8h_a95d45e37519eb9a678f9a4badf1482d3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_k_b_c_8h_a95d45e37519eb9a678f9a4badf1482d3_icgraph}
+\end{center}
+\end{figure}

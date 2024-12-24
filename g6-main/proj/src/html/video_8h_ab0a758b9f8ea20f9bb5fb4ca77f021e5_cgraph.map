@@ -1,0 +1,5 @@
+<map id="vg_draw_character" name="vg_draw_character">
+<area shape="rect" id="Node000001" title="Draws a character." alt="" coords="5,5,137,31"/>
+<area shape="rect" id="Node000002" href="$video_8c.html#ab0332ee565f978f725c021b4eb35958e" title="Draws pixel." alt="" coords="185,5,306,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,16,170,16,170,21,137,21"/>
+</map>

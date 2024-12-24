@@ -1,0 +1,27 @@
+<map id="leave" name="leave">
+<area shape="rect" id="Node000001" title="Function executed on program end, unsubscribes interrupts and overall resets MINIX to its&#39; default mo..." alt="" coords="5,145,58,171"/>
+<area shape="rect" id="Node000002" href="$keyboard_8c.html#aee0a7b54ee426fade9c780418d110fe0" title="Unsubscribes keyboard interrupts." alt="" coords="115,5,255,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="35,144,60,94,79,66,104,41,112,36,115,40,107,46,84,69,64,97,40,146"/>
+<area shape="rect" id="Node000003" href="$mouse_8c.html#a7e311379d4d64f88873ef8ade5c82a25" title="Disables data reporting." alt="" coords="115,55,255,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="48,143,104,105,114,100,117,105,107,110,51,147"/>
+<area shape="rect" id="Node000009" href="$mouse_8c.html#a3ecf823d80520009ae5e0d76ae40a3c3" title="Unsubscribes mouse interrupts." alt="" coords="106,120,264,146"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="58,151,91,146,92,151,58,157"/>
+<area shape="rect" id="Node000010" href="$history_8c.html#a09b7d2a829665d653cefbe0bea795603" title="Saves the history to the file." alt="" coords="137,169,233,195"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="58,160,123,170,122,175,58,165"/>
+<area shape="rect" id="Node000011" href="$timer_8c.html#afabd21de449be154dd65d5fdb2d8045d" title=" " alt="" coords="111,219,259,244"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="51,169,77,188,107,205,120,211,118,216,104,210,74,192,48,174"/>
+<area shape="rect" id="Node000012" href="$video_8c.html#a229934fe854471c3f5db925a213ebbb8" title="Exit video mode." alt="" coords="145,268,225,294"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="41,170,67,212,85,235,107,255,132,267,129,272,104,259,81,239,62,215,37,173"/>
+<area shape="rect" id="Node000004" href="$mouse_8c.html#a4d3acee0b9a97e26872d4af9f237a98c" title="Writes a command to the mouse." alt="" coords="312,63,471,88"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="255,73,297,73,297,78,255,78"/>
+<area shape="rect" id="Node000005" href="$_k_b_c_8c.html#a72fbcf4ba83c3ea35461be5675a1277d" title="Reads the output buffer from the keyboard." alt="" coords="519,87,644,112"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="472,83,505,87,504,92,471,88"/>
+<area shape="rect" id="Node000008" href="$_k_b_c_8c.html#a95d45e37519eb9a678f9a4badf1482d3" title="Writes the input to the keyboard." alt="" coords="522,37,641,63"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="471,62,507,57,507,63,472,67"/>
+<area shape="rect" id="Node000006" href="$_k_b_c_8c.html#a783c73c7acfacf481d616e56650195df" title="Reads the status register." alt="" coords="692,37,809,63"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="627,83,689,65,691,70,629,89"/>
+<area shape="rect" id="Node000007" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title=" " alt="" coords="857,63,947,88"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="644,92,842,77,842,83,644,98"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="810,57,843,63,842,68,809,63"/>
+<area shape="poly" id="edge9_Node000008_Node000006" title=" " alt="" coords="641,48,677,48,677,53,641,53"/>
+</map>
