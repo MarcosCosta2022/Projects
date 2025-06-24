@@ -1,0 +1,82 @@
+
+.notification-text *{
+    overflow: hidden;
+}
+
+.custom-tabs {
+    border:none;
+}
+
+.custom-tabs li{
+    border:none;
+    margin-right: 1em;
+}
+
+#myTab.custom-tabs .nav-link{
+    color: rgb(79, 79, 79);
+    font-weight: bold;
+}
+
+#myTab.custom-tabs .nav-link.active{
+    color: white;
+}
+
+#myTab.custom-tabs .nav-link:hover{
+    color: white;
+}
+
+.notification-not-read{
+    background-color: #c4e2ff;
+}
+.notification-not-read:hover{
+    background-color: #eff7ff;
+}
+
+.notification-not-read .newTag{
+    display: inline-block;
+}
+
+.newTag{
+    display: none;
+}
+
+#notification-settings{
+    display: none;
+    border: none;
+    background-color: #2C3E50;
+    justify-content: center;
+    align-items: center;
+    border-radius : 50%;
+    width: 40px;
+    height: 40px;
+    box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.5);
+}
+
+#notification-settings #notificationssettingbutton{
+    border:none;
+}
+
+.notification:hover #notification-settings{
+    display: flex;
+}
+
+#notification-settings #notificationssettingbutton:before{
+    content:"\00B7\00B7\00B7";
+    margin:0;
+}
+
+#notification-settings #notificationssettingbutton:hover{
+    background-color: transparent;
+}
+
+
+#notification-overtall-actions{
+
+    margin-top: 1em;
+}
+
+
+
+
+
+

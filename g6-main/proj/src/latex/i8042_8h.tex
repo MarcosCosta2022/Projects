@@ -1,0 +1,891 @@
+\doxysection{devices/i8042.h File Reference}
+\hypertarget{i8042_8h}{}\label{i8042_8h}\index{devices/i8042.h@{devices/i8042.h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{i8042_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a4180e4977784e44dfa1bb52daa9b6d07}{KBC\+\_\+\+OUT\+\_\+\+BUFF}}~0x60
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a99533c5d88176d018fa5a725dbd2f4a3}{KBC\+\_\+\+IN\+\_\+\+BUFF}}~0x60
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a0b4e336aad52f96e65dd212f76675d8d}{KBC\+\_\+\+STATUS\+\_\+\+REG}}~0x64
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a352e43b162f7755d7849e3c181d326c2}{COMMAND\+\_\+\+INTERACT}}~0x64
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a1862e728098ddeac91aaacf6420fc2e7}{KBD\+\_\+\+IRQ\+\_\+\+LINE}}~1
+\item 
+\#define \mbox{\hyperlink{i8042_8h_af10b9efcb908230838524558bb05588a}{MOUSE\+\_\+\+IRQ\+\_\+\+LINE}}~12
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a81d2ca6759f3f3bf04556b7558aea6bc}{PARITY\+\_\+\+ERROR}}~BIT(7)
+\item 
+\#define \mbox{\hyperlink{i8042_8h_aefc48d416c882f06edaf6d01779d4d74}{TIMEOUT\+\_\+\+ERROR}}~BIT(6)
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a1b41fd2be63532d4ab910f8b256c3811}{AUX}}~BIT(5)
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a03f542f1e0e2ba512c4ed189decfee3d}{INH}}~BIT(4)
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a8b6f3924789338f54449d1484a3c57cf}{INPUT\+\_\+\+BUFFER\+\_\+\+FULL}}~BIT(1)
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a5f2144f5b632518bcba6ae0e0ea8c8d0}{OUTPUT\+\_\+\+BUFFER\+\_\+\+FULL}}~BIT(0)
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a7e1856ac7c6ed757978fc30bb92ace74}{MAX\+\_\+\+ATTEMPTS}}~3
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a62249e384b997229a3e2ae74ade334e2}{DELAY}}~2
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a592dfdf397b21913348b4dd6b7759b2d}{ESC\+\_\+\+BREAK\+\_\+\+CODE}}~0x81
+\item 
+\#define \mbox{\hyperlink{i8042_8h_ab427e6926fcc47eb1c02c1f78162b6f6}{TWO\+\_\+\+BYTES}}~0x\+E0
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a595a5cad2d3c793963da50865b2c1b47}{KBC\+\_\+\+READ\+\_\+\+CMD}}~0x20
+\item 
+\#define \mbox{\hyperlink{i8042_8h_aaa62a6987753a109d2f7a609ce8b7334}{KBC\+\_\+\+WRITE\+\_\+\+CMD}}~0x60
+\item 
+\#define \mbox{\hyperlink{i8042_8h_ab0ce87b741d49df766ec534683eb1cb3}{DISABLE\+\_\+\+MOUSE\+\_\+\+INTERFACE}}~BIT(5)
+\item 
+\#define \mbox{\hyperlink{i8042_8h_af4de6eb113cbb16e0c04e4eed2e25f9d}{DISABLE\+\_\+\+KBD\+\_\+\+INTERFACE}}~BIT(4)
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a759299819faf258e675cc8f16af059d4}{MOUSE\+\_\+\+ENABLE\+\_\+\+OBF\+\_\+\+INT}}~BIT(1)
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a731d20e5ad149c23ad5840861bfb84b1}{KBD\+\_\+\+ENABLE\+\_\+\+OBF\+\_\+\+INT}}~BIT(0)
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a001416d7c363224748134b28bef8d82f}{WRITE\+\_\+\+TO\+\_\+\+AUX\+\_\+\+DEV}}~0x\+D4
+\item 
+\#define \mbox{\hyperlink{i8042_8h_aaf4a73cbba85cdecf6c8bc146feff105}{ENABLE\+\_\+\+DATA\+\_\+\+REPORTING\+\_\+\+CMD}}~0x\+F4
+\item 
+\#define \mbox{\hyperlink{i8042_8h_aabce64c830ae4f1e517fa71b12833574}{DISABLE\+\_\+\+DATA\+\_\+\+REPORTING\+\_\+\+CMD}}~0x\+F5
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a3789391a769864fd2d3f40d035fd8a74}{MOUSE\+\_\+\+OK}}~0x\+FA
+\item 
+\#define \mbox{\hyperlink{i8042_8h_adcf9f9d7eafff23164deaed9de57d5cc}{BREAK\+\_\+\+CODE\+\_\+\+BYTE}}~BIT(7)
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a8c16b82c4c75ea74d0c3ec7c9a4f9b47}{FIRST\+\_\+\+BYTE\+\_\+\+PACKET}}~BIT(3)
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a168fd0a54619731c76c386a7f1bde2b1}{ESC\+\_\+\+MAKE}}~0x01
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a343f44cb034d2d2ff3438b3d45dcde1f}{ESC\+\_\+\+BREAK}}~0x81
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a629568514359445d2fbda71d70eeb1ce}{BACKSPACE}}~0x0e
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a5b1eca6358420b8748a151949d3119fa}{DOWN\+\_\+\+ARROW}}~0x50
+\item 
+\#define \mbox{\hyperlink{i8042_8h_ae78ccf44cb7970752cbfeb22e6a66d14}{LEFT\+\_\+\+ARROW}}~0x4b
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a9ed2533108b634266a6261c8f37e4fc0}{RIGHT\+\_\+\+ARROW}}~0x4d
+\item 
+\#define \mbox{\hyperlink{i8042_8h_ad315ce436b88e78c266532e4714dd197}{UP\+\_\+\+ARROW}}~0x48
+\item 
+\#define \mbox{\hyperlink{i8042_8h_af4bced5cf8ed55746d4b5d34f9a0fe39}{ENTER}}~0x1c
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a5ff6e798033f03e74730e99f01936f84}{SPACE}}~0x39
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a2e092124f706e9898a26f3d0c6dd33d3}{A\+\_\+\+KEY}}~0x1e
+\item 
+\#define \mbox{\hyperlink{i8042_8h_ad17571f139195fb7361f6293b791744d}{B\+\_\+\+KEY}}~0x30
+\item 
+\#define \mbox{\hyperlink{i8042_8h_adfb2653969987357f3abaaa3c3bdde54}{C\+\_\+\+KEY}}~0x2e
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a23c8dc1c6696b91ba6b96f2dca53b7ba}{D\+\_\+\+KEY}}~0x20
+\item 
+\#define \mbox{\hyperlink{i8042_8h_ab0b927b3a09eaa32f8a4d36d822e38e3}{E\+\_\+\+KEY}}~0x12
+\item 
+\#define \mbox{\hyperlink{i8042_8h_ad584448031fad147de7c07cb425b583c}{F\+\_\+\+KEY}}~0x21
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a82f468fa5d01499717ebb6c2336ffa14}{G\+\_\+\+KEY}}~0x22
+\item 
+\#define \mbox{\hyperlink{i8042_8h_ab454741f32a91feca20d2dda1c15e3dc}{H\+\_\+\+KEY}}~0x23
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a2c2fd95e748cf3ec6322b35a89fc53bf}{I\+\_\+\+KEY}}~0x17
+\item 
+\#define \mbox{\hyperlink{i8042_8h_ac06553a93547334a545098a6ae60ab4f}{J\+\_\+\+KEY}}~0x24
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a1d4c75734307f98fc096e756ffac6852}{K\+\_\+\+KEY}}~0x25
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a01d053c0e426921f363d45be6c052c39}{L\+\_\+\+KEY}}~0x26
+\item 
+\#define \mbox{\hyperlink{i8042_8h_aefb17eeead0329261a24903952388df9}{M\+\_\+\+KEY}}~0x32
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a7c1125941195a92532d3a8039804f348}{N\+\_\+\+KEY}}~0x31
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a63950988373606fe6b8264da12363bd9}{O\+\_\+\+KEY}}~0x18
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a694eafa85c419c8ad91dc382650eb481}{P\+\_\+\+KEY}}~0x19
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a3d8aa05967b559c3e0d0f9f5ce3eacfb}{Q\+\_\+\+KEY}}~0x10
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a75ac3acba95812a4be896446cd3051b4}{R\+\_\+\+KEY}}~0x13
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a38916d959d471a2781d390910271b6b5}{S\+\_\+\+KEY}}~0x1f
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a77d5459649c5af68a94ef9f378f8eb63}{T\+\_\+\+KEY}}~0x14
+\item 
+\#define \mbox{\hyperlink{i8042_8h_ad42a93716460f8a0020a8a93d606ff54}{U\+\_\+\+KEY}}~0x16
+\item 
+\#define \mbox{\hyperlink{i8042_8h_aa4205a597a74f91c04f5e096f2934355}{V\+\_\+\+KEY}}~0x2f
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a8cb726577cd35fc0582744b2270e192f}{W\+\_\+\+KEY}}~0x11
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a416bc7f282396f298c821ce248960641}{X\+\_\+\+KEY}}~0x2d
+\item 
+\#define \mbox{\hyperlink{i8042_8h_af1c95fc803a5d97f5a67dc3146daccaa}{Y\+\_\+\+KEY}}~0x15
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a0ea0953e6e1b70f697bf6aab7da4ca9e}{Z\+\_\+\+KEY}}~0x2c
+\item 
+\#define \mbox{\hyperlink{i8042_8h_ad67440cfa48dfa0bcf25806cf592877f}{ZERO\+\_\+\+KEY}}~0x0b
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a334f1097343867e39c66459ae23f0a69}{ONE\+\_\+\+KEY}}~0x02
+\item 
+\#define \mbox{\hyperlink{i8042_8h_ad9380e88f8d0ae57bd76e2613353b3a2}{TWO\+\_\+\+KEY}}~0x03
+\item 
+\#define \mbox{\hyperlink{i8042_8h_ab49b3d62e8424a36994b2f6825cbd2d2}{THREE\+\_\+\+KEY}}~0x04
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a9599b17ce3bcdd9c360972254d24f0f5}{FOUR\+\_\+\+KEY}}~0x05
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a70b3fea4fde12eca78bb1393e9b5d7d3}{FIVE\+\_\+\+KEY}}~0x06
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a485371dec443a36f18548bae8a4c7548}{SIX\+\_\+\+KEY}}~0x07
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a1bc5733730b29110fb3bb1257755074d}{SEVEN\+\_\+\+KEY}}~0x08
+\item 
+\#define \mbox{\hyperlink{i8042_8h_ad41d18026b44a6d3138a8b5afd787b66}{EIGHT\+\_\+\+KEY}}~0x09
+\item 
+\#define \mbox{\hyperlink{i8042_8h_a0e2f3e8ad7ffdb245275b5d772e93802}{NINE\+\_\+\+KEY}}~0x0a
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{i8042_8h_a2e092124f706e9898a26f3d0c6dd33d3}\label{i8042_8h_a2e092124f706e9898a26f3d0c6dd33d3} 
+\index{i8042.h@{i8042.h}!A\_KEY@{A\_KEY}}
+\index{A\_KEY@{A\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{A\_KEY}{A\_KEY}}
+{\footnotesize\ttfamily \#define A\+\_\+\+KEY~0x1e}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00056}{56}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a1b41fd2be63532d4ab910f8b256c3811}\label{i8042_8h_a1b41fd2be63532d4ab910f8b256c3811} 
+\index{i8042.h@{i8042.h}!AUX@{AUX}}
+\index{AUX@{AUX}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{AUX}{AUX}}
+{\footnotesize\ttfamily \#define AUX~BIT(5)}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00014}{14}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_ad17571f139195fb7361f6293b791744d}\label{i8042_8h_ad17571f139195fb7361f6293b791744d} 
+\index{i8042.h@{i8042.h}!B\_KEY@{B\_KEY}}
+\index{B\_KEY@{B\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{B\_KEY}{B\_KEY}}
+{\footnotesize\ttfamily \#define B\+\_\+\+KEY~0x30}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00057}{57}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a629568514359445d2fbda71d70eeb1ce}\label{i8042_8h_a629568514359445d2fbda71d70eeb1ce} 
+\index{i8042.h@{i8042.h}!BACKSPACE@{BACKSPACE}}
+\index{BACKSPACE@{BACKSPACE}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{BACKSPACE}{BACKSPACE}}
+{\footnotesize\ttfamily \#define BACKSPACE~0x0e}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00046}{46}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_adcf9f9d7eafff23164deaed9de57d5cc}\label{i8042_8h_adcf9f9d7eafff23164deaed9de57d5cc} 
+\index{i8042.h@{i8042.h}!BREAK\_CODE\_BYTE@{BREAK\_CODE\_BYTE}}
+\index{BREAK\_CODE\_BYTE@{BREAK\_CODE\_BYTE}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{BREAK\_CODE\_BYTE}{BREAK\_CODE\_BYTE}}
+{\footnotesize\ttfamily \#define BREAK\+\_\+\+CODE\+\_\+\+BYTE~BIT(7)}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00038}{38}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_adfb2653969987357f3abaaa3c3bdde54}\label{i8042_8h_adfb2653969987357f3abaaa3c3bdde54} 
+\index{i8042.h@{i8042.h}!C\_KEY@{C\_KEY}}
+\index{C\_KEY@{C\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{C\_KEY}{C\_KEY}}
+{\footnotesize\ttfamily \#define C\+\_\+\+KEY~0x2e}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00058}{58}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a352e43b162f7755d7849e3c181d326c2}\label{i8042_8h_a352e43b162f7755d7849e3c181d326c2} 
+\index{i8042.h@{i8042.h}!COMMAND\_INTERACT@{COMMAND\_INTERACT}}
+\index{COMMAND\_INTERACT@{COMMAND\_INTERACT}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{COMMAND\_INTERACT}{COMMAND\_INTERACT}}
+{\footnotesize\ttfamily \#define COMMAND\+\_\+\+INTERACT~0x64}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00007}{7}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a23c8dc1c6696b91ba6b96f2dca53b7ba}\label{i8042_8h_a23c8dc1c6696b91ba6b96f2dca53b7ba} 
+\index{i8042.h@{i8042.h}!D\_KEY@{D\_KEY}}
+\index{D\_KEY@{D\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{D\_KEY}{D\_KEY}}
+{\footnotesize\ttfamily \#define D\+\_\+\+KEY~0x20}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00059}{59}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a62249e384b997229a3e2ae74ade334e2}\label{i8042_8h_a62249e384b997229a3e2ae74ade334e2} 
+\index{i8042.h@{i8042.h}!DELAY@{DELAY}}
+\index{DELAY@{DELAY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{DELAY}{DELAY}}
+{\footnotesize\ttfamily \#define DELAY~2}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00020}{20}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_aabce64c830ae4f1e517fa71b12833574}\label{i8042_8h_aabce64c830ae4f1e517fa71b12833574} 
+\index{i8042.h@{i8042.h}!DISABLE\_DATA\_REPORTING\_CMD@{DISABLE\_DATA\_REPORTING\_CMD}}
+\index{DISABLE\_DATA\_REPORTING\_CMD@{DISABLE\_DATA\_REPORTING\_CMD}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{DISABLE\_DATA\_REPORTING\_CMD}{DISABLE\_DATA\_REPORTING\_CMD}}
+{\footnotesize\ttfamily \#define DISABLE\+\_\+\+DATA\+\_\+\+REPORTING\+\_\+\+CMD~0x\+F5}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00034}{34}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_af4de6eb113cbb16e0c04e4eed2e25f9d}\label{i8042_8h_af4de6eb113cbb16e0c04e4eed2e25f9d} 
+\index{i8042.h@{i8042.h}!DISABLE\_KBD\_INTERFACE@{DISABLE\_KBD\_INTERFACE}}
+\index{DISABLE\_KBD\_INTERFACE@{DISABLE\_KBD\_INTERFACE}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{DISABLE\_KBD\_INTERFACE}{DISABLE\_KBD\_INTERFACE}}
+{\footnotesize\ttfamily \#define DISABLE\+\_\+\+KBD\+\_\+\+INTERFACE~BIT(4)}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00028}{28}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_ab0ce87b741d49df766ec534683eb1cb3}\label{i8042_8h_ab0ce87b741d49df766ec534683eb1cb3} 
+\index{i8042.h@{i8042.h}!DISABLE\_MOUSE\_INTERFACE@{DISABLE\_MOUSE\_INTERFACE}}
+\index{DISABLE\_MOUSE\_INTERFACE@{DISABLE\_MOUSE\_INTERFACE}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{DISABLE\_MOUSE\_INTERFACE}{DISABLE\_MOUSE\_INTERFACE}}
+{\footnotesize\ttfamily \#define DISABLE\+\_\+\+MOUSE\+\_\+\+INTERFACE~BIT(5)}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00027}{27}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a5b1eca6358420b8748a151949d3119fa}\label{i8042_8h_a5b1eca6358420b8748a151949d3119fa} 
+\index{i8042.h@{i8042.h}!DOWN\_ARROW@{DOWN\_ARROW}}
+\index{DOWN\_ARROW@{DOWN\_ARROW}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{DOWN\_ARROW}{DOWN\_ARROW}}
+{\footnotesize\ttfamily \#define DOWN\+\_\+\+ARROW~0x50}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00048}{48}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_ab0b927b3a09eaa32f8a4d36d822e38e3}\label{i8042_8h_ab0b927b3a09eaa32f8a4d36d822e38e3} 
+\index{i8042.h@{i8042.h}!E\_KEY@{E\_KEY}}
+\index{E\_KEY@{E\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{E\_KEY}{E\_KEY}}
+{\footnotesize\ttfamily \#define E\+\_\+\+KEY~0x12}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00060}{60}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_ad41d18026b44a6d3138a8b5afd787b66}\label{i8042_8h_ad41d18026b44a6d3138a8b5afd787b66} 
+\index{i8042.h@{i8042.h}!EIGHT\_KEY@{EIGHT\_KEY}}
+\index{EIGHT\_KEY@{EIGHT\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{EIGHT\_KEY}{EIGHT\_KEY}}
+{\footnotesize\ttfamily \#define EIGHT\+\_\+\+KEY~0x09}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00091}{91}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_aaf4a73cbba85cdecf6c8bc146feff105}\label{i8042_8h_aaf4a73cbba85cdecf6c8bc146feff105} 
+\index{i8042.h@{i8042.h}!ENABLE\_DATA\_REPORTING\_CMD@{ENABLE\_DATA\_REPORTING\_CMD}}
+\index{ENABLE\_DATA\_REPORTING\_CMD@{ENABLE\_DATA\_REPORTING\_CMD}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{ENABLE\_DATA\_REPORTING\_CMD}{ENABLE\_DATA\_REPORTING\_CMD}}
+{\footnotesize\ttfamily \#define ENABLE\+\_\+\+DATA\+\_\+\+REPORTING\+\_\+\+CMD~0x\+F4}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00033}{33}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_af4bced5cf8ed55746d4b5d34f9a0fe39}\label{i8042_8h_af4bced5cf8ed55746d4b5d34f9a0fe39} 
+\index{i8042.h@{i8042.h}!ENTER@{ENTER}}
+\index{ENTER@{ENTER}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{ENTER}{ENTER}}
+{\footnotesize\ttfamily \#define ENTER~0x1c}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00053}{53}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a343f44cb034d2d2ff3438b3d45dcde1f}\label{i8042_8h_a343f44cb034d2d2ff3438b3d45dcde1f} 
+\index{i8042.h@{i8042.h}!ESC\_BREAK@{ESC\_BREAK}}
+\index{ESC\_BREAK@{ESC\_BREAK}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{ESC\_BREAK}{ESC\_BREAK}}
+{\footnotesize\ttfamily \#define ESC\+\_\+\+BREAK~0x81}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00045}{45}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a592dfdf397b21913348b4dd6b7759b2d}\label{i8042_8h_a592dfdf397b21913348b4dd6b7759b2d} 
+\index{i8042.h@{i8042.h}!ESC\_BREAK\_CODE@{ESC\_BREAK\_CODE}}
+\index{ESC\_BREAK\_CODE@{ESC\_BREAK\_CODE}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{ESC\_BREAK\_CODE}{ESC\_BREAK\_CODE}}
+{\footnotesize\ttfamily \#define ESC\+\_\+\+BREAK\+\_\+\+CODE~0x81}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00022}{22}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a168fd0a54619731c76c386a7f1bde2b1}\label{i8042_8h_a168fd0a54619731c76c386a7f1bde2b1} 
+\index{i8042.h@{i8042.h}!ESC\_MAKE@{ESC\_MAKE}}
+\index{ESC\_MAKE@{ESC\_MAKE}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{ESC\_MAKE}{ESC\_MAKE}}
+{\footnotesize\ttfamily \#define ESC\+\_\+\+MAKE~0x01}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00044}{44}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_ad584448031fad147de7c07cb425b583c}\label{i8042_8h_ad584448031fad147de7c07cb425b583c} 
+\index{i8042.h@{i8042.h}!F\_KEY@{F\_KEY}}
+\index{F\_KEY@{F\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{F\_KEY}{F\_KEY}}
+{\footnotesize\ttfamily \#define F\+\_\+\+KEY~0x21}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00061}{61}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a8c16b82c4c75ea74d0c3ec7c9a4f9b47}\label{i8042_8h_a8c16b82c4c75ea74d0c3ec7c9a4f9b47} 
+\index{i8042.h@{i8042.h}!FIRST\_BYTE\_PACKET@{FIRST\_BYTE\_PACKET}}
+\index{FIRST\_BYTE\_PACKET@{FIRST\_BYTE\_PACKET}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{FIRST\_BYTE\_PACKET}{FIRST\_BYTE\_PACKET}}
+{\footnotesize\ttfamily \#define FIRST\+\_\+\+BYTE\+\_\+\+PACKET~BIT(3)}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00040}{40}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a70b3fea4fde12eca78bb1393e9b5d7d3}\label{i8042_8h_a70b3fea4fde12eca78bb1393e9b5d7d3} 
+\index{i8042.h@{i8042.h}!FIVE\_KEY@{FIVE\_KEY}}
+\index{FIVE\_KEY@{FIVE\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{FIVE\_KEY}{FIVE\_KEY}}
+{\footnotesize\ttfamily \#define FIVE\+\_\+\+KEY~0x06}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00088}{88}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a9599b17ce3bcdd9c360972254d24f0f5}\label{i8042_8h_a9599b17ce3bcdd9c360972254d24f0f5} 
+\index{i8042.h@{i8042.h}!FOUR\_KEY@{FOUR\_KEY}}
+\index{FOUR\_KEY@{FOUR\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{FOUR\_KEY}{FOUR\_KEY}}
+{\footnotesize\ttfamily \#define FOUR\+\_\+\+KEY~0x05}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00087}{87}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a82f468fa5d01499717ebb6c2336ffa14}\label{i8042_8h_a82f468fa5d01499717ebb6c2336ffa14} 
+\index{i8042.h@{i8042.h}!G\_KEY@{G\_KEY}}
+\index{G\_KEY@{G\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{G\_KEY}{G\_KEY}}
+{\footnotesize\ttfamily \#define G\+\_\+\+KEY~0x22}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00062}{62}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_ab454741f32a91feca20d2dda1c15e3dc}\label{i8042_8h_ab454741f32a91feca20d2dda1c15e3dc} 
+\index{i8042.h@{i8042.h}!H\_KEY@{H\_KEY}}
+\index{H\_KEY@{H\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{H\_KEY}{H\_KEY}}
+{\footnotesize\ttfamily \#define H\+\_\+\+KEY~0x23}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00063}{63}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a2c2fd95e748cf3ec6322b35a89fc53bf}\label{i8042_8h_a2c2fd95e748cf3ec6322b35a89fc53bf} 
+\index{i8042.h@{i8042.h}!I\_KEY@{I\_KEY}}
+\index{I\_KEY@{I\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{I\_KEY}{I\_KEY}}
+{\footnotesize\ttfamily \#define I\+\_\+\+KEY~0x17}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00064}{64}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a03f542f1e0e2ba512c4ed189decfee3d}\label{i8042_8h_a03f542f1e0e2ba512c4ed189decfee3d} 
+\index{i8042.h@{i8042.h}!INH@{INH}}
+\index{INH@{INH}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{INH}{INH}}
+{\footnotesize\ttfamily \#define INH~BIT(4)}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00015}{15}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a8b6f3924789338f54449d1484a3c57cf}\label{i8042_8h_a8b6f3924789338f54449d1484a3c57cf} 
+\index{i8042.h@{i8042.h}!INPUT\_BUFFER\_FULL@{INPUT\_BUFFER\_FULL}}
+\index{INPUT\_BUFFER\_FULL@{INPUT\_BUFFER\_FULL}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{INPUT\_BUFFER\_FULL}{INPUT\_BUFFER\_FULL}}
+{\footnotesize\ttfamily \#define INPUT\+\_\+\+BUFFER\+\_\+\+FULL~BIT(1)}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00016}{16}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_ac06553a93547334a545098a6ae60ab4f}\label{i8042_8h_ac06553a93547334a545098a6ae60ab4f} 
+\index{i8042.h@{i8042.h}!J\_KEY@{J\_KEY}}
+\index{J\_KEY@{J\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{J\_KEY}{J\_KEY}}
+{\footnotesize\ttfamily \#define J\+\_\+\+KEY~0x24}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00065}{65}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a1d4c75734307f98fc096e756ffac6852}\label{i8042_8h_a1d4c75734307f98fc096e756ffac6852} 
+\index{i8042.h@{i8042.h}!K\_KEY@{K\_KEY}}
+\index{K\_KEY@{K\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{K\_KEY}{K\_KEY}}
+{\footnotesize\ttfamily \#define K\+\_\+\+KEY~0x25}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00066}{66}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a99533c5d88176d018fa5a725dbd2f4a3}\label{i8042_8h_a99533c5d88176d018fa5a725dbd2f4a3} 
+\index{i8042.h@{i8042.h}!KBC\_IN\_BUFF@{KBC\_IN\_BUFF}}
+\index{KBC\_IN\_BUFF@{KBC\_IN\_BUFF}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_IN\_BUFF}{KBC\_IN\_BUFF}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+IN\+\_\+\+BUFF~0x60}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00005}{5}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a4180e4977784e44dfa1bb52daa9b6d07}\label{i8042_8h_a4180e4977784e44dfa1bb52daa9b6d07} 
+\index{i8042.h@{i8042.h}!KBC\_OUT\_BUFF@{KBC\_OUT\_BUFF}}
+\index{KBC\_OUT\_BUFF@{KBC\_OUT\_BUFF}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_OUT\_BUFF}{KBC\_OUT\_BUFF}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+OUT\+\_\+\+BUFF~0x60}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00004}{4}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a595a5cad2d3c793963da50865b2c1b47}\label{i8042_8h_a595a5cad2d3c793963da50865b2c1b47} 
+\index{i8042.h@{i8042.h}!KBC\_READ\_CMD@{KBC\_READ\_CMD}}
+\index{KBC\_READ\_CMD@{KBC\_READ\_CMD}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_READ\_CMD}{KBC\_READ\_CMD}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+READ\+\_\+\+CMD~0x20}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00025}{25}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a0b4e336aad52f96e65dd212f76675d8d}\label{i8042_8h_a0b4e336aad52f96e65dd212f76675d8d} 
+\index{i8042.h@{i8042.h}!KBC\_STATUS\_REG@{KBC\_STATUS\_REG}}
+\index{KBC\_STATUS\_REG@{KBC\_STATUS\_REG}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_STATUS\_REG}{KBC\_STATUS\_REG}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+STATUS\+\_\+\+REG~0x64}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00006}{6}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_aaa62a6987753a109d2f7a609ce8b7334}\label{i8042_8h_aaa62a6987753a109d2f7a609ce8b7334} 
+\index{i8042.h@{i8042.h}!KBC\_WRITE\_CMD@{KBC\_WRITE\_CMD}}
+\index{KBC\_WRITE\_CMD@{KBC\_WRITE\_CMD}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_WRITE\_CMD}{KBC\_WRITE\_CMD}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+WRITE\+\_\+\+CMD~0x60}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00026}{26}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a731d20e5ad149c23ad5840861bfb84b1}\label{i8042_8h_a731d20e5ad149c23ad5840861bfb84b1} 
+\index{i8042.h@{i8042.h}!KBD\_ENABLE\_OBF\_INT@{KBD\_ENABLE\_OBF\_INT}}
+\index{KBD\_ENABLE\_OBF\_INT@{KBD\_ENABLE\_OBF\_INT}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{KBD\_ENABLE\_OBF\_INT}{KBD\_ENABLE\_OBF\_INT}}
+{\footnotesize\ttfamily \#define KBD\+\_\+\+ENABLE\+\_\+\+OBF\+\_\+\+INT~BIT(0)}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00030}{30}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a1862e728098ddeac91aaacf6420fc2e7}\label{i8042_8h_a1862e728098ddeac91aaacf6420fc2e7} 
+\index{i8042.h@{i8042.h}!KBD\_IRQ\_LINE@{KBD\_IRQ\_LINE}}
+\index{KBD\_IRQ\_LINE@{KBD\_IRQ\_LINE}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{KBD\_IRQ\_LINE}{KBD\_IRQ\_LINE}}
+{\footnotesize\ttfamily \#define KBD\+\_\+\+IRQ\+\_\+\+LINE~1}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00009}{9}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a01d053c0e426921f363d45be6c052c39}\label{i8042_8h_a01d053c0e426921f363d45be6c052c39} 
+\index{i8042.h@{i8042.h}!L\_KEY@{L\_KEY}}
+\index{L\_KEY@{L\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{L\_KEY}{L\_KEY}}
+{\footnotesize\ttfamily \#define L\+\_\+\+KEY~0x26}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00067}{67}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_ae78ccf44cb7970752cbfeb22e6a66d14}\label{i8042_8h_ae78ccf44cb7970752cbfeb22e6a66d14} 
+\index{i8042.h@{i8042.h}!LEFT\_ARROW@{LEFT\_ARROW}}
+\index{LEFT\_ARROW@{LEFT\_ARROW}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{LEFT\_ARROW}{LEFT\_ARROW}}
+{\footnotesize\ttfamily \#define LEFT\+\_\+\+ARROW~0x4b}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00049}{49}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_aefb17eeead0329261a24903952388df9}\label{i8042_8h_aefb17eeead0329261a24903952388df9} 
+\index{i8042.h@{i8042.h}!M\_KEY@{M\_KEY}}
+\index{M\_KEY@{M\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{M\_KEY}{M\_KEY}}
+{\footnotesize\ttfamily \#define M\+\_\+\+KEY~0x32}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00068}{68}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a7e1856ac7c6ed757978fc30bb92ace74}\label{i8042_8h_a7e1856ac7c6ed757978fc30bb92ace74} 
+\index{i8042.h@{i8042.h}!MAX\_ATTEMPTS@{MAX\_ATTEMPTS}}
+\index{MAX\_ATTEMPTS@{MAX\_ATTEMPTS}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_ATTEMPTS}{MAX\_ATTEMPTS}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+ATTEMPTS~3}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00019}{19}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a759299819faf258e675cc8f16af059d4}\label{i8042_8h_a759299819faf258e675cc8f16af059d4} 
+\index{i8042.h@{i8042.h}!MOUSE\_ENABLE\_OBF\_INT@{MOUSE\_ENABLE\_OBF\_INT}}
+\index{MOUSE\_ENABLE\_OBF\_INT@{MOUSE\_ENABLE\_OBF\_INT}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{MOUSE\_ENABLE\_OBF\_INT}{MOUSE\_ENABLE\_OBF\_INT}}
+{\footnotesize\ttfamily \#define MOUSE\+\_\+\+ENABLE\+\_\+\+OBF\+\_\+\+INT~BIT(1)}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00029}{29}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_af10b9efcb908230838524558bb05588a}\label{i8042_8h_af10b9efcb908230838524558bb05588a} 
+\index{i8042.h@{i8042.h}!MOUSE\_IRQ\_LINE@{MOUSE\_IRQ\_LINE}}
+\index{MOUSE\_IRQ\_LINE@{MOUSE\_IRQ\_LINE}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{MOUSE\_IRQ\_LINE}{MOUSE\_IRQ\_LINE}}
+{\footnotesize\ttfamily \#define MOUSE\+\_\+\+IRQ\+\_\+\+LINE~12}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00010}{10}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a3789391a769864fd2d3f40d035fd8a74}\label{i8042_8h_a3789391a769864fd2d3f40d035fd8a74} 
+\index{i8042.h@{i8042.h}!MOUSE\_OK@{MOUSE\_OK}}
+\index{MOUSE\_OK@{MOUSE\_OK}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{MOUSE\_OK}{MOUSE\_OK}}
+{\footnotesize\ttfamily \#define MOUSE\+\_\+\+OK~0x\+FA}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00035}{35}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a7c1125941195a92532d3a8039804f348}\label{i8042_8h_a7c1125941195a92532d3a8039804f348} 
+\index{i8042.h@{i8042.h}!N\_KEY@{N\_KEY}}
+\index{N\_KEY@{N\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{N\_KEY}{N\_KEY}}
+{\footnotesize\ttfamily \#define N\+\_\+\+KEY~0x31}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00069}{69}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a0e2f3e8ad7ffdb245275b5d772e93802}\label{i8042_8h_a0e2f3e8ad7ffdb245275b5d772e93802} 
+\index{i8042.h@{i8042.h}!NINE\_KEY@{NINE\_KEY}}
+\index{NINE\_KEY@{NINE\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{NINE\_KEY}{NINE\_KEY}}
+{\footnotesize\ttfamily \#define NINE\+\_\+\+KEY~0x0a}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00092}{92}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a63950988373606fe6b8264da12363bd9}\label{i8042_8h_a63950988373606fe6b8264da12363bd9} 
+\index{i8042.h@{i8042.h}!O\_KEY@{O\_KEY}}
+\index{O\_KEY@{O\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{O\_KEY}{O\_KEY}}
+{\footnotesize\ttfamily \#define O\+\_\+\+KEY~0x18}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00070}{70}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a334f1097343867e39c66459ae23f0a69}\label{i8042_8h_a334f1097343867e39c66459ae23f0a69} 
+\index{i8042.h@{i8042.h}!ONE\_KEY@{ONE\_KEY}}
+\index{ONE\_KEY@{ONE\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{ONE\_KEY}{ONE\_KEY}}
+{\footnotesize\ttfamily \#define ONE\+\_\+\+KEY~0x02}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00084}{84}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a5f2144f5b632518bcba6ae0e0ea8c8d0}\label{i8042_8h_a5f2144f5b632518bcba6ae0e0ea8c8d0} 
+\index{i8042.h@{i8042.h}!OUTPUT\_BUFFER\_FULL@{OUTPUT\_BUFFER\_FULL}}
+\index{OUTPUT\_BUFFER\_FULL@{OUTPUT\_BUFFER\_FULL}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{OUTPUT\_BUFFER\_FULL}{OUTPUT\_BUFFER\_FULL}}
+{\footnotesize\ttfamily \#define OUTPUT\+\_\+\+BUFFER\+\_\+\+FULL~BIT(0)}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00017}{17}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a694eafa85c419c8ad91dc382650eb481}\label{i8042_8h_a694eafa85c419c8ad91dc382650eb481} 
+\index{i8042.h@{i8042.h}!P\_KEY@{P\_KEY}}
+\index{P\_KEY@{P\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{P\_KEY}{P\_KEY}}
+{\footnotesize\ttfamily \#define P\+\_\+\+KEY~0x19}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00071}{71}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a81d2ca6759f3f3bf04556b7558aea6bc}\label{i8042_8h_a81d2ca6759f3f3bf04556b7558aea6bc} 
+\index{i8042.h@{i8042.h}!PARITY\_ERROR@{PARITY\_ERROR}}
+\index{PARITY\_ERROR@{PARITY\_ERROR}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{PARITY\_ERROR}{PARITY\_ERROR}}
+{\footnotesize\ttfamily \#define PARITY\+\_\+\+ERROR~BIT(7)}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00012}{12}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a3d8aa05967b559c3e0d0f9f5ce3eacfb}\label{i8042_8h_a3d8aa05967b559c3e0d0f9f5ce3eacfb} 
+\index{i8042.h@{i8042.h}!Q\_KEY@{Q\_KEY}}
+\index{Q\_KEY@{Q\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{Q\_KEY}{Q\_KEY}}
+{\footnotesize\ttfamily \#define Q\+\_\+\+KEY~0x10}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00072}{72}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a75ac3acba95812a4be896446cd3051b4}\label{i8042_8h_a75ac3acba95812a4be896446cd3051b4} 
+\index{i8042.h@{i8042.h}!R\_KEY@{R\_KEY}}
+\index{R\_KEY@{R\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{R\_KEY}{R\_KEY}}
+{\footnotesize\ttfamily \#define R\+\_\+\+KEY~0x13}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00073}{73}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a9ed2533108b634266a6261c8f37e4fc0}\label{i8042_8h_a9ed2533108b634266a6261c8f37e4fc0} 
+\index{i8042.h@{i8042.h}!RIGHT\_ARROW@{RIGHT\_ARROW}}
+\index{RIGHT\_ARROW@{RIGHT\_ARROW}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{RIGHT\_ARROW}{RIGHT\_ARROW}}
+{\footnotesize\ttfamily \#define RIGHT\+\_\+\+ARROW~0x4d}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00050}{50}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a38916d959d471a2781d390910271b6b5}\label{i8042_8h_a38916d959d471a2781d390910271b6b5} 
+\index{i8042.h@{i8042.h}!S\_KEY@{S\_KEY}}
+\index{S\_KEY@{S\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{S\_KEY}{S\_KEY}}
+{\footnotesize\ttfamily \#define S\+\_\+\+KEY~0x1f}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00074}{74}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a1bc5733730b29110fb3bb1257755074d}\label{i8042_8h_a1bc5733730b29110fb3bb1257755074d} 
+\index{i8042.h@{i8042.h}!SEVEN\_KEY@{SEVEN\_KEY}}
+\index{SEVEN\_KEY@{SEVEN\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{SEVEN\_KEY}{SEVEN\_KEY}}
+{\footnotesize\ttfamily \#define SEVEN\+\_\+\+KEY~0x08}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00090}{90}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a485371dec443a36f18548bae8a4c7548}\label{i8042_8h_a485371dec443a36f18548bae8a4c7548} 
+\index{i8042.h@{i8042.h}!SIX\_KEY@{SIX\_KEY}}
+\index{SIX\_KEY@{SIX\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{SIX\_KEY}{SIX\_KEY}}
+{\footnotesize\ttfamily \#define SIX\+\_\+\+KEY~0x07}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00089}{89}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a5ff6e798033f03e74730e99f01936f84}\label{i8042_8h_a5ff6e798033f03e74730e99f01936f84} 
+\index{i8042.h@{i8042.h}!SPACE@{SPACE}}
+\index{SPACE@{SPACE}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{SPACE}{SPACE}}
+{\footnotesize\ttfamily \#define SPACE~0x39}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00054}{54}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a77d5459649c5af68a94ef9f378f8eb63}\label{i8042_8h_a77d5459649c5af68a94ef9f378f8eb63} 
+\index{i8042.h@{i8042.h}!T\_KEY@{T\_KEY}}
+\index{T\_KEY@{T\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{T\_KEY}{T\_KEY}}
+{\footnotesize\ttfamily \#define T\+\_\+\+KEY~0x14}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00075}{75}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_ab49b3d62e8424a36994b2f6825cbd2d2}\label{i8042_8h_ab49b3d62e8424a36994b2f6825cbd2d2} 
+\index{i8042.h@{i8042.h}!THREE\_KEY@{THREE\_KEY}}
+\index{THREE\_KEY@{THREE\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{THREE\_KEY}{THREE\_KEY}}
+{\footnotesize\ttfamily \#define THREE\+\_\+\+KEY~0x04}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00086}{86}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_aefc48d416c882f06edaf6d01779d4d74}\label{i8042_8h_aefc48d416c882f06edaf6d01779d4d74} 
+\index{i8042.h@{i8042.h}!TIMEOUT\_ERROR@{TIMEOUT\_ERROR}}
+\index{TIMEOUT\_ERROR@{TIMEOUT\_ERROR}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{TIMEOUT\_ERROR}{TIMEOUT\_ERROR}}
+{\footnotesize\ttfamily \#define TIMEOUT\+\_\+\+ERROR~BIT(6)}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00013}{13}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_ab427e6926fcc47eb1c02c1f78162b6f6}\label{i8042_8h_ab427e6926fcc47eb1c02c1f78162b6f6} 
+\index{i8042.h@{i8042.h}!TWO\_BYTES@{TWO\_BYTES}}
+\index{TWO\_BYTES@{TWO\_BYTES}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{TWO\_BYTES}{TWO\_BYTES}}
+{\footnotesize\ttfamily \#define TWO\+\_\+\+BYTES~0x\+E0}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00023}{23}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_ad9380e88f8d0ae57bd76e2613353b3a2}\label{i8042_8h_ad9380e88f8d0ae57bd76e2613353b3a2} 
+\index{i8042.h@{i8042.h}!TWO\_KEY@{TWO\_KEY}}
+\index{TWO\_KEY@{TWO\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{TWO\_KEY}{TWO\_KEY}}
+{\footnotesize\ttfamily \#define TWO\+\_\+\+KEY~0x03}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00085}{85}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_ad42a93716460f8a0020a8a93d606ff54}\label{i8042_8h_ad42a93716460f8a0020a8a93d606ff54} 
+\index{i8042.h@{i8042.h}!U\_KEY@{U\_KEY}}
+\index{U\_KEY@{U\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{U\_KEY}{U\_KEY}}
+{\footnotesize\ttfamily \#define U\+\_\+\+KEY~0x16}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00076}{76}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_ad315ce436b88e78c266532e4714dd197}\label{i8042_8h_ad315ce436b88e78c266532e4714dd197} 
+\index{i8042.h@{i8042.h}!UP\_ARROW@{UP\_ARROW}}
+\index{UP\_ARROW@{UP\_ARROW}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{UP\_ARROW}{UP\_ARROW}}
+{\footnotesize\ttfamily \#define UP\+\_\+\+ARROW~0x48}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00051}{51}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_aa4205a597a74f91c04f5e096f2934355}\label{i8042_8h_aa4205a597a74f91c04f5e096f2934355} 
+\index{i8042.h@{i8042.h}!V\_KEY@{V\_KEY}}
+\index{V\_KEY@{V\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{V\_KEY}{V\_KEY}}
+{\footnotesize\ttfamily \#define V\+\_\+\+KEY~0x2f}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00077}{77}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a8cb726577cd35fc0582744b2270e192f}\label{i8042_8h_a8cb726577cd35fc0582744b2270e192f} 
+\index{i8042.h@{i8042.h}!W\_KEY@{W\_KEY}}
+\index{W\_KEY@{W\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{W\_KEY}{W\_KEY}}
+{\footnotesize\ttfamily \#define W\+\_\+\+KEY~0x11}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00078}{78}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a001416d7c363224748134b28bef8d82f}\label{i8042_8h_a001416d7c363224748134b28bef8d82f} 
+\index{i8042.h@{i8042.h}!WRITE\_TO\_AUX\_DEV@{WRITE\_TO\_AUX\_DEV}}
+\index{WRITE\_TO\_AUX\_DEV@{WRITE\_TO\_AUX\_DEV}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{WRITE\_TO\_AUX\_DEV}{WRITE\_TO\_AUX\_DEV}}
+{\footnotesize\ttfamily \#define WRITE\+\_\+\+TO\+\_\+\+AUX\+\_\+\+DEV~0x\+D4}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00032}{32}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a416bc7f282396f298c821ce248960641}\label{i8042_8h_a416bc7f282396f298c821ce248960641} 
+\index{i8042.h@{i8042.h}!X\_KEY@{X\_KEY}}
+\index{X\_KEY@{X\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{X\_KEY}{X\_KEY}}
+{\footnotesize\ttfamily \#define X\+\_\+\+KEY~0x2d}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00079}{79}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_af1c95fc803a5d97f5a67dc3146daccaa}\label{i8042_8h_af1c95fc803a5d97f5a67dc3146daccaa} 
+\index{i8042.h@{i8042.h}!Y\_KEY@{Y\_KEY}}
+\index{Y\_KEY@{Y\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{Y\_KEY}{Y\_KEY}}
+{\footnotesize\ttfamily \#define Y\+\_\+\+KEY~0x15}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00080}{80}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_a0ea0953e6e1b70f697bf6aab7da4ca9e}\label{i8042_8h_a0ea0953e6e1b70f697bf6aab7da4ca9e} 
+\index{i8042.h@{i8042.h}!Z\_KEY@{Z\_KEY}}
+\index{Z\_KEY@{Z\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{Z\_KEY}{Z\_KEY}}
+{\footnotesize\ttfamily \#define Z\+\_\+\+KEY~0x2c}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00081}{81}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+
+\Hypertarget{i8042_8h_ad67440cfa48dfa0bcf25806cf592877f}\label{i8042_8h_ad67440cfa48dfa0bcf25806cf592877f} 
+\index{i8042.h@{i8042.h}!ZERO\_KEY@{ZERO\_KEY}}
+\index{ZERO\_KEY@{ZERO\_KEY}!i8042.h@{i8042.h}}
+\doxysubsubsection{\texorpdfstring{ZERO\_KEY}{ZERO\_KEY}}
+{\footnotesize\ttfamily \#define ZERO\+\_\+\+KEY~0x0b}
+
+
+
+Definition at line \mbox{\hyperlink{i8042_8h_source_l00083}{83}} of file \mbox{\hyperlink{i8042_8h_source}{i8042.\+h}}.
+

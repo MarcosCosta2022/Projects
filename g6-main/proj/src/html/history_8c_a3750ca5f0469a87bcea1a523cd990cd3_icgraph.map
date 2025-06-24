@@ -1,0 +1,13 @@
+<map id="getMatchRecord" name="getMatchRecord">
+<area shape="rect" id="Node000001" title="Gets a match record." alt="" coords="773,5,890,31"/>
+<area shape="rect" id="Node000002" href="$draw__graphics_8c.html#aa32b59d4667316fa80d30a55f882d593" title="Draws the history screen." alt="" coords="630,5,725,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="758,21,725,21,725,16,758,16"/>
+<area shape="rect" id="Node000003" href="$draw__graphics_8c.html#a58530c2091e5cc9fb6a5ec67aee2b850" title="Draws the graphics corresponding to the current state." alt="" coords="476,5,582,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="615,21,582,21,582,16,615,16"/>
+<area shape="rect" id="Node000004" href="$timer__event__handler_8c.html#a9814995f1b2e4ce71724af01f54c237f" title="Handles timer events." alt="" coords="290,5,428,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="461,21,428,21,428,16,461,16"/>
+<area shape="rect" id="Node000005" href="$int__manager_8c.html#a24285aea4a27f96c321b2628788e9a57" title="The main program execution loop, responsible for calling all of the needed functions to run the game ..." alt="" coords="162,5,242,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="275,21,242,21,242,16,275,16"/>
+<area shape="rect" id="Node000006" href="$proj_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,5,114,31"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="147,21,114,21,114,16,147,16"/>
+</map>

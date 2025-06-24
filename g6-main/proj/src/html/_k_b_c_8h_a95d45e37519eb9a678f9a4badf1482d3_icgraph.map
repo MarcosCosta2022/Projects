@@ -1,0 +1,18 @@
+<map id="KBC_write_input" name="KBC_write_input">
+<area shape="rect" id="Node000001" title="Writes a command to the keyboard controller." alt="" coords="737,31,856,56"/>
+<area shape="rect" id="Node000002" href="$keyboard_8c.html#ab2698b094b95ec9e2d4bc4a9076e32fe" title="Restores the keyboard to its&#39; original state." alt="" coords="564,5,654,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="722,36,654,27,654,22,722,31"/>
+<area shape="rect" id="Node000003" href="$mouse_8c.html#a4d3acee0b9a97e26872d4af9f237a98c" title="Writes a command to the mouse." alt="" coords="529,55,689,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="722,56,690,60,689,55,721,50"/>
+<area shape="rect" id="Node000004" href="$mouse_8c.html#a7e311379d4d64f88873ef8ade5c82a25" title="Disables data reporting." alt="" coords="302,18,442,59"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="514,58,442,49,442,44,515,53"/>
+<area shape="rect" id="Node000007" href="$mouse_8c.html#a70b60dfed85db39dd7c8c5a856dc2a3d" title="Enables data reporting." alt="" coords="262,83,481,108"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="515,81,482,85,481,80,514,76"/>
+<area shape="rect" id="Node000005" href="$int__manager_8c.html#a5660953c43c447e3e57c44f7eacf432e" title="Function executed on program end, unsubscribes interrupts and overall resets MINIX to its&#39; default mo..." alt="" coords="162,28,214,54"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="287,42,215,43,215,38,287,37"/>
+<area shape="rect" id="Node000006" href="$proj_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,55,114,80"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="147,52,115,59,114,54,146,47"/>
+<area shape="rect" id="Node000008" href="$int__manager_8c.html#a6611da0eaaaa020ce5748914abff7828" title="Function called at program start, enables interrupts, intializes videocard, loads xpms and initialize..." alt="" coords="169,79,207,104"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="247,95,207,95,207,89,247,90"/>
+<area shape="poly" id="edge8_Node000008_Node000006" title=" " alt="" coords="154,88,114,80,115,75,155,83"/>
+</map>

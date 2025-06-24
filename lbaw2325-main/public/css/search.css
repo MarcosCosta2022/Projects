@@ -1,0 +1,35 @@
+.search-query {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.search-filter {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.card-body {
+    display: flex;
+    align-items: center;
+}
+
+.search-user-photo, .search-group-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.search-user-username, .search-group-name {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.page-header{
+    display: none !important;
+}
+
+.card-text {
+    font-size: 1rem;
+}

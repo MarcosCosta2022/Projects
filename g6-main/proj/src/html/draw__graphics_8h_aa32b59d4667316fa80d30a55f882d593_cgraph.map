@@ -1,0 +1,21 @@
+<map id="draw_history" name="draw_history">
+<area shape="rect" id="Node000001" title="Draws the history screen." alt="" coords="5,80,101,106"/>
+<area shape="rect" id="Node000002" href="$draw__graphics_8c.html#a1764e22633ce78c7cbb835f2bb0f2bac" title="Draws a string." alt="" coords="170,5,258,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,77,148,40,160,34,162,39,150,45,78,82"/>
+<area shape="rect" id="Node000006" href="$history_8c.html#a3750ca5f0469a87bcea1a523cd990cd3" title="Gets a match record." alt="" coords="155,55,273,80"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="101,83,140,76,141,82,101,88"/>
+<area shape="rect" id="Node000007" href="$video_8c.html#a99d2da2559e11200c6b40c469e9977ec" title=" " alt="" coords="149,104,279,130"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="101,97,134,102,133,108,101,103"/>
+<area shape="rect" id="Node000009" href="$video_8c.html#a978b99877ebdb731d2787c1456c341c0" title="Draws a .xpm image." alt="" coords="491,155,611,180"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="75,104,109,123,149,140,236,158,324,167,406,170,476,169,476,175,406,175,323,172,235,163,148,145,107,128,73,109"/>
+<area shape="rect" id="Node000003" href="$draw__graphics_8c.html#abedef77b00c316e162554bce0344fa54" title="Draws a character." alt="" coords="327,17,437,43"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="258,19,312,23,312,28,258,24"/>
+<area shape="rect" id="Node000004" href="$video_8c.html#ab0a758b9f8ea20f9bb5fb4ca77f021e5" title="Draws a character." alt="" coords="485,29,617,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="438,31,471,34,470,39,438,37"/>
+<area shape="rect" id="Node000005" href="$video_8c.html#ab0332ee565f978f725c021b4eb35958e" title="Draws pixel." alt="" coords="665,104,786,130"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="584,53,681,95,679,100,582,58"/>
+<area shape="rect" id="Node000008" href="$video_8c.html#a5e5b25bd525250f61f40b9e9f212d5e6" title=" " alt="" coords="330,104,434,130"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="279,114,315,114,315,120,279,120"/>
+<area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="435,114,650,114,650,120,435,120"/>
+<area shape="poly" id="edge10_Node000009_Node000005" title=" " alt="" coords="597,151,664,132,666,137,599,157"/>
+</map>

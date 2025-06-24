@@ -1,0 +1,32 @@
+import Auxi;
+import foo.bar.A;
+import foo.bar.B;
+
+class Foo extends A{
+    public static void main(String[] args){
+        Auxi auxi;
+        A a;
+        B b;
+        int i;
+        Foo fo;
+        Foo tempFooo;
+
+        tempFooo = new Foo();
+        fo = tempFooo.getFooIns();
+
+
+        auxi = new Auxi();
+        a = new A();
+        b = new B();
+
+
+        i = auxi.instanceCallInt();
+
+        Auxi.staticCall(i);
+
+    }
+
+    public Foo getFooIns(){
+        return this;
+    }
+}

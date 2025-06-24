@@ -1,0 +1,9 @@
+<map id="devices/video.h" name="devices/video.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="77,5,190,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,70,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,34,67,72,63,68,116,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="94,79,173,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="136,31,136,64,131,64,131,31"/>
+<area shape="rect" id="Node000004" href="$_v_b_e2__0_8h.html" title=" " alt="" coords="197,79,278,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="153,29,209,68,206,73,150,34"/>
+</map>

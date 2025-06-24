@@ -1,0 +1,19 @@
+{
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "timer.h": "c",
+        "lab2.h": "c",
+        "lab3.h": "c",
+        "stdbool.h": "c",
+        "stdint.h": "c",
+        "kbc.h": "c",
+        "lcf.h": "c",
+        "lab4.h": "c",
+        "lab5.h": "c",
+        "video_gr.h": "c",
+        "*.xpm": "c",
+        "piece.h": "c",
+        "draw_graphics.h": "c"
+    }
+}

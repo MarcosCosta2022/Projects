@@ -1,0 +1,9 @@
+<map id="draw_checkers" name="draw_checkers">
+<area shape="rect" id="Node000001" title="Draws the checkers." alt="" coords="5,5,115,31"/>
+<area shape="rect" id="Node000002" href="$draw__graphics_8c.html#a28a1c081b70b5c12894ae09f80a0b848" title="Draws a checker piece." alt="" coords="163,5,265,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,16,148,16,148,21,115,21"/>
+<area shape="rect" id="Node000003" href="$video_8c.html#a978b99877ebdb731d2787c1456c341c0" title="Draws a .xpm image." alt="" coords="313,5,432,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="265,16,298,16,298,21,265,21"/>
+<area shape="rect" id="Node000004" href="$video_8c.html#ab0332ee565f978f725c021b4eb35958e" title="Draws pixel." alt="" coords="480,5,602,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="433,16,465,16,465,21,433,21"/>
+</map>

@@ -1,0 +1,318 @@
+/* Custom Styling for the Feed */
+.container {
+    max-width: 800px; /* Adjust width as needed */
+}
+
+.card {
+    max-width: 800px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+    margin: 0 auto; /* Center the card */
+    margin-top: 10px;
+}
+
+.card-header, .card-footer {
+    background-color: #f8f9fa; /* Light background for header and footer */
+    color: #333; /* Dark text for contrast */
+}
+
+.card-img-top {
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensure images cover the area */
+    border-top-left-radius: 10px; /* Rounded top corners */
+    border-top-right-radius: 10px;
+}
+
+.card-body p {
+    font-size: 1rem; /* Adjust font size as needed */
+}
+
+.card-body textarea {
+    resize: none; /* Disable textarea resizing */
+}
+
+/* Additional Customizations */
+/* Add more custom styles here as per your design requirements */
+/* Custom Styling for the Post */
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.card-body img {
+    max-width: 100%;
+    margin-top: 15px;
+}
+
+.card-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e3e3e3;
+}
+
+/* Style for Icons */
+.fa-thumbs-up, .fa-thumbs-down, .fa-comments {
+    cursor: pointer;
+}
+
+/* Style for User Profile Pictures */
+.rounded-circle {
+    object-fit: cover;
+}
+
+/* Style for Buttons */
+.btn-outline-secondary, .btn-outline-danger {
+    font-size: 0.8rem;
+}
+
+/* Additional styling as needed */
+/* Styling for Post Card */
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.card-header img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.card-body {
+    position: relative;
+    padding: 15px;
+}
+#create-post-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+}
+
+.card-footer {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Styling for Interaction Icons */
+.post-interaction-icons i {
+    margin-right: 10px;
+    cursor: pointer;
+    color: #007bff;
+}
+
+/* Styling for Edit and Delete Buttons */
+.btn-outline-secondary, .btn-outline-danger {
+    font-size: 0.8rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-header, .card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+/* Styling for the Post Actions */
+.post-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e3e3e3;
+}
+
+.post-actions {
+    display: flex;
+    align-items: center;
+}
+
+.post-actions p {
+    margin: 0 10px;
+}
+
+.post-actions i {
+    cursor: pointer;
+    margin-right: 10px;
+    color: #2C3E50;
+}
+
+/* Styling for Like, Dislike, Share, and Comment icons */
+.fa-thumbs-up, .fa-thumbs-down, .fa-arrows-rotate, .fa-comments {
+    font-size: 1.25rem;
+}
+
+/* Styling for Edit and Delete Buttons */
+.buttons a, .buttons button {
+    border: none;
+    background: none;
+    color: #2C3E50;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+.buttons button {
+    padding: 0;
+    line-height: 1;
+}
+
+/* Hover effect */
+.buttons a:hover, .buttons button:hover {
+    color: #0056b3;
+}
+
+.page-header{
+    display: none;
+}
+
+.card-header p{
+    margin-bottom: 0.5em;
+    margin-top: 10px;
+}
+
+.card-header button{
+    margin-right: 10px;
+}
+
+.card-header label{
+    margin-right: 10px;
+}
+
+.report-card {
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 20px; /* Adjust margin as needed */
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+.report-card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e3e3e3;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.report-card-header img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.report-card-header a{
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.report-card-header p{
+    margin-bottom: 0.5em;
+    margin-top: 10px;
+    margin-left: 530px;
+}
+
+.report-card-content {
+    position: relative;
+    padding: 15px;
+}
+
+.report-card-content img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+}
+
+.report-card-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e3e3e3;
+    padding: 10px 15px;
+}
+
+.report-card-footer p {
+    margin: 0.5em;
+}
+
+
+
+.post-actions i {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.adminsec{
+    height:auto;
+}
+
+#admin{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#adminSections {
+    flex: 1;
+    display: flex;
+    overflow: hidden; /* Hide horizontal overflow */
+    
+}
+
+.adminsec {
+    display: flex;
+    flex-direction: column;
+}
+
+.vertical-scrollable {
+    flex: 1;
+    overflow-y: auto; /* Add vertical scrollbar */
+}
+
+.vertical-scrollable::-webkit-scrollbar {
+    width: 8px;
+}
+.vertical-scrollable::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.vertical-scrollable:hover::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+}
+
+.vertical-scrollable::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+}
+
+.adminsec:first-child {
+    border-right: 1px solid #e3e3e3;
+}
+
+.adminsec {
+    border-top: 1px solid #e3e3e3;
+    padding-top: 10px;
+}
+.profile-picture {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    float: left;
+    margin-right: 20px;
+}

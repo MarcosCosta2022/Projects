@@ -1,0 +1,20 @@
+import Auxi;
+import foo.bar.A;
+import foo.bar.B;
+Foo{
+
+
+.method public static main(args.array.String).V {
+tmp0.Auxi :=.Auxi new(Auxi).Auxi;
+invokespecial(tmp0.Auxi, "").V;
+auxi.Auxi :=.Auxi tmp0.Auxi;
+tmp1.i32 :=.i32 invokevirtual(auxi.Auxi, "instanceCallInt").i32;
+i.i32 :=.i32 tmp1.i32;
+invokestatic(Auxi, "staticCall", i.i32).V;
+ret.V ;
+}
+
+.construct Foo().V {
+invokespecial(this, "<init>").V;
+}
+}

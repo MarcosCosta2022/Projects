@@ -1,0 +1,261 @@
+\doxysection{devices/int\+\_\+manager.c File Reference}
+\hypertarget{int__manager_8c}{}\label{int__manager_8c}\index{devices/int\_manager.c@{devices/int\_manager.c}}
+{\ttfamily \#include \"{}int\+\_\+manager.\+h\"{}}\newline
+{\ttfamily \#include \"{}../game/draw\+\_\+graphics.\+h\"{}}\newline
+Include dependency graph for int\+\_\+manager.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{int__manager_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{int__manager_8c_a6611da0eaaaa020ce5748914abff7828}{init}} ()
+\begin{DoxyCompactList}\small\item\em Function called at program start, enables interrupts, intializes videocard, loads xpms and initializes other important features. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{int__manager_8c_a24285aea4a27f96c321b2628788e9a57}{main\+\_\+loop}} ()
+\begin{DoxyCompactList}\small\item\em The main program execution loop, responsible for calling all of the needed functions to run the game and menus. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{int__manager_8c_a5660953c43c447e3e57c44f7eacf432e}{leave}} ()
+\begin{DoxyCompactList}\small\item\em Function executed on program end, unsubscribes interrupts and overall resets MINIX to its\textquotesingle{} default mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{int__manager_8c_a3462fc5fe41d7f3738b28e8db5c34afa}{timer\+\_\+irq\+\_\+set}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{int__manager_8c_a4a804c5ed9fbbb87e678bc754a0050df}{kbd\+\_\+irq\+\_\+set}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{int__manager_8c_a19510d6e8f8e3683abe25e8936a4401e}{mouse\+\_\+irq\+\_\+set}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{int__manager_8c_a6611da0eaaaa020ce5748914abff7828}\label{int__manager_8c_a6611da0eaaaa020ce5748914abff7828} 
+\index{int\_manager.c@{int\_manager.c}!init@{init}}
+\index{init@{init}!int\_manager.c@{int\_manager.c}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily int() init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function called at program start, enables interrupts, intializes videocard, loads xpms and initializes other important features. 
+
+\begin{DoxyReturn}{Returns}
+0 if successful, 1 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{int__manager_8c_source_l00009}{9}} of file \mbox{\hyperlink{int__manager_8c_source}{int\+\_\+manager.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00010\ \ \ uint8\_t\ timer\_bit\_no\ =\ 0,\ kbd\_bit\_no\ =\ 0,\ \ mouse\_bit\_no\ =0;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \textcolor{comment}{//\ enabling\ interrupts}}
+\DoxyCodeLine{00013\ \ \ \mbox{\hyperlink{timer_8c_ac57a7e1140a7e00ad95ac5488d2a671b}{timer\_subscribe\_int}}(\&timer\_bit\_no);}
+\DoxyCodeLine{00014\ \ \ \mbox{\hyperlink{keyboard_8c_a4ac9231a99a664d6a9f0b69767e0d707}{kbd\_subscribe\_int}}(\&kbd\_bit\_no);}
+\DoxyCodeLine{00015\ \ \ \mbox{\hyperlink{mouse_8c_a20285aed4b3ef45812cd967532dd09db}{mouse\_subscribe\_int}}(\&mouse\_bit\_no);}
+\DoxyCodeLine{00016\ \ \ \mbox{\hyperlink{mouse_8c_a70b60dfed85db39dd7c8c5a856dc2a3d}{mouse\_enable\_data\_reporting\_mv}}();}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \mbox{\hyperlink{int__manager_8c_a3462fc5fe41d7f3738b28e8db5c34afa}{timer\_irq\_set}}\ =\ BIT(timer\_bit\_no);}
+\DoxyCodeLine{00019\ \ \ \mbox{\hyperlink{int__manager_8c_a4a804c5ed9fbbb87e678bc754a0050df}{kbd\_irq\_set}}\ =\ BIT(kbd\_bit\_no);}
+\DoxyCodeLine{00020\ \ \ \mbox{\hyperlink{int__manager_8c_a19510d6e8f8e3683abe25e8936a4401e}{mouse\_irq\_set}}\ =\ BIT(mouse\_bit\_no);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \textcolor{comment}{//\ initialize\ vc}}
+\DoxyCodeLine{00023\ \ \ \mbox{\hyperlink{video_8c_afa0e432c3ebeefc29a59abc4d22918df}{vg\_init}}(0x115);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \textcolor{comment}{//\ loading\ xpms}}
+\DoxyCodeLine{00026\ \ \ \mbox{\hyperlink{draw__graphics_8c_a297af57e28b63a9537fdc82eddd80422}{load\_xpms}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \textcolor{comment}{//\ initialize\ array\ of\ keys}}
+\DoxyCodeLine{00029\ \ \ \mbox{\hyperlink{game__utils_8c_a4f017f51874e2df61091a589c98aa54c}{get\_keys}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \textcolor{comment}{//load\ history}}
+\DoxyCodeLine{00032\ \ \ \mbox{\hyperlink{history_8c_a430dfdf5895b99b13d24f0cd542eda06}{load\_history}}();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \textcolor{keywordflow}{return}\ EXIT\_SUCCESS;}
+\DoxyCodeLine{00035\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{int__manager_8c_a6611da0eaaaa020ce5748914abff7828_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{int__manager_8c_a6611da0eaaaa020ce5748914abff7828_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{int__manager_8c_a5660953c43c447e3e57c44f7eacf432e}\label{int__manager_8c_a5660953c43c447e3e57c44f7eacf432e} 
+\index{int\_manager.c@{int\_manager.c}!leave@{leave}}
+\index{leave@{leave}!int\_manager.c@{int\_manager.c}}
+\doxysubsubsection{\texorpdfstring{leave()}{leave()}}
+{\footnotesize\ttfamily int() leave (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function executed on program end, unsubscribes interrupts and overall resets MINIX to its\textquotesingle{} default mode. 
+
+\begin{DoxyReturn}{Returns}
+0 if successful, 1 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{int__manager_8c_source_l00092}{92}} of file \mbox{\hyperlink{int__manager_8c_source}{int\+\_\+manager.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00093\ \ \ \mbox{\hyperlink{history_8c_a09b7d2a829665d653cefbe0bea795603}{save\_history}}();}
+\DoxyCodeLine{00094\ \ \ \mbox{\hyperlink{timer_8c_afabd21de449be154dd65d5fdb2d8045d}{timer\_unsubscribe\_int}}();}
+\DoxyCodeLine{00095\ \ \ \mbox{\hyperlink{keyboard_8c_aee0a7b54ee426fade9c780418d110fe0}{kbd\_unsubscribe\_int}}();}
+\DoxyCodeLine{00096\ \ \ \mbox{\hyperlink{mouse_8c_a3ecf823d80520009ae5e0d76ae40a3c3}{mouse\_unsubscribe\_int}}();}
+\DoxyCodeLine{00097\ \ \ \mbox{\hyperlink{mouse_8c_a7e311379d4d64f88873ef8ade5c82a25}{mouse\_disable\_data\_reporting}}();}
+\DoxyCodeLine{00098\ \ \ \mbox{\hyperlink{video_8c_a229934fe854471c3f5db925a213ebbb8}{video\_exit}}();}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \textcolor{keywordflow}{return}\ EXIT\_SUCCESS;}
+\DoxyCodeLine{00101\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{int__manager_8c_a5660953c43c447e3e57c44f7eacf432e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{int__manager_8c_a5660953c43c447e3e57c44f7eacf432e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{int__manager_8c_a24285aea4a27f96c321b2628788e9a57}\label{int__manager_8c_a24285aea4a27f96c321b2628788e9a57} 
+\index{int\_manager.c@{int\_manager.c}!main\_loop@{main\_loop}}
+\index{main\_loop@{main\_loop}!int\_manager.c@{int\_manager.c}}
+\doxysubsubsection{\texorpdfstring{main\_loop()}{main\_loop()}}
+{\footnotesize\ttfamily int() main\+\_\+loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The main program execution loop, responsible for calling all of the needed functions to run the game and menus. 
+
+\begin{DoxyReturn}{Returns}
+0 if successful, 1 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{int__manager_8c_source_l00037}{37}} of file \mbox{\hyperlink{int__manager_8c_source}{int\+\_\+manager.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ message\ msg;}
+\DoxyCodeLine{00039\ \ \ \textcolor{keywordtype}{int}\ ipc\_status;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{game_8c_a70546ef15bc78d3e183760c87a4f2f95}{fase}}\ !=\ \mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628a7a10b5d68d31711288e1fe0fa17dbf4f}{EXIT}})\ \{}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{int}\ r;}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{if}\ ((r\ =\ driver\_receive(ANY,\ \&msg,\ \&ipc\_status))\ !=\ OK)\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}driver\_receive\ failed\ with:\ \%d"{}},\ r);}
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordflow}{if}\ (is\_ipc\_notify(ipc\_status))\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\_ENDPOINT\_P(msg.m\_source))\ \{}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ HARDWARE:\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (msg.m\_notify.interrupts\ \&\ \mbox{\hyperlink{int__manager_8c_a19510d6e8f8e3683abe25e8936a4401e}{mouse\_irq\_set}})\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{mouse_8c_aed4404005e4c565ac36656307386e0ac}{mouse\_ih}}();}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{mouse_8c_ab3ae786aee1f20eff4f6d9ff85e41299}{mouse\_ready}})\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{mouse_8c_ab3ae786aee1f20eff4f6d9ff85e41299}{mouse\_ready}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{mouse__event__handler_8c_a43497a5fd88eb9f5093d334de9060e77}{mouse\_event\_handler}}(\&\mbox{\hyperlink{mouse_8c_a3b2e64ffb96c650d6525c99be01c7331}{mouse\_packet}});}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (msg.m\_notify.interrupts\ \&\ \mbox{\hyperlink{int__manager_8c_a4a804c5ed9fbbb87e678bc754a0050df}{kbd\_irq\_set}})\ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{keyboard_8c_aea970a154161a35f6894898a092ed70a}{kbc\_ih}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{keyboard_8c_a06a3dd28ec493a423fea6ccd048d441a}{scan\_code}}[\mbox{\hyperlink{keyboard_8c_a1304f6a4a1ca2e86ea8cf758c982e0e0}{kbd\_i}}]\ ==\ \mbox{\hyperlink{i8042_8h_ab427e6926fcc47eb1c02c1f78162b6f6}{TWO\_BYTES}})\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{keyboard_8c_a1304f6a4a1ca2e86ea8cf758c982e0e0}{kbd\_i}}++;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{keyboard_8c_a1304f6a4a1ca2e86ea8cf758c982e0e0}{kbd\_i}}\ =\ 0;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{kbd__event__handler_8c_a300347b7d13a379173e194b73208fc94}{kbd\_event\_handler}}(\mbox{\hyperlink{keyboard_8c_a06a3dd28ec493a423fea6ccd048d441a}{scan\_code}});}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{keyboard_8c_a06a3dd28ec493a423fea6ccd048d441a}{scan\_code}}[0]\ =\ 0;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{keyboard_8c_a06a3dd28ec493a423fea6ccd048d441a}{scan\_code}}[1]\ =\ 0;}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (msg.m\_notify.interrupts\ \&\ \mbox{\hyperlink{int__manager_8c_a3462fc5fe41d7f3738b28e8db5c34afa}{timer\_irq\_set}})\ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{timer_8c_a91a2072306c68353712a6b771287dc2c}{timer\_int\_handler}}();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{timer_8c_a0f08eb193e0aedb134a1481913b6a823}{timer\_counter}}\ \%\ 2\ ==\ 0)\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{timer__event__handler_8c_a9814995f1b2e4ce71724af01f54c237f}{timer\_event\_handler}}();}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00086\ \ \ \ \ \}}
+\DoxyCodeLine{00087\ \ \ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \textcolor{keywordflow}{return}\ EXIT\_SUCCESS;}
+\DoxyCodeLine{00090\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{int__manager_8c_a24285aea4a27f96c321b2628788e9a57_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{int__manager_8c_a24285aea4a27f96c321b2628788e9a57_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{int__manager_8c_a4a804c5ed9fbbb87e678bc754a0050df}\label{int__manager_8c_a4a804c5ed9fbbb87e678bc754a0050df} 
+\index{int\_manager.c@{int\_manager.c}!kbd\_irq\_set@{kbd\_irq\_set}}
+\index{kbd\_irq\_set@{kbd\_irq\_set}!int\_manager.c@{int\_manager.c}}
+\doxysubsubsection{\texorpdfstring{kbd\_irq\_set}{kbd\_irq\_set}}
+{\footnotesize\ttfamily uint32\+\_\+t kbd\+\_\+irq\+\_\+set}
+
+
+
+Definition at line \mbox{\hyperlink{int__manager_8c_source_l00006}{6}} of file \mbox{\hyperlink{int__manager_8c_source}{int\+\_\+manager.\+c}}.
+
+\Hypertarget{int__manager_8c_a19510d6e8f8e3683abe25e8936a4401e}\label{int__manager_8c_a19510d6e8f8e3683abe25e8936a4401e} 
+\index{int\_manager.c@{int\_manager.c}!mouse\_irq\_set@{mouse\_irq\_set}}
+\index{mouse\_irq\_set@{mouse\_irq\_set}!int\_manager.c@{int\_manager.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_irq\_set}{mouse\_irq\_set}}
+{\footnotesize\ttfamily uint32\+\_\+t mouse\+\_\+irq\+\_\+set}
+
+
+
+Definition at line \mbox{\hyperlink{int__manager_8c_source_l00006}{6}} of file \mbox{\hyperlink{int__manager_8c_source}{int\+\_\+manager.\+c}}.
+
+\Hypertarget{int__manager_8c_a3462fc5fe41d7f3738b28e8db5c34afa}\label{int__manager_8c_a3462fc5fe41d7f3738b28e8db5c34afa} 
+\index{int\_manager.c@{int\_manager.c}!timer\_irq\_set@{timer\_irq\_set}}
+\index{timer\_irq\_set@{timer\_irq\_set}!int\_manager.c@{int\_manager.c}}
+\doxysubsubsection{\texorpdfstring{timer\_irq\_set}{timer\_irq\_set}}
+{\footnotesize\ttfamily uint32\+\_\+t timer\+\_\+irq\+\_\+set}
+
+
+
+Definition at line \mbox{\hyperlink{int__manager_8c_source_l00006}{6}} of file \mbox{\hyperlink{int__manager_8c_source}{int\+\_\+manager.\+c}}.
+

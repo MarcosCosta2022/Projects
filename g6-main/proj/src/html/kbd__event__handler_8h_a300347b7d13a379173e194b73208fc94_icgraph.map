@@ -1,0 +1,7 @@
+<map id="kbd_event_handler" name="kbd_event_handler">
+<area shape="rect" id="Node000001" title="Handles keyboard events." alt="" coords="290,5,420,31"/>
+<area shape="rect" id="Node000002" href="$int__manager_8c.html#a24285aea4a27f96c321b2628788e9a57" title="The main program execution loop, responsible for calling all of the needed functions to run the game ..." alt="" coords="162,5,242,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="275,21,242,21,242,16,275,16"/>
+<area shape="rect" id="Node000003" href="$proj_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,5,114,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="147,21,114,21,114,16,147,16"/>
+</map>

@@ -1,0 +1,112 @@
+\doxysection{event\+\_\+handler/kbd\+\_\+event\+\_\+handler.h File Reference}
+\hypertarget{kbd__event__handler_8h}{}\label{kbd__event__handler_8h}\index{event\_handler/kbd\_event\_handler.h@{event\_handler/kbd\_event\_handler.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \"{}../devices/keyboard.\+h\"{}}\newline
+{\ttfamily \#include \"{}../game/game.\+h\"{}}\newline
+Include dependency graph for kbd\+\_\+event\+\_\+handler.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kbd__event__handler_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kbd__event__handler_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void() \mbox{\hyperlink{kbd__event__handler_8h_a300347b7d13a379173e194b73208fc94}{kbd\+\_\+event\+\_\+handler}} (uint8\+\_\+t scancode\mbox{[}2\mbox{]})
+\begin{DoxyCompactList}\small\item\em Handles keyboard events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{kbd__event__handler_8h_a300347b7d13a379173e194b73208fc94}\label{kbd__event__handler_8h_a300347b7d13a379173e194b73208fc94} 
+\index{kbd\_event\_handler.h@{kbd\_event\_handler.h}!kbd\_event\_handler@{kbd\_event\_handler}}
+\index{kbd\_event\_handler@{kbd\_event\_handler}!kbd\_event\_handler.h@{kbd\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{kbd\_event\_handler()}{kbd\_event\_handler()}}
+{\footnotesize\ttfamily void() kbd\+\_\+event\+\_\+handler (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{scancode\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Handles keyboard events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scancode} & array with the scancode \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{kbd__event__handler_8c_source_l00003}{3}} of file \mbox{\hyperlink{kbd__event__handler_8c_source}{kbd\+\_\+event\+\_\+handler.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00004\ \ \ \ \ \textcolor{keywordflow}{if}\ (scancode[0]\ !=\ \mbox{\hyperlink{i8042_8h_ab427e6926fcc47eb1c02c1f78162b6f6}{TWO\_BYTES}})\{}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (scancode[0]\ ==\ \mbox{\hyperlink{i8042_8h_a343f44cb034d2d2ff3438b3d45dcde1f}{ESC\_BREAK}})\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a70546ef15bc78d3e183760c87a4f2f95}{fase}}\ !=\ \mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628a4c40e60bc71a32b924ce1f08d57f9721}{MENU}})\ \{\mbox{\hyperlink{game_8c_a58f4ad8c25d6712b21e03fac6fdba17c}{changeState}}(\mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628a4c40e60bc71a32b924ce1f08d57f9721}{MENU}});\}}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \mbox{\hyperlink{game_8c_a58f4ad8c25d6712b21e03fac6fdba17c}{changeState}}(\mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628a7a10b5d68d31711288e1fe0fa17dbf4f}{EXIT}});}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a70546ef15bc78d3e183760c87a4f2f95}{fase}}\ ==\ \mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628ade61fd9af662e17286e2966e11148159}{CHOOSE\_NAME}})\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (scancode[0]\ >=\ 0x90)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a7082db574ba2d2d69ccafb060398b7d8}{name}}\ ==\ \mbox{\hyperlink{game_8h_aa5998168cabfb2b2e41151349077812ca19f0b039d78ea564ee9379b997e03243}{NO\_NAME}})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}*\ name\_selected;}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a7082db574ba2d2d69ccafb060398b7d8}{name}}\ ==\ \mbox{\hyperlink{game_8h_aa5998168cabfb2b2e41151349077812ca4fd01f8f763987a3b970c1d60547a135}{WHITE\_NAME}})\ name\_selected\ =\ \mbox{\hyperlink{game_8c_ace6dbe6f73e3ceafa52a94af5cd39944}{white\_name}};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ name\_selected\ =\ \mbox{\hyperlink{game_8c_ae6439bcf42c914cdb59213277f001892}{black\_name}};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (scancode[0]\ ==\ \mbox{\hyperlink{i8042_8h_a629568514359445d2fbda71d70eeb1ce}{BACKSPACE}})\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (strlen(name\_selected)\ ==\ 0)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name\_selected[strlen(name\_selected)\ -\/\ 1]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ key\ =\ \mbox{\hyperlink{keyboard_8c_ae5d71bd9d53577890ce705d0b488b6ee}{keys}}[scancode[0]];}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (key\ ==\ 0)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (key\ ==\ \textcolor{charliteral}{'\ '}\ \&\&\ strlen(name\_selected)\ ==\ 0)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 10;\ i++)\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (name\_selected[i]\ ==\ \textcolor{charliteral}{'\(\backslash\)0'})\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name\_selected[i]\ =\ key;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name\_selected[i\ +\ 1]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a70546ef15bc78d3e183760c87a4f2f95}{fase}}\ ==\ \mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628a283e4f8f90756c9892871460a0d62a60}{HISTORY}})\{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (scancode[1]\ ==\ \mbox{\hyperlink{i8042_8h_ad315ce436b88e78c266532e4714dd197}{UP\_ARROW}})\{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_a933208df950622e857a82625b946727a}{roll\_up}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (scancode[1]\ ==\ \mbox{\hyperlink{i8042_8h_a5b1eca6358420b8748a151949d3119fa}{DOWN\_ARROW}})\{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{history_8c_ab4af141d40f18fd524b677f9a68ba6cc}{roll\_down}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kbd__event__handler_8h_a300347b7d13a379173e194b73208fc94_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kbd__event__handler_8h_a300347b7d13a379173e194b73208fc94_icgraph}
+\end{center}
+\end{figure}

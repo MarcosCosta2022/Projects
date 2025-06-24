@@ -1,0 +1,26 @@
+\doxysection{utils.\+c}
+\hypertarget{utils_8c_source}{}\label{utils_8c_source}\index{devices/utils.c@{devices/utils.c}}
+\mbox{\hyperlink{utils_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{utils_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{\Hypertarget{utils_8c_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{utils_8c_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{\Hypertarget{utils_8c_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{utils_8c_source_l00005}\mbox{\hyperlink{utils_8c_a81621440b3d65680979425e39aa8c789}{00005}}\ int(\mbox{\hyperlink{utils_8c_a81621440b3d65680979425e39aa8c789}{util\_get\_LSB}})(uint16\_t\ val,\ uint8\_t\ *lsb)\ \{}
+\DoxyCodeLine{\Hypertarget{utils_8c_source_l00006}00006\ \ \ *lsb\ =\ (uint8\_t)\ val;}
+\DoxyCodeLine{\Hypertarget{utils_8c_source_l00007}00007\ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{utils_8c_source_l00008}00008\ \}}
+\DoxyCodeLine{\Hypertarget{utils_8c_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{utils_8c_source_l00010}\mbox{\hyperlink{utils_8c_a6a880076cd2ec468834438b6e0c58836}{00010}}\ int(\mbox{\hyperlink{utils_8c_a6a880076cd2ec468834438b6e0c58836}{util\_get\_MSB}})(uint16\_t\ val,\ uint8\_t\ *msb)\ \{}
+\DoxyCodeLine{\Hypertarget{utils_8c_source_l00011}00011\ \ \ *msb\ =\ (uint8\_t)\ (val\ >>8);}
+\DoxyCodeLine{\Hypertarget{utils_8c_source_l00012}00012\ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{utils_8c_source_l00013}00013\ \}}
+\DoxyCodeLine{\Hypertarget{utils_8c_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{utils_8c_source_l00015}\mbox{\hyperlink{utils_8c_a79a031a8611f5b2d6afa4158e92b0fb4}{00015}}\ int\ (\mbox{\hyperlink{utils_8c_a79a031a8611f5b2d6afa4158e92b0fb4}{util\_sys\_inb}})(\textcolor{keywordtype}{int}\ port,\ uint8\_t\ *value)\ \{}
+\DoxyCodeLine{\Hypertarget{utils_8c_source_l00016}00016\ \ \ u32\_t\ temp;}
+\DoxyCodeLine{\Hypertarget{utils_8c_source_l00017}00017\ \ \ \textcolor{keywordtype}{int}\ r\ =\ sys\_inb(port,\ \&temp);}
+\DoxyCodeLine{\Hypertarget{utils_8c_source_l00018}00018\ \ \ *value\ =\ (uint8\_t)\ temp;}
+\DoxyCodeLine{\Hypertarget{utils_8c_source_l00019}00019\ \ \ \textcolor{keywordflow}{return}\ r;}
+\DoxyCodeLine{\Hypertarget{utils_8c_source_l00020}00020\ \}}
+
+\end{DoxyCode}

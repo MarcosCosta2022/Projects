@@ -1,0 +1,17 @@
+<map id="init_winner" name="init_winner">
+<area shape="rect" id="Node000001" title="Initializes the winner." alt="" coords="5,80,89,106"/>
+<area shape="rect" id="Node000002" href="$piece_8c.html#aabf9e8dc1805608072457dc2efa5b2a7" title="Create a Piece object." alt="" coords="159,5,250,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,77,135,40,148,34,150,39,138,45,70,82"/>
+<area shape="rect" id="Node000003" href="$piece_8c.html#a9bbadfbace1a561a9b018c1a32dc62ef" title="Makes a piece a king." alt="" coords="170,55,239,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="89,84,155,73,156,78,89,89"/>
+<area shape="rect" id="Node000004" href="$rtc_8c.html#a9cfbfcb4b0b62e6acd00fb33c9b6b793" title="Yields a Time like type struct that contains the time taken from the RTC." alt="" coords="154,104,255,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="89,97,140,104,139,110,89,102"/>
+<area shape="rect" id="Node000008" href="$history_8c.html#af4bcea2cd0974b3563d9023f25a7beb5" title="Saves a match record." alt="" coords="137,153,272,179"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="71,104,138,140,150,145,148,150,136,145,69,109"/>
+<area shape="rect" id="Node000005" href="$rtc_8c.html#a13a4e87785409aac48125001245f0f16" title="Read from the RTC data register on addr." alt="" coords="322,80,422,106"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="255,107,306,99,307,105,255,112"/>
+<area shape="rect" id="Node000007" href="$rtc_8c.html#a793e4961c088e1842f29b37af4e37b5c" title="Write data to the RTC address register." alt="" coords="320,129,423,155"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="255,122,306,130,305,135,255,127"/>
+<area shape="rect" id="Node000006" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title=" " alt="" coords="471,80,562,106"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="422,90,456,90,456,96,422,96"/>
+</map>

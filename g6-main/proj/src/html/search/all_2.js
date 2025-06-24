@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['b_0',['B',['../_v_b_e2__0_8h.html#a7b96e3a863c6ef1b261c051574113e7c',1,'VBE2_0.h']]],
+  ['b_5fbits_1',['B_BITS',['../_v_b_e2__0_8h.html#ad889e14369e7c17021a8bb8eb36a36cb',1,'VBE2_0.h']]],
+  ['b_5fkey_2',['B_KEY',['../i8042_8h.html#ad17571f139195fb7361f6293b791744d',1,'i8042.h']]],
+  ['b_5foffset_3',['B_OFFSET',['../_v_b_e2__0_8h.html#a6c116f4575d27d102053dbc576117fa4',1,'VBE2_0.h']]],
+  ['backspace_4',['BACKSPACE',['../i8042_8h.html#a629568514359445d2fbda71d70eeb1ce',1,'i8042.h']]],
+  ['black_5',['BLACK',['../game_8h.html#ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3',1,'game.h']]],
+  ['black_5fchecker_6',['black_checker',['../draw__graphics_8c.html#a9b6b60ce68305da4c81e90d89826db21',1,'black_checker:&#160;draw_graphics.c'],['../draw__graphics_8h.html#a9b6b60ce68305da4c81e90d89826db21',1,'black_checker:&#160;draw_graphics.h']]],
+  ['black_5fking_7',['black_king',['../draw__graphics_8c.html#af506c99bd1c7bacf13859dd666ea5de6',1,'black_king:&#160;draw_graphics.c'],['../draw__graphics_8h.html#af506c99bd1c7bacf13859dd666ea5de6',1,'black_king:&#160;draw_graphics.h']]],
+  ['black_5fname_8',['BLACK_NAME',['../game_8h.html#aa5998168cabfb2b2e41151349077812caf6d7a0199495a2f50e180f8d24e55252',1,'game.h']]],
+  ['black_5fname_9',['black_name',['../game_8c.html#ae6439bcf42c914cdb59213277f001892',1,'black_name:&#160;game.c'],['../game_8h.html#ae6439bcf42c914cdb59213277f001892',1,'black_name:&#160;game.c']]],
+  ['black_5fplayer_5fname_10',['black_player_name',['../struct_match_record.html#a7071eddc5b3b1d6ec4d4a394947172e5',1,'MatchRecord']]],
+  ['black_5fremain_5ftime_11',['black_remain_time',['../struct_match_record.html#a19a80e03aba24aaa1119c8bacb439381',1,'MatchRecord']]],
+  ['black_5fscore_12',['black_score',['../game_8c.html#ad55e591f5f90e62961138c329a639c38',1,'black_score:&#160;game.c'],['../game_8h.html#ad55e591f5f90e62961138c329a639c38',1,'black_score:&#160;game.c']]],
+  ['black_5ftime_13',['black_time',['../game_8c.html#ad2942906e1bafe30b74a620b6bfb0bc8',1,'black_time:&#160;game.c'],['../game_8h.html#ad2942906e1bafe30b74a620b6bfb0bc8',1,'black_time:&#160;game.c']]],
+  ['board_14',['board',['../board_8c.html#ab7a4538a6cfde5b8e1a246e084c68c72',1,'board:&#160;board.c'],['../board_8h.html#ab7a4538a6cfde5b8e1a246e084c68c72',1,'board:&#160;board.c']]],
+  ['board_2ec_15',['board.c',['../board_8c.html',1,'']]],
+  ['board_2eh_16',['board.h',['../board_8h.html',1,'']]],
+  ['board_5fto_5fdraw_17',['board_to_draw',['../draw__graphics_8c.html#a72f40040de5b7deb3efd9b4f96e26bfc',1,'board_to_draw:&#160;draw_graphics.c'],['../draw__graphics_8h.html#a72f40040de5b7deb3efd9b4f96e26bfc',1,'board_to_draw:&#160;draw_graphics.c']]],
+  ['break_5fcode_5fbyte_18',['BREAK_CODE_BYTE',['../i8042_8h.html#adcf9f9d7eafff23164deaed9de57d5cc',1,'i8042.h']]]
+];

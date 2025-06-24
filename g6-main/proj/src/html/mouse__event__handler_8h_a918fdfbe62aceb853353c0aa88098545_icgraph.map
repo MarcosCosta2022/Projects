@@ -1,0 +1,11 @@
+<map id="mouse_lb_pressed_name" name="mouse_lb_pressed_name">
+<area shape="rect" id="Node000001" title="Handles mouse left button pressed in name choosing menu." alt="" coords="665,5,834,31"/>
+<area shape="rect" id="Node000002" href="$mouse__event__handler_8c.html#a6b9ced5360f7e67997198ff937fa3b39" title="Handles mouse left button pressed." alt="" coords="486,5,617,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="650,21,617,21,617,16,650,16"/>
+<area shape="rect" id="Node000003" href="$mouse__event__handler_8c.html#a43497a5fd88eb9f5093d334de9060e77" title="Handles mouse events." alt="" coords="290,5,438,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="472,21,439,21,439,16,472,16"/>
+<area shape="rect" id="Node000004" href="$int__manager_8c.html#a24285aea4a27f96c321b2628788e9a57" title="The main program execution loop, responsible for calling all of the needed functions to run the game ..." alt="" coords="162,5,242,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="275,21,242,21,242,16,275,16"/>
+<area shape="rect" id="Node000005" href="$proj_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,5,114,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="147,21,114,21,114,16,147,16"/>
+</map>

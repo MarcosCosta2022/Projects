@@ -1,0 +1,92 @@
+\doxysection{proj.\+c File Reference}
+\hypertarget{proj_8c}{}\label{proj_8c}\index{proj.c@{proj.c}}
+{\ttfamily \#include \"{}devices/int\+\_\+manager.\+h\"{}}\newline
+Include dependency graph for proj.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{proj_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{proj_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\item 
+int() \mbox{\hyperlink{proj_8c_a2a16f651eccbd248e1ad3b3b924b143b}{proj\+\_\+main\+\_\+loop}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{proj_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{proj_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+\index{proj.c@{proj.c}!main@{main}}
+\index{main@{main}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{proj_8c_source_l00003}{3}} of file \mbox{\hyperlink{proj_8c_source}{proj.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00004\ \ \ \textcolor{comment}{//\ sets\ the\ language\ of\ LCF\ messages\ (can\ be\ either\ EN-\/US\ or\ PT-\/PT)}}
+\DoxyCodeLine{00005\ \ \ lcf\_set\_language(\textcolor{stringliteral}{"{}EN-\/US"{}});}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \ \ \textcolor{comment}{//\ enables\ to\ log\ function\ invocations\ that\ are\ being\ "{}wrapped"{}\ by\ LCF}}
+\DoxyCodeLine{00008\ \ \ \textcolor{comment}{//\ [comment\ this\ out\ if\ you\ don't\ want/need\ it]}}
+\DoxyCodeLine{00009\ \ \ lcf\_trace\_calls(\textcolor{stringliteral}{"{}/home/lcom/labs/g6/proj/src/trace.txt"{}});}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \textcolor{comment}{//\ enables\ to\ save\ the\ output\ of\ printf\ function\ calls\ on\ a\ file}}
+\DoxyCodeLine{00012\ \ \ \textcolor{comment}{//\ [comment\ this\ out\ if\ you\ don't\ want/need\ it]}}
+\DoxyCodeLine{00013\ \ \ lcf\_log\_output(\textcolor{stringliteral}{"{}/home/lcom/labs/g6/proj/src/output.txt"{}});}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \textcolor{comment}{//\ handles\ control\ over\ to\ LCF}}
+\DoxyCodeLine{00016\ \ \ \textcolor{comment}{//\ [LCF\ handles\ command\ line\ arguments\ and\ invokes\ the\ right\ function]}}
+\DoxyCodeLine{00017\ \ \ \textcolor{keywordflow}{if}\ (lcf\_start(argc,\ argv))}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \textcolor{comment}{//\ LCF\ clean\ up\ tasks}}
+\DoxyCodeLine{00021\ \ \ \textcolor{comment}{//\ [must\ be\ the\ last\ statement\ before\ return]}}
+\DoxyCodeLine{00022\ \ \ lcf\_cleanup();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00025\ \}}
+
+\end{DoxyCode}
+\Hypertarget{proj_8c_a2a16f651eccbd248e1ad3b3b924b143b}\label{proj_8c_a2a16f651eccbd248e1ad3b3b924b143b} 
+\index{proj.c@{proj.c}!proj\_main\_loop@{proj\_main\_loop}}
+\index{proj\_main\_loop@{proj\_main\_loop}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{proj\_main\_loop()}{proj\_main\_loop()}}
+{\footnotesize\ttfamily int() proj\+\_\+main\+\_\+loop (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{proj_8c_source_l00027}{27}} of file \mbox{\hyperlink{proj_8c_source}{proj.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ }
+\DoxyCodeLine{00029\ \ \ \textcolor{comment}{//\ setting\ up\ interrupts\ and\ some\ graphics}}
+\DoxyCodeLine{00030\ \ \ \mbox{\hyperlink{int__manager_8c_a6611da0eaaaa020ce5748914abff7828}{init}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \textcolor{comment}{//\ main\ gameplay\ loop}}
+\DoxyCodeLine{00033\ \ \ \mbox{\hyperlink{int__manager_8c_a24285aea4a27f96c321b2628788e9a57}{main\_loop}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \textcolor{comment}{//\ freeing\ resources\ and\ returning\ minix\ to\ default\ state}}
+\DoxyCodeLine{00036\ \ \ \mbox{\hyperlink{int__manager_8c_a5660953c43c447e3e57c44f7eacf432e}{leave}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00039\ \ \ }
+\DoxyCodeLine{00040\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{proj_8c_a2a16f651eccbd248e1ad3b3b924b143b_cgraph}
+\end{center}
+\end{figure}

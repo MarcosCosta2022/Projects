@@ -1,0 +1,42 @@
+#ifndef i8042Interface
+#define i8042Interface
+
+#define KBC_OUT_BUFF 0x60
+#define KBC_IN_BUFF 0x60
+#define KBC_STATUS_REG 0x64
+#define COMMAND_INTERACT 0x64
+
+#define KBD_IRQ_LINE 1
+#define MOUSE_IRQ_LINE 12
+
+#define PARITY_ERROR BIT(7)
+#define TIMEOUT_ERROR BIT(6)
+#define AUX BIT(5)
+#define INH BIT(4)
+#define INPUT_BUFFER_FULL BIT(1)
+#define OUTPUT_BUFFER_FULL BIT(0)
+
+#define MAX_ATTEMPTS 3
+#define DELAY 25000
+
+#define ESC_BREAK_CODE 0x81
+#define TWO_BYTES 0xE0
+
+#define KBC_READ_CMD 0x20
+#define KBC_WRITE_CMD 0x60
+#define DISABLE_MOUSE_INTERFACE BIT(5)
+#define DISABLE_KBD_INTERFACE BIT(4)
+#define MOUSE_ENABLE_OBF_INT BIT(1)
+#define KBD_ENABLE_OBF_INT BIT(0)
+
+#define WRITE_TO_AUX_DEV 0xD4
+#define ENABLE_DATA_REPORTING_CMD 0xF4
+#define DISABLE_DATA_REPORTING_CMD 0xF5
+#define MOUSE_OK 0xFA
+
+
+#define BREAK_CODE_BYTE BIT(7)
+
+#define FIRST_BYTE_PACKET BIT(3)
+
+#endif

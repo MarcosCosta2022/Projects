@@ -1,0 +1,16 @@
+<map id="draw_checker" name="draw_checker">
+<area shape="rect" id="Node000001" title="Draws a checker piece." alt="" coords="812,31,914,56"/>
+<area shape="rect" id="Node000002" href="$draw__graphics_8c.html#a18fc4cda99a0790d47701c8f6ad305d1" title="Draws the checkers." alt="" coords="642,5,752,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="797,36,752,29,753,24,798,31"/>
+<area shape="rect" id="Node000007" href="$draw__graphics_8c.html#a80a9bf1d52cac8d6eb23b4288db4b184" title="Draws the result screen." alt="" coords="630,55,764,80"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="797,56,765,60,764,55,797,50"/>
+<area shape="rect" id="Node000003" href="$draw__graphics_8c.html#a58530c2091e5cc9fb6a5ec67aee2b850" title="Draws the graphics corresponding to the current state." alt="" coords="476,31,582,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="628,31,582,38,582,33,627,26"/>
+<area shape="rect" id="Node000004" href="$timer__event__handler_8c.html#a9814995f1b2e4ce71724af01f54c237f" title="Handles timer events." alt="" coords="290,31,428,56"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="461,46,428,46,428,41,461,41"/>
+<area shape="rect" id="Node000005" href="$int__manager_8c.html#a24285aea4a27f96c321b2628788e9a57" title="The main program execution loop, responsible for calling all of the needed functions to run the game ..." alt="" coords="162,31,242,56"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="275,46,242,46,242,41,275,41"/>
+<area shape="rect" id="Node000006" href="$proj_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,31,114,56"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="147,46,114,46,114,41,147,41"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="615,58,581,54,582,48,615,53"/>
+</map>

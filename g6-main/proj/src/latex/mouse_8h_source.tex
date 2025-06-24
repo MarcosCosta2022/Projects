@@ -1,0 +1,30 @@
+\doxysection{mouse.\+h}
+\hypertarget{mouse_8h_source}{}\label{mouse_8h_source}\index{devices/mouse.h@{devices/mouse.h}}
+\mbox{\hyperlink{mouse_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ MOUSE\_HEADER}}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ MOUSE\_HEADER}}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{i8042_8h}{i8042.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_k_b_c_8h}{KBC.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00008}00008\ \textcolor{keyword}{extern}\ \textcolor{keyword}{struct\ }packet\ \mbox{\hyperlink{mouse_8h_a3b2e64ffb96c650d6525c99be01c7331}{mouse\_packet}};}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00009}00009\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{mouse_8h_af1d7398887185361a782967fb759700f}{mouse\_index}};}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00010}00010\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{mouse_8h_ab3ae786aee1f20eff4f6d9ff85e41299}{mouse\_ready}};}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00018}00018\ int\ (\mbox{\hyperlink{mouse_8h_a4d3acee0b9a97e26872d4af9f237a98c}{mouse\_write\_command}})(uint8\_t\ cmd\ ,\ uint8\_t*\ response);}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00024}00024\ int\ (\mbox{\hyperlink{mouse_8h_a70b60dfed85db39dd7c8c5a856dc2a3d}{mouse\_enable\_data\_reporting\_mv}})();}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00030}00030\ int\ (\mbox{\hyperlink{mouse_8h_a7e311379d4d64f88873ef8ade5c82a25}{mouse\_disable\_data\_reporting}})();}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00037}00037\ int\ (\mbox{\hyperlink{mouse_8h_a20285aed4b3ef45812cd967532dd09db}{mouse\_subscribe\_int}})(uint8\_t*\ bit\_no);}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00043}00043\ int\ (\mbox{\hyperlink{mouse_8h_a3ecf823d80520009ae5e0d76ae40a3c3}{mouse\_unsubscribe\_int}})();}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00048}00048\ void\ (\mbox{\hyperlink{mouse_8h_aed4404005e4c565ac36656307386e0ac}{mouse\_ih}})(void);}
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{mouse_8h_source_l00050}00050\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

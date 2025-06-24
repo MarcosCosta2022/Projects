@@ -1,0 +1,25 @@
+import io.som;
+class Foo extends som{
+
+   public static void main(String[] args) {
+   }
+
+   public Foo somCalls(){
+      Foo temp1;
+      temp1 = new Foo();
+      return temp1;
+   }
+
+   public int callSomCallFromSom(){
+      som s;
+      int res;
+      boolean b;
+      Foo f;
+
+      s = new som();
+      res = s.somCalls();
+      b = s.somCalls();
+      return res;
+   }
+
+}

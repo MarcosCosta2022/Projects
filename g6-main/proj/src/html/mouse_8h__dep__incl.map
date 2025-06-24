@@ -1,0 +1,16 @@
+<map id="devices/mouse.h" name="devices/mouse.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="140,5,260,31"/>
+<area shape="rect" id="Node000002" href="$int__manager_8h.html" title=" " alt="" coords="68,175,219,201"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,41,145,59,130,80,124,105,126,131,140,174,135,176,121,132,119,104,125,78,142,55,162,37"/>
+<area shape="rect" id="Node000005" href="$mouse_8c.html" title=" " alt="" coords="140,87,260,112"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="202,46,202,86,197,86,197,46"/>
+<area shape="rect" id="Node000006" href="$mouse__event__handler_8h.html" title=" " alt="" coords="284,79,430,120"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="238,36,319,76,317,81,236,40"/>
+<area shape="rect" id="Node000003" href="$int__manager_8c.html" title=" " alt="" coords="5,256,157,282"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="127,214,93,257,89,254,123,211"/>
+<area shape="rect" id="Node000004" href="$proj_8c.html" title=" " alt="" coords="181,256,234,282"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="165,211,200,254,196,257,161,214"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="296,128,174,177,172,172,294,123"/>
+<area shape="rect" id="Node000007" href="$mouse__event__handler_8c.html" title=" " alt="" coords="284,168,430,208"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="360,134,360,167,354,167,354,134"/>
+</map>

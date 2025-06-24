@@ -1,0 +1,26 @@
+<map id="calculate_piece_moves" name="calculate_piece_moves">
+<area shape="rect" id="Node000001" title="Calculates the moves of a piece." alt="" coords="5,228,163,254"/>
+<area shape="poly" id="edge4_Node000001_Node000001" title=" " alt="" coords="51,229,45,219,49,210,62,203,84,201,109,204,121,212,118,216,107,209,84,207,63,209,52,213,50,219,56,226"/>
+<area shape="rect" id="Node000002" href="$board_8c.html#a167a078502fe9e0bebb7cb182f9b4b11" title="Adds a move to a trajectory." alt="" coords="239,5,321,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,227,103,190,128,140,164,87,185,62,209,40,224,31,227,35,212,44,189,66,168,90,133,143,108,192,93,229"/>
+<area shape="rect" id="Node000003" href="$board_8c.html#a8f8c442b372b0044baef767846ce0c85" title="Adds a copy of a trajectory to the array of trajectories." alt="" coords="211,55,349,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="91,226,135,162,169,123,209,89,216,85,219,89,212,94,173,127,140,165,95,229"/>
+<area shape="rect" id="Node000005" href="$board_8c.html#a7de21db3a3efa590179541304d7901a9" title="Clears the trajectories." alt="" coords="220,104,340,130"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="97,225,145,184,209,139,219,133,222,138,212,143,148,188,101,229"/>
+<area shape="rect" id="Node000006" href="$board_8c.html#a643b00b2ad2f337bc85e012a5e8470c0" title="Returns the current column of a trajectory." alt="" coords="237,153,323,179"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="116,225,210,188,225,182,227,187,212,193,118,230"/>
+<area shape="rect" id="Node000007" href="$board_8c.html#a3f702599a3dc16396e142e0c50a87321" title="Returns the current row of a trajectory." alt="" coords="235,203,325,228"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="162,228,221,220,221,226,163,233"/>
+<area shape="rect" id="Node000008" href="$board_8c.html#a48d410f354013beb13e7a9009ccee6fa" title="Checks if a piece is allied." alt="" coords="226,252,334,278"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="163,248,212,254,211,259,162,253"/>
+<area shape="rect" id="Node000009" href="$board_8c.html#a98c4983c9a3b64e19652292d0e528327" title="Checks if a piece is an enemy." alt="" coords="222,301,338,327"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="119,252,212,288,227,293,225,298,210,293,117,257"/>
+<area shape="rect" id="Node000010" href="$board_8c.html#a16fb663a09087c10c4364f2fef39ede7" title="Checks if a piece exists in a position." alt="" coords="242,351,318,376"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="101,252,148,293,212,337,230,345,227,350,209,342,145,297,97,256"/>
+<area shape="rect" id="Node000011" href="$board_8c.html#ad20e11b277c67bede5c2f0aea810822b" title="Checks if a position is inside the board." alt="" coords="235,400,325,426"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="95,252,140,316,173,354,212,387,223,393,220,398,209,391,170,358,136,319,91,255"/>
+<area shape="rect" id="Node000012" href="$board_8c.html#a9cc3000982f33ddcd2952ec8d602dc02" title="Removes a move from a trajectory." alt="" coords="228,449,332,475"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="93,253,108,289,133,338,168,391,212,436,217,440,214,444,209,440,164,394,128,341,103,291,88,255"/>
+<area shape="rect" id="Node000004" href="$board_8c.html#a90470a95ffa5acb52c32afdfaedb0d6b" title="Adds a trajectory to the array of trajectories." alt="" coords="397,55,500,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="349,65,382,65,382,70,349,70"/>
+</map>

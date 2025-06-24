@@ -1,0 +1,153 @@
+\doxysection{game/piece.h File Reference}
+\hypertarget{piece_8h}{}\label{piece_8h}\index{game/piece.h@{game/piece.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \"{}board.\+h\"{}}\newline
+{\ttfamily \#include \"{}game.\+h\"{}}\newline
+Include dependency graph for piece.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{piece_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{piece_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_piece}{Piece}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{piece_8h_aabf9e8dc1805608072457dc2efa5b2a7}{create\+Piece}} (int x, int y, int row, int col, \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color, bool is\+King, xpm\+\_\+image\+\_\+t \texorpdfstring{$\ast$}{*}image)
+\begin{DoxyCompactList}\small\item\em Create a \doxylink{struct_piece}{Piece} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{piece_8h_a9bbadfbace1a561a9b018c1a32dc62ef}{promote}} (\mbox{\hyperlink{struct_piece}{Piece}} \texorpdfstring{$\ast$}{*}piece)
+\begin{DoxyCompactList}\small\item\em Makes a piece a king. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{piece_8h_a25b4e1a5539ffd998aeb00a3f99ec4b9}{capture}} (\mbox{\hyperlink{struct_piece}{Piece}} \texorpdfstring{$\ast$}{*}piece)
+\begin{DoxyCompactList}\small\item\em Captures a piece. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{piece_8h_a25b4e1a5539ffd998aeb00a3f99ec4b9}\label{piece_8h_a25b4e1a5539ffd998aeb00a3f99ec4b9} 
+\index{piece.h@{piece.h}!capture@{capture}}
+\index{capture@{capture}!piece.h@{piece.h}}
+\doxysubsubsection{\texorpdfstring{capture()}{capture()}}
+{\footnotesize\ttfamily void capture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{piece }\end{DoxyParamCaption})}
+
+
+
+Captures a piece. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em piece} & \doxylink{struct_piece}{Piece} being captured \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{piece_8c_source_l00027}{27}} of file \mbox{\hyperlink{piece_8c_source}{piece.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a018c7ca7ee7c12c88b59c064ce7d7d6a}{isCaptured}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00029\ \}}
+
+\end{DoxyCode}
+\Hypertarget{piece_8h_aabf9e8dc1805608072457dc2efa5b2a7}\label{piece_8h_aabf9e8dc1805608072457dc2efa5b2a7} 
+\index{piece.h@{piece.h}!createPiece@{createPiece}}
+\index{createPiece@{createPiece}!piece.h@{piece.h}}
+\doxysubsubsection{\texorpdfstring{createPiece()}{createPiece()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_piece}{Piece}} \texorpdfstring{$\ast$}{*} create\+Piece (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{row,  }\item[{int}]{col,  }\item[{\mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{color,  }\item[{bool}]{is\+King,  }\item[{xpm\+\_\+image\+\_\+t \texorpdfstring{$\ast$}{*}}]{image }\end{DoxyParamCaption})}
+
+
+
+Create a \doxylink{struct_piece}{Piece} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x position \\
+\hline
+{\em y} & y position \\
+\hline
+{\em row} & row position \\
+\hline
+{\em col} & column position \\
+\hline
+{\em color} & color of the piece \\
+\hline
+{\em is\+King} & if the piece is a king \\
+\hline
+{\em image} & image of the piece \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Piece\texorpdfstring{$\ast$}{*} pointer to the created piece 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{piece_8c_source_l00004}{4}} of file \mbox{\hyperlink{piece_8c_source}{piece.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \mbox{\hyperlink{struct_piece}{Piece}}*\ piece\ =\ (\mbox{\hyperlink{struct_piece}{Piece}}*)\ malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_piece}{Piece}}));}
+\DoxyCodeLine{00006\ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a895b6803ce74fe8574d6168d66ac6bb5}{x}}\ =\ x;}
+\DoxyCodeLine{00007\ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a97d61c9e42873e2274620c91178e879b}{y}}\ =\ y;}
+\DoxyCodeLine{00008\ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_ac6ef7c474f20562cb629c2452ce0631d}{row}}\ =\ row;}
+\DoxyCodeLine{00009\ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a4017d278fbe40f96214961ab71f17d35}{col}}\ =\ col;}
+\DoxyCodeLine{00010\ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a4cf5b29a9e13dcb93b616b11160c2abc}{color}}\ =\ color;}
+\DoxyCodeLine{00011\ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a98ddd530a5ffb3ee8242dc5b986aa3c5}{isKing}}\ =\ isKing;}
+\DoxyCodeLine{00012\ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a623a9a57ec7f25a0bef4f66b35f7d46b}{image}}\ =\ image;}
+\DoxyCodeLine{00013\ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a018c7ca7ee7c12c88b59c064ce7d7d6a}{isCaptured}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{return}\ piece;}
+\DoxyCodeLine{00015\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{piece_8h_aabf9e8dc1805608072457dc2efa5b2a7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{piece_8h_a9bbadfbace1a561a9b018c1a32dc62ef}\label{piece_8h_a9bbadfbace1a561a9b018c1a32dc62ef} 
+\index{piece.h@{piece.h}!promote@{promote}}
+\index{promote@{promote}!piece.h@{piece.h}}
+\doxysubsubsection{\texorpdfstring{promote()}{promote()}}
+{\footnotesize\ttfamily void promote (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{piece }\end{DoxyParamCaption})}
+
+
+
+Makes a piece a king. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em piece} & \doxylink{struct_piece}{Piece} to promote \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{piece_8c_source_l00017}{17}} of file \mbox{\hyperlink{piece_8c_source}{piece.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a98ddd530a5ffb3ee8242dc5b986aa3c5}{isKing}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordflow}{if}(piece-\/>\mbox{\hyperlink{struct_piece_a4cf5b29a9e13dcb93b616b11160c2abc}{color}}\ ==\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1ca283fc479650da98250635b9c3c0e7e50}{WHITE}})\{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a623a9a57ec7f25a0bef4f66b35f7d46b}{image}}\ =\ \&\mbox{\hyperlink{draw__graphics_8c_ad3c4eb0800627b4ce1bdac19bef9ef9f}{white\_king}};}
+\DoxyCodeLine{00021\ \ \ \ \ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ piece-\/>\mbox{\hyperlink{struct_piece_a623a9a57ec7f25a0bef4f66b35f7d46b}{image}}\ =\ \&\mbox{\hyperlink{draw__graphics_8c_af506c99bd1c7bacf13859dd666ea5de6}{black\_king}};}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{piece_8h_a9bbadfbace1a561a9b018c1a32dc62ef_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,41 @@
+\doxysection{history.\+h}
+\hypertarget{history_8h_source}{}\label{history_8h_source}\index{game/history.h@{game/history.h}}
+\mbox{\hyperlink{history_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ \ \_HISTORY\_H\_}}
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ \ \_HISTORY\_H\_}}
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{game_8h}{game.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}../devices/rtc.h"{}}}
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00010}\mbox{\hyperlink{struct_match_record}{00010}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00011}\mbox{\hyperlink{struct_match_record_a7071eddc5b3b1d6ec4d4a394947172e5}{00011}}\ \ \ \ \ \textcolor{keywordtype}{char}\ black\_player\_name[20];}
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00012}\mbox{\hyperlink{struct_match_record_a267d9fa08bafb6dfb36269952e9fa0cc}{00012}}\ \ \ \ \ \textcolor{keywordtype}{char}\ white\_player\_name[20];}
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00013}\mbox{\hyperlink{struct_match_record_aa4ba0725774ad9d8cfa6f69df7279bbd}{00013}}\ \ \ \ \ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}\ \mbox{\hyperlink{struct_match_record_aa4ba0725774ad9d8cfa6f69df7279bbd}{winner}};}
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00014}\mbox{\hyperlink{struct_match_record_a630ab468f07a9ebd780f727b359dd31c}{00014}}\ \ \ \ \ \mbox{\hyperlink{struct_time}{Time}}\ \mbox{\hyperlink{struct_match_record_a630ab468f07a9ebd780f727b359dd31c}{start\_time}};}
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00015}\mbox{\hyperlink{struct_match_record_a19a80e03aba24aaa1119c8bacb439381}{00015}}\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_match_record_a19a80e03aba24aaa1119c8bacb439381}{black\_remain\_time}};}
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00016}\mbox{\hyperlink{struct_match_record_a0e922d654bbd28a457ab8f09a5f33778}{00016}}\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_match_record_a0e922d654bbd28a457ab8f09a5f33778}{white\_remain\_time}};}
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00017}00017\ \}\ \mbox{\hyperlink{struct_match_record}{MatchRecord}};}
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00019}00019\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{history_8h_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}};}
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00020}00020\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_match_record}{MatchRecord}}\ \mbox{\hyperlink{history_8h_abfc1db0f347b2e243c80b15abb01dc0a}{history}}[30];\ \textcolor{comment}{//only\ saves\ up\ to\ 30\ matches}}
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00021}00021\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{history_8h_ae1517d80b170a8baa197d6f9bfbb88d9}{index\_first\_match\_being\_shown}};}
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00026}00026\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{history_8h_a430dfdf5895b99b13d24f0cd542eda06}{load\_history}}();}
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00031}00031\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{history_8h_a09b7d2a829665d653cefbe0bea795603}{save\_history}}();}
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00042}00042\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{history_8h_af4bcea2cd0974b3563d9023f25a7beb5}{save\_match\_record}}(\mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}\ \mbox{\hyperlink{game_8c_a9deaba51419cfcf0fb430512e8d11b5e}{winner}},\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ black\_remain\_time,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ white\_remain\_time\ ,\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{game_8c_ae6439bcf42c914cdb59213277f001892}{black\_name}},\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{game_8c_ace6dbe6f73e3ceafa52a94af5cd39944}{white\_name}}\ ,\ \mbox{\hyperlink{struct_time}{Time}}\ start\_time);}
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00049}00049\ \mbox{\hyperlink{struct_match_record}{MatchRecord}}*\ \mbox{\hyperlink{history_8h_a3750ca5f0469a87bcea1a523cd990cd3}{getMatchRecord}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00054}00054\ void\ (\mbox{\hyperlink{history_8h_ab4af141d40f18fd524b677f9a68ba6cc}{roll\_down}})();}
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00059}00059\ void\ (\mbox{\hyperlink{history_8h_a933208df950622e857a82625b946727a}{roll\_up}})();}
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{history_8h_source_l00061}00061\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_HISTORY\_H\_}}
+
+\end{DoxyCode}

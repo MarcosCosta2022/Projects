@@ -1,0 +1,1003 @@
+\doxysection{game/draw\+\_\+graphics.h File Reference}
+\hypertarget{draw__graphics_8h}{}\label{draw__graphics_8h}\index{game/draw\_graphics.h@{game/draw\_graphics.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \"{}../devices/video.\+h\"{}}\newline
+{\ttfamily \#include \"{}game.\+h\"{}}\newline
+{\ttfamily \#include \"{}../resources/imgs/cursor.\+xpm\"{}}\newline
+{\ttfamily \#include \"{}../resources/imgs/white\+\_\+checker.\+xpm\"{}}\newline
+{\ttfamily \#include \"{}../resources/imgs/black\+\_\+checker.\+xpm\"{}}\newline
+{\ttfamily \#include \"{}../resources/imgs/white\+\_\+queen.\+xpm\"{}}\newline
+{\ttfamily \#include \"{}../resources/imgs/black\+\_\+queen.\+xpm\"{}}\newline
+{\ttfamily \#include \"{}../resources/imgs/menu.\+xpm\"{}}\newline
+{\ttfamily \#include \"{}../resources/imgs/font.\+xpm\"{}}\newline
+{\ttfamily \#include \"{}../resources/imgs/result\+\_\+screen.\+xpm\"{}}\newline
+{\ttfamily \#include \"{}../resources/imgs/game\+\_\+side\+\_\+bar.\+xpm\"{}}\newline
+{\ttfamily \#include \"{}../resources/imgs/name\+\_\+screen.\+xpm\"{}}\newline
+{\ttfamily \#include \"{}../resources/imgs/history.\+xpm\"{}}\newline
+{\ttfamily \#include \"{}../resources/imgs/record.\+xpm\"{}}\newline
+{\ttfamily \#include \"{}board.\+h\"{}}\newline
+{\ttfamily \#include \"{}piece.\+h\"{}}\newline
+{\ttfamily \#include $<$libgen.\+h$>$}\newline
+Include dependency graph for draw\+\_\+graphics.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__graphics_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__graphics_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_animation}{Animation}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{draw__graphics_8h_a3a108be31e0716851ed304b76e2d641a}{TURN\+\_\+\+COLOR}}~0x\+FF8\+C00
+\item 
+\#define \mbox{\hyperlink{draw__graphics_8h_ac375067a7058332239b7fa268320e2ad}{NOT\+\_\+\+TURN\+\_\+\+COLOR}}~0xffffff
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9}{House\+Draw}} \{ \newline
+\mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9a2f0d18fc0d0fa4a6cd92dc328501874d}{EMPTY}}
+, \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9a02b0fb84d46d585b477a6509abf32b5d}{SELECTED}}
+, \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9a2a90047fe45c6934034c89fd9fb5dbbb}{CAPTURE}}
+, \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9aed3ef32890b6da0919b57254c5206c62}{MOVE}}
+, \newline
+\mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9ad67a493278074cf714b262b33d84739c}{PATH}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{draw__graphics_8h_aa32b59d4667316fa80d30a55f882d593}{draw\+\_\+history}} ()
+\begin{DoxyCompactList}\small\item\em Draws the history screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{draw__graphics_8h_a8b6c981db3aad686de04545c1e87f33c}{draw\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Draws the menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{draw__graphics_8h_a3763258e5ba88b3ed638cc2f43c803d0}{draw\+\_\+name\+\_\+screen}} ()
+\begin{DoxyCompactList}\small\item\em Draws the name screen. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{draw__graphics_8h_a297af57e28b63a9537fdc82eddd80422}{load\+\_\+xpms}} ()
+\begin{DoxyCompactList}\small\item\em Loads the xpms. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{draw__graphics_8h_abb180da0d359d9dd5c05536f5ad20f0c}{\+\_\+update\+\_\+screen}} (void)
+\begin{DoxyCompactList}\small\item\em Updates the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{draw__graphics_8h_a58530c2091e5cc9fb6a5ec67aee2b850}{draw\+\_\+graphics}} (void)
+\begin{DoxyCompactList}\small\item\em Draws the graphics corresponding to the current state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{draw__graphics_8h_a1e436c75e3e5fb4a53d1104ba1d03411}{draw\+\_\+board}} (void)
+\begin{DoxyCompactList}\small\item\em Draws the game board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{draw__graphics_8h_a18fc4cda99a0790d47701c8f6ad305d1}{draw\+\_\+checkers}} (void)
+\begin{DoxyCompactList}\small\item\em Draws the checkers. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{draw__graphics_8h_a28a1c081b70b5c12894ae09f80a0b848}{draw\+\_\+checker}} (\mbox{\hyperlink{struct_piece}{Piece}} \texorpdfstring{$\ast$}{*}piece)
+\begin{DoxyCompactList}\small\item\em Draws a checker piece. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{draw__graphics_8h_a9f0ef87214b46ee2f13d056e722575d7}{draw\+\_\+cursor}} (void)
+\begin{DoxyCompactList}\small\item\em Draws the cursor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{draw__graphics_8h_ada6cd54dcdb8df73b70d5bdcba415486}{update\+\_\+draw\+\_\+board}} ()
+\begin{DoxyCompactList}\small\item\em Updates the game board. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{draw__graphics_8h_a1764e22633ce78c7cbb835f2bb0f2bac}{draw\+\_\+string}} (const char \texorpdfstring{$\ast$}{*}str, int x, int y, int color, int scale)
+\begin{DoxyCompactList}\small\item\em Draws a string. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{draw__graphics_8h_abedef77b00c316e162554bce0344fa54}{draw\+\_\+character}} (const char c, int x, int y, int color, int scale)
+\begin{DoxyCompactList}\small\item\em Draws a character. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{draw__graphics_8h_a80a9bf1d52cac8d6eb23b4288db4b184}{draw\+\_\+result\+\_\+screen}} ()
+\begin{DoxyCompactList}\small\item\em Draws the result screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{draw__graphics_8h_ab344452c360efd75914e0c88e39dd329}{cursor}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{draw__graphics_8h_ad3c4eb0800627b4ce1bdac19bef9ef9f}{white\+\_\+king}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{draw__graphics_8h_ac98839962dc945736e4fb43caddc26b0}{white\+\_\+checker}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{draw__graphics_8h_af506c99bd1c7bacf13859dd666ea5de6}{black\+\_\+king}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{draw__graphics_8h_a9b6b60ce68305da4c81e90d89826db21}{black\+\_\+checker}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{draw__graphics_8h_a632b0a796c388aa5cf8a762ff0790256}{font}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{draw__graphics_8h_ae3ed41f4213bf5f0f807613660fa6f20}{menu}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{draw__graphics_8h_a5db8cdfbf23a0dda4db2f0b12543bc56}{game\+\_\+side\+\_\+bar}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{draw__graphics_8h_aca834743c1d01bfb74f303927b7786a1}{name\+\_\+screen}}
+\item 
+\mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9}{House\+Draw}} \mbox{\hyperlink{draw__graphics_8h_a72f40040de5b7deb3efd9b4f96e26bfc}{board\+\_\+to\+\_\+draw}} \mbox{[}8\mbox{]}\mbox{[}8\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{draw__graphics_8h_ac375067a7058332239b7fa268320e2ad}\label{draw__graphics_8h_ac375067a7058332239b7fa268320e2ad} 
+\index{draw\_graphics.h@{draw\_graphics.h}!NOT\_TURN\_COLOR@{NOT\_TURN\_COLOR}}
+\index{NOT\_TURN\_COLOR@{NOT\_TURN\_COLOR}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{NOT\_TURN\_COLOR}{NOT\_TURN\_COLOR}}
+{\footnotesize\ttfamily \#define NOT\+\_\+\+TURN\+\_\+\+COLOR~0xffffff}
+
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8h_source_l00043}{43}} of file \mbox{\hyperlink{draw__graphics_8h_source}{draw\+\_\+graphics.\+h}}.
+
+\Hypertarget{draw__graphics_8h_a3a108be31e0716851ed304b76e2d641a}\label{draw__graphics_8h_a3a108be31e0716851ed304b76e2d641a} 
+\index{draw\_graphics.h@{draw\_graphics.h}!TURN\_COLOR@{TURN\_COLOR}}
+\index{TURN\_COLOR@{TURN\_COLOR}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{TURN\_COLOR}{TURN\_COLOR}}
+{\footnotesize\ttfamily \#define TURN\+\_\+\+COLOR~0x\+FF8\+C00}
+
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8h_source_l00042}{42}} of file \mbox{\hyperlink{draw__graphics_8h_source}{draw\+\_\+graphics.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9}\label{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9} 
+\index{draw\_graphics.h@{draw\_graphics.h}!HouseDraw@{HouseDraw}}
+\index{HouseDraw@{HouseDraw}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{HouseDraw}{HouseDraw}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9}{House\+Draw}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EMPTY@{EMPTY}!draw\_graphics.h@{draw\_graphics.h}}\index{draw\_graphics.h@{draw\_graphics.h}!EMPTY@{EMPTY}}}\Hypertarget{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9a2f0d18fc0d0fa4a6cd92dc328501874d}\label{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9a2f0d18fc0d0fa4a6cd92dc328501874d} 
+EMPTY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SELECTED@{SELECTED}!draw\_graphics.h@{draw\_graphics.h}}\index{draw\_graphics.h@{draw\_graphics.h}!SELECTED@{SELECTED}}}\Hypertarget{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9a02b0fb84d46d585b477a6509abf32b5d}\label{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9a02b0fb84d46d585b477a6509abf32b5d} 
+SELECTED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CAPTURE@{CAPTURE}!draw\_graphics.h@{draw\_graphics.h}}\index{draw\_graphics.h@{draw\_graphics.h}!CAPTURE@{CAPTURE}}}\Hypertarget{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9a2a90047fe45c6934034c89fd9fb5dbbb}\label{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9a2a90047fe45c6934034c89fd9fb5dbbb} 
+CAPTURE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOVE@{MOVE}!draw\_graphics.h@{draw\_graphics.h}}\index{draw\_graphics.h@{draw\_graphics.h}!MOVE@{MOVE}}}\Hypertarget{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9aed3ef32890b6da0919b57254c5206c62}\label{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9aed3ef32890b6da0919b57254c5206c62} 
+MOVE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PATH@{PATH}!draw\_graphics.h@{draw\_graphics.h}}\index{draw\_graphics.h@{draw\_graphics.h}!PATH@{PATH}}}\Hypertarget{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9ad67a493278074cf714b262b33d84739c}\label{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9ad67a493278074cf714b262b33d84739c} 
+PATH&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8h_source_l00006}{6}} of file \mbox{\hyperlink{draw__graphics_8h_source}{draw\+\_\+graphics.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9a2f0d18fc0d0fa4a6cd92dc328501874d}{EMPTY}},}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9a02b0fb84d46d585b477a6509abf32b5d}{SELECTED}},}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9a2a90047fe45c6934034c89fd9fb5dbbb}{CAPTURE}},}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9aed3ef32890b6da0919b57254c5206c62}{MOVE}},}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9ad67a493278074cf714b262b33d84739c}{PATH}}}
+\DoxyCodeLine{00012\ \}\mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9}{HouseDraw}};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{draw__graphics_8h_abb180da0d359d9dd5c05536f5ad20f0c}\label{draw__graphics_8h_abb180da0d359d9dd5c05536f5ad20f0c} 
+\index{draw\_graphics.h@{draw\_graphics.h}!\_update\_screen@{\_update\_screen}}
+\index{\_update\_screen@{\_update\_screen}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{\_update\_screen()}{\_update\_screen()}}
+{\footnotesize\ttfamily void() \+\_\+update\+\_\+screen (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Updates the screen. 
+
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8c_source_l00206}{206}} of file \mbox{\hyperlink{draw__graphics_8c_source}{draw\+\_\+graphics.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00207\ \ \ \ \ \mbox{\hyperlink{video_8c_abf6484fd059638dc0bde985ef437f3c2}{update\_screen}}();}
+\DoxyCodeLine{00208\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{draw__graphics_8h_abb180da0d359d9dd5c05536f5ad20f0c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__graphics_8h_abb180da0d359d9dd5c05536f5ad20f0c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{draw__graphics_8h_a1e436c75e3e5fb4a53d1104ba1d03411}\label{draw__graphics_8h_a1e436c75e3e5fb4a53d1104ba1d03411} 
+\index{draw\_graphics.h@{draw\_graphics.h}!draw\_board@{draw\_board}}
+\index{draw\_board@{draw\_board}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{draw\_board()}{draw\_board()}}
+{\footnotesize\ttfamily void draw\+\_\+board (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Draws the game board. 
+
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8c_source_l00137}{137}} of file \mbox{\hyperlink{draw__graphics_8c_source}{draw\+\_\+graphics.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \mbox{\hyperlink{video_8c_a978b99877ebdb731d2787c1456c341c0}{video\_draw\_xpm}}(0,\ 0,\ \&\mbox{\hyperlink{draw__graphics_8c_a5db8cdfbf23a0dda4db2f0b12543bc56}{game\_side\_bar}});}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j;}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{int}\ sideLength\ =\ 600/8;}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{int}\ offset\ =\ 200;}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordflow}{for}(i\ =\ 0;\ i\ <\ 8;\ i++)\{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(j\ =\ 0;\ j\ <\ 8;\ j++)\{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((i\ +\ j)\ \%\ 2\ ==\ 0)\{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{video_8c_a99d2da2559e11200c6b40c469e9977ec}{vg\_draw\_rectangle}}(i\ *\ sideLength\ +\ offset,\ j\ *\ sideLength,\ sideLength,\ sideLength,0xeeeed2);}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ color;}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}(\mbox{\hyperlink{draw__graphics_8c_a72f40040de5b7deb3efd9b4f96e26bfc}{board\_to\_draw}}[j][i])\{}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9a2f0d18fc0d0fa4a6cd92dc328501874d}{EMPTY}}:color\ =\ 0x769656;\textcolor{keywordflow}{break};}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9a02b0fb84d46d585b477a6509abf32b5d}{SELECTED}}:\ color\ =\ 0xff0000;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9a2a90047fe45c6934034c89fd9fb5dbbb}{CAPTURE}}:\ color\ =\ 0xff0000;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9aed3ef32890b6da0919b57254c5206c62}{MOVE}}:\ color\ =\ 0x0000ff;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9ad67a493278074cf714b262b33d84739c}{PATH}}:\ color\ =\ 0x000000;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{video_8c_a99d2da2559e11200c6b40c469e9977ec}{vg\_draw\_rectangle}}(i\ *\ sideLength\ +\ offset,\ j\ *\ sideLength,sideLength,sideLength,color);}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00158\ \ \ \ \ \}}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{comment}{//draw\ scores}}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{int}\ x;}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{char}\ score[10];}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \ \ \ \ sprintf(score,\ \textcolor{stringliteral}{"{}\%d"{}},\ \mbox{\hyperlink{game_8c_ad55e591f5f90e62961138c329a639c38}{black\_score}});}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_ad55e591f5f90e62961138c329a639c38}{black\_score}}\ >\ 9)\ x\ =\ 150;}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordflow}{else}\ x\ =\ 165;}
+\DoxyCodeLine{00168\ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a1764e22633ce78c7cbb835f2bb0f2bac}{draw\_string}}(score,\ x,265,\ 0,\ 3);}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a0359d6089e0f8af3a3af63a640644cd5}{white\_score}}\ >\ 9)\ x\ =\ 150;}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordflow}{else}\ x\ =\ 165;}
+\DoxyCodeLine{00172\ \ \ \ \ sprintf(score,\ \textcolor{stringliteral}{"{}\%d"{}},\ \mbox{\hyperlink{game_8c_a0359d6089e0f8af3a3af63a640644cd5}{white\_score}});}
+\DoxyCodeLine{00173\ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a1764e22633ce78c7cbb835f2bb0f2bac}{draw\_string}}(score,\ x,\ 315,\ 0,\ 3);}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{comment}{//draw\ time}}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{int}\ seconds\ =\ (\mbox{\hyperlink{game_8c_ad2942906e1bafe30b74a620b6bfb0bc8}{black\_time}}\ +59)/60;}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{int}\ minutes\ =\ seconds/60;}
+\DoxyCodeLine{00179\ \ \ \ \ seconds\ =\ seconds\%60;}
+\DoxyCodeLine{00180\ \ \ \ \ sprintf(score,\ \textcolor{stringliteral}{"{}\%02d:\%02d"{}},\ minutes,\ seconds);}
+\DoxyCodeLine{00181\ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a1764e22633ce78c7cbb835f2bb0f2bac}{draw\_string}}(score,\ 80,\ 10,\ 0,\ 3);}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \ \ seconds\ =\ (\mbox{\hyperlink{game_8c_a5566e6568ea277a508f909b32a2d99bc}{white\_time}}\ +59)/60;}
+\DoxyCodeLine{00184\ \ \ \ \ minutes\ =\ seconds/60;}
+\DoxyCodeLine{00185\ \ \ \ \ seconds\ =\ seconds\%60;}
+\DoxyCodeLine{00186\ \ \ \ \ sprintf(score,\ \textcolor{stringliteral}{"{}\%02d:\%02d"{}},\ minutes,\ seconds);}
+\DoxyCodeLine{00187\ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a1764e22633ce78c7cbb835f2bb0f2bac}{draw\_string}}(score,\ 80,\ 570,\ 0,\ 3);}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{comment}{//write\ names}}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordtype}{int}\ white\_name\_color;}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{int}\ black\_name\_color;}
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_aaca79719959531adcb538aad5a0c53e8}{turn}}\ ==\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1ca283fc479650da98250635b9c3c0e7e50}{WHITE}})\{}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ white\_name\_color\ =\ \mbox{\hyperlink{draw__graphics_8h_a3a108be31e0716851ed304b76e2d641a}{TURN\_COLOR}};}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ black\_name\_color\ =\ \mbox{\hyperlink{draw__graphics_8h_ac375067a7058332239b7fa268320e2ad}{NOT\_TURN\_COLOR}};}
+\DoxyCodeLine{00196\ \ \ \ \ \}}
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ white\_name\_color\ =\ \mbox{\hyperlink{draw__graphics_8h_ac375067a7058332239b7fa268320e2ad}{NOT\_TURN\_COLOR}};}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ black\_name\_color\ =\ \mbox{\hyperlink{draw__graphics_8h_a3a108be31e0716851ed304b76e2d641a}{TURN\_COLOR}};}
+\DoxyCodeLine{00200\ \ \ \ \ \}}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a1764e22633ce78c7cbb835f2bb0f2bac}{draw\_string}}(\mbox{\hyperlink{game_8c_ace6dbe6f73e3ceafa52a94af5cd39944}{white\_name}}\ ,\ 30\ ,\ 100\ ,\ white\_name\_color\ ,\ 2);}
+\DoxyCodeLine{00203\ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a1764e22633ce78c7cbb835f2bb0f2bac}{draw\_string}}\ (\mbox{\hyperlink{game_8c_ae6439bcf42c914cdb59213277f001892}{black\_name}}\ ,\ 30\ ,\ 500\ ,\ black\_name\_color,2);}
+\DoxyCodeLine{00204\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__graphics_8h_a1e436c75e3e5fb4a53d1104ba1d03411_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__graphics_8h_a1e436c75e3e5fb4a53d1104ba1d03411_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{draw__graphics_8h_abedef77b00c316e162554bce0344fa54}\label{draw__graphics_8h_abedef77b00c316e162554bce0344fa54} 
+\index{draw\_graphics.h@{draw\_graphics.h}!draw\_character@{draw\_character}}
+\index{draw\_character@{draw\_character}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{draw\_character()}{draw\_character()}}
+{\footnotesize\ttfamily void() draw\+\_\+character (\begin{DoxyParamCaption}\item[{const char}]{c,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{color,  }\item[{int}]{scale }\end{DoxyParamCaption})}
+
+
+
+Draws a character. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & character to be drawn \\
+\hline
+{\em x} & x coordinate \\
+\hline
+{\em y} & y coordinate \\
+\hline
+{\em color} & color of the character \\
+\hline
+{\em scale} & size of the character \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8c_source_l00254}{254}} of file \mbox{\hyperlink{draw__graphics_8c_source}{draw\+\_\+graphics.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00255\ \ \ \ \ \textcolor{keywordflow}{if}\ (c\ ==\ \textcolor{charliteral}{'\ '})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00257\ \ \ \ \ uint16\_t\ index;}
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{keywordflow}{if}\ (c\ >=\ \textcolor{charliteral}{'0'}\ \&\&\ c\ <=\ \textcolor{charliteral}{'9'})index\ =\ c\ -\/\ \textcolor{charliteral}{'0'};}
+\DoxyCodeLine{00259\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (c\ >=\ \textcolor{charliteral}{'A'}\ \&\&\ c\ <=\ \textcolor{charliteral}{'Z'})index\ =\ c\ -\/\ \textcolor{charliteral}{'A'}\ +\ 17;}
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (c\ >=\ \textcolor{charliteral}{'a'}\ \&\&\ c\ <=\ \textcolor{charliteral}{'z'})\ index\ =\ c\ -\/\ \textcolor{charliteral}{'a'}\ +\ 17;}
+\DoxyCodeLine{00261\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\ c\ ==\ \textcolor{charliteral}{':'})index\ =\ 10;}
+\DoxyCodeLine{00262\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (c\ ==\ \textcolor{charliteral}{'<'})\ index\ =\ 12;}
+\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\ c\ ==\ \textcolor{charliteral}{'='})\ index\ =\ 13;}
+\DoxyCodeLine{00264\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (c\ ==\ \textcolor{charliteral}{'>'})\ index\ =\ 14;}
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (c\ ==\ \textcolor{charliteral}{'?'})\ index\ =\ 15;}
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (c\ ==\ \textcolor{charliteral}{'!'})\ index\ =\ 11;}
+\DoxyCodeLine{00267\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (c\ ==\ \textcolor{charliteral}{'@'})\ index\ =\ 16;}
+\DoxyCodeLine{00268\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (c\ ==\ \textcolor{charliteral}{'['})\ index\ =\ 43;}
+\DoxyCodeLine{00269\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (c\ ==\ \textcolor{charliteral}{'\(\backslash\)\(\backslash\)'})\ index\ =\ 44;}
+\DoxyCodeLine{00270\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (c\ ==\ \textcolor{charliteral}{']'})\ index\ =\ 45;}
+\DoxyCodeLine{00271\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (c\ ==\ \textcolor{charliteral}{'\string^'})index\ =\ 46;}
+\DoxyCodeLine{00272\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (c\ ==\ \textcolor{charliteral}{'/'})\ index\ =\ 47;}
+\DoxyCodeLine{00273\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00274\ }
+\DoxyCodeLine{00275\ \ \ \ \ \mbox{\hyperlink{video_8c_ab0a758b9f8ea20f9bb5fb4ca77f021e5}{vg\_draw\_character}}(\&\mbox{\hyperlink{draw__graphics_8c_a632b0a796c388aa5cf8a762ff0790256}{font}},\ index\ ,\ x\ ,\ y\ ,\ color,scale);}
+\DoxyCodeLine{00276\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__graphics_8h_abedef77b00c316e162554bce0344fa54_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__graphics_8h_abedef77b00c316e162554bce0344fa54_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{draw__graphics_8h_a28a1c081b70b5c12894ae09f80a0b848}\label{draw__graphics_8h_a28a1c081b70b5c12894ae09f80a0b848} 
+\index{draw\_graphics.h@{draw\_graphics.h}!draw\_checker@{draw\_checker}}
+\index{draw\_checker@{draw\_checker}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{draw\_checker()}{draw\_checker()}}
+{\footnotesize\ttfamily void() draw\+\_\+checker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_piece}{Piece}} \texorpdfstring{$\ast$}{*}}]{piece }\end{DoxyParamCaption})}
+
+
+
+Draws a checker piece. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em piece} & \doxylink{struct_piece}{Piece} being drawn \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8c_source_l00237}{237}} of file \mbox{\hyperlink{draw__graphics_8c_source}{draw\+\_\+graphics.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00238\ \ \ \ \ \mbox{\hyperlink{video_8c_a978b99877ebdb731d2787c1456c341c0}{video\_draw\_xpm}}(piece-\/>\mbox{\hyperlink{struct_piece_a895b6803ce74fe8574d6168d66ac6bb5}{x}},\ piece-\/>\mbox{\hyperlink{struct_piece_a97d61c9e42873e2274620c91178e879b}{y}},\ piece-\/>\mbox{\hyperlink{struct_piece_a623a9a57ec7f25a0bef4f66b35f7d46b}{image}});}
+\DoxyCodeLine{00239\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__graphics_8h_a28a1c081b70b5c12894ae09f80a0b848_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__graphics_8h_a28a1c081b70b5c12894ae09f80a0b848_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{draw__graphics_8h_a18fc4cda99a0790d47701c8f6ad305d1}\label{draw__graphics_8h_a18fc4cda99a0790d47701c8f6ad305d1} 
+\index{draw\_graphics.h@{draw\_graphics.h}!draw\_checkers@{draw\_checkers}}
+\index{draw\_checkers@{draw\_checkers}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{draw\_checkers()}{draw\_checkers()}}
+{\footnotesize\ttfamily void draw\+\_\+checkers (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Draws the checkers. 
+
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8c_source_l00225}{225}} of file \mbox{\hyperlink{draw__graphics_8c_source}{draw\+\_\+graphics.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{keywordflow}{for}(i\ =\ 0;\ i\ <\ 24;\ i++)\{}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{board_8c_a4439dd9a93a0c191e4a514540d97c76b}{pieces}}[i]\ !=\ NULL\ \&\&\ \mbox{\hyperlink{board_8c_a4439dd9a93a0c191e4a514540d97c76b}{pieces}}[i]\ !=\ \mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}\ \&\&\ !\mbox{\hyperlink{board_8c_a4439dd9a93a0c191e4a514540d97c76b}{pieces}}[i]-\/>isCaptured)\{}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a28a1c081b70b5c12894ae09f80a0b848}{draw\_checker}}(\mbox{\hyperlink{board_8c_a4439dd9a93a0c191e4a514540d97c76b}{pieces}}[i]);}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00231\ \ \ \ \ \}}
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}\ !=\ NULL)\{}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a28a1c081b70b5c12894ae09f80a0b848}{draw\_checker}}(\mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}});}
+\DoxyCodeLine{00234\ \ \ \ \ \}}
+\DoxyCodeLine{00235\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__graphics_8h_a18fc4cda99a0790d47701c8f6ad305d1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__graphics_8h_a18fc4cda99a0790d47701c8f6ad305d1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{draw__graphics_8h_a9f0ef87214b46ee2f13d056e722575d7}\label{draw__graphics_8h_a9f0ef87214b46ee2f13d056e722575d7} 
+\index{draw\_graphics.h@{draw\_graphics.h}!draw\_cursor@{draw\_cursor}}
+\index{draw\_cursor@{draw\_cursor}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{draw\_cursor()}{draw\_cursor()}}
+{\footnotesize\ttfamily void draw\+\_\+cursor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Draws the cursor. 
+
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8c_source_l00241}{241}} of file \mbox{\hyperlink{draw__graphics_8c_source}{draw\+\_\+graphics.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00242\ \ \ \ \ \mbox{\hyperlink{video_8c_a978b99877ebdb731d2787c1456c341c0}{video\_draw\_xpm}}(\mbox{\hyperlink{game_8c_a1ced84253abfbe73f3dddecc6c04e6dd}{cursor\_x}},\ \mbox{\hyperlink{game_8c_a74697fe945d4edc7482c382f1082539b}{cursor\_y}},\ \&\mbox{\hyperlink{draw__graphics_8c_ab344452c360efd75914e0c88e39dd329}{cursor}});}
+\DoxyCodeLine{00243\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__graphics_8h_a9f0ef87214b46ee2f13d056e722575d7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__graphics_8h_a9f0ef87214b46ee2f13d056e722575d7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{draw__graphics_8h_a58530c2091e5cc9fb6a5ec67aee2b850}\label{draw__graphics_8h_a58530c2091e5cc9fb6a5ec67aee2b850} 
+\index{draw\_graphics.h@{draw\_graphics.h}!draw\_graphics@{draw\_graphics}}
+\index{draw\_graphics@{draw\_graphics}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{draw\_graphics()}{draw\_graphics()}}
+{\footnotesize\ttfamily void draw\+\_\+graphics (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Draws the graphics corresponding to the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8c_source_l00012}{12}} of file \mbox{\hyperlink{draw__graphics_8c_source}{draw\+\_\+graphics.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordflow}{switch}\ (\mbox{\hyperlink{game_8c_a70546ef15bc78d3e183760c87a4f2f95}{fase}})\{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628a4c40e60bc71a32b924ce1f08d57f9721}{MENU}}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a8b6c981db3aad686de04545c1e87f33c}{draw\_menu}}();}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628ad50cf309d7568040619ed26ee6835a84}{GAME}}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a1e436c75e3e5fb4a53d1104ba1d03411}{draw\_board}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a18fc4cda99a0790d47701c8f6ad305d1}{draw\_checkers}}();}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628a283e4f8f90756c9892871460a0d62a60}{HISTORY}}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_aa32b59d4667316fa80d30a55f882d593}{draw\_history}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628a7a10b5d68d31711288e1fe0fa17dbf4f}{EXIT}}:}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628ad1cb40a0245d392ac672f7bb0c76aa56}{WINNER}}:}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a80a9bf1d52cac8d6eb23b4288db4b184}{draw\_result\_screen}}();}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{game_8h_a3a7489f1d670bfcd556e86cb79c3b628ade61fd9af662e17286e2966e11148159}{CHOOSE\_NAME}}:}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a3763258e5ba88b3ed638cc2f43c803d0}{draw\_name\_screen}}();}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a9f0ef87214b46ee2f13d056e722575d7}{draw\_cursor}}();}
+\DoxyCodeLine{00034\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__graphics_8h_a58530c2091e5cc9fb6a5ec67aee2b850_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__graphics_8h_a58530c2091e5cc9fb6a5ec67aee2b850_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{draw__graphics_8h_aa32b59d4667316fa80d30a55f882d593}\label{draw__graphics_8h_aa32b59d4667316fa80d30a55f882d593} 
+\index{draw\_graphics.h@{draw\_graphics.h}!draw\_history@{draw\_history}}
+\index{draw\_history@{draw\_history}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{draw\_history()}{draw\_history()}}
+{\footnotesize\ttfamily void draw\+\_\+history (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the history screen. 
+
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8c_source_l00036}{36}} of file \mbox{\hyperlink{draw__graphics_8c_source}{draw\+\_\+graphics.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{video_8c_a978b99877ebdb731d2787c1456c341c0}{video\_draw\_xpm}}(0,\ 0,\ \&\mbox{\hyperlink{draw__graphics_8c_a859783a60b7ee644d4f46336a9395997}{history\_screen}});}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//hide\ buttons\ that\ are\ useless}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{history_8c_ae1517d80b170a8baa197d6f9bfbb88d9}{index\_first\_match\_being\_shown}}\ <=\ 0)\{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{//conceal\ the\ down\ button}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{video_8c_a99d2da2559e11200c6b40c469e9977ec}{vg\_draw\_rectangle}}(725,428,65,70,0x374D38);}
+\DoxyCodeLine{00043\ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{history_8c_ae1517d80b170a8baa197d6f9bfbb88d9}{index\_first\_match\_being\_shown}}\ >=\ \mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}\ -\/\ 3)\{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{comment}{//conceal\ the\ up\ button}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{video_8c_a99d2da2559e11200c6b40c469e9977ec}{vg\_draw\_rectangle}}(725,174,65,70,0x374D38);}
+\DoxyCodeLine{00047\ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ numberOfMatchesShown\ =\ 3;}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}}\ <\ 3)\ numberOfMatchesShown\ =\ \mbox{\hyperlink{history_8c_a1ddfe161cc1b15c8338a87a4be3d703f}{num\_matches}};}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{int}\ i\ \ =\ numberOfMatchesShown\ -\/1;}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordflow}{for}(;\ i\ >=\ 0;\ i-\/-\/)\{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ 27;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ 97\ +166*(numberOfMatchesShown\ -\/1\ -\/i);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ \mbox{\hyperlink{history_8c_ae1517d80b170a8baa197d6f9bfbb88d9}{index\_first\_match\_being\_shown}}\ +\ i;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_match_record}{MatchRecord}}*\ record\_info\ =\ \mbox{\hyperlink{history_8c_a3750ca5f0469a87bcea1a523cd990cd3}{getMatchRecord}}(index);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (record\_info\ ==\ NULL)\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{video_8c_a978b99877ebdb731d2787c1456c341c0}{video\_draw\_xpm}}(x,y\ ,\&\mbox{\hyperlink{draw__graphics_8c_a9034030b62498e1acf21a60f888fb280}{record}});}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{comment}{//write\ names}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a1764e22633ce78c7cbb835f2bb0f2bac}{draw\_string}}(record\_info-\/>\mbox{\hyperlink{struct_match_record_a267d9fa08bafb6dfb36269952e9fa0cc}{white\_player\_name}},\ x+128,y+20,\ 0,\ 3);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a1764e22633ce78c7cbb835f2bb0f2bac}{draw\_string}}(record\_info-\/>\mbox{\hyperlink{struct_match_record_a7071eddc5b3b1d6ec4d4a394947172e5}{black\_player\_name}},\ x+128,y+60,\ 0,\ 3);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{comment}{//write\ winner}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(record\_info-\/>\mbox{\hyperlink{struct_match_record_aa4ba0725774ad9d8cfa6f69df7279bbd}{winner}}\ ==\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1ca283fc479650da98250635b9c3c0e7e50}{WHITE}})\{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a1764e22633ce78c7cbb835f2bb0f2bac}{draw\_string}}(record\_info-\/>\mbox{\hyperlink{struct_match_record_a267d9fa08bafb6dfb36269952e9fa0cc}{white\_player\_name}},\ x+128,y+100,\ 0,\ 3);}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(record\_info-\/>\mbox{\hyperlink{struct_match_record_aa4ba0725774ad9d8cfa6f69df7279bbd}{winner}}\ ==\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3}{BLACK}})\{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a1764e22633ce78c7cbb835f2bb0f2bac}{draw\_string}}(record\_info-\/>\mbox{\hyperlink{struct_match_record_a7071eddc5b3b1d6ec4d4a394947172e5}{black\_player\_name}},\ x+128,y+100,\ 0,\ 3);}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a1764e22633ce78c7cbb835f2bb0f2bac}{draw\_string}}(\textcolor{stringliteral}{"{}DRAW"{}},\ x+128,y+100,\ 0,\ 3);}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{comment}{//write\ date}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ date[20];}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ sprintf(date,\ \textcolor{stringliteral}{"{}\%02d/\%02d/\%02d"{}},\ record\_info-\/>\mbox{\hyperlink{struct_match_record_a630ab468f07a9ebd780f727b359dd31c}{start\_time}}.\mbox{\hyperlink{struct_time_adc6c9605317382a56b244a4ceb725075}{day}},\ record\_info-\/>\mbox{\hyperlink{struct_match_record_a630ab468f07a9ebd780f727b359dd31c}{start\_time}}.\mbox{\hyperlink{struct_time_a851e70710f3b58c46e1636ce554d23ee}{month}},\ record\_info-\/>\mbox{\hyperlink{struct_match_record_a630ab468f07a9ebd780f727b359dd31c}{start\_time}}.\mbox{\hyperlink{struct_time_a2cad6a957612ff2a63dde0b00d61a140}{year}});}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a1764e22633ce78c7cbb835f2bb0f2bac}{draw\_string}}(date,\ x+434,y+100,\ 0,\ 3);}
+\DoxyCodeLine{00076\ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__graphics_8h_aa32b59d4667316fa80d30a55f882d593_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__graphics_8h_aa32b59d4667316fa80d30a55f882d593_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{draw__graphics_8h_a8b6c981db3aad686de04545c1e87f33c}\label{draw__graphics_8h_a8b6c981db3aad686de04545c1e87f33c} 
+\index{draw\_graphics.h@{draw\_graphics.h}!draw\_menu@{draw\_menu}}
+\index{draw\_menu@{draw\_menu}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{draw\_menu()}{draw\_menu()}}
+{\footnotesize\ttfamily void draw\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the menu. 
+
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8c_source_l00101}{101}} of file \mbox{\hyperlink{draw__graphics_8c_source}{draw\+\_\+graphics.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \mbox{\hyperlink{video_8c_a978b99877ebdb731d2787c1456c341c0}{video\_draw\_xpm}}(0,\ 0,\ \&\mbox{\hyperlink{draw__graphics_8c_ae3ed41f4213bf5f0f807613660fa6f20}{menu}});}
+\DoxyCodeLine{00103\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__graphics_8h_a8b6c981db3aad686de04545c1e87f33c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__graphics_8h_a8b6c981db3aad686de04545c1e87f33c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{draw__graphics_8h_a3763258e5ba88b3ed638cc2f43c803d0}\label{draw__graphics_8h_a3763258e5ba88b3ed638cc2f43c803d0} 
+\index{draw\_graphics.h@{draw\_graphics.h}!draw\_name\_screen@{draw\_name\_screen}}
+\index{draw\_name\_screen@{draw\_name\_screen}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{draw\_name\_screen()}{draw\_name\_screen()}}
+{\footnotesize\ttfamily void draw\+\_\+name\+\_\+screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the name screen. 
+
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8c_source_l00105}{105}} of file \mbox{\hyperlink{draw__graphics_8c_source}{draw\+\_\+graphics.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \mbox{\hyperlink{video_8c_a978b99877ebdb731d2787c1456c341c0}{video\_draw\_xpm}}(0,\ 0,\ \&\mbox{\hyperlink{draw__graphics_8c_aca834743c1d01bfb74f303927b7786a1}{name\_screen}});}
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a1764e22633ce78c7cbb835f2bb0f2bac}{draw\_string}}(\mbox{\hyperlink{game_8c_ace6dbe6f73e3ceafa52a94af5cd39944}{white\_name}},\ 250,\ 225,\ 0,\ 5);}
+\DoxyCodeLine{00108\ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a1764e22633ce78c7cbb835f2bb0f2bac}{draw\_string}}(\mbox{\hyperlink{game_8c_ae6439bcf42c914cdb59213277f001892}{black\_name}},\ 250,\ 381,\ 0xffffff,\ 5);}
+\DoxyCodeLine{00109\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__graphics_8h_a3763258e5ba88b3ed638cc2f43c803d0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__graphics_8h_a3763258e5ba88b3ed638cc2f43c803d0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{draw__graphics_8h_a80a9bf1d52cac8d6eb23b4288db4b184}\label{draw__graphics_8h_a80a9bf1d52cac8d6eb23b4288db4b184} 
+\index{draw\_graphics.h@{draw\_graphics.h}!draw\_result\_screen@{draw\_result\_screen}}
+\index{draw\_result\_screen@{draw\_result\_screen}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{draw\_result\_screen()}{draw\_result\_screen()}}
+{\footnotesize\ttfamily void() draw\+\_\+result\+\_\+screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the result screen. 
+
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8c_source_l00079}{79}} of file \mbox{\hyperlink{draw__graphics_8c_source}{draw\+\_\+graphics.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{video_8c_a978b99877ebdb731d2787c1456c341c0}{video\_draw\_xpm}}(0,\ 0,\ \&\mbox{\hyperlink{draw__graphics_8c_abed43d8a156d444d056e2b93fb67ca93}{result\_screen}});}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a9deaba51419cfcf0fb430512e8d11b5e}{winner}}\ ==\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1ca3ee31cecca7d8247d370588c3d08b1bc}{COLORLESS}})\{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a1764e22633ce78c7cbb835f2bb0f2bac}{draw\_string}}(\textcolor{stringliteral}{"{}DRAW"{}},\ 320,\ 200,\ 0,\ 5);}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a9deaba51419cfcf0fb430512e8d11b5e}{winner}}\ ==\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1ca283fc479650da98250635b9c3c0e7e50}{WHITE}})\{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a1764e22633ce78c7cbb835f2bb0f2bac}{draw\_string}}(\textcolor{stringliteral}{"{}WHITE\ WINS"{}},\ 240,\ 170,\ 0xffffff,\ 4);}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a1764e22633ce78c7cbb835f2bb0f2bac}{draw\_string}}(\mbox{\hyperlink{game_8c_ace6dbe6f73e3ceafa52a94af5cd39944}{white\_name}},\ 200,\ 250,\ 0xffffff,\ 5);}
+\DoxyCodeLine{00087\ \ \ \ \ \}}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{game_8c_a9deaba51419cfcf0fb430512e8d11b5e}{winner}}\ ==\ \mbox{\hyperlink{game_8h_ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3}{BLACK}})\{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a1764e22633ce78c7cbb835f2bb0f2bac}{draw\_string}}(\textcolor{stringliteral}{"{}BLACK\ WINS"{}},\ 240,\ 170,\ 0,\ 4);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a1764e22633ce78c7cbb835f2bb0f2bac}{draw\_string}}(\mbox{\hyperlink{game_8c_ae6439bcf42c914cdb59213277f001892}{black\_name}},\ 200,\ 250,\ 0,\ 5);}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//\ draw\ sprites}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{game_8c_a7c4988f3343262d4d8d26923af00d1f7}{num\_sprites}};\ i++)\{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_piece_sprite}{PieceSprite}}*\ sprite\ =\ \&\mbox{\hyperlink{game_8c_a0fe09b3858b8c61f07a8c5290a54699f}{sprites}}[i];}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a28a1c081b70b5c12894ae09f80a0b848}{draw\_checker}}(sprite-\/>\mbox{\hyperlink{struct_piece_sprite_a5867f03b175005754ee4fcf2185b8e18}{piece}});}
+\DoxyCodeLine{00098\ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__graphics_8h_a80a9bf1d52cac8d6eb23b4288db4b184_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__graphics_8h_a80a9bf1d52cac8d6eb23b4288db4b184_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{draw__graphics_8h_a1764e22633ce78c7cbb835f2bb0f2bac}\label{draw__graphics_8h_a1764e22633ce78c7cbb835f2bb0f2bac} 
+\index{draw\_graphics.h@{draw\_graphics.h}!draw\_string@{draw\_string}}
+\index{draw\_string@{draw\_string}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{draw\_string()}{draw\_string()}}
+{\footnotesize\ttfamily void() draw\+\_\+string (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{color,  }\item[{int}]{scale }\end{DoxyParamCaption})}
+
+
+
+Draws a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & string to be drawn \\
+\hline
+{\em x} & x coordinate \\
+\hline
+{\em y} & y coordinate \\
+\hline
+{\em color} & color of the string \\
+\hline
+{\em scale} & size of the string \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8c_source_l00245}{245}} of file \mbox{\hyperlink{draw__graphics_8c_source}{draw\+\_\+graphics.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00246\ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ 0;}
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordflow}{while}\ (str[i]\ !=\ \textcolor{charliteral}{'\(\backslash\)0'})\{}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_abedef77b00c316e162554bce0344fa54}{draw\_character}}(str[i],x\ +\ i*8*scale,y,color,scale);}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{00250\ \ \ \ \ \}}
+\DoxyCodeLine{00251\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__graphics_8h_a1764e22633ce78c7cbb835f2bb0f2bac_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__graphics_8h_a1764e22633ce78c7cbb835f2bb0f2bac_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{draw__graphics_8h_a297af57e28b63a9537fdc82eddd80422}\label{draw__graphics_8h_a297af57e28b63a9537fdc82eddd80422} 
+\index{draw\_graphics.h@{draw\_graphics.h}!load\_xpms@{load\_xpms}}
+\index{load\_xpms@{load\_xpms}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{load\_xpms()}{load\_xpms()}}
+{\footnotesize\ttfamily void() load\+\_\+xpms (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads the xpms. 
+
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8c_source_l00210}{210}} of file \mbox{\hyperlink{draw__graphics_8c_source}{draw\+\_\+graphics.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00211\ \ \ \ \ xpm\_load(cursor\_xpm,\ XPM\_8\_8\_8\_8,\ \&\mbox{\hyperlink{draw__graphics_8c_ab344452c360efd75914e0c88e39dd329}{cursor}});}
+\DoxyCodeLine{00212\ \ \ \ \ xpm\_load(white\_queen\_xpm\ ,\ XPM\_8\_8\_8\_8,\ \&\mbox{\hyperlink{draw__graphics_8c_ad3c4eb0800627b4ce1bdac19bef9ef9f}{white\_king}});}
+\DoxyCodeLine{00213\ \ \ \ \ xpm\_load(white\_checker\_xpm\ ,\ XPM\_8\_8\_8\_8,\ \&\mbox{\hyperlink{draw__graphics_8c_ac98839962dc945736e4fb43caddc26b0}{white\_checker}});}
+\DoxyCodeLine{00214\ \ \ \ \ xpm\_load(black\_queen\_xpm\ ,\ XPM\_8\_8\_8\_8,\ \&\mbox{\hyperlink{draw__graphics_8c_af506c99bd1c7bacf13859dd666ea5de6}{black\_king}});}
+\DoxyCodeLine{00215\ \ \ \ \ xpm\_load(black\_checker\_xpm\ ,\ XPM\_8\_8\_8\_8,\ \&\mbox{\hyperlink{draw__graphics_8c_a9b6b60ce68305da4c81e90d89826db21}{black\_checker}});}
+\DoxyCodeLine{00216\ \ \ \ \ xpm\_load(menu\_xpm\ ,\ XPM\_8\_8\_8\_8,\ \&\mbox{\hyperlink{draw__graphics_8c_ae3ed41f4213bf5f0f807613660fa6f20}{menu}});}
+\DoxyCodeLine{00217\ \ \ \ \ xpm\_load(font\_xpm\ ,\ XPM\_8\_8\_8\_8,\ \&\mbox{\hyperlink{draw__graphics_8c_a632b0a796c388aa5cf8a762ff0790256}{font}});}
+\DoxyCodeLine{00218\ \ \ \ \ xpm\_load(result\_screen\_xpm\ ,\ XPM\_8\_8\_8\_8,\ \&\mbox{\hyperlink{draw__graphics_8c_abed43d8a156d444d056e2b93fb67ca93}{result\_screen}});}
+\DoxyCodeLine{00219\ \ \ \ \ xpm\_load(game\_side\_bar\_xpm\ ,\ XPM\_8\_8\_8\_8,\ \&\mbox{\hyperlink{draw__graphics_8c_a5db8cdfbf23a0dda4db2f0b12543bc56}{game\_side\_bar}});}
+\DoxyCodeLine{00220\ \ \ \ \ xpm\_load(name\_screen\_xpm,\ XPM\_8\_8\_8\_8,\ \&\mbox{\hyperlink{draw__graphics_8c_aca834743c1d01bfb74f303927b7786a1}{name\_screen}});}
+\DoxyCodeLine{00221\ \ \ \ \ xpm\_load(history\_xpm,\ XPM\_8\_8\_8\_8,\ \&\mbox{\hyperlink{draw__graphics_8c_a859783a60b7ee644d4f46336a9395997}{history\_screen}});}
+\DoxyCodeLine{00222\ \ \ \ \ xpm\_load(record\_xpm,\ XPM\_8\_8\_8\_8,\ \&\mbox{\hyperlink{draw__graphics_8c_a9034030b62498e1acf21a60f888fb280}{record}});}
+\DoxyCodeLine{00223\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{draw__graphics_8h_a297af57e28b63a9537fdc82eddd80422_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{draw__graphics_8h_ada6cd54dcdb8df73b70d5bdcba415486}\label{draw__graphics_8h_ada6cd54dcdb8df73b70d5bdcba415486} 
+\index{draw\_graphics.h@{draw\_graphics.h}!update\_draw\_board@{update\_draw\_board}}
+\index{update\_draw\_board@{update\_draw\_board}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{update\_draw\_board()}{update\_draw\_board()}}
+{\footnotesize\ttfamily void update\+\_\+draw\+\_\+board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the game board. 
+
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8c_source_l00111}{111}} of file \mbox{\hyperlink{draw__graphics_8c_source}{draw\+\_\+graphics.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0\ ;\ i\ <\ 8\ ;\ i++)\{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0\ ;\ j\ <\ 8\ ;\ j++)\{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a72f40040de5b7deb3efd9b4f96e26bfc}{board\_to\_draw}}[i][j]\ =\ \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9a2f0d18fc0d0fa4a6cd92dc328501874d}{EMPTY}};}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \ \ \ \}}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}\ ==\ NULL)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00118\ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a72f40040de5b7deb3efd9b4f96e26bfc}{board\_to\_draw}}[\mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}-\/>\mbox{\hyperlink{struct_piece_ac6ef7c474f20562cb629c2452ce0631d}{row}}][\mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}}-\/>\mbox{\hyperlink{struct_piece_a4017d278fbe40f96214961ab71f17d35}{col}}]\ =\ \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9a02b0fb84d46d585b477a6509abf32b5d}{SELECTED}};}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0\ ;i<\mbox{\hyperlink{board_8c_ad6061628183a69346f2529f4170f0cd8}{num\_moves}};i++)\{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_trajectory}{Trajectory}}*\ t\ =\ \&\mbox{\hyperlink{board_8c_a75f3a9c4ee37c341da26bc899fe1f3f1}{all\_moves}}[i];}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ t-\/>\mbox{\hyperlink{struct_trajectory_a799e67180a72b24337949c7e8b141891}{piece}}!=\ \mbox{\hyperlink{board_8c_a09da077207c4c32abd079e452cacbc1d}{selected\_piece}})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ t-\/>\mbox{\hyperlink{struct_trajectory_a095f7a71e91ff50730c34b2074c23b9d}{num\_moves}};\ j++)\{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_move}{Move}}*\ m\ =\ \&t-\/>\mbox{\hyperlink{struct_trajectory_a48845b1a230e3822a4820b0741803bf6}{moves}}[j];}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m-\/>\mbox{\hyperlink{struct_move_ab9cdf7d77b4ba6028ea20ae90a54db88}{piece\_captured}}\ !=\ NULL)\{}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a72f40040de5b7deb3efd9b4f96e26bfc}{board\_to\_draw}}[m-\/>\mbox{\hyperlink{struct_move_ab9cdf7d77b4ba6028ea20ae90a54db88}{piece\_captured}}-\/>\mbox{\hyperlink{struct_piece_ac6ef7c474f20562cb629c2452ce0631d}{row}}][m-\/>\mbox{\hyperlink{struct_move_ab9cdf7d77b4ba6028ea20ae90a54db88}{piece\_captured}}-\/>\mbox{\hyperlink{struct_piece_a4017d278fbe40f96214961ab71f17d35}{col}}]\ =\ \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9a2a90047fe45c6934034c89fd9fb5dbbb}{CAPTURE}};}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a72f40040de5b7deb3efd9b4f96e26bfc}{board\_to\_draw}}[m-\/>\mbox{\hyperlink{struct_move_a318a43aa622cd8a882965a1814e5cdd4}{end\_row}}][m-\/>\mbox{\hyperlink{struct_move_aba405a0f310265c9782a9c9b92b0a6e0}{end\_col}}]\ =\ \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9ad67a493278074cf714b262b33d84739c}{PATH}};}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_move}{Move}}*\ m\ =\ \&t-\/>\mbox{\hyperlink{struct_trajectory_a48845b1a230e3822a4820b0741803bf6}{moves}}[t-\/>\mbox{\hyperlink{struct_trajectory_a095f7a71e91ff50730c34b2074c23b9d}{num\_moves}}-\/1];}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{draw__graphics_8c_a72f40040de5b7deb3efd9b4f96e26bfc}{board\_to\_draw}}[m-\/>\mbox{\hyperlink{struct_move_a318a43aa622cd8a882965a1814e5cdd4}{end\_row}}][m-\/>\mbox{\hyperlink{struct_move_aba405a0f310265c9782a9c9b92b0a6e0}{end\_col}}]\ =\ \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9aed3ef32890b6da0919b57254c5206c62}{MOVE}};}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00133\ \ \ \ \ \}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw__graphics_8h_ada6cd54dcdb8df73b70d5bdcba415486_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{draw__graphics_8h_a9b6b60ce68305da4c81e90d89826db21}\label{draw__graphics_8h_a9b6b60ce68305da4c81e90d89826db21} 
+\index{draw\_graphics.h@{draw\_graphics.h}!black\_checker@{black\_checker}}
+\index{black\_checker@{black\_checker}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{black\_checker}{black\_checker}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t black\+\_\+checker}
+
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8h_source_l00045}{45}} of file \mbox{\hyperlink{draw__graphics_8h_source}{draw\+\_\+graphics.\+h}}.
+
+\Hypertarget{draw__graphics_8h_af506c99bd1c7bacf13859dd666ea5de6}\label{draw__graphics_8h_af506c99bd1c7bacf13859dd666ea5de6} 
+\index{draw\_graphics.h@{draw\_graphics.h}!black\_king@{black\_king}}
+\index{black\_king@{black\_king}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{black\_king}{black\_king}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t black\+\_\+king}
+
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8h_source_l00045}{45}} of file \mbox{\hyperlink{draw__graphics_8h_source}{draw\+\_\+graphics.\+h}}.
+
+\Hypertarget{draw__graphics_8h_a72f40040de5b7deb3efd9b4f96e26bfc}\label{draw__graphics_8h_a72f40040de5b7deb3efd9b4f96e26bfc} 
+\index{draw\_graphics.h@{draw\_graphics.h}!board\_to\_draw@{board\_to\_draw}}
+\index{board\_to\_draw@{board\_to\_draw}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{board\_to\_draw}{board\_to\_draw}}
+{\footnotesize\ttfamily \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9}{House\+Draw}} board\+\_\+to\+\_\+draw\mbox{[}8\mbox{]}\mbox{[}8\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8c_source_l00008}{8}} of file \mbox{\hyperlink{draw__graphics_8c_source}{draw\+\_\+graphics.\+c}}.
+
+\Hypertarget{draw__graphics_8h_ab344452c360efd75914e0c88e39dd329}\label{draw__graphics_8h_ab344452c360efd75914e0c88e39dd329} 
+\index{draw\_graphics.h@{draw\_graphics.h}!cursor@{cursor}}
+\index{cursor@{cursor}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{cursor}{cursor}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t cursor\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8c_source_l00004}{4}} of file \mbox{\hyperlink{draw__graphics_8c_source}{draw\+\_\+graphics.\+c}}.
+
+\Hypertarget{draw__graphics_8h_a632b0a796c388aa5cf8a762ff0790256}\label{draw__graphics_8h_a632b0a796c388aa5cf8a762ff0790256} 
+\index{draw\_graphics.h@{draw\_graphics.h}!font@{font}}
+\index{font@{font}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t font}
+
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8h_source_l00045}{45}} of file \mbox{\hyperlink{draw__graphics_8h_source}{draw\+\_\+graphics.\+h}}.
+
+\Hypertarget{draw__graphics_8h_a5db8cdfbf23a0dda4db2f0b12543bc56}\label{draw__graphics_8h_a5db8cdfbf23a0dda4db2f0b12543bc56} 
+\index{draw\_graphics.h@{draw\_graphics.h}!game\_side\_bar@{game\_side\_bar}}
+\index{game\_side\_bar@{game\_side\_bar}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{game\_side\_bar}{game\_side\_bar}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t game\+\_\+side\+\_\+bar}
+
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8h_source_l00045}{45}} of file \mbox{\hyperlink{draw__graphics_8h_source}{draw\+\_\+graphics.\+h}}.
+
+\Hypertarget{draw__graphics_8h_ae3ed41f4213bf5f0f807613660fa6f20}\label{draw__graphics_8h_ae3ed41f4213bf5f0f807613660fa6f20} 
+\index{draw\_graphics.h@{draw\_graphics.h}!menu@{menu}}
+\index{menu@{menu}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{menu}{menu}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t menu}
+
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8h_source_l00045}{45}} of file \mbox{\hyperlink{draw__graphics_8h_source}{draw\+\_\+graphics.\+h}}.
+
+\Hypertarget{draw__graphics_8h_aca834743c1d01bfb74f303927b7786a1}\label{draw__graphics_8h_aca834743c1d01bfb74f303927b7786a1} 
+\index{draw\_graphics.h@{draw\_graphics.h}!name\_screen@{name\_screen}}
+\index{name\_screen@{name\_screen}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{name\_screen}{name\_screen}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t name\+\_\+screen}
+
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8h_source_l00045}{45}} of file \mbox{\hyperlink{draw__graphics_8h_source}{draw\+\_\+graphics.\+h}}.
+
+\Hypertarget{draw__graphics_8h_ac98839962dc945736e4fb43caddc26b0}\label{draw__graphics_8h_ac98839962dc945736e4fb43caddc26b0} 
+\index{draw\_graphics.h@{draw\_graphics.h}!white\_checker@{white\_checker}}
+\index{white\_checker@{white\_checker}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{white\_checker}{white\_checker}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t white\+\_\+checker}
+
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8h_source_l00045}{45}} of file \mbox{\hyperlink{draw__graphics_8h_source}{draw\+\_\+graphics.\+h}}.
+
+\Hypertarget{draw__graphics_8h_ad3c4eb0800627b4ce1bdac19bef9ef9f}\label{draw__graphics_8h_ad3c4eb0800627b4ce1bdac19bef9ef9f} 
+\index{draw\_graphics.h@{draw\_graphics.h}!white\_king@{white\_king}}
+\index{white\_king@{white\_king}!draw\_graphics.h@{draw\_graphics.h}}
+\doxysubsubsection{\texorpdfstring{white\_king}{white\_king}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t white\+\_\+king}
+
+
+
+Definition at line \mbox{\hyperlink{draw__graphics_8h_source_l00045}{45}} of file \mbox{\hyperlink{draw__graphics_8h_source}{draw\+\_\+graphics.\+h}}.
+

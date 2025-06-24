@@ -1,0 +1,83 @@
+\doxysection{draw\+\_\+graphics.\+h}
+\hypertarget{draw__graphics_8h_source}{}\label{draw__graphics_8h_source}\index{game/draw\_graphics.h@{game/draw\_graphics.h}}
+\mbox{\hyperlink{draw__graphics_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ DRAW\_GRAPHICS\_H}}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ DRAW\_GRAPHICS\_H}}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00006}\mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9}{00006}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\{}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00007}\mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9a2f0d18fc0d0fa4a6cd92dc328501874d}{00007}}\ \ \ \ \ \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9a2f0d18fc0d0fa4a6cd92dc328501874d}{EMPTY}},}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00008}\mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9a02b0fb84d46d585b477a6509abf32b5d}{00008}}\ \ \ \ \ \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9a02b0fb84d46d585b477a6509abf32b5d}{SELECTED}},}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00009}\mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9a2a90047fe45c6934034c89fd9fb5dbbb}{00009}}\ \ \ \ \ \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9a2a90047fe45c6934034c89fd9fb5dbbb}{CAPTURE}},}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00010}\mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9aed3ef32890b6da0919b57254c5206c62}{00010}}\ \ \ \ \ \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9aed3ef32890b6da0919b57254c5206c62}{MOVE}},}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00011}00011\ \ \ \ \ \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9ad67a493278074cf714b262b33d84739c}{PATH}}}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00012}\mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9ad67a493278074cf714b262b33d84739c}{00012}}\ \}\mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9}{HouseDraw}};}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00014}\mbox{\hyperlink{struct_animation}{00014}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00015}\mbox{\hyperlink{struct_animation_a75712c45a3c935c3262a37970c6141a5}{00015}}\ \ \ \ \ xpm\_image\_t*\ frames[10];}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00016}\mbox{\hyperlink{struct_animation_a4008d09d9e279d845098a3532c37da88}{00016}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_animation_a4008d09d9e279d845098a3532c37da88}{num\_frames}};}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00017}\mbox{\hyperlink{struct_animation_a9e81e6ba78973f963e1f2995f89d57eb}{00017}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_animation_a9e81e6ba78973f963e1f2995f89d57eb}{current\_frame}};}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00018}\mbox{\hyperlink{struct_animation_a9d231644debb18a66f222a76826a87ec}{00018}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_animation_a9d231644debb18a66f222a76826a87ec}{frame\_duration}};}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00019}\mbox{\hyperlink{struct_animation_a0578579ba246a17aaf75a9b4b4321fc1}{00019}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_animation_a0578579ba246a17aaf75a9b4b4321fc1}{current\_duration}};}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00020}\mbox{\hyperlink{struct_animation_afd5c86707e8b565c868cbee56496dcd7}{00020}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_animation_afd5c86707e8b565c868cbee56496dcd7}{x}};}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00021}\mbox{\hyperlink{struct_animation_a72467306123dccc6abee23b0fe86d046}{00021}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_animation_a72467306123dccc6abee23b0fe86d046}{y}};}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00022}00022\ \}\mbox{\hyperlink{struct_animation}{Animation}};}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00024}00024\ \textcolor{preprocessor}{\#include\ "{}../devices/video.h"{}}}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00025}00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{game_8h}{game.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00026}00026\ \textcolor{preprocessor}{\#include\ "{}../resources/imgs/cursor.xpm"{}}}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00027}00027\ \textcolor{preprocessor}{\#include\ "{}../resources/imgs/white\_checker.xpm"{}}}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00028}00028\ \textcolor{preprocessor}{\#include\ "{}../resources/imgs/black\_checker.xpm"{}}}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00029}00029\ \textcolor{preprocessor}{\#include\ "{}../resources/imgs/white\_queen.xpm"{}}}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00030}00030\ \textcolor{preprocessor}{\#include\ "{}../resources/imgs/black\_queen.xpm"{}}}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00031}00031\ \textcolor{preprocessor}{\#include\ "{}../resources/imgs/menu.xpm"{}}}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00032}00032\ \textcolor{preprocessor}{\#include\ "{}../resources/imgs/font.xpm"{}}}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00033}00033\ \textcolor{preprocessor}{\#include\ "{}../resources/imgs/result\_screen.xpm"{}}}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00034}00034\ \textcolor{preprocessor}{\#include\ "{}../resources/imgs/game\_side\_bar.xpm"{}}}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00035}00035\ \textcolor{preprocessor}{\#include\ "{}../resources/imgs/name\_screen.xpm"{}}}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00036}00036\ \textcolor{preprocessor}{\#include\ "{}../resources/imgs/history.xpm"{}}}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00037}00037\ \textcolor{preprocessor}{\#include\ "{}../resources/imgs/record.xpm"{}}}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00038}00038\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{board_8h}{board.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00039}00039\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{piece_8h}{piece.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00040}00040\ \textcolor{preprocessor}{\#include\ <libgen.h>}}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00042}\mbox{\hyperlink{draw__graphics_8h_a3a108be31e0716851ed304b76e2d641a}{00042}}\ \textcolor{preprocessor}{\#define\ TURN\_COLOR\ 0xFF8C00\ }\textcolor{comment}{//orange}}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00043}\mbox{\hyperlink{draw__graphics_8h_ac375067a7058332239b7fa268320e2ad}{00043}}\ \textcolor{preprocessor}{\#define\ NOT\_TURN\_COLOR\ 0xffffff\ }\textcolor{comment}{//white}}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00045}\mbox{\hyperlink{draw__graphics_8h_a9b6b60ce68305da4c81e90d89826db21}{00045}}\ \textcolor{keyword}{extern}\ xpm\_image\_t\ \mbox{\hyperlink{draw__graphics_8h_ab344452c360efd75914e0c88e39dd329}{cursor}},\mbox{\hyperlink{draw__graphics_8h_ad3c4eb0800627b4ce1bdac19bef9ef9f}{white\_king}},\mbox{\hyperlink{draw__graphics_8h_ac98839962dc945736e4fb43caddc26b0}{white\_checker}},\mbox{\hyperlink{draw__graphics_8h_af506c99bd1c7bacf13859dd666ea5de6}{black\_king}},\mbox{\hyperlink{draw__graphics_8h_a9b6b60ce68305da4c81e90d89826db21}{black\_checker}},\mbox{\hyperlink{draw__graphics_8h_a632b0a796c388aa5cf8a762ff0790256}{font}},\mbox{\hyperlink{draw__graphics_8h_ae3ed41f4213bf5f0f807613660fa6f20}{menu}},\mbox{\hyperlink{draw__graphics_8h_a5db8cdfbf23a0dda4db2f0b12543bc56}{game\_side\_bar}},\ \mbox{\hyperlink{draw__graphics_8h_aca834743c1d01bfb74f303927b7786a1}{name\_screen}};}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00046}00046\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{draw__graphics_8h_af8041ffb16d1bd9bbdb59a209479f5c9}{HouseDraw}}\ \mbox{\hyperlink{draw__graphics_8h_a72f40040de5b7deb3efd9b4f96e26bfc}{board\_to\_draw}}[8][8];}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00051}00051\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{draw__graphics_8h_aa32b59d4667316fa80d30a55f882d593}{draw\_history}}();}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00056}00056\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{draw__graphics_8h_a8b6c981db3aad686de04545c1e87f33c}{draw\_menu}}();}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00061}00061\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{draw__graphics_8h_a3763258e5ba88b3ed638cc2f43c803d0}{draw\_name\_screen}}();}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00066}00066\ void\ (\mbox{\hyperlink{draw__graphics_8h_a297af57e28b63a9537fdc82eddd80422}{load\_xpms}})();}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00071}00071\ void\ (\mbox{\hyperlink{draw__graphics_8h_abb180da0d359d9dd5c05536f5ad20f0c}{\_update\_screen}})(void);}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00076}00076\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{draw__graphics_8h_a58530c2091e5cc9fb6a5ec67aee2b850}{draw\_graphics}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00081}00081\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{draw__graphics_8h_a1e436c75e3e5fb4a53d1104ba1d03411}{draw\_board}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00086}00086\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{draw__graphics_8h_a18fc4cda99a0790d47701c8f6ad305d1}{draw\_checkers}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00092}00092\ void\ (\mbox{\hyperlink{draw__graphics_8h_a28a1c081b70b5c12894ae09f80a0b848}{draw\_checker}})(\mbox{\hyperlink{struct_piece}{Piece}}\ *\ piece);}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00095}00095\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{draw__graphics_8h_a9f0ef87214b46ee2f13d056e722575d7}{draw\_cursor}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00100}00100\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{draw__graphics_8h_ada6cd54dcdb8df73b70d5bdcba415486}{update\_draw\_board}}();}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00109}00109\ void\ (\mbox{\hyperlink{draw__graphics_8h_a1764e22633ce78c7cbb835f2bb0f2bac}{draw\_string}})(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ str,\textcolor{keywordtype}{int}\ x\ ,\ \textcolor{keywordtype}{int}\ y\ ,\ \textcolor{keywordtype}{int}\ color,\textcolor{keywordtype}{int}\ scale);}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00119}00119\ void\ (\mbox{\hyperlink{draw__graphics_8h_abedef77b00c316e162554bce0344fa54}{draw\_character}})(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ c,\textcolor{keywordtype}{int}\ x\ ,\ \textcolor{keywordtype}{int}\ y\ ,\ \textcolor{keywordtype}{int}\ color,\textcolor{keywordtype}{int}\ scale);}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00124}00124\ void\ (\mbox{\hyperlink{draw__graphics_8h_a80a9bf1d52cac8d6eb23b4288db4b184}{draw\_result\_screen}})();}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00126}00126\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{draw__graphics_8h_source_l00127}00127\ }
+
+\end{DoxyCode}
