@@ -1,0 +1,6043 @@
+{
+  "yasf": {
+    "globals": {
+      "background": {
+        "r": 0,
+        "g": 0,
+        "b": 0
+      },
+      "ambient": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "intensity": 3
+      },
+      "fog": {
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "near": 10000,
+        "far": 10001
+      },
+      "skybox": {
+        "size": {
+          "x": 400,
+          "y": 200,
+          "z": 200
+        },
+        "center": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "emissive": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "intensity": 0.5,
+        "front": "scenes/chamber/textures/TRRM_PAN1.png",
+        "back": "scenes/chamber/textures/TRRM_PAN1.png",
+        "up": "scenes/chamber/textures/TRRM_PAN1.png",
+        "down": "scenes/chamber/textures/TRRM_PAN1.png",
+        "left": "scenes/chamber/textures/TRRM_PAN1.png",
+        "right": "scenes/chamber/textures/TRRM_PAN1.png"
+      }
+    },
+    "cameras": {
+      "initial": "perspective",
+      "perspective": {
+        "type": "perspective",
+        "angle": 75,
+        "near": 0.1,
+        "far": 1000,
+        "location": {
+          "x": -5,
+          "y": 0,
+          "z": 0
+        },
+        "target": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    "textures": {
+      "mainwall": {
+        "filepath": "scenes/chamber/textures/TRRM_PAN1.png",
+        "isVideo": false,
+        "mipmap0": "scenes/chamber/textures/TRRM_PAN1_b.png",
+        "mipmap1": "scenes/chamber/textures/TRRM_PAN1_r.png",
+        "mipmap2": "scenes/chamber/textures/TRRM_PAN1_g.png"
+      },
+      "centerpanels": {
+        "filepath": "scenes/chamber/textures/TRRM_PAN2_edited.png",
+        "isVideo": false
+      },
+      "centernograte": {
+        "filepath": "scenes/chamber/textures/TRRM_PAN4_edited.png",
+        "isVideo": false
+      },
+      "centergrate": {
+        "filepath": "scenes/chamber/textures/TRRM_PAN4.png",
+        "isVideo": false
+      },
+      "pipes": {
+        "filepath": "scenes/chamber/textures/NWBARREL.png",
+        "isVideo": false
+      },
+      "screen": {
+        "filepath": "scenes/chamber/textures/LAB1_CMPM5.png",
+        "isVideo": false
+      },
+      "keyboardbottom": {
+        "filepath": "scenes/chamber/textures/keyboardbottom.png",
+        "isVideo": false
+      },
+      "spinnerring": {
+        "filepath": "scenes/chamber/textures/1LAB3_FLR1.png",
+        "isVideo": false
+      },
+      "topcylindercap": {
+        "filepath": "scenes/chamber/textures/C3A1_GEAR2.png",
+        "isVideo": false
+      },
+      "ladder": {
+        "filepath": "scenes/chamber/textures/{LADDER2.png",
+        "isVideo": false
+      },
+      "ladderfold": {
+        "filepath": "scenes/chamber/textures/{LADDER2_edited.png",
+        "isVideo": false
+      },
+      "whiteTexture": {
+        "filepath": "scenes/chamber/textures/GENERIC027.png",
+        "isVideo": false
+      },
+      "fullgratesquare": {
+        "filepath": "scenes/chamber/textures/{GRATESTEP2.png",
+        "isVideo": false
+      },
+      "holedgratesquare": {
+        "filepath": "scenes/chamber/textures/{GRATESTEP2_edited.png",
+        "isVideo": false
+      },
+      "gratefilling": {
+        "filepath": "scenes/chamber/textures/{GRATESTEP1_edited.png",
+        "isVideo": false
+      },
+      "red": {
+        "filepath": "scenes/chamber/textures/~SPOTRED.png",
+        "isVideo": false
+      },
+      "orange": {
+        "filepath": "scenes/chamber/textures/~SPOTYELLOW.png",
+        "isVideo": false
+      },
+      "darkconcrete": {
+        "filepath": "scenes/chamber/textures/concrete_0019_color_1k.jpg",
+        "isVideo": false
+      },
+      "videoscreen": {
+        "filepath": "scenes/chamber/textures/videoscreen.mp4",
+        "isVideo": true
+      },
+      "rail": {
+        "filepath": "scenes/chamber/textures/{RAIL2.png",
+        "isVideo": false
+      },
+      "railtop": {
+        "filepath": "scenes/chamber/textures/{RAIL2_edited.png",
+        "isVideo": false
+      },
+      "computercase": {
+        "filepath": "scenes/chamber/textures/LAB1_W1A_edited.png",
+        "isVideo": false
+      },
+      "computerholder": {
+        "filepath": "scenes/chamber/textures/GENERIC111B_edited.png",
+        "isVideo": false
+      }
+    },
+    "materials": {
+      "mainwall": {
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "specular": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "shininess": 30,
+        "emissive": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "transparent": false,
+        "opacity": 1.0,
+        "shading": true,
+        "textureref": "mainwall",
+        "twosided": false,
+        "texlength_s": 7.854,
+        "texlength_t": 35
+      },
+      "upperwall": {
+        "color": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+        },
+        "specular": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "shininess": 30,
+        "emissive": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "transparent": false,
+        "opacity": 1.0,
+        "shading": true,
+        "textureref": "mainwall",
+        "twosided": true,
+        "texlength_s": 7.854,
+        "texlength_t": 22.22
+      },
+      "centerpanels": {
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "specular": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "shininess": 30,
+        "emissive": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "transparent": false,
+        "opacity": 1.0,
+        "shading": true,
+        "textureref": "centerpanels",
+        "twosided": false,
+        "texlength_s": 5.498,
+        "texlength_t": 1.5
+      },
+      "centernograte": {
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "specular": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "shininess": 30,
+        "emissive": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "transparent": false,
+        "opacity": 1.0,
+        "shading": true,
+        "textureref": "centernograte",
+        "twosided": false,
+        "texlength_s": 5.498,
+        "texlength_t": 1.5
+      },
+      "centergrate": {
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "specular": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "shininess": 30,
+        "emissive": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "transparent": false,
+        "opacity": 1.0,
+        "shading": true,
+        "textureref": "centergrate",
+        "twosided": false,
+        "texlength_s": 5.498,
+        "texlength_t": 5
+      },
+      "pipesupport": {
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "specular": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "shininess": 30,
+        "emissive": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "transparent": false,
+        "opacity": 1.0,
+        "shading": true,
+        "textureref": "centergrate",
+        "twosided": false,
+        "texlength_s": 10,
+        "texlength_t": 8
+      },
+      "pipe": {
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "specular": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "shininess": 30,
+        "emissive": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "transparent": false,
+        "opacity": 1.0,
+        "shading": true,
+        "textureref": "pipes",
+        "twosided": false,
+        "texlength_s": 5.498,
+        "texlength_t": 5
+      },
+      "spinnerring": {
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "specular": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "shininess": 30,
+        "emissive": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "transparent": false,
+        "opacity": 1.0,
+        "shading": true,
+        "textureref": "spinnerring",
+        "twosided": false,
+        "texlength_s": 5.498,
+        "texlength_t": 5
+      },
+      "spinnerringdark": {
+        "color": {
+          "r": 0.5,
+          "g": 0.5,
+          "b": 0.5
+        },
+        "specular": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "shininess": 30,
+        "emissive": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "transparent": false,
+        "opacity": 1.0,
+        "shading": true,
+        "textureref": "spinnerring",
+        "twosided": false,
+        "texlength_s": 2,
+        "texlength_t": 4
+      },
+      "screen": {
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "specular": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "shininess": 30,
+        "emissive": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "transparent": false,
+        "opacity": 1.0,
+        "shading": true,
+        "textureref": "screen",
+        "twosided": false,
+        "texlength_s": 2,
+        "texlength_t": 2
+      },
+      "videoscreen": {
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "specular": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "shininess": 30,
+        "emissive": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "transparent": false,
+        "opacity": 1.0,
+        "shading": true,
+        "textureref": "videoscreen",
+        "twosided": false,
+        "texlength_s": 2,
+        "texlength_t": 2
+      },
+      "bottomkeyboard": {
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "specular": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "shininess": 30,
+        "emissive": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "transparent": false,
+        "opacity": 1.0,
+        "shading": true,
+        "textureref": "keyboardbottom",
+        "twosided": false,
+        "texlength_s": 2.6,
+        "texlength_t": 1.2
+      },
+      "topcylindercap": {
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "specular": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "shininess": 30,
+        "emissive": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "transparent": false,
+        "opacity": 1.0,
+        "shading": true,
+        "textureref": "topcylindercap",
+        "twosided": false,
+        "texlength_s": 4.5,
+        "texlength_t": 4.5
+      },
+      "ladder": {
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "specular": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "shininess": 30,
+        "emissive": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "transparent": true,
+        "opacity": 1.0,
+        "shading": true,
+        "textureref": "ladder",
+        "twosided": false,
+        "texlength_s": 1,
+        "texlength_t": 1
+      },
+      "ladderfold": {
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "specular": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "shininess": 30,
+        "emissive": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "transparent": false,
+        "opacity": 1.0,
+        "shading": true,
+        "textureref": "ladderfold",
+        "twosided": false,
+        "texlength_s": 0.2,
+        "texlength_t": 1
+      },
+      "whiteMaterial": {
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "specular": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "shininess": 30,
+        "emissive": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "transparent": false,
+        "opacity": 1.0,
+        "shading": true,
+        "textureref": "whiteTexture",
+        "twosided": false,
+        "texlength_s": 1,
+        "texlength_t": 1
+      },
+      "fullgratesquare": {
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "specular": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "shininess": 30,
+        "emissive": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "transparent": true,
+        "opacity": 1.0,
+        "shading": true,
+        "textureref": "fullgratesquare",
+        "twosided": false,
+        "texlength_s": 4,
+        "texlength_t": 4
+      },
+      "holedgratesquare": {
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "specular": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "shininess": 30,
+        "emissive": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "transparent": true,
+        "opacity": 1.0,
+        "shading": true,
+        "textureref": "holedgratesquare",
+        "twosided": false,
+        "texlength_s": 4,
+        "texlength_t": 4
+      },
+      "gratefilling": {
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "specular": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "shininess": 30,
+        "emissive": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "transparent": true,
+        "opacity": 1.0,
+        "shading": true,
+        "textureref": "gratefilling",
+        "twosided": false,
+        "texlength_s": 4,
+        "texlength_t": 0.2
+      },
+      "red": {
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "specular": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "shininess": 30,
+        "emissive": {
+          "r": 0.5,
+          "g": 0,
+          "b": 0
+        },
+        "transparent": false,
+        "opacity": 1.0,
+        "shading": true,
+        "textureref": "red",
+        "twosided": false,
+        "texlength_s": 0.8,
+        "texlength_t": 0.4
+      },
+      "orange": {
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "specular": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "shininess": 30,
+        "emissive": {
+          "r": 0.5,
+          "g": 0,
+          "b": 0
+        },
+        "transparent": false,
+        "opacity": 1.0,
+        "shading": true,
+        "textureref": "orange",
+        "twosided": false,
+        "texlength_s": 0.8,
+        "texlength_t": 0.4
+      },
+      "darkconcrete": {
+        "color": {
+          "r": 0.3,
+          "g": 0.3,
+          "b": 0.3
+        },
+        "specular": {
+          "r": 0.1,
+          "g": 0.1,
+          "b": 0.1
+        },
+        "shininess": 30,
+        "emissive": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "transparent": false,
+        "opacity": 1.0,
+        "shading": true,
+        "textureref": "darkconcrete",
+        "twosided": false,
+        "texlength_s": 0.1,
+        "texlength_t": 0.1
+      },
+      "rail": {
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "specular": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "shininess": 30,
+        "emissive": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "transparent": true,
+        "opacity": 1.0,
+        "shading": true,
+        "textureref": "rail",
+        "twosided": false,
+        "texlength_s": 1.5,
+        "texlength_t": 0.8
+      },
+      "railtop": {
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "specular": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "shininess": 30,
+        "emissive": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "transparent": false,
+        "opacity": 1.0,
+        "shading": true,
+        "textureref": "railtop",
+        "twosided": false,
+        "texlength_s": 0.8,
+        "texlength_t": 0.2
+      },
+      "computercase": {
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "specular": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "shininess": 30,
+        "emissive": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "transparent": false,
+        "opacity": 1.0,
+        "shading": true,
+        "textureref": "computercase",
+        "twosided": false,
+        "texlength_s": 2,
+        "texlength_t": 2
+      },
+      "computerholder": {
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "specular": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0
+        },
+        "shininess": 30,
+        "emissive": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "transparent": false,
+        "opacity": 1.0,
+        "shading": true,
+        "textureref": "computerholder",
+        "twosided": false,
+        "texlength_s": 2,
+        "texlength_t": 2
+      }
+    },
+    "graph": {
+      "rootid": "root",
+      "root": {
+        "type": "node",
+        "children": {
+          "nodesList": [
+            "walls",
+            "center",
+            "railingleft",
+            "railingright",
+            "railingtransition",
+            "walllights"
+          ]
+        }
+      },
+      "center": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 45,
+              "z": 0
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": 1.1,
+              "y": 1.1,
+              "z": 1.1
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "topcentercylinder",
+            "topspiner",
+            "bottomcenter"
+          ]
+        }
+      },
+      "walls": {
+        "type": "node",
+        "children": {
+          "nodesList": [
+            "bottomwall",
+            "upperwall",
+            "pipes",
+            "wallcomputerwrapper"
+          ]
+        }
+      },
+      "wallcomputerwrapper": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 1.4,
+              "z": 0
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": -22.5,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "wallcomputer"
+          ]
+        }
+      },
+      "wallcomputer": {
+        "type": "node",
+        "materialref": {
+          "materialId": "screen"
+        },
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": -3,
+              "y": 5,
+              "z": -27.72
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "wallmonitor",
+            "wallkeyboard"
+          ]
+        }
+      },
+      "wallkeyboard": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": -1.5,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "keyboard"
+          ]
+        }
+      },
+      "keyboard": {
+        "type": "node",
+        "children": {
+          "nodesList": [
+            "bottomkeyboard",
+            "keyboardcase"
+          ]
+        }
+      },
+      "keyboardcase": {
+        "type": "node",
+        "materialref": {
+          "materialId": "computercase"
+        },
+        "children": {
+          "nodesList": [
+            "bottomkeyboardtrileft",
+            "bottomkeyboardtriright",
+            "bottomkeyboardbottom",
+            "bottomkeyboardback"
+          ]
+        }
+      },
+      "bottomkeyboard": {
+        "type": "node",
+        "materialref": {
+          "materialId": "bottomkeyboard"
+        },
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 0,
+              "z": 0.52
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": -60,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "rectangle": {
+            "type": "rectangle",
+            "xy1": {
+              "x": -1.3,
+              "y": -0.6
+            },
+            "xy2": {
+              "x": 1.3,
+              "y": 0.6
+            }
+          }
+        }
+      },
+      "bottomkeyboardback": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": -0.29,
+              "z": 0
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": 1,
+              "y": 1,
+              "z": -1
+            }
+          }
+        ],
+        "children": {
+          "rect": {
+            "type": "rectangle",
+            "xy1": {
+              "x": -1.3,
+              "y": -0.6
+            },
+            "xy2": {
+              "x": 1.3,
+              "y": 0.6
+            }
+          }
+        }
+      },
+      "bottomkeyboardtrileft": {
+        "type": "node",
+        "children": {
+          "nodesList": [
+            "bottomkeyboardtri"
+          ]
+        }
+      },
+      "bottomkeyboardtriright": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "scale",
+            "amount": {
+              "x": -1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "bottomkeyboardtri"
+          ]
+        }
+      },
+      "bottomkeyboardtri": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": -0.29,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "tri": {
+            "type": "triangle",
+            "xyz1": {
+              "x": 1.3,
+              "y": -0.6,
+              "z": 0
+            },
+            "xyz2": {
+              "x": 1.3,
+              "y": 0.6,
+              "z": 0
+            },
+            "xyz3": {
+              "x": 1.3,
+              "y": 0,
+              "z": 1.04
+            }
+          }
+        }
+      },
+      "bottomkeyboardbottom": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": -0.59,
+              "z": 0.52
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 60,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "rectangle": {
+            "type": "rectangle",
+            "xy1": {
+              "x": -1.3,
+              "y": -0.6
+            },
+            "xy2": {
+              "x": 1.3,
+              "y": 0.6
+            }
+          }
+        }
+      },
+      "monitor": {
+        "type": "node",
+        "children": {
+          "nodesList": [
+            "screen",
+            "wallmonitorcase"
+          ]
+        }
+      },
+      "wallmonitor": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": -0.3,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "monitor"
+          ]
+        }
+      },
+      "wallmonitorcase": {
+        "type": "node",
+        "materialref": {
+          "materialId": "computercase"
+        },
+        "children": {
+          "nodesList": [
+            "trileft",
+            "triright",
+            "computertop",
+            "computerback"
+          ]
+        }
+      },
+      "screen": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 0,
+              "z": 0.26
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 15,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "rectangle": {
+            "type": "rectangle",
+            "xy1": {
+              "x": -1,
+              "y": -1
+            },
+            "xy2": {
+              "x": 1,
+              "y": 1
+            }
+          }
+        }
+      },
+      "trileft": {
+        "type": "node",
+        "children": {
+          "nodesList": [
+            "computertri"
+          ]
+        }
+      },
+      "triright": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "scale",
+            "amount": {
+              "x": -1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "computertri"
+          ]
+        }
+      },
+      "computerback": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 180,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "rect": {
+            "type": "rectangle",
+            "xy1": {
+              "x": -1,
+              "y": -0.96
+            },
+            "xy2": {
+              "x": 1,
+              "y": 0.96
+            }
+          }
+        }
+      },
+      "computertri": {
+        "type": "node",
+        "children": {
+          "triangle": {
+            "type": "triangle",
+            "xyz1": {
+              "x": 1,
+              "y": -0.96,
+              "z": 0
+            },
+            "xyz2": {
+              "x": 1,
+              "y": 0.96,
+              "z": 0
+            },
+            "xyz3": {
+              "x": 1,
+              "y": 0.96,
+              "z": 0.52
+            }
+          }
+        }
+      },
+      "computertop": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 0.96,
+              "z": 0.26
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": -90,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "rectangle": {
+            "type": "rectangle",
+            "xy1": {
+              "x": -1,
+              "y": -0.26
+            },
+            "xy2": {
+              "x": 1,
+              "y": 0.26
+            }
+          }
+        }
+      },
+      "pipes": {
+        "type": "node",
+        "materialref": {
+          "materialId": "pipe"
+        },
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 22.5,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "pipe1",
+            "pipe2"
+          ]
+        }
+      },
+      "pipe1": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 3,
+              "y": 0,
+              "z": 30
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "genericpipe",
+            "pipesupport"
+          ]
+        }
+      },
+      "pipesupport": {
+        "type": "node",
+        "children": {
+          "nodesList": [
+            "supportcylinder",
+            "supportpolygonwrapper"
+          ]
+        }
+      },
+      "supportpolygonwrapper": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 22.5,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "supportpolygon"
+          ]
+        }
+      },
+      "supportpolygon": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 8,
+              "z": 0
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 90,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": 1,
+              "y": 1,
+              "z": -1
+            }
+          }
+        ],
+        "children": {
+          "polygon": {
+            "type": "polygon",
+            "stacks": 10,
+            "slices": 8,
+            "radius": 7,
+            "color_c": {
+              "r": 0.5,
+              "g": 0.5,
+              "b": 0.5
+            },
+            "color_p": {
+              "r": 0.5,
+              "g": 0.5,
+              "b": 0.5
+            }
+          }
+        }
+      },
+      "supportcylinder": {
+        "type": "node",
+        "materialref": {
+          "materialId": "pipesupport"
+        },
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 4,
+              "z": 0
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 22.5,
+              "z": 0
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": 1,
+              "y": -1,
+              "z": 1
+            }
+          }
+        ],
+        "children": {
+          "cylinder": {
+            "type": "cylinder",
+            "base": 7,
+            "top": 7,
+            "height": 8,
+            "slices": 8,
+            "stacks": 20
+          }
+        }
+      },
+      "pipe2": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 0,
+              "z": -30
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "smallpipe1",
+            "smallpipe2",
+            "pipesupportwrapper"
+          ]
+        }
+      },
+      "pipesupportwrapper": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 1.5,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "pipesupport"
+          ]
+        }
+      },
+      "smallpipe1": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": -1,
+              "y": 0,
+              "z": 1
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": 0.5,
+              "y": 1,
+              "z": 0.5
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "genericpipe"
+          ]
+        }
+      },
+      "smallpipe2": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 4,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": 0.7,
+              "y": 1,
+              "z": 0.7
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "genericpipe"
+          ]
+        }
+      },
+      "genericpipe": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 22.5,
+              "z": 0
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 22.5,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "cylinder": {
+            "type": "cylinder",
+            "base": 5,
+            "top": 5,
+            "height": 45,
+            "slices": 8,
+            "stacks": 20
+          }
+        }
+      },
+      "wallplane": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 0,
+              "z": -27.72
+            }
+          }
+        ],
+        "children": {
+          "rect": {
+            "type": "rectangle",
+            "xy1": {
+              "x": -11.48,
+              "y": 0
+            },
+            "xy2": {
+              "x": 11.48,
+              "y": 35
+            }
+          }
+        }
+      },
+      "bottomwall": {
+        "type": "node",
+        "materialref": {
+          "materialId": "mainwall"
+        },
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "wallplane1",
+            "wallplane2",
+            "wallplane3",
+            "wallplane4",
+            "wallplane5",
+            "wallplane6",
+            "wallplane7",
+            "wallplane8"
+          ]
+        }
+      },
+      "wallplane8": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 337.5,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "wallplane"
+          ]
+        }
+      },
+      "wallplane7": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 292.5,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "wallplane"
+          ]
+        }
+      },
+      "wallplane6": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 247.5,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "wallplane"
+          ]
+        }
+      },
+      "wallplane5": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 202.5,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "wallplane"
+          ]
+        }
+      },
+      "wallplane4": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 157.5,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "wallplane"
+          ]
+        }
+      },
+      "wallplane3": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 112.5,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "wallplane"
+          ]
+        }
+      },
+      "wallplane2": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 67.5,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "wallplane"
+          ]
+        }
+      },
+      "wallplane1": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 22.5,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "wallplane"
+          ]
+        }
+      },
+      "upperwall": {
+        "type": "node",
+        "materialref": {
+          "materialId": "upperwall"
+        },
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 45,
+              "z": 0
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": 1,
+              "y": 2,
+              "z": 1
+            }
+          }
+        ],
+        "children": {
+          "cylinder": {
+            "type": "cylinder",
+            "base": 30,
+            "top": 30,
+            "height": 10,
+            "slices": 8,
+            "stacks": 20
+          }
+        }
+      },
+      "topcentercylinder": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": 2,
+              "y": 1.7,
+              "z": 2
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "firsttopcylinder",
+            "secondtopcylinder",
+            "thirdtopcylinder",
+            "fourthtopcylinder",
+            "fifthtopcylinder",
+            "topcylindercap"
+          ]
+        }
+      },
+      "topspiner": {
+        "type": "node",
+        "materialref": {
+          "materialId": "whiteMaterial"
+        },
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": -18,
+              "z": 0
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": 1.7,
+              "y": 1.5,
+              "z": 1.7
+            }
+          }
+        ],
+        "children": {
+          "cylinder": {
+            "type": "cylinder",
+            "base": 1.6,
+            "top": 1.6,
+            "height": 5,
+            "slices": 8,
+            "stacks": 20,
+            "capsclose": false
+          },
+          "nodesList": [
+            "trasformedtopcylindercap1",
+            "trasformedtopcylindercap2",
+            "smallercylindercenter1",
+            "smallercylindercenter2",
+            "trapezoidring",
+            "smallerring",
+            "floatingballs"
+          ]
+        }
+      },
+      "trasformedtopcylindercap1": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "scale",
+            "amount": {
+              "x": 0.3556,
+              "y": 1,
+              "z": 0.3556
+            }
+          },
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 5.25,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "topcylindercap"
+          ]
+        }
+      },
+      "trasformedtopcylindercap2": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "scale",
+            "amount": {
+              "x": 0.3556,
+              "y": -1,
+              "z": 0.3556
+            }
+          },
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": -5.25,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "topcylindercap"
+          ]
+        }
+      },
+      "smallercylindercenter1": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": -3.5,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "cylinder": {
+            "type": "cylinder",
+            "base": 0.8,
+            "top": 0.8,
+            "height": 1.2,
+            "slices": 6,
+            "stacks": 20,
+            "capsclose": true
+          }
+        }
+      },
+      "smallercylindercenter2": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": -5.1,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "cylinder": {
+            "type": "cylinder",
+            "base": 0.4,
+            "top": 0.4,
+            "height": 1.7,
+            "slices": 6,
+            "stacks": 20,
+            "capsclose": true
+          }
+        }
+      },
+      "smallerring": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": -6.2,
+              "z": 0
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": 1.3,
+              "y": 0.2,
+              "z": 1.3
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "smallerringpart1",
+            "smallerringpart2",
+            "smallerringpart3"
+          ]
+        }
+      },
+      "smallerringpart1": {
+        "type": "node",
+        "children": {
+          "nodesList": [
+            "smallringtransformations"
+          ]
+        }
+      },
+      "smallerringpart2": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 120,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "smallringtransformations"
+          ]
+        }
+      },
+      "smallerringpart3": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 240,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "smallringtransformations"
+          ]
+        }
+      },
+      "smallringtransformations": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "scale",
+            "amount": {
+              "x": 0.1,
+              "y": 1,
+              "z": 0.3
+            }
+          },
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0.1,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "trapezoidfaces"
+          ]
+        }
+      },
+      "floatingballs": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": -5,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "floatingball1",
+            "floatingball2",
+            "floatingball3"
+          ]
+        }
+      },
+      "floatingball1": {
+        "type": "node",
+        "children": {
+          "nodesList": [
+            "floatingball"
+          ]
+        }
+      },
+      "floatingball2": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 120,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "floatingball"
+          ]
+        }
+      },
+      "floatingball3": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 240,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "floatingball"
+          ]
+        }
+      },
+      "floatingball": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 2.5,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "floatingballtop",
+            "floatingballbottom"
+          ]
+        }
+      },
+      "floatingballtop": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": 1,
+              "y": -1,
+              "z": 1
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "floatingballfalf"
+          ]
+        }
+      },
+      "floatingballbottom": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": -0.9,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "floatingballfalf"
+          ]
+        }
+      },
+      "floatingballfalf": {
+        "type": "node",
+        "children": {
+          "cylinder": {
+            "type": "cylinder",
+            "base": 0.4,
+            "top": 0.6,
+            "height": 0.7,
+            "slices": 6,
+            "stacks": 20,
+            "capsclose": true
+          }
+        }
+      },
+      "trapezoidring": {
+        "type": "node",
+        "materialref": {
+          "materialId": "spinnerring"
+        },
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": -4.5,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "trapezoid1",
+            "trapezoid2",
+            "trapezoid3",
+            "trapezoid4",
+            "trapezoid5",
+            "trapezoid6"
+          ]
+        }
+      },
+      "firsttopcylinder": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "scale",
+            "amount": {
+              "x": 1,
+              "y": 1.5,
+              "z": 1
+            }
+          },
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 3.565,
+              "z": 0
+            }
+          }
+        ],
+        "materialref": {
+          "materialId": "centerpanels"
+        },
+        "children": {
+          "cylinder": {
+            "type": "cylinder",
+            "base": 7,
+            "top": 7,
+            "height": 1.5,
+            "slices": 8,
+            "stacks": 20
+          }
+        }
+      },
+      "secondtopcylinder": {
+        "type": "node",
+        "materialref": {
+          "materialId": "centergrate"
+        },
+        "transforms": [
+          {
+            "type": "scale",
+            "amount": {
+              "x": 1,
+              "y": 1.7,
+              "z": 1
+            }
+          },
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 0.74,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "cylinder": {
+            "type": "cylinder",
+            "base": 7,
+            "top": 7,
+            "height": 2,
+            "slices": 8,
+            "stacks": 20
+          }
+        }
+      },
+      "thirdtopcylinder": {
+        "type": "node",
+        "materialref": {
+          "materialId": "centernograte"
+        },
+        "transforms": [
+          {
+            "type": "scale",
+            "amount": {
+              "x": 1,
+              "y": 1.7,
+              "z": 1
+            }
+          },
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": -2.23,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "cylinder": {
+            "type": "cylinder",
+            "base": 7,
+            "top": 7,
+            "height": 1.5,
+            "slices": 8,
+            "stacks": 20
+          }
+        }
+      },
+      "fourthtopcylinder": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": -8.19,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "firsttopcylinder"
+          ]
+        }
+      },
+      "fifthtopcylinder": {
+        "type": "node",
+        "materialref": {
+          "materialId": "centergrate"
+        },
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": -6.75,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "cylinder": {
+            "type": "cylinder",
+            "base": 4.5,
+            "top": 7,
+            "height": 2,
+            "slices": 8,
+            "stacks": 20
+          },
+          "nodesList": [
+            "centerlightwrapper"
+          ]
+        }
+      },
+      "centerlightwrapper": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 22.5,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "centerlight1",
+            "centerlight2",
+            "centerlight3",
+            "centerlight4"
+          ]
+        }
+      },
+      "centerlight4": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 270,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "centerlightbasewrapper"
+          ]
+        }
+      },
+      "centerlight3": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 180,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "centerlightbasewrapper"
+          ]
+        }
+      },
+      "centerlight2": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 90,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "centerlightbasewrapper"
+          ]
+        }
+      },
+      "centerlight1": {
+        "type": "node",
+        "children": {
+          "nodesList": [
+            "centerlightbasewrapper"
+          ]
+        }
+      },
+      "centerlightbasewrapper": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 0,
+              "z": 90
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "centerlightbase"
+          ]
+        }
+      },
+      "centerlightbase": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 0,
+              "z": 5.38
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": -50,
+              "z": 0
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": 1,
+              "y": 2,
+              "z": 1
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "centerlight"
+          ]
+        }
+      },
+      "topcylindercap": {
+        "type": "node",
+        "materialref": {
+          "materialId": "topcylindercap"
+        },
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": -7.75,
+              "z": 0
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 90,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "polygon": {
+            "type": "polygon",
+            "stacks": 10,
+            "slices": 8,
+            "radius": 4.5,
+            "color_c": {
+              "r": 0.5,
+              "g": 0.5,
+              "b": 0.5
+            },
+            "color_p": {
+              "r": 0.5,
+              "g": 0.5,
+              "b": 0.5
+            }
+          }
+        }
+      },
+      "trapezoid1": {
+        "type": "node",
+        "children": {
+          "nodesList": [
+            "trapezoidfaces"
+          ]
+        }
+      },
+      "trapezoid2": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 60,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "trapezoidfaces"
+          ]
+        }
+      },
+      "trapezoid3": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 120,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "trapezoidfaces"
+          ]
+        }
+      },
+      "trapezoid4": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 180,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "trapezoidfaces"
+          ]
+        }
+      },
+      "trapezoid5": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 240,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "trapezoidfaces"
+          ]
+        }
+      },
+      "trapezoid6": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 300,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "trapezoidfaces"
+          ]
+        }
+      },
+      "trapezoidfaces": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0.11,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "polygonleft",
+            "polygonright",
+            "rectanglecenter",
+            "rectangleedge",
+            "polygonup",
+            "polygondown"
+          ]
+        }
+      },
+      "rectanglecenter": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": -90,
+              "z": 0
+            }
+          },
+          {
+            "type": "translate",
+            "amount": {
+              "x": 1.5,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "rectangle": {
+            "type": "rectangle",
+            "xy1": {
+              "x": -0.5,
+              "y": 0
+            },
+            "xy2": {
+              "x": 0.5,
+              "y": 7
+            }
+          }
+        }
+      },
+      "rectangleedge": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 90,
+              "z": 0
+            }
+          },
+          {
+            "type": "translate",
+            "amount": {
+              "x": 4,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "rectangle": {
+            "type": "rectangle",
+            "xy1": {
+              "x": -1.2,
+              "y": 1.5
+            },
+            "xy2": {
+              "x": 1.2,
+              "y": 7
+            }
+          }
+        }
+      },
+      "polygonleft": {
+        "type": "node",
+        "children": {
+          "nurb": {
+            "type": "nurbs",
+            "degree_u": 1,
+            "degree_v": 1,
+            "parts_u": 2,
+            "parts_v": 1,
+            "controlpoints": [
+              {
+                "x": 1.5,
+                "y": 0.0,
+                "z": 0.5
+              },
+              {
+                "x": 1.5,
+                "y": 7.0,
+                "z": 0.5
+              },
+              {
+                "x": 4.0,
+                "y": 1.5,
+                "z": 1.2
+              },
+              {
+                "x": 4.0,
+                "y": 7.0,
+                "z": 1.2
+              }
+            ]
+          }
+        }
+      },
+      "polygonright": {
+        "type": "node",
+        "children": {
+          "nurb": {
+            "type": "nurbs",
+            "degree_u": 1,
+            "degree_v": 1,
+            "parts_u": 2,
+            "parts_v": 1,
+            "controlpoints": [
+              {
+                "x": 1.5,
+                "y": 7.0,
+                "z": -0.5
+              },
+              {
+                "x": 1.5,
+                "y": 0.0,
+                "z": -0.5
+              },
+              {
+                "x": 4.0,
+                "y": 7.0,
+                "z": -1.2
+              },
+              {
+                "x": 4.0,
+                "y": 1.5,
+                "z": -1.2
+              }
+            ]
+          }
+        }
+      },
+      "polygonup": {
+        "type": "node",
+        "children": {
+          "nurb": {
+            "type": "nurbs",
+            "degree_u": 1,
+            "degree_v": 1,
+            "parts_u": 2,
+            "parts_v": 1,
+            "controlpoints": [
+              {
+                "x": 1.5,
+                "y": 7.0,
+                "z": 0.5
+              },
+              {
+                "x": 1.5,
+                "y": 7.0,
+                "z": -0.5
+              },
+              {
+                "x": 4.0,
+                "y": 7.0,
+                "z": 1.2
+              },
+              {
+                "x": 4.0,
+                "y": 7.0,
+                "z": -1.2
+              }
+            ]
+          }
+        }
+      },
+      "polygondown": {
+        "type": "node",
+        "children": {
+          "nurb": {
+            "type": "nurbs",
+            "degree_u": 1,
+            "degree_v": 1,
+            "parts_u": 2,
+            "parts_v": 1,
+            "controlpoints": [
+              {
+                "x": 1.5,
+                "y": 0.0,
+                "z": -0.5
+              },
+              {
+                "x": 1.5,
+                "y": 0.0,
+                "z": 0.5
+              },
+              {
+                "x": 4.0,
+                "y": 1.5,
+                "z": -1.2
+              },
+              {
+                "x": 4.0,
+                "y": 1.5,
+                "z": 1.2
+              }
+            ]
+          }
+        }
+      },
+      "bottomcenter": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": -35,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "bottomspiner"
+          ]
+        }
+      },
+      "bottomspiner": {
+        "type": "node",
+        "materialref": {
+          "materialId": "spinnerring"
+        },
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "spinerpart1",
+            "spinerpart2",
+            "spinerpart3",
+            "spinerpart4",
+            "spinerpart5",
+            "claw1",
+            "claw2",
+            "claw3",
+            "junction1",
+            "junction2",
+            "junction3",
+            "junction4",
+            "junction5",
+            "junction6"
+          ]
+        }
+      },
+      "spinerpart1": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 280,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "spinerentrancepart"
+          ]
+        }
+      },
+      "spinerpart2": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "scale",
+            "amount": {
+              "x": -1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 30,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "spinerentrancepart"
+          ]
+        }
+      },
+      "spinerpart3": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": -23,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "spinerpart"
+          ]
+        }
+      },
+      "spinerpart4": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 67,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "spinerpart"
+          ]
+        }
+      },
+      "spinerpart5": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 157,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "spinerpart"
+          ]
+        }
+      },
+      "claw1": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": -23,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "claw"
+          ]
+        }
+      },
+      "claw2": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 157,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "claw"
+          ]
+        }
+      },
+      "claw3": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 67,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "claw"
+          ]
+        }
+      },
+      "junction1": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 7,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "junction"
+          ]
+        }
+      },
+      "junction2": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 37,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "junction"
+          ]
+        }
+      },
+      "junction3": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 95,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "junction"
+          ]
+        }
+      },
+      "junction4": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": -52.88,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "junction"
+          ]
+        }
+      },
+      "junction5": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": -83.12,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "junction"
+          ]
+        }
+      },
+      "junction6": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": -142,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "junction"
+          ]
+        }
+      },
+      "junction": {
+        "type": "node",
+        "materialref": {
+          "materialId": "whiteMaterial"
+        },
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": -7.5,
+              "z": -2.5
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "junctionpartcenter",
+            "junctionparttop",
+            "junctionpartedge"
+          ]
+        }
+      },
+      "junctionpartedge": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 180,
+              "z": 0
+            }
+          },
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 0,
+              "z": -1.5
+            }
+          }
+        ],
+        "children": {
+          "rectangle": {
+            "type": "rectangle",
+            "xy1": {
+              "x": -1.081,
+              "y": -1.5
+            },
+            "xy2": {
+              "x": 1.081,
+              "y": 0
+            }
+          }
+        }
+      },
+      "junctionparttop": {
+        "type": "node",
+        "children": {
+          "nurb": {
+            "type": "nurbs",
+            "degree_u": 1,
+            "degree_v": 1,
+            "parts_u": 2,
+            "parts_v": 1,
+            "controlpoints": [
+              {
+                "x": -1.081,
+                "y": 0,
+                "z": -1.5
+              },
+              {
+                "x": 1.081,
+                "y": 0,
+                "z": -1.5
+              },
+              {
+                "x": -0.676,
+                "y": 0,
+                "z": 0
+              },
+              {
+                "x": 0.676,
+                "y": 0,
+                "z": 0
+              }
+            ]
+          }
+        }
+      },
+      "junctionpartcenter": {
+        "type": "node",
+        "children": {
+          "rectangle": {
+            "type": "rectangle",
+            "xy1": {
+              "x": -0.676,
+              "y": -1.5
+            },
+            "xy2": {
+              "x": 0.676,
+              "y": 0
+            }
+          }
+        }
+      },
+      "claw": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 4,
+              "y": -7,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "clawpart1",
+            "clawpart2",
+            "clawpart3"
+          ]
+        }
+      },
+      "clawpart1": {
+        "type": "node",
+        "children": {
+          "nodesList": [
+            "clawpartfront1",
+            "clawpartback1",
+            "clawpartup1",
+            "clawpartdown1",
+            "clawpartcenter1"
+          ]
+        }
+      },
+      "clawpartfront1": {
+        "type": "node",
+        "children": {
+          "nurb": {
+            "type": "nurbs",
+            "degree_u": 1,
+            "degree_v": 1,
+            "parts_u": 2,
+            "parts_v": 1,
+            "controlpoints": [
+              {
+                "x": 0,
+                "y": 0,
+                "z": 1
+              },
+              {
+                "x": 1,
+                "y": 2,
+                "z": 1
+              },
+              {
+                "x": 4,
+                "y": 0,
+                "z": 1
+              },
+              {
+                "x": 4.2,
+                "y": 1.3,
+                "z": 1
+              }
+            ]
+          }
+        }
+      },
+      "clawpartback1": {
+        "type": "node",
+        "children": {
+          "nurb": {
+            "type": "nurbs",
+            "degree_u": 1,
+            "degree_v": 1,
+            "parts_u": 2,
+            "parts_v": 1,
+            "controlpoints": [
+              {
+                "x": 1,
+                "y": 2,
+                "z": -1
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "z": -1
+              },
+              {
+                "x": 4.2,
+                "y": 1.3,
+                "z": -1
+              },
+              {
+                "x": 4,
+                "y": 0,
+                "z": -1
+              }
+            ]
+          }
+        }
+      },
+      "clawpartup1": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 1,
+              "y": 2,
+              "z": 0
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": -90,
+              "y": 12.4,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "rectangle": {
+            "type": "rectangle",
+            "xy1": {
+              "x": 0,
+              "y": -1
+            },
+            "xy2": {
+              "x": 3.275,
+              "y": 1
+            }
+          }
+        }
+      },
+      "clawpartdown1": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 90,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "rectangle": {
+            "type": "rectangle",
+            "xy1": {
+              "x": 0,
+              "y": -1
+            },
+            "xy2": {
+              "x": 5.1,
+              "y": 1
+            }
+          }
+        }
+      },
+      "clawpartcenter1": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": -90,
+              "y": -63.435,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "rectangle": {
+            "type": "rectangle",
+            "xy1": {
+              "x": 0,
+              "y": -1
+            },
+            "xy2": {
+              "x": 2.236,
+              "y": 1
+            }
+          }
+        }
+      },
+      "clawpart2": {
+        "type": "node",
+        "children": {
+          "nodesList": [
+            "clawpartfront2",
+            "clawpartback2",
+            "clawpartedge2",
+            "clawpartcenter2"
+          ]
+        }
+      },
+      "clawpartfront2": {
+        "type": "node",
+        "children": {
+          "nurb": {
+            "type": "nurbs",
+            "degree_u": 1,
+            "degree_v": 1,
+            "parts_u": 2,
+            "parts_v": 1,
+            "controlpoints": [
+              {
+                "x": 4,
+                "y": 0,
+                "z": 1
+              },
+              {
+                "x": 4.6,
+                "y": 4,
+                "z": 1
+              },
+              {
+                "x": 5.1,
+                "y": 0,
+                "z": 1
+              },
+              {
+                "x": 5.6,
+                "y": 4.2,
+                "z": 1
+              }
+            ]
+          }
+        }
+      },
+      "clawpartback2": {
+        "type": "node",
+        "children": {
+          "nurb": {
+            "type": "nurbs",
+            "degree_u": 1,
+            "degree_v": 1,
+            "parts_u": 2,
+            "parts_v": 1,
+            "controlpoints": [
+              {
+                "x": 5.1,
+                "y": 0,
+                "z": -1
+              },
+              {
+                "x": 5.6,
+                "y": 4.2,
+                "z": -1
+              },
+              {
+                "x": 4,
+                "y": 0,
+                "z": -1
+              },
+              {
+                "x": 4.6,
+                "y": 4,
+                "z": -1
+              }
+            ]
+          }
+        }
+      },
+      "clawpartedge2": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 5.600,
+              "y": 4.2,
+              "z": 0
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": -90,
+              "y": 96.8,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "rectangle": {
+            "type": "rectangle",
+            "xy1": {
+              "x": 0,
+              "y": -1
+            },
+            "xy2": {
+              "x": 4.230,
+              "y": 1
+            }
+          }
+        }
+      },
+      "clawpartcenter2": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 4.1945,
+              "y": 1.298,
+              "z": 0
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": -90,
+              "y": -81.4659,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "rectangle": {
+            "type": "rectangle",
+            "xy1": {
+              "x": 0,
+              "y": -1
+            },
+            "xy2": {
+              "x": 2.732,
+              "y": 1
+            }
+          }
+        }
+      },
+      "clawpart3": {
+        "type": "node",
+        "materialref": {
+          "materialId": "whiteMaterial"
+        },
+        "children": {
+          "nodesList": [
+            "clawpartfront3",
+            "clawpartback3",
+            "clawpartup3",
+            "clawpartdown3",
+            "clawpartedge3",
+            "clawpartcenter3"
+          ]
+        }
+      },
+      "clawpartfront3": {
+        "type": "node",
+        "children": {
+          "nurb": {
+            "type": "nurbs",
+            "degree_u": 1,
+            "degree_v": 1,
+            "parts_u": 2,
+            "parts_v": 1,
+            "controlpoints": [
+              {
+                "x": 5.6,
+                "y": 4.2,
+                "z": 1
+              },
+              {
+                "x": 2,
+                "y": 3.48,
+                "z": 1
+              },
+              {
+                "x": 6.5,
+                "y": 5,
+                "z": 1
+              },
+              {
+                "x": 5,
+                "y": 5,
+                "z": 1
+              }
+            ]
+          }
+        }
+      },
+      "clawpartback3": {
+        "type": "node",
+        "children": {
+          "nurb": {
+            "type": "nurbs",
+            "degree_u": 1,
+            "degree_v": 1,
+            "parts_u": 2,
+            "parts_v": 1,
+            "controlpoints": [
+              {
+                "x": 2,
+                "y": 3.48,
+                "z": -1
+              },
+              {
+                "x": 5.6,
+                "y": 4.2,
+                "z": -1
+              },
+              {
+                "x": 5,
+                "y": 5,
+                "z": -1
+              },
+              {
+                "x": 6.5,
+                "y": 5,
+                "z": -1
+              }
+            ]
+          }
+        }
+      },
+      "clawpartup3": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 5,
+              "y": 5,
+              "z": 0
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": -90,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "rectangle": {
+            "type": "rectangle",
+            "xy1": {
+              "x": 0,
+              "y": -1
+            },
+            "xy2": {
+              "x": 1.5,
+              "y": 1
+            }
+          }
+        }
+      },
+      "clawpartdown3": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 2,
+              "y": 3.48,
+              "z": 0
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 90,
+              "y": 11.31,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "rectangle": {
+            "type": "rectangle",
+            "xy1": {
+              "x": 0,
+              "y": -1
+            },
+            "xy2": {
+              "x": 2.652,
+              "y": 1
+            }
+          }
+        }
+      },
+      "clawpartedge3": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 6.5,
+              "y": 5,
+              "z": 0
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": -90,
+              "y": 138.37,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "rectangle": {
+            "type": "rectangle",
+            "xy1": {
+              "x": 0,
+              "y": -1
+            },
+            "xy2": {
+              "x": 1.2044,
+              "y": 1
+            }
+          }
+        }
+      },
+      "clawpartcenter3": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 2,
+              "y": 3.48,
+              "z": 0
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": -90,
+              "y": -26.87,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "rectangle": {
+            "type": "rectangle",
+            "xy1": {
+              "x": 0,
+              "y": -1
+            },
+            "xy2": {
+              "x": 3.3632,
+              "y": 1
+            }
+          }
+        }
+      },
+      "spinerentrancepart": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 1.5,
+              "y": -5,
+              "z": 0
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": 1,
+              "y": -1,
+              "z": 1.1
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "polygonbottomleft",
+            "polygonbottomright",
+            "polygonbottomup",
+            "rectanglebottomcenter",
+            "rectanglebottomedge"
+          ]
+        }
+      },
+      "spinerpart": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 1.2,
+              "y": -5,
+              "z": 0
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": 1.2,
+              "y": -1,
+              "z": 1.1
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "rectangleleftbottomcenter",
+            "rectanglerightbottomcenter",
+            "smallerpolygonup",
+            "smallerrectanglebottomcenter",
+            "smallerrectanglebottomedge"
+          ]
+        }
+      },
+      "rectanglebottomcenter": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": -90,
+              "z": 0
+            }
+          },
+          {
+            "type": "translate",
+            "amount": {
+              "x": 1,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "rectangle": {
+            "type": "rectangle",
+            "xy1": {
+              "x": -0.5,
+              "y": 0
+            },
+            "xy2": {
+              "x": 0.5,
+              "y": 4
+            }
+          }
+        }
+      },
+      "rectanglebottomedge": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 5.4999,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 108.435,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "rectangle": {
+            "type": "rectangle",
+            "xy1": {
+              "x": -1.581,
+              "y": 2.5
+            },
+            "xy2": {
+              "x": 1.581,
+              "y": 4
+            }
+          }
+        }
+      },
+      "polygonbottomleft": {
+        "type": "node",
+        "children": {
+          "nurb": {
+            "type": "nurbs",
+            "degree_u": 1,
+            "degree_v": 1,
+            "parts_u": 2,
+            "parts_v": 1,
+            "controlpoints": [
+              {
+                "x": 1.0,
+                "y": 0.0,
+                "z": 0.5
+              },
+              {
+                "x": 1.0,
+                "y": 4.0,
+                "z": 0.5
+              },
+              {
+                "x": 6.0,
+                "y": 2.5,
+                "z": 1.5
+              },
+              {
+                "x": 6.0,
+                "y": 4.0,
+                "z": 1.5
+              }
+            ]
+          }
+        }
+      },
+      "polygonbottomright": {
+        "type": "node",
+        "children": {
+          "nurb": {
+            "type": "nurbs",
+            "degree_u": 1,
+            "degree_v": 1,
+            "parts_u": 2,
+            "parts_v": 1,
+            "controlpoints": [
+              {
+                "x": 1.0,
+                "y": 4.0,
+                "z": -0.5
+              },
+              {
+                "x": 1.0,
+                "y": 0.0,
+                "z": -0.5
+              },
+              {
+                "x": 5.0,
+                "y": 4.0,
+                "z": -1.5
+              },
+              {
+                "x": 5.0,
+                "y": 2.5,
+                "z": -1.5
+              }
+            ]
+          }
+        }
+      },
+      "polygonbottomup": {
+        "type": "node",
+        "children": {
+          "nurb": {
+            "type": "nurbs",
+            "degree_u": 1,
+            "degree_v": 1,
+            "parts_u": 2,
+            "parts_v": 1,
+            "controlpoints": [
+              {
+                "x": 1.0,
+                "y": 0.0,
+                "z": -0.5
+              },
+              {
+                "x": 1.0,
+                "y": 0.0,
+                "z": 0.5
+              },
+              {
+                "x": 5.0,
+                "y": 2.5,
+                "z": -1.5
+              },
+              {
+                "x": 6.0,
+                "y": 2.5,
+                "z": 1.5
+              }
+            ]
+          }
+        }
+      },
+      "rectangleleftbottomcenter": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": -11,
+              "z": 0
+            }
+          },
+          {
+            "type": "translate",
+            "amount": {
+              "x": 1,
+              "y": 1,
+              "z": 0.7
+            }
+          }
+        ],
+        "children": {
+          "rectangle": {
+            "type": "rectangle",
+            "xy1": {
+              "x": 0,
+              "y": 0
+            },
+            "xy2": {
+              "x": 4,
+              "y": 3
+            }
+          }
+        }
+      },
+      "rectanglerightbottomcenter": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 11,
+              "z": 0
+            }
+          },
+          {
+            "type": "translate",
+            "amount": {
+              "x": 1,
+              "y": 1,
+              "z": -0.7
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": 1,
+              "y": 1,
+              "z": -1
+            }
+          }
+        ],
+        "children": {
+          "rectangle": {
+            "type": "rectangle",
+            "xy1": {
+              "x": 0,
+              "y": 0
+            },
+            "xy2": {
+              "x": 4,
+              "y": 3
+            }
+          }
+        }
+      },
+      "smallerrectanglebottomcenter": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": -90,
+              "z": 0
+            }
+          },
+          {
+            "type": "translate",
+            "amount": {
+              "x": 1,
+              "y": 1,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "rectangle": {
+            "type": "rectangle",
+            "xy1": {
+              "x": -0.7,
+              "y": 0
+            },
+            "xy2": {
+              "x": 0.7,
+              "y": 3
+            }
+          }
+        }
+      },
+      "smallerrectanglebottomedge": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 90,
+              "z": 0
+            }
+          },
+          {
+            "type": "translate",
+            "amount": {
+              "x": 4.9265,
+              "y": 1,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "rectangle": {
+            "type": "rectangle",
+            "xy1": {
+              "x": -1.4633,
+              "y": 0
+            },
+            "xy2": {
+              "x": 1.4633,
+              "y": 3
+            }
+          }
+        }
+      },
+      "smallerpolygonup": {
+        "type": "node",
+        "children": {
+          "nurb": {
+            "type": "nurbs",
+            "degree_u": 1,
+            "degree_v": 1,
+            "parts_u": 2,
+            "parts_v": 1,
+            "controlpoints": [
+              {
+                "x": 1,
+                "y": 1,
+                "z": -0.7
+              },
+              {
+                "x": 1,
+                "y": 1,
+                "z": 0.7
+              },
+              {
+                "x": 4.9265,
+                "y": 1,
+                "z": -1.4633
+              },
+              {
+                "x": 4.9265,
+                "y": 1,
+                "z": 1.4633
+              }
+            ]
+          }
+        }
+      },
+      "railingleft": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": -22.5,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "railingleftwrapper"
+          ]
+        }
+      },
+      "railingright": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": -67.5,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "railingrightwrapper"
+          ]
+        }
+      },
+      "railingtransition": {
+        "type": "node",
+        "children": {
+          "nodesList": [
+            "railingtransitionwrapper"
+          ]
+        }
+      },
+      "railingtransitionwrapper": {
+        "type": "node",
+        "children": {
+          "nodesList": [
+            "railinggrates3"
+          ]
+        }
+      },
+      "railingleftwrapper": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 0,
+              "z": -27.72
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "ladder",
+            "railinggrates1"
+          ]
+        }
+      },
+      "railinggrates1": {
+        "type": "node",
+        "children": {
+          "nodesList": [
+            "railinggrategroup1"
+          ]
+        }
+      },
+      "railinggrates2": {
+        "type": "node",
+        "children": {
+          "nodesList": [
+            "railinggrategroup2",
+            "railingcomputer"
+          ]
+        }
+      },
+      "railinggrates3": {
+        "type": "node",
+        "children": {
+          "nodesList": [
+            "railinggrategroup3"
+          ]
+        }
+      },
+      "railingcomputer": {
+        "type": "node",
+        "materialref": {
+          "materialId": "videoscreen"
+        },
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 9.8,
+              "y": 22.8,
+              "z": 7.8
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "railingcomputerholder",
+            "railingmonitor"
+          ]
+        }
+      },
+      "railingmonitor": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 1.95,
+              "z": 0.1
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 180,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "monitor"
+          ]
+        }
+      },
+      "railingcomputerholder": {
+        "type": "node",
+        "materialref": {
+          "materialId": "computerholder"
+        },
+        "children": {
+          "box": {
+            "type": "box",
+            "xyz1": {
+              "x": -0.12,
+              "y": 0,
+              "z": -0.12
+            },
+            "xyz2": {
+              "x": 0.12,
+              "y": 1,
+              "z": 0.12
+            }
+          }
+        }
+      },
+      "railingrightwrapper": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 0,
+              "z": -27.72
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "railinggrates2"
+          ]
+        }
+      },
+      "railinggrategroup1": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": -2,
+              "y": 21,
+              "z": 4
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 90,
+              "z": 0
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": 2,
+              "y": 2,
+              "z": 2
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "railinggrate1",
+            "railinggrate2",
+            "railinggraterails"
+          ]
+        }
+      },
+      "railinggraterails": {
+        "type": "node",
+        "materialref": {
+          "materialId": "rail"
+        },
+        "children": {
+          "nodesList": [
+            "raillarge",
+            "railshort",
+            "railbacklarge",
+            "railbackshort",
+            "railshorttop",
+            "raillargetop"
+          ]
+        }
+      },
+      "raillargetop": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 2,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 90,
+              "z": 0
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": 2,
+              "y": 1,
+              "z": 1
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "railshorttop"
+          ]
+        }
+      },
+      "railshorttop": {
+        "type": "node",
+        "materialref": {
+          "materialId": "railtop"
+        },
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 0.9,
+              "z": -3.9
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": -90,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "rect": {
+            "type": "rectangle",
+            "xy1": {
+              "x": -2,
+              "y": -0.1
+            },
+            "xy2": {
+              "x": 2,
+              "y": 0.1
+            }
+          }
+        }
+      },
+      "railbackshort": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 0,
+              "z": -7.8
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": 1,
+              "y": 1,
+              "z": -1
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "railshort"
+          ]
+        }
+      },
+      "railbacklarge": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": -3.8,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": -1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "raillarge"
+          ]
+        }
+      },
+      "railshort": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 0,
+              "z": -4
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": 1,
+              "y": 1,
+              "z": -1
+            }
+          }
+        ],
+        "children": {
+          "rect": {
+            "type": "rectangle",
+            "xy1": {
+              "x": -2,
+              "y": 0.1
+            },
+            "xy2": {
+              "x": 2,
+              "y": 0.9
+            }
+          }
+        }
+      },
+      "raillarge": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": -2,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": -90,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "rect": {
+            "type": "rectangle",
+            "xy1": {
+              "x": -4,
+              "y": 0.1
+            },
+            "xy2": {
+              "x": 4,
+              "y": 0.9
+            }
+          }
+        }
+      },
+      "railinggrategroup2": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 2,
+              "y": 21,
+              "z": 4
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 90,
+              "z": 0
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": 2,
+              "y": 2,
+              "z": 2
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "railinggrate3",
+            "railinggrate4",
+            "flippedrailinggraterails"
+          ]
+        }
+      },
+      "railinggrategroup3": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 21.2,
+              "z": 0
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 45,
+              "z": 0
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "railinggratenurbwrapper",
+            "railinggratenurbbottom",
+            "railingrectangle"
+          ]
+        }
+      },
+      "railinggratenurbwrapper": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 36,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": 3.3,
+              "y": 1,
+              "z": 1.18
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "railinggratenurbtop",
+            "railinggratenurbbottom"
+          ]
+        }
+      },
+      "railinggratenurbtop": {
+        "type": "node",
+        "materialref": {
+          "materialId": "spinnerringdark"
+        },
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": -90,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nurb": {
+            "type": "polygon",
+            "radius": 5,
+            "slices": 9,
+            "stacks": 1,
+            "color_c": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "color_p": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            }
+          }
+        }
+      },
+      "railinggratenurbbottom": {
+        "type": "node",
+        "materialref": {
+          "materialId": "spinnerring"
+        },
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": -0.4,
+              "z": 0
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": 1,
+              "y": -1,
+              "z": 1
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "railinggratenurbtop"
+          ]
+        }
+      },
+      "railingrectangle": {
+        "type": "node",
+        "materialref": {
+          "materialId": "gratefilling"
+        },
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 20.5,
+              "y": -0.4,
+              "z": -2
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": -90,
+              "z": 0
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": 2,
+              "y": 2,
+              "z": 1
+            }
+          }
+        ],
+        "children": {
+          "rectangle": {
+            "type": "rectangle",
+            "xy1": {
+              "x": 0,
+              "y": 0
+            },
+            "xy2": {
+              "x": 2.001,
+              "y": 0.2
+            }
+          }
+        }
+      },
+      "flippedrailinggraterails": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "scale",
+            "amount": {
+              "x": 1,
+              "y": 1,
+              "z": -1
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "railinggraterails"
+          ]
+        }
+      },
+      "railinggrate1": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 0,
+              "z": -2
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 90,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "holedgratesquare"
+          ]
+        }
+      },
+      "railinggrate2": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 0,
+              "z": 2
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "fullgratesquare"
+          ]
+        }
+      },
+      "railinggrate3": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 0,
+              "z": -2
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 90,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "fullgratesquare"
+          ]
+        }
+      },
+      "railinggrate4": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 0,
+              "z": 2
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "fullgratesquare"
+          ]
+        }
+      },
+      "ladder": {
+        "type": "node",
+        "materialref": {
+          "materialId": "ladder"
+        },
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": -7.5,
+              "y": 3,
+              "z": 0.1
+            }
+          },
+          {
+            "type": "scale",
+            "amount": {
+              "x": 1.4,
+              "y": 1.4,
+              "z": 1.4
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "laddersegment1",
+            "laddersegment2",
+            "laddersegment3",
+            "laddersegment4",
+            "laddersegment5",
+            "laddersegment6",
+            "laddersegment7",
+            "laddersegment8",
+            "laddersegment9",
+            "laddersegment10",
+            "laddersegment11",
+            "laddersegment12",
+            "laddersegment13",
+            "laddersegment14",
+            "laddersegment15",
+            "laddersegment16"
+          ]
+        }
+      },
+      "laddersegment1": {
+        "type": "node",
+        "children": {
+          "lodsList": [
+            "ladderlod"
+          ]
+        }
+      },
+      "laddersegment2": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 1,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "lodsList": [
+            "ladderlod"
+          ]
+        }
+      },
+      "laddersegment3": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 2,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "lodsList": [
+            "ladderlod"
+          ]
+        }
+      },
+      "laddersegment4": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 3,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "lodsList": [
+            "ladderlod"
+          ]
+        }
+      },
+      "laddersegment5": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 4,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "lodsList": [
+            "ladderlod"
+          ]
+        }
+      },
+      "laddersegment6": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 5,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "lodsList": [
+            "ladderlod"
+          ]
+        }
+      },
+      "laddersegment7": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 6,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "lodsList": [
+            "ladderlod"
+          ]
+        }
+      },
+      "laddersegment8": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 7,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "lodsList": [
+            "ladderlod"
+          ]
+        }
+      },
+      "laddersegment9": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 8,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "lodsList": [
+            "ladderlod"
+          ]
+        }
+      },
+      "laddersegment10": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 9,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "lodsList": [
+            "ladderlod"
+          ]
+        }
+      },
+      "laddersegment11": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 10,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "lodsList": [
+            "ladderlod"
+          ]
+        }
+      },
+      "laddersegment12": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 11,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "lodsList": [
+            "ladderlod"
+          ]
+        }
+      },
+      "laddersegment13": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 12,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "lodsList": [
+            "ladderlod"
+          ]
+        }
+      },
+      "laddersegment14": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 13,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "lodsList": [
+            "ladderlod"
+          ]
+        }
+      },
+      "laddersegment15": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 14,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "lodsList": [
+            "ladderlod"
+          ]
+        }
+      },
+      "laddersegment16": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 15,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "lodsList": [
+            "ladderlod"
+          ]
+        }
+      },
+      "ladderlod": {
+        "type": "lod",
+        "lodNodes": [
+          {
+            "nodeId": "laddersegment",
+            "mindist": 0
+          },
+          {
+            "nodeId": "laddersegmentlowdetail",
+            "mindist": 20
+          }
+        ]
+      },
+      "laddersegment": {
+        "type": "node",
+        "children": {
+          "nodesList": [
+            "laddersegmentmain",
+            "laddersegmentfoldl",
+            "laddersegmentfoldr"
+          ]
+        }
+      },
+      "laddersegmentlowdetail": {
+        "type": "node",
+        "children": {
+          "nodesList": [
+            "laddersegmentmain"
+          ]
+        }
+      },
+      "laddersegmentmain": {
+        "type": "node",
+        "children": {
+          "rectangle": {
+            "type": "rectangle",
+            "xy1": {
+              "x": -0.5,
+              "y": 0
+            },
+            "xy2": {
+              "x": 0.5,
+              "y": 1
+            }
+          }
+        }
+      },
+      "laddersegmentfoldl": {
+        "type": "node",
+        "materialref": {
+          "materialId": "ladderfold"
+        },
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0.5,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 90,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "rectangle": {
+            "type": "rectangle",
+            "xy1": {
+              "x": 0,
+              "y": 0
+            },
+            "xy2": {
+              "x": 0.1,
+              "y": 1
+            }
+          }
+        }
+      },
+      "laddersegmentfoldr": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "scale",
+            "amount": {
+              "x": -1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "laddersegmentfoldl"
+          ]
+        }
+      },
+      "gratesquare": {
+        "type": "node",
+        "children": {
+          "nodesList": [
+            "topgratesquare",
+            "flippedgratesquare",
+            "gratefilling"
+          ]
+        }
+      },
+      "gratefilling": {
+        "type": "node",
+        "materialref": {
+          "materialId": "gratefilling"
+        },
+        "children": {
+          "nodesList": [
+            "gratefilling1",
+            "gratefilling2",
+            "gratefilling3",
+            "gratefilling4"
+          ]
+        }
+      },
+      "gratefilling1": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 0,
+              "z": 2
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "gratefillingpiece"
+          ]
+        }
+      },
+      "gratefilling2": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "scale",
+            "amount": {
+              "x": 1,
+              "y": 1,
+              "z": -1
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "gratefilling1"
+          ]
+        }
+      },
+      "gratefilling3": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 2,
+              "y": 0,
+              "z": 0
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 90,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "gratefillingpiece"
+          ]
+        }
+      },
+      "gratefilling4": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "scale",
+            "amount": {
+              "x": -1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "gratefilling3"
+          ]
+        }
+      },
+      "gratefillingpiece": {
+        "type": "node",
+        "children": {
+          "rect": {
+            "type": "rectangle",
+            "xy1": {
+              "x": -2,
+              "y": -0.1
+            },
+            "xy2": {
+              "x": 2,
+              "y": 0.1
+            }
+          }
+        }
+      },
+      "fullgratesquare": {
+        "type": "node",
+        "materialref": {
+          "materialId": "fullgratesquare"
+        },
+        "children": {
+          "nodesList": [
+            "gratesquare"
+          ]
+        }
+      },
+      "holedgratesquare": {
+        "type": "node",
+        "materialref": {
+          "materialId": "holedgratesquare"
+        },
+        "children": {
+          "nodesList": [
+            "gratesquare"
+          ]
+        }
+      },
+      "topgratesquare": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 0.1,
+              "z": 0
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": -90,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "rect": {
+            "type": "rectangle",
+            "xy1": {
+              "x": -2,
+              "y": -2
+            },
+            "xy2": {
+              "x": 2,
+              "y": 2
+            }
+          }
+        }
+      },
+      "flippedgratesquare": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "scale",
+            "amount": {
+              "x": 1,
+              "y": -1,
+              "z": 1
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "topgratesquare"
+          ]
+        }
+      },
+      "walllights": {
+        "type": "node",
+        "children": {
+          "nodesList": [
+            "walllightpair1",
+            "walllightpair2"
+          ]
+        }
+      },
+      "walllightpair1": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": -22.5,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "walllightpair"
+          ]
+        }
+      },
+      "walllightpair2": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": -45,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "walllightpair1"
+          ]
+        }
+      },
+      "walllightpair": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 31,
+              "z": -27.72
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "walllight1",
+            "walllight2"
+          ]
+        }
+      },
+      "walllight1": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": -6,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "walllight"
+          ]
+        }
+      },
+      "walllight2": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 6,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "walllight"
+          ]
+        }
+      },
+      "walllight": {
+        "type": "node",
+        "children": {
+          "nodesList": [
+            "walllightred",
+            "walllightsource",
+            "walllightconcrete"
+          ]
+        }
+      },
+      "centerlight": {
+        "type": "node",
+        "children": {
+          "nodesList": [
+            "centerlightorange",
+            "centerlightsource",
+            "walllightconcrete"
+          ]
+        }
+      },
+      "centerlightsource": {
+        "type": "node",
+        "children": {
+          "walllightpoint": {
+            "type": "pointlight",
+            "color": {
+              "r": 0.9,
+              "g": 0.5,
+              "b": 0
+            },
+            "intensity": 10,
+            "position": {
+              "x": 0,
+              "y": 0,
+              "z": 0.25
+            }
+          }
+        }
+      },
+      "centerlightorange": {
+        "type": "node",
+        "materialref": {
+          "materialId": "orange"
+        },
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 0,
+              "z": 0.2
+            }
+          }
+        ],
+        "children": {
+          "rect": {
+            "type": "rectangle",
+            "xy1": {
+              "x": -0.4,
+              "y": -0.2
+            },
+            "xy2": {
+              "x": 0.4,
+              "y": 0.2
+            }
+          }
+        }
+      },
+      "walllightsource": {
+        "type": "node",
+        "children": {
+          "walllightpoint": {
+            "type": "pointlight",
+            "color": {
+              "r": 1,
+              "g": 0,
+              "b": 0
+            },
+            "intensity": 10,
+            "position": {
+              "x": 0,
+              "y": 0,
+              "z": 0.25
+            }
+          }
+        }
+      },
+      "walllightconcrete": {
+        "type": "node",
+        "materialref": {
+          "materialId": "darkconcrete"
+        },
+        "children": {
+          "nodesList": [
+            "walllightleft",
+            "walllightright",
+            "walllighttop",
+            "walllightbottom"
+          ]
+        }
+      },
+      "walllighttop": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 0.2,
+              "z": 0.1
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": -90,
+              "y": 0,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "rect": {
+            "type": "rectangle",
+            "xy1": {
+              "x": -0.4,
+              "y": -0.1
+            },
+            "xy2": {
+              "x": 0.4,
+              "y": 0.1
+            }
+          }
+        }
+      },
+      "walllightbottom": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "scale",
+            "amount": {
+              "x": 1,
+              "y": -1,
+              "z": 1
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "walllighttop"
+          ]
+        }
+      },
+      "walllightred": {
+        "type": "node",
+        "materialref": {
+          "materialId": "red"
+        },
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0,
+              "y": 0,
+              "z": 0.2
+            }
+          }
+        ],
+        "children": {
+          "rect": {
+            "type": "rectangle",
+            "xy1": {
+              "x": -0.4,
+              "y": -0.2
+            },
+            "xy2": {
+              "x": 0.4,
+              "y": 0.2
+            }
+          }
+        }
+      },
+      "walllightleft": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "translate",
+            "amount": {
+              "x": 0.5,
+              "y": 0,
+              "z": 0.1
+            }
+          },
+          {
+            "type": "rotate",
+            "amount": {
+              "x": 0,
+              "y": 45,
+              "z": 0
+            }
+          }
+        ],
+        "children": {
+          "rect": {
+            "type": "rectangle",
+            "xy1": {
+              "x": -0.1415,
+              "y": -0.2
+            },
+            "xy2": {
+              "x": 0.1415,
+              "y": 0.2
+            }
+          },
+          "nodesList": [
+            "walllighttritop",
+            "walllighttribottom"
+          ]
+        }
+      },
+      "walllighttritop": {
+        "type": "node",
+        "children": {
+          "tri": {
+            "type": "triangle",
+            "xyz1": {
+              "x": -0.1415,
+              "y": 0.2,
+              "z": 0
+            },
+            "xyz2": {
+              "x": 0.1415,
+              "y": 0.2,
+              "z": 0
+            },
+            "xyz3": {
+              "x": 0,
+              "y": 0.2,
+              "z": -0.1414
+            }
+          }
+        }
+      },
+      "walllighttribottom": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "scale",
+            "amount": {
+              "x": 1,
+              "y": -1,
+              "z": 1
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "walllighttritop"
+          ]
+        }
+      },
+      "walllightright": {
+        "type": "node",
+        "transforms": [
+          {
+            "type": "scale",
+            "amount": {
+              "x": -1,
+              "y": 1,
+              "z": 1
+            }
+          }
+        ],
+        "children": {
+          "nodesList": [
+            "walllightleft"
+          ]
+        }
+      }
+    }
+  }
+}

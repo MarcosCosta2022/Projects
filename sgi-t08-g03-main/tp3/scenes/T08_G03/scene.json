@@ -1,0 +1,5234 @@
+{
+    "yasf": {
+        "globals": {
+            "background": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+            },
+            "ambient": {
+                "r": 0.8,
+                "g": 0.8,
+                "b": 0.8,
+                "intensity": 1.0
+            },
+            "fog": {
+                "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "near": 10000,
+                "far": 10000
+            },
+            "skybox": {
+                "size": {
+                    "x": 4000,
+                    "y": 4000,
+                    "z": 4000
+                },
+                "center": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "emissive": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "intensity": 1,
+                "front": "scenes/T08_G03/textures/skybox/pz.png",
+                "back": "scenes/T08_G03/textures/skybox/nz.png",
+                "up": "scenes/T08_G03/textures/skybox/py.png",
+                "down": "scenes/T08_G03/textures/skybox/ny.png",
+                "left": "scenes/T08_G03/textures/skybox/nx.png",
+                "right": "scenes/T08_G03/textures/skybox/px.png"
+            }
+        },
+        "textures": {
+            "spaceship": {
+                "filepath": "scenes/T08_G03/textures/spaceship.jpg",
+                "isVideo": false
+            },
+            "trailer":{
+                "filepath": "scenes/T08_G03/textures/trailer.mp4",
+                "isVideo": true
+            },
+            "whitespaceship": {
+                "filepath": "scenes/T08_G03/textures/whitebody.jpg",
+                "isVideo": false
+            },
+            "redspaceship": {
+                "filepath": "scenes/T08_G03/textures/redspaceship.jpg",
+                "isVideo": false
+            },
+            "titanium": {
+                "filepath": "scenes/T08_G03/textures/titanium.jpg",
+                "isVideo": false
+            },
+            "solarpanel": {
+                "filepath": "scenes/T08_G03/textures/solarpanel.jpg",
+                "isVideo": false
+            },
+            "deathstar": {
+                "filepath": "scenes/T08_G03/textures/deathstar.jpg",
+                "isVideo": false,
+                "mipmap0": "scenes/T08_G03/textures/deathstar.jpg",
+                "mipmap1": "scenes/T08_G03/textures/deathstarl1.jpg"
+            },
+            "wingenemy": {
+                "filepath": "scenes/T08_G03/textures/wingenemy.jpg",
+                "isVideo": false
+            },
+            "tube": {
+                "filepath": "scenes/T08_G03/textures/metal.jpg",
+                "isVideo": false
+            },
+            "tubeprotection": {
+                "filepath": "scenes/T08_G03/textures/tubeprotection.jpg",
+                "isVideo": false
+            },
+            "tiefighterwingtex": {
+                "filepath": "scenes/T08_G03/textures/tieBreakerWing.jpg",
+                "isVideo": false
+            },
+            "glasstex": {
+                "filepath": "scenes/T08_G03/textures/glasstexture.jpg",
+                "isVideo": false
+            }
+        },
+        "materials": {
+            "simplemat": {
+                "color": {
+                    "r": 0.8,
+                    "g": 0.8,
+                    "b": 0.8
+                },
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "specular": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "shininess": 1,
+                "transparent": false,
+                "opacity": 1
+            },
+            "complexmat": {
+                "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                },
+                "emissive": {
+                    "r": 0.1,
+                    "g": 0.1,
+                    "b": 0.1
+                },
+                "specular": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "shininess": 1,
+                "transparent": false,
+                "opacity": 1,
+                "wireframe": false,
+                "shading": false,
+                "textureref": "spaceship",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": true,
+                "specularref": "spaceship"
+            },
+            "complexmat1": {
+                "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                },
+                "emissive": {
+                    "r": 0.1,
+                    "g": 0.1,
+                    "b": 0.1
+                },
+                "specular": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "shininess": 1,
+                "transparent": true,
+                "opacity": 1,
+                "wireframe": false,
+                "shading": false,
+                "textureref": "spaceship",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "specularref": "spaceship"
+            },
+            "trailermat":{
+                "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                },
+                "emissive": {
+                    "r": 0.1,
+                    "g": 0.1,
+                    "b": 0.1
+                },
+                "specular": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "shininess": 1,
+                "transparent": false,
+                "opacity": 1,
+                "wireframe": false,
+                "shading": false,
+                "textureref": "trailer",
+                "texlength_s": 1,
+                "texlength_t": 1
+                
+            },
+
+            "glassmat":{
+                "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                },
+                "emissive": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "specular": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                },
+                "shininess": 40,
+                "transparent": false,
+                "opacity": 1,
+                "textureref": "glasstex",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": false,
+                "bumpref": "glasstex",
+                "bumpscale": 1
+            },
+
+            "redspaceshipmat":{
+                "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                },
+                "emissive": {
+                    "r": 0.1,
+                    "g": 0.1,
+                    "b": 0.1
+                },
+                "specular": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                },
+                "shininess": 1,
+                "transparent": false,
+                "opacity": 1,
+                "wireframe": false,
+                "shading": false,
+                "textureref": "redspaceship",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": false,
+                "specularref": "redspaceship"
+            },
+            "whitespaceshipmat":{
+                "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                },
+                "emissive": {
+                    "r": 0.1,
+                    "g": 0.1,
+                    "b": 0.1
+                },
+                "specular": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "shininess": 1,
+                "transparent": false,
+                "opacity": 1,
+                "wireframe": false,
+                "shading": false,
+                "textureref": "whitespaceship",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "specularref": "whitespaceship"
+            },
+            "solarpanelmat": {
+                "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                },
+                "emissive": {
+                    "r": 0.1,
+                    "g": 0.1,
+                    "b": 0.1
+                },
+                "specular": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "shininess": 1,
+                "transparent": false,
+                "opacity": 1,
+                "wireframe": false,
+                "shading": false,
+                "textureref": "solarpanel",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": false,
+                "specularref": "solarpanel"
+            },
+            "tubeprotectionmat": {
+                "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                },
+                "emissive": {
+                    "r": 0.1,
+                    "g": 0.1,
+                    "b": 0.1
+                },
+                "specular": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "shininess": 1,
+                "transparent": false,
+                "opacity": 1,
+                "wireframe": false,
+                "shading": false,
+                "textureref": "tubeprotection",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": true,
+                "specularref": "tubeprotection"
+            },
+            "tubemat": {
+                "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                },
+                "emissive": {
+                    "r": 0.1,
+                    "g": 0.1,
+                    "b": 0.1
+                },
+                "specular": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "shininess": 1,
+                "transparent": false,
+                "opacity": 1,
+                "wireframe": false,
+                "shading": false,
+                "textureref": "tube",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "specularref": "tube"
+            },
+            "wingenemymat": {
+                "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                },
+                "emissive": {
+                    "r": 0.1,
+                    "g": 0.1,
+                    "b": 0.1
+                },
+                "specular": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "shininess": 1,
+                "transparent": false,
+                "opacity": 1,
+                "wireframe": false,
+                "shading": false,
+                "textureref": "wingenemy",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": false
+            },
+            "deathstarmat": {
+                "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                },
+                "emissive": {
+                    "r": 0.1,
+                    "g": 0.1,
+                    "b": 0.1
+                },
+                "specular": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "shininess": 1,
+                "transparent": false,
+                "opacity": 1,
+                "wireframe": false,
+                "shading": false,
+                "textureref": "deathstar",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": false,
+                "specularref": "deathstar"
+            },
+            "tiefighterwingtexture": {
+                "color": {
+                    "r": 0.5,
+                    "g": 0.5,
+                    "b": 0.5
+                },
+                "emissive": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "specular": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                },
+                "shininess": 50,
+                "transparent": false,
+                "opacity": 1,
+                "wireframe": false,
+                "shading": false,
+                "textureref": "tiefighterwingtex",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "bumpref": "tiefighterwingtex",
+                "bumpscale": 0.5
+            },
+            "onlymat": {
+                "color": {
+                    "r": 0,
+                    "g": 0.8,
+                    "b": 0.8
+                },
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "specular": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                },
+                "shininess": 1,
+                "transparent": false,
+                "opacity": 1,
+                "twosided": false
+            },
+            "redshotmaterial": {
+                "color": {
+                    "r": 1,
+                    "g": 0,
+                    "b": 0
+                },
+                "emissive": {
+                    "r": 1,
+                    "g": 0,
+                    "b": 0
+                },
+                "specular": {
+                    "r": 0.5,
+                    "g": 0.2,
+                    "b": 0.2
+                },
+                "shininess": 10,
+                "transparent": false,
+                "opacity": 0.2,
+                "twosided": true
+            },
+
+            "redshotmaterialweak": {
+                "color": {
+                    "r": 1,
+                    "g": 0,
+                    "b": 0
+                },
+                "emissive": {
+                    "r": 5,
+                    "g": 0,
+                    "b": 0
+                },
+                "specular": {
+                    "r": 0.5,
+                    "g": 0.2,
+                    "b": 0.2
+                },
+                "shininess": 100,
+                "transparent": true,
+                "opacity": 0.1,
+                "twosided": false
+            },
+            "blueshotmaterial":{
+                "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                },
+                "emissive": {
+                    "r": 0,
+                    "g": 2,
+                    "b": 5
+                },
+                "specular": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                },
+                "shininess": 100,
+                "transparent": true,
+                "opacity": 0.6,
+                "twosided": false
+            },
+            "whiteshotmaterial": {
+                "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                },
+                "emissive": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "specular": {
+                    "r": 0.5,
+                    "g": 0.2,
+                    "b": 0.2
+                },
+                "shininess": 100,
+                "transparent": true,
+                "opacity": 0.95,
+                "twosided": false
+            },
+            "spheremat": {
+                "color": {
+                    "r": 0,
+                    "g": 0.8,
+                    "b": 0.8
+                },
+                "specular": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                },
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 1,
+                "transparent": false,
+                "opacity": 1,
+                "shading": false
+            }
+        },
+        "cameras": {
+            "initial": "cam1",
+            "cam1": {
+                "type": "perspective",
+                "angle": 60,
+                "near": 0.1,
+                "far": 6000,
+                "location": {
+                    "x": -100,
+                    "y": 100,
+                    "z": -200
+                },
+                "target": {
+                    "x": 100,
+                    "y": 5,
+                    "z": 120
+                }
+            }
+        },
+        "graph": {
+            "rootid": "start",
+            "start": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "onlymat"
+                },
+                "children": {
+                    "pointlight": {
+                        "type": "pointlight",
+                        "color": {
+                            "r": 1,
+                            "g": 1,
+                            "b": 1
+                        },
+                        "intensity": 1.0,
+                        "distance": 100,
+                        "decay": 0.0,
+                        "position": {
+                            "x": -5,
+                            "y": 10,
+                            "z": -5
+                        }
+                    },
+                    "nodesList": [
+                        "spacestation",
+                        "enemyspaceship1",
+                        "enemyspaceship2",
+                        "enemyspaceship3",
+                        "enemyspaceship4",
+                        "enemyspaceship5",
+                        "enemyspaceship6",
+                        "friendspaceship1",
+                        "friendspaceship2",
+                        "friendspaceship3",
+                        "friendspaceship4",
+                        "advertisementship",
+                        "sphereprimn"
+                    ]
+                }
+            },
+            "spaceshiplight": {
+                        "type": "node",
+                        "transforms":[
+                            {
+                                "type":"translate",
+                                "amount":{
+                                    "x":0,
+                                    "y":0,
+                                    "z":0
+                                }
+                            }
+                        ],
+                        "children": {
+                            "fuellight": {
+                                "type": "pointlight",
+                                "color": {
+                                    "r": 1,
+                                    "g": 0,
+                                    "b": 0
+                                },
+                                "intensity": 100.0,
+                                "distance": 100,
+                                "decay": 0.0,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                }
+                            }
+                        }
+                    },
+            "friendspaceship1":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":-100,
+                            "y":-120,
+                            "z":-550
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":1,
+                            "y":1,
+                            "z":1
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":30,
+                            "y":30,
+                            "z":30
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "friendspaceship"
+                    ]
+                }
+            },
+            "friendspaceship2":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":-100,
+                            "y":-120,
+                            "z":-150
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":1,
+                            "y":1,
+                            "z":1
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":0,
+                            "y":-30,
+                            "z":30
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "friendspaceship"
+                    ]
+                }
+            },
+            "friendspaceship3":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":100,
+                            "y":-120,
+                            "z":-580
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":1,
+                            "y":1,
+                            "z":1
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":45,
+                            "y":15,
+                            "z":30
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "friendspaceship"
+                    ]
+                }
+            },
+            "friendspaceship4":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":100,
+                            "y":-130,
+                            "z":-150
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":1,
+                            "y":1,
+                            "z":1
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":0,
+                            "y":-50,
+                            "z":35
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "friendspaceship"
+                    ]
+                }
+            },
+            "enemyspaceship1":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":100,
+                            "y":5,
+                            "z":120
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":1,
+                            "y":1,
+                            "z":1
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":-50,
+                            "y":180,
+                            "z":10
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "enemyspaceship"
+                    ]
+                }
+            },
+            "enemyspaceship2":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":190,
+                            "y":15,
+                            "z":10
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":1,
+                            "y":1,
+                            "z":1
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":0,
+                            "y":180,
+                            "z":0
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "enemyspaceship"
+                    ]
+                }
+            },
+            "enemyspaceship3":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":-200,
+                            "y":5,
+                            "z":20
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":1,
+                            "y":1,
+                            "z":1
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":-50,
+                            "y":180,
+                            "z":10
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "enemyspaceship"
+                    ]
+                }
+            },
+            "enemyspaceship4":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":-290,
+                            "y":15,
+                            "z":-110
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":1,
+                            "y":1,
+                            "z":1
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":0,
+                            "y":180,
+                            "z":0
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "enemyspaceship"
+                    ]
+                }
+            },
+            "enemyspaceship5":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":200,
+                            "y":5,
+                            "z":-220
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":1,
+                            "y":1,
+                            "z":1
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":-10,
+                            "y":-90,
+                            "z":0
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "enemyspaceship"
+                    ]
+                }
+            },
+            "enemyspaceship6":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":300,
+                            "y":15,
+                            "z":-330
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":1,
+                            "y":1,
+                            "z":1
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":0,
+                            "y":220,
+                            "z":-35
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "enemyspaceship"
+                    ]
+                }
+            },
+            
+            "spacestation": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -300,
+                            "y": -300,
+                            "z": -300
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": -35,
+                            "y": 10,
+                            "z": 10
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "middle",
+                        "tube1",
+                        "tube1protection",
+                        "tube2protection",
+                        "rightwing",
+                        "glass"
+                    ]
+                }
+            },
+            "advertisementship":{
+                "type":"node",
+                "castshadows": true,
+                "receiveshadows":true,
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":-300,
+                            "y":320,
+                            "z":230
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":1,
+                            "y":1,
+                            "z":1
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":0,
+                            "y":0,
+                            "z":0
+                        }
+                    }
+                ],
+               
+                "children":{
+                    "nodesList":[
+                        "advertisementshipbody",
+                        "advertisementshipscreens",
+                        "advertisementshippropellers",
+                        "advertisementpolygon",
+                        "advertisementantenna",
+                        "advertisementshiplight"
+                    ]
+                }
+
+
+            },
+            "advertisementshiplight":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":0,
+                            "y":80,
+                            "z":0
+                        }
+                    }
+                ],
+                "children": {
+                            "shadowlight": {
+                                "type": "pointlight",
+                                "color": {
+                                    "r": 1,
+                                    "g": 1,
+                                    "b": 1
+                                },
+                                "intensity": 5.0,
+                                "distance": 100,
+                                "decay": 0.0,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "castshadow": true
+                            }
+                        }
+
+            },
+            "advertisementantenna":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":0,
+                            "y":25.2,
+                            "z":0
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":1,
+                            "y":1,
+                            "z":1
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":0,
+                            "y":0,
+                            "z":0
+                        }
+                    }
+                ],
+               
+                "children": {
+                    "nodesList":[
+                        "advertisementactualantenna",
+                        "adverismentcolumn"
+                    ]
+                }
+
+            },
+            "advertisementactualantenna":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":0,
+                            "y":25,
+                            "z":0
+                        }
+                    },
+                    
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":90,
+                            "y":0,
+                            "z":0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "complexmat1"
+                },
+                "children": {
+                    "nodesList":[
+                        "antennasupporter",
+                        "smallantennas"
+                    ]
+                }
+            },
+            "smallantennas":{
+                "type":"node",
+                "transforms": [
+                    {"type": "translate",
+                    "amount": {
+                        "x": 12.5,
+                        "y": 25,
+                        "z": 0
+                    }
+                },
+                {
+                    
+                    "type": "rotate",
+                    "amount": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 90
+                    }
+                },
+                {
+                    "type": "scale",
+                    "amount": {
+                        "x": 1,
+                        "y": 0.5,
+                        "z": 1
+                    }
+                }
+            ],
+                "children":{
+                "nodesList":[
+                    "smallantenna1",
+                    "smallantenna2"
+                ]}
+            },
+            "smallantenna1":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":0,
+                            "y":25,
+                            "z":0
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "actualsmallantenna"
+                    ]
+                }
+            },
+            "smallantenna2":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":-10,
+                            "y":25,
+                            "z":0
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "actualsmallantenna"
+                    ]
+                }
+            },
+            "actualsmallantenna":{
+                "type":"node",
+                "children":{
+                    "cylinderprim":{
+                        "type": "cylinder",
+                        "base": 1,
+                        "top": 1,
+                        "height": 50,
+                        "slices": 5,
+                        "stacks": 5,
+                        "capsclose": true,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    
+
+                    }
+                }
+            },
+            "antennasupporter":{
+                "type":"node",    
+                "children":{ 
+                "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 1,
+                        "top": 1,
+                        "height": 50,
+                        "slices": 5,
+                        "stacks": 5,
+                        "capsclose": true,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }}
+
+            },
+            "adverismentcolumn":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":0,
+                            "y":10,
+                            "z":0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "complexmat1"
+                },
+                "children": {
+                    "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 1,
+                        "top": 1,
+                        "height": 30,
+                        "slices": 5,
+                        "stacks": 5,
+                        "capsclose": true,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }
+                }
+
+            },
+            "advertisementpolygon":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":0,
+                            "y":25.5,
+                            "z":0
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":5,
+                            "y":5,
+                            "z":5
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":-90,
+                            "y":0,
+                            "z":0
+                        }
+                    }
+                ],
+               
+                "children": {
+                    "polygon": {
+                        "type": "polygon",
+                        "radius": 5,
+                        "slices": 5,
+                        "stacks": 5,
+                        "color_c": {"r": 0, "g": 1, "b": 1},
+                        "color_p": {"r": 0, "g": 0, "b": 1}
+                    }
+                }
+
+            },
+            "advertisementshippropellers":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":0,
+                            "y":0,
+                            "z":0
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":1,
+                            "y":1,
+                            "z":1
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":0,
+                            "y":0,
+                            "z":0
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "advertisementshippropeller1",
+                        "advertisementshippropeller2",
+                        "advertisementshippropellersbacktrails"
+                    ]
+                }
+            },
+            "advertisementshippropeller1":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":60,
+                            "y":0,
+                            "z":0
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":1,
+                            "y":1,
+                            "z":1
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":0,
+                            "y":0,
+                            "z":90
+                        }
+                    }
+                ],
+                "materialref":{
+                    "materialId":"complexmat1"
+                },
+                "children":{
+                    "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 20,
+                        "top": 20,
+                        "height": 5,
+                        "slices": 10,
+                        "stacks": 10,
+                        "capsclose": true,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }
+                }
+
+            },
+
+            "advertisementshippropeller2":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":-60,
+                            "y":0,
+                            "z":0
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":1,
+                            "y":1,
+                            "z":1
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":0,
+                            "y":0,
+                            "z":90
+                        }
+                    }
+                ],
+                "materialref":{
+                    "materialId":"complexmat1"
+                },
+                "children":{
+                    "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 20,
+                        "top": 20,
+                        "height": 5,
+                        "slices": 10,
+                        "stacks": 10,
+                        "capsclose": true,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }
+                }
+
+            },
+            "advertisementshippropellersbacktrails":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":0,
+                            "y":0,
+                            "z":0
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":1,
+                            "y":1,
+                            "z":1
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":0,
+                            "y":0,
+                            "z":0
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "advertisementshippropeller1backtrail",
+                        "advertisementshippropeller2backtrail"
+                    ]
+                }
+
+            },
+            "advertisementshippropeller1backtrail":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":64,
+                            "y":0,
+                            "z":0
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":1,
+                            "y":1,
+                            "z":1
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":0,
+                            "y":0,
+                            "z":90
+                        }
+                    }
+                ],
+                "materialref":{
+                    "materialId":"redshotmaterialweak"
+                },
+                "children":{
+                    "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 10,
+                        "top": 20,
+                        "height": 1,
+                        "slices": 10,
+                        "stacks": 1,
+                        "capsclose": true,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }
+                }
+
+            },
+
+            "advertisementshippropeller2backtrail":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":-64,
+                            "y":0,
+                            "z":0
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":1,
+                            "y":1,
+                            "z":1
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":0,
+                            "y":0,
+                            "z":90
+                        }
+                    }
+                ],
+                "materialref":{
+                    "materialId":"redshotmaterialweak"
+                },
+                "children":{
+                    "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 20,
+                        "top": 10,
+                        "height": 1,
+                        "slices": 10,
+                        "stacks": 1,
+                        "capsclose": true,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }
+                }
+
+            },
+            "advertisementshipscreens":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":0,
+                            "y":0,
+                            "z":0
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":120,
+                            "y":50,
+                            "z":1
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":0,
+                            "y":0,
+                            "z":0
+                        }
+                    }
+                ],
+                "materialref":{
+                    "materialId":"trailermat"
+                },
+                "children":{
+                    "nodesList":[
+                        "advertisementshipscreen1",
+                        "advertisementshipscreen2"
+                    ]
+                }
+
+            },
+        
+            "advertisementshipscreen1":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":0,
+                            "y":0,
+                            "z":35.1
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":1,
+                            "y":1,
+                            "z":1
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":0,
+                            "y":0,
+                            "z":0
+                        }
+                    }
+                ],
+                "materialref":{
+                    "materialId":"trailermat"
+                },
+                "children":{
+                    "rectangleprim": {
+                  "type": "rectangle",
+                  "xy1": { "x": -0.5, "y": -0.5 },
+                  "xy2": { "x": 0.5, "y": 0.5 }
+                }
+                }
+            },
+
+            "advertisementshipscreen2":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":0,
+                            "y":0,
+                            "z":-35.1
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":1,
+                            "y":1,
+                            "z":1
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":0,
+                            "y":180,
+                            "z":0
+                        }
+                    }
+                ],
+                "materialref":{
+                    "materialId":"trailermat"
+                },
+                "children":{
+                    "rectangleprim": {
+                  "type": "rectangle",
+                  "xy1": { "x": -0.5, "y": -0.5 },
+                  "xy2": { "x": 0.5, "y": 0.5 }
+                }
+                }
+            },
+        "advertisementshipbody":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":0,
+                            "y":0,
+                            "z":0
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":120,
+                            "y":50,
+                            "z":70
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":0,
+                            "y":0,
+                            "z":0
+                        }
+                    }
+                ],
+                "materialref":{
+                    "materialId":"complexmat1"
+                },
+                "children":{
+                    "boxprim": {
+                        "type": "box",
+                        "xyz1": {
+                            "x": -0.5,
+                            "y": -0.5,
+                            "z": -0.5
+                        },
+                        "xyz2": {
+                            "x": 0.5,
+                            "y": 0.5,
+                            "z": 0.5
+                        },
+                        "parts_x": 1,
+                        "parts_y": 1,
+                        "parts_z": 1
+                    }
+                   
+                }
+            },
+            "friendspaceship": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "lodsList": [
+                        "friendspaceshiplod"
+                    ]
+                }
+            },
+
+            "friendspaceshiplod":{
+                "type":"lod",
+                "lodNodes":[{
+                    "nodeId": "friendspaceship_full_detail",
+                    "mindist": 0
+                },
+                {
+                    "nodeId": "friendspaceship_low_detail",
+                    "mindist": 1250
+                }
+                ]
+
+
+            },
+            "friendspaceship_low_detail": {
+                "type": "node",
+                "children": {
+                    "nodesList": [
+                        "friendspaceshipmiddlelow",
+                        "friendspaceshipbody",
+                        "friendspaceshipbodyback",
+                        "friendspaceshipwingslow"
+                    ]
+                }
+            },
+            "friendspaceshipwingslow": {
+                "type": "node",
+                "children": {
+                    "nodesList": [
+                        "friendspaceshiptopwingslow",
+                        "friendspaceshipbotwingslow"
+                    ]
+                }
+            },
+            "friendspaceshipbotwingslow":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":0,
+                            "y":0,
+                            "z":45
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "friendspaceshipleftwingbot",
+                        "friendspaceshiprightwingbot"
+                    ]
+                }
+
+            },
+            "friendspaceshiptopwingslow":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":0,
+                            "y":0,
+                            "z":45
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "friendspaceshipleftwingtop",
+                        "friendspaceshiprightwingtop"
+                    ]
+                }
+            },
+
+            "friendspaceshipmiddlelow":{
+                "type":"node",
+                "transforms":[
+                    
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":90,
+                            "y":0,
+                            "z":0
+                        }
+                    }
+                ],
+                "materialref":{
+                    "materialId":"complexmat"
+                },
+                "children":{
+                   "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 3,
+                        "top": 10,
+                        "height": 80,
+                        "slices": 5,
+                        "stacks": 1,
+                        "capsclose": true,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }
+                }
+
+            },
+
+            "friendspaceship_full_detail":{
+                "type":"node",
+                
+                "children":{
+                    "nodesList":[
+                        "friendspaceshipmiddle",
+                        "friendspaceshipbody",
+                        "friendspaceshipbodyback",
+                        "friendspaceshipbodybacktrail",
+                        "friendspaceshipcockpit",
+                        "friendspaceshipwings"
+                    ]
+                }
+            },
+            "friendspaceshipcockpit": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 10,
+                            "z": 55
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 0.8,
+                            "z": 2.5
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "whiteshotmaterial"
+                },
+                "children": {
+                    "sphereprim": {
+                        "type": "sphere",
+                        "radius": 10,
+                        "slices": 10,
+                        "stacks": 10
+                    }
+                }
+            },
+            "friendspaceshipwings": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "friendspaceshiptopwings",
+                        "friendspaceshipbotwings"
+                    ]
+                }
+            },
+            "friendspaceshiptopwings": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 45
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "friendspaceshipleftwingtop",
+                        "friendspaceshiprightwingtop",
+                        "friendspaceshipmotortop",
+                        "friendspaceshipmotorbot",
+                        "friendspaceshipgunstop",
+                        "friendspaceshipgunsbot"
+                    ]
+                }
+            },
+            "friendspaceshipgunsbot": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": -28,
+                            "z": -8
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "complexmat"
+                },
+                "children": {
+                    "nodesList": [
+                        "friendspaceshiprightgunbot",
+                        "friendspaceshipleftgunbot"
+                    ]
+                }
+            },
+            "friendspaceshiprightgunbot": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 67,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.3,
+                            "y": 0.3,
+                            "z": 0.3
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "friendspaceshipmiddle"
+                    ]
+                }
+            },
+            "friendspaceshipleftgunbot": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -67,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.3,
+                            "y": 0.3,
+                            "z": 0.3
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "friendspaceshipmiddle"
+                    ]
+                }
+            },
+            "friendspaceshipgunstop": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 35,
+                            "z": -8
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "complexmat"
+                },
+                "children": {
+                    "nodesList":[
+                        "friendspaceshiprightgunstop",
+                        "friendspaceshipleftgunstop"
+
+                    ]
+                }
+            },
+            "friendspaceshiprightgunstop": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 65,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.3,
+                            "y": 0.3,
+                            "z": 0.3
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                
+                "children": {
+                    "nodesList":[
+                        "friendspaceshipmiddle"
+                    ]
+
+                }
+            },
+            "friendspaceshipleftgunstop":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -65,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.3,
+                            "y": 0.3,
+                            "z": 0.3
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                
+                "children": {
+                    "nodesList":[
+                        "friendspaceshipmiddle"
+                    ]
+
+                }
+            },
+            "friendspaceshipmotorbot":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": -10,
+                            "z": 20
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1.5,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "complexmat"
+                },
+                "children": {
+                    "nodesList": [
+                        "friendspaceshipleftmotorbot",
+                        "friendspaceshiprightmotorbot"
+                    ]
+                }
+            },
+            "friendspaceshipleftmotorbot": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -22,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "complexmat"
+                },
+                "children": {
+                    "nodesList": [
+                        "friendspaceshipmotor",
+                        "friendspaceshipmotorback"
+                    ]
+                }
+            },
+            "friendspaceshiprightmotorbot": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 22,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "complexmat"
+                },
+                "children": {
+                    "nodesList": [
+                        "friendspaceshipmotor",
+                        "friendspaceshipmotorback"
+                    ]
+                }
+            },
+
+            "friendspaceshipmotortop": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 10,
+                            "z": 20
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1.5,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "complexmat"
+                },
+                "children": {
+                    "nodesList": [
+                        "friendspaceshipleftmotortop",
+                        "friendspaceshiprightmotortop"
+                    ]
+                }
+            },
+            "friendspaceshipleftmotortop": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -22,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "complexmat"
+                },
+                "children": {
+                   "nodesList": [
+                        "friendspaceshipmotor",
+                        "friendspaceshipmotorback"
+                    ]
+                }
+            },
+            "friendspaceshiprightmotortop": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 22,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "complexmat"
+                },
+                "children": {
+                    "nodesList": [
+                        "friendspaceshipmotor",
+                        "friendspaceshipmotorback"
+                    ]
+                }
+            },
+            "friendspaceshipmotorback":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":0,
+                            "y":10,
+                            "z":0
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":1,
+                            "y":1,
+                            "z":1
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":0,
+                            "y":0,
+                            "z":0
+                        }
+                    }
+                ],
+                "materialref":{
+                    "materialId":"redshotmaterial"
+                },
+                "children":{
+                   "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 5,
+                        "top": 4,
+                        "height": 1,
+                        "slices": 10,
+                        "stacks": 10,
+                        "capsclose": true,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }
+
+
+                }
+            },
+            "friendspaceshipmotor":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 5,
+                            "y": 20,
+                            "z": 5
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "complexmat"
+                },
+                "children": {
+                    "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 1,
+                        "top": 1,
+                        "height": 1,
+                        "slices": 10,
+                        "stacks": 10,
+                        "capsclose": true,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }
+                }
+
+            },
+            "friendspaceshipwing":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "complexmat"
+                },
+                "children": {
+                    "boxprim": {
+                        "type": "box",
+                        "xyz1": {
+                            "x": -0.5,
+                            "y": -0.5,
+                            "z": -0.5
+                        },
+                        "xyz2": {
+                            "x": 0.5,
+                            "y": 0.5,
+                            "z": 0.5
+                        },
+                        "parts_x": 1,
+                        "parts_y": 1,
+                        "parts_z": 1
+                    }
+                }
+            },
+           
+            "friendspaceshipleftwingtop": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 35,
+                            "y": 15,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 70,
+                            "y": 2,
+                            "z": 10
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 30
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "complexmat"
+                },
+                "children": {
+                    "nodesList": [
+                        "friendspaceshipwing"
+                    ]
+                }
+            },
+            "friendspaceshiprightwingtop": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -35,
+                            "y": 15,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 70,
+                            "y": 2,
+                            "z": 10
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": -30
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "complexmat"
+                },
+                "children": {
+                    "nodesList": [
+                        "friendspaceshipwing"
+                    ]
+                }
+            },
+            "friendspaceshipbotwings": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 45
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "friendspaceshipleftwingbot",
+                        "friendspaceshiprightwingbot"
+                    ]
+                }
+            },
+            "friendspaceshipleftwingbot": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 40,
+                            "y": -15,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 70,
+                            "y": 2,
+                            "z": 10
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": -20
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "complexmat"
+                },
+                "children": {
+                    "nodesList": [
+                        "friendspaceshipwing"
+                    ]
+                }
+            },
+            "friendspaceshiprightwingbot": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -40,
+                            "y": -15,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 70,
+                            "y": 2,
+                            "z": 10
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 20
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "complexmat"
+                },
+                "children": {
+                    "nodesList": [
+                        "friendspaceshipwing"
+                    ]
+                }
+            },
+            "friendspaceshipbody": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 50
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 20,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "redspaceshipmat"
+                },
+                "children": {
+                    "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 10,
+                        "top": 20,
+                        "height": 1,
+                        "slices": 10,
+                        "stacks": 10,
+                        "capsclose": true,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }
+                }
+            },
+            "friendspaceshipbodybacktrail":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 82
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 5,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList":[
+                        "friendspaceshipactualbacktrail",
+                        "spaceshiplight"
+                    ]
+                }
+            },
+
+            "friendspaceshipactualbacktrail":{
+                "type":"node",
+                
+                "materialref":{
+                    "materialId":"redshotmaterial"
+                },
+                "children":{
+                    "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 20,
+                        "top": 8,
+                        "height": 1,
+                        "slices": 10,
+                        "stacks": 1,
+                        "capsclose": true,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }
+                }
+            },
+            
+            
+            "friendspaceshipbodyback": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 70
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 20,
+                            "y": 20,
+                            "z": 20
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "complexmat"
+                },
+                "children": {
+                    "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 1,
+                        "top": 1,
+                        "height": 1,
+                        "slices": 20,
+                        "stacks": 20,
+                        "capsclose": true,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }
+                }
+            },
+            "friendspaceshipmiddle": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "complexmat"
+                },
+                "children": {
+                    "nodesList": [
+                        "friendspaceshipmiddlefront",
+                        "friendspaceshipmiddledetail1",
+                        "friendspaceshipmiddledetail2",
+                        "friendspaceshipmiddledetail3"
+                    ]
+                }
+            },
+            "friendspaceshipmiddlefront": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 80,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "redspaceshipmat"
+                },
+                "children": {
+                    "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 3,
+                        "top": 10,
+                        "height": 1,
+                        "slices": 20,
+                        "stacks": 20,
+                        "capsclose": true,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }
+                }
+            },
+            "friendspaceshipmiddledetail1": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 20
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 20,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "complexmat"
+                },
+                "children": {
+                    "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 9,
+                        "top": 10,
+                        "height": 1,
+                        "slices": 20,
+                        "stacks": 20,
+                        "capsclose": true,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }
+                }
+            },
+            "friendspaceshipmiddledetail2": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 20,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "redspaceshipmat"
+                },
+                "children": {
+                    "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 7,
+                        "top": 8,
+                        "height": 1,
+                        "slices": 20,
+                        "stacks": 20,
+                        "capsclose": true,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }
+                }
+            },
+            "friendspaceshipmiddledetail3": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": -20
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 20,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "complexmat"
+                },
+                "children": {
+                    "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 5,
+                        "top": 6,
+                        "height": 1,
+                        "slices": 20,
+                        "stacks": 20,
+                        "capsclose": true,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }
+                }
+            },
+            "enemyspaceship": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "lodsList":[
+                        "enemyspaceshiplod"
+                    ]
+                }
+            },
+            "enemyspaceshiplod":{
+                "type":"lod",
+                "lodNodes":[{
+                    "nodeId": "enemyspaceship_full_detail",
+                    "mindist": 0
+                },{
+                    "nodeId":"enemyspaceship_low_detail",
+                    "mindist": 750},
+                    {
+                        "nodeId":"enemyspaceship_lowest_detail",
+                        "mindist": 1500
+                    }
+                ]
+            },
+            "enemyspaceship_lowest_detail": {
+                "type": "node",
+                "children": {
+                    "nodesList": [
+                        "middleenemyspaceshiplow",
+                        "leftwingenemylowest",
+                        "rightwingenemylowest"
+                    ]
+                }
+            },
+            "enemyspaceship_low_detail": {
+                "type": "node",
+                "children": {
+                    "nodesList": [
+                        "middleenemyspaceshiplow",
+                        "leftwingenemylow",
+                        "rightwingenemylow"
+                    ]
+                }
+            },
+            "enemyspaceship_full_detail":{
+                "type":"node",
+                "children":{
+                "nodesList": [
+                        "middleenemyspaceship",
+                        "leftwingenemy",
+                        "rightwingenemy",
+                        "enemyspacelight"
+                    ]}
+            },
+            "enemyspacelight": {
+                        "type": "node",
+                        "transforms":[
+                            {
+                                "type":"translate",
+                                "amount":{
+                                    "x":0,
+                                    "y":20,
+                                    "z":20
+                                }
+                            }
+                        ],
+                        "children": {
+                            "windowlight": {
+                                "type": "pointlight",
+                                "color": {
+                                    "r": 1,
+                                    "g": 1,
+                                    "b": 1
+                                },
+                                "intensity": 3,
+                                "distance": 50,
+                                "decay": 0.0,
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                }
+                            }
+                        }
+                    },
+            "middle": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 1,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 6,
+                            "y": 18,
+                            "z": 6
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 90
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "complexmat"
+                },
+                "children": {
+                    "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 1,
+                        "top": 1,
+                        "height": 1,
+                        "slices": 20,
+                        "stacks": 20,
+                        "capsclose": false,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }
+                }
+            },
+            "middleenemyspaceshiplow":{
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "tubemat"
+                },
+                "children": {
+                    "nodesList": [
+                        "middleenemyball"
+                    ]
+                }
+            },
+            "middleenemyspaceship": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "tubemat"
+                },
+                "children": {
+                    "nodesList": [
+                        "middleenemyball",
+                        "middleenemywindow",
+                        "middleenemyguns"
+                    ]
+                }
+            },
+            "middleenemywindow":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":-6,
+                            "y":-5,
+                            "z":9
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":12,
+                            "y":10,
+                            "z":10
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":0,
+                            "y":0,
+                            "z":0
+                        }
+                    }
+                ],
+                "materialref":{
+                    "materialId":"glassmat"
+                },
+                "children":{
+                       "nurbs": {
+                "type": "nurbs",
+                "degree_u": 2,
+                "degree_v": 2,
+                "parts_u": 10,
+                "parts_v": 10,
+                "controlpoints": [
+                    {"x": 0, "y": 0, "z": 0},
+                    {"x": -0.3, "y": 0.5, "z": 0},
+                    {"x": 0, "y": 1, "z": 0},
+                    {"x": 0.5, "y": 0, "z": 0.5},
+                    {"x": 0.5, "y": 0.5, "z": 1},
+                    {"x": 0.5, "y": 1, "z": 0.5},
+                    {"x": 1, "y": 0, "z": 0},
+                    {"x": 1.3, "y": 0.5, "z": 0},
+                    {"x": 1, "y": 1, "z": 0}
+                ]
+                    }
+                    
+                }
+
+            },
+            "middleenemyball": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 12,
+                            "y": 12,
+                            "z": 12
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "tubemat"
+                },
+                "children": {
+                    "sphereprim": {
+                        "type": "sphere",
+                        "radius": 1,
+                        "slices": 30,
+                        "stacks": 30
+                    }
+                }
+            },
+            "middleenemyguns": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": -9,
+                            "z": 10
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "tiefighterwingtexture"
+                },
+                "children": {
+                    "nodesList": [
+                        "middleenemygunsleft",
+                        "middleenemygunsright",
+                        "middleenemyshots"
+                    ]
+                }
+            },
+            "middleenemyshots": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "middleenemyshotsfar",
+                        "middleenemyshotsclose"
+                    ]
+                }
+            },
+            "middleenemyshotsfar": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -4,
+                            "y": 30,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "redshotmaterial"
+                },
+                "children": {
+                    "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 0.25,
+                        "top": 0.25,
+                        "height": 20,
+                        "slices": 20,
+                        "stacks": 20,
+                        "capsclose": true,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }
+                }
+            },
+            "middleenemyshotsclose": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 4,
+                            "y": 19,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "redshotmaterial"
+                },
+                "children": {
+                    "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 0.25,
+                        "top": 0.25,
+                        "height": 20,
+                        "slices": 10,
+                        "stacks": 10,
+                        "capsclose": true,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }
+                }
+            },
+            "middleenemygunsright": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -4,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "middleenemygunsbot",
+                        "middleenemygunstop"
+                    ]
+                }
+            },
+            "middleenemygunsleft": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 4,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "middleenemygunsbot",
+                        "middleenemygunstop"
+                    ]
+                }
+            },
+            "middleenemygunsbot": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 0.75,
+                        "top": 0.75,
+                        "height": 10,
+                        "slices": 20,
+                        "stacks": 20,
+                        "capsclose": true,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }
+                }
+            },
+            "middleenemygunstop": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": -1.51
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 0.75,
+                        "top": 0.75,
+                        "height": 8,
+                        "slices": 20,
+                        "stacks": 20,
+                        "capsclose": true,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }
+                }
+            },
+            "leftwingenemylowest": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -15,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 90
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "wingenemylow"
+                    ]
+                }
+            },
+            "leftwingenemylow":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":-15,
+                            "y":0,
+                            "z":0
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":1,
+                            "y":1,
+                            "z":1
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":0,
+                            "y":0,
+                            "z":90
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "wingenemylow",
+                        "wingenemyprotection"
+                    ]
+                }
+
+            },
+            "leftwingenemy": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -15,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 90
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "wingenemyprotection",
+                        "wingenemy"
+                    ]
+                }
+            },
+
+            "rightwingenemylowest":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":15,
+                            "y":0,
+                            "z":0
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":1,
+                            "y":1,
+                            "z":1
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":0,
+                            "y":0,
+                            "z":-90
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "wingenemylow"
+                    ]
+                }
+            },
+            "rightwingenemylow":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":15,
+                            "y":0,
+                            "z":0
+                        }
+                    },
+                    {
+                        "type":"scale",
+                        "amount":{
+                            "x":1,
+                            "y":1,
+                            "z":1
+                        }
+                    },
+                    {
+                        "type":"rotate",
+                        "amount":{
+                            "x":0,
+                            "y":0,
+                            "z":-90
+                        }
+                    }
+                ],
+                "children":{
+                    "nodesList":[
+                        "wingenemylow",
+                        "wingenemyprotection"
+                    ]
+                }
+            },
+            "rightwingenemy": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 15,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": -90
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "wingenemyprotection",
+                        "wingenemy"
+                    ]
+                }
+            },
+            "wingenemyprotection": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 15,
+                            "y": 15,
+                            "z": 15
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "tubemat"
+                },
+                "children": {
+                    "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 0.45,
+                        "top": 0.2,
+                        "height": 1,
+                        "slices": 10,
+                        "stacks": 10,
+                        "capsclose": true,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }
+                }
+            },
+            "wingenemylow": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 10,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 13,
+                            "y": 1,
+                            "z": 10
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "tiefighterwingtexture"
+                },
+                "children": {
+                    "sphereprim": {
+                        "type": "sphere",
+                        "radius": 3,
+                        "slices": 6,
+                        "stacks": 6
+                    }
+                }
+            },
+            "wingenemy": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 10,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 13,
+                            "y": 1,
+                            "z": 10
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "tiefighterwingtexture"
+                },
+                "children": {
+                    "sphereprim": {
+                        "type": "sphere",
+                        "radius": 3,
+                        "slices": 6,
+                        "stacks": 6
+                    },
+                    "nodesList": [
+                        "wingenemyoutsidepart",
+                        "wingenemyoutsideprotection"
+                    ]
+                }
+            },
+            "wingenemyoutsidepart": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 2,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.9,
+                            "y": 3,
+                            "z": 1.2
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "tubemat"
+                },
+                "children": {
+                    "sphereprim": {
+                        "type": "sphere",
+                        "radius": 1,
+                        "slices": 6,
+                        "stacks": 6
+                    }
+                }
+            },
+            "wingenemyoutsideprotection": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 3,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "tubemat"
+                },
+                "children": {
+                    "nodesList": [
+                        "wingenemyoutsideprotectiontube1",
+                        "wingenemyoutsideprotectiontube2",
+                        "wingenemyoutsideprotectiontube3"
+                    ]
+                }
+            },
+            "wingenemyoutsideprotectiontube1": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -0.75,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 3.25,
+                            "y": 1,
+                            "z": 0.25
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "wingenemytubeprim"
+                    ]
+                }
+            },
+            "wingenemyoutsideprotectiontube2": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -0.4,
+                            "y": 0,
+                            "z": 0.75
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 3.25,
+                            "y": 1,
+                            "z": 0.25
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 60,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "wingenemytubeprim"
+                    ]
+                }
+            },
+            "wingenemyoutsideprotectiontube3": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -0.4,
+                            "y": 0,
+                            "z": -0.75
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 3.25,
+                            "y": 1,
+                            "z": 0.25
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": -60,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "wingenemytubeprim"
+                    ]
+                }
+            },
+            "wingenemytubeprim": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "tubemat"
+                },
+                "children": {
+                    "boxprim": {
+                        "type": "box",
+                        "xyz1": {
+                            "x": -0.5,
+                            "y": -0.5,
+                            "z": -0.5
+                        },
+                        "xyz2": {
+                            "x": 1,
+                            "y": 0.5,
+                            "z": 0.5
+                        },
+                        "parts_x": 1,
+                        "parts_y": 1,
+                        "parts_z": 1
+                    }
+                }
+            },
+            "rightwing": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 28.9,
+                            "y": 1,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 2,
+                            "y": 20,
+                            "z": 2
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 90
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "complexmat"
+                },
+                "children": {
+                    "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 4,
+                        "top": 4,
+                        "height": 1,
+                        "slices": 20,
+                        "stacks": 10,
+                        "capsclose": false,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }
+                }
+            },
+            "glass": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 39,
+                            "y": 1,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 4.8,
+                            "y": 8,
+                            "z": 8
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "whiteshotmaterial"
+                },
+                "children": {
+                    "sphereprim": {
+                        "type": "sphere",
+                        "radius": 1,
+                        "slices": 30,
+                        "stacks": 30
+                    }
+                }
+            },
+            "tube1": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -10,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "tube",
+                        "tubepanel1",
+                        "tubepanel2",
+                        "tubepanel3",
+                        "tubepanel4",
+                        "tubepanel5",
+                        "tubepanel6",
+                        "tubepanel7",
+                        "tubepanel8",
+                        "tubepanel9",
+                        "tubepanel10",
+                        "tubepanel11",
+                        "tubepanel12"
+                    ]
+                }
+            },
+            "tube": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -14,
+                            "y": 1,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 2,
+                            "y": 2,
+                            "z": 2
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 90
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "tubemat"
+                },
+                "children": {
+                    "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 1,
+                        "top": 1,
+                        "height": 14,
+                        "slices": 20,
+                        "stacks": 20,
+                        "capsclose": true,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }
+                }
+            },
+            "tubepanel1": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -5,
+                            "y": 5,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "tubecolumn",
+                        "solarpanel"
+                    ]
+                }
+            },
+            "tubepanel2": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -12,
+                            "y": 5,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "tubecolumn",
+                        "solarpanel"
+                    ]
+                }
+            },
+            "tubepanel3": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -19,
+                            "y": 5,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "tubecolumn",
+                        "solarpanel"
+                    ]
+                }
+            },
+            "tubepanel4": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -26,
+                            "y": 5,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "tubecolumn",
+                        "solarpanel"
+                    ]
+                }
+            },
+            "tubepanel5": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -5,
+                            "y": -0.5,
+                            "z": 2.46
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 120,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "tubecolumn",
+                        "solarpanel"
+                    ]
+                }
+            },
+            "tubepanel6": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -12,
+                            "y": -0.5,
+                            "z": 2.46
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 120,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "tubecolumn",
+                        "solarpanel"
+                    ]
+                }
+            },
+            "tubepanel7": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -19,
+                            "y": -0.5,
+                            "z": 2.46
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 120,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "tubecolumn",
+                        "solarpanel"
+                    ]
+                }
+            },
+            "tubepanel8": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -26,
+                            "y": -0.5,
+                            "z": 2.46
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 120,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "tubecolumn",
+                        "solarpanel"
+                    ]
+                }
+            },
+            "tubepanel9": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -5,
+                            "y": -0.5,
+                            "z": -2.46
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": -120,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "tubecolumn",
+                        "solarpanel"
+                    ]
+                }
+            },
+            "tubepanel10": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -12,
+                            "y": -0.5,
+                            "z": -2.46
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": -120,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "tubecolumn",
+                        "solarpanel"
+                    ]
+                }
+            },
+            "tubepanel11": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -19,
+                            "y": -0.5,
+                            "z": -2.46
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": -120,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "tubecolumn",
+                        "solarpanel"
+                    ]
+                }
+            },
+            "tubepanel12": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -26,
+                            "y": -0.5,
+                            "z": -2.46
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": -120,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "tubecolumn",
+                        "solarpanel"
+                    ]
+                }
+            },
+            "tubecolumn": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.1,
+                            "y": 4,
+                            "z": 0.1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "complexmat"
+                },
+                "children": {
+                    "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 1,
+                        "top": 1,
+                        "height": 2,
+                        "slices": 10,
+                        "stacks": 10,
+                        "capsclose": false,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }
+                }
+            },
+            "solarpanel": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -0.66,
+                            "y": 15,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 6,
+                            "y": 24,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "solarpanelmat"
+                },
+                "children": {
+                    "boxprim": {
+                        "type": "box",
+                        "xyz1": {
+                            "x": -0.5,
+                            "y": -0.5,
+                            "z": -0.5
+                        },
+                        "xyz2": {
+                            "x": 0.5,
+                            "y": 0.5,
+                            "z": 0.5
+                        },
+                        "parts_x": 1,
+                        "parts_y": 1,
+                        "parts_z": 1
+                    }
+                }
+            },
+            "tube1protection": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -10.5,
+                            "y": 1,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 2,
+                            "y": 3,
+                            "z": 2
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 90
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "tubeprotectionmat"
+                },
+                "children": {
+                    "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 3,
+                        "top": 1,
+                        "height": 1,
+                        "slices": 20,
+                        "stacks": 20,
+                        "capsclose": true,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }
+                }
+            },
+            "tube2protection": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 14,
+                            "y": 1,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 2,
+                            "y": 10,
+                            "z": 2
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 90
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "tubeprotectionmat"
+                },
+                "children": {
+                    "cylinderprim": {
+                        "type": "cylinder",
+                        "base": 4,
+                        "top": 3,
+                        "height": 1,
+                        "slices": 20,
+                        "stacks": 20,
+                        "capsclose": false,
+                        "thetastart": 200,
+                        "thetalength": 360
+                    }
+                }
+            },
+            "sphereprimn": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 500,
+                            "y": 500,
+                            "z": -490
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 350,
+                            "y": 350,
+                            "z": 350
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "materialref": {
+                    "materialId": "deathstarmat"
+                },
+                "children": {
+                    "sphereprim": {
+                        "type": "sphere",
+                        "radius": 1,
+                        "slices": 50,
+                        "stacks": 50
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,269 @@
+{
+    "yasf": {
+      "globals": {
+        "background": {"r": 0.3, "g": 0.4, "b": 0.8},
+        "ambient": {"r": 0.8, "g": 0.7, "b": 0.8, "intensity": 1.0},
+        "fog": {
+          "color": {"r": 0.8, "g": 0.6, "b": 0.7},
+          "near": 1.0,
+          "far": 100.0
+        },
+        "skybox": {
+          "size": {"x": 100, "y": 100, "z": 100},
+          "center": {"x": 0, "y": 0, "z": 0},
+          "emissive": {"r": 0.0, "g": 0.0, "b": 0.0},
+          "intensity": 1.0,
+          "front": "scenes/christmas/textures/front.jpg",
+          "back": "scenes/christmas/textures/back.jpg",
+          "up": "scenes/christmas/textures/up.jpg",
+          "down": "scenes/christmas/textures/down.jpg",
+          "left": "scenes/christmas/textures/back.jpg",
+          "right": "scenes/christmas/textures/back.jpg"
+        }
+      },
+      "cameras": {
+        "initial": "cam1",
+        "cam1": {
+          "type": "perspective",
+          "angle": 60,
+          "near": 0.1,
+          "far": 1000,
+          "location": {"x": 15, "y": 15, "z": 15},
+          "target": {"x": 0, "y": 0, "z": 0}
+        },
+        "cam2": {
+          "type": "orthogonal",
+          "near": 0.1,
+          "far": 1000,
+          "location": {"x": 0, "y": 15, "z": 15},
+          "target": {"x": 0, "y": 15, "z": 0},
+          "left": -5,
+          "right": 5,
+          "bottom": -5,
+          "top": 5
+        }
+      },
+      "textures": {
+        "tabletex": {"filepath": "scenes/christmas/textures/table.png", "isVideo": false},
+        "pinetex": {"filepath": "scenes/christmas/textures/pine.png", "isVideo": false},
+        "vasetex": {"filepath": "scenes/christmas/textures/vase.png", "isVideo": false},
+        "treetrunktex": {"filepath": "scenes/christmas/textures/treeTrunk.jpg", "isVideo": false},
+        "treebodylightstex": {"filepath": "scenes/christmas/textures/treeBodyLights.jpg", "isVideo": false},
+        "christmasballtex": {"filepath": "scenes/christmas/textures/christmasBall2.jpg", "isVideo": false},
+        "presenttex": {"filepath": "scenes/christmas/textures/present.jpg", "isVideo": false},
+        "candycanetex": {"filepath": "scenes/christmas/textures/candyCane.jpg", "isVideo": false}
+      },
+      "materials": {
+        "tableapp": {
+          "color": {"r": 0.8, "g": 0.8, "b": 0.8},
+          "specular": {"r": 0.0, "g": 0.0, "b": 0.0},
+          "shininess": 10,
+          "emissive": {"r": 0.0, "g": 0.0, "b": 0.0},
+          "transparent": false,
+          "opacity": 1.0,
+          "textureref": "tabletex",
+          "texlength_s": 1,
+          "texlength_t": 1
+        },
+        "floorapp": {
+          "color": {"r": 0.8, "g": 0.8, "b": 0.8},
+          "specular": {"r": 0.0, "g": 0.0, "b": 0.0},
+          "shininess": 0.0,
+          "emissive": {"r": 0.0, "g": 0.0, "b": 0.0},
+          "transparent": false,
+          "opacity": 1.0,
+          "textureref": "pinetex",
+          "texlength_s": 15,
+          "texlength_t": 15,
+          "twosided": true
+        },
+        "pineapp": {
+          "color": {"r": 0.8, "g": 0.8, "b": 0.8},
+          "specular": {"r": 0.0, "g": 0.0, "b": 0.0},
+          "shininess": 0.0,
+          "emissive": {"r": 0.0, "g": 0.0, "b": 0.0},
+          "transparent": false,
+          "opacity": 1.0,
+          "textureref": "pinetex",
+          "texlength_s": 1,
+          "texlength_t": 1,
+          "wireframe": true
+        },
+        "vaseapp": {
+          "color": {"r": 0.8, "g": 0.8, "b": 0.8},
+          "specular": {"r": 0.0, "g": 0.0, "b": 0.0},
+          "shininess": 0.0,
+          "emissive": {"r": 0.0, "g": 0.0, "b": 0.0},
+          "transparent": false,
+          "opacity": 1.0,
+          "textureref": "vasetex",
+          "texlength_s": 1,
+          "texlength_t": 1,
+          "shading": true
+        },
+        "treetrunkapp": {
+          "color": {"r": 0.6, "g": 0.3, "b": 0.1},
+          "specular": {"r": 0.1, "g": 0.1, "b": 0.1},
+          "shininess": 0,
+          "emissive": {"r": 0.0, "g": 0.0, "b": 0.0},
+          "transparent": false,
+          "opacity": 1.0,
+          "textureref": "treetrunktex",
+          "texlength_s": 1,
+          "texlength_t": 4
+        },
+        "treebodylightsapp": {
+          "color": {"r": 0.2, "g": 0.5, "b": 0.2},
+          "specular": {"r": 0.1, "g": 0.1, "b": 0.1},
+          "shininess": 10,
+          "emissive": {"r": 0.0, "g": 0.0, "b": 0.0},
+          "transparent": false,
+          "opacity": 1.0,
+          "textureref": "treebodylightstex",
+          "texlength_s": 1,
+          "texlength_t": 1
+        },
+        "christmasballapp": {
+          "color": {"r": 0.8, "g": 0.8, "b": 0.8},
+          "specular": {"r": 0.0, "g": 0.0, "b": 0.0},
+          "shininess": 0.0,
+          "emissive": {"r": 0.0, "g": 0.0, "b": 0.0},
+          "transparent": false,
+          "opacity": 1.0,
+          "textureref": "christmasballtex",
+          "texlength_s": 1,
+          "texlength_t": 1
+        },
+        "presentapp": {
+          "color": {"r": 0.8, "g": 0.8, "b": 0.8},
+          "specular": {"r": 0.0, "g": 0.0, "b": 0.0},
+          "shininess": 0.0,
+          "emissive": {"r": 0.0, "g": 0.0, "b": 0.0},
+          "transparent": false,
+          "opacity": 1.0,
+          "textureref": "presenttex",
+          "texlength_s": 1,
+          "texlength_t": 1
+        },
+        "candycaneapp": {
+          "color": {"r": 0.8, "g": 0.8, "b": 0.8},
+          "specular": {"r": 0.0, "g": 0.0, "b": 0.0},
+          "shininess": 0.0,
+          "emissive": {"r": 0.0, "g": 0.0, "b": 0.0},
+          "transparent": false,
+          "opacity": 1.0,
+          "textureref": "candycanetex",
+          "texlength_s": 1,
+          "texlength_t": 1
+        },
+        "snowflakeapp": {
+          "color": {"r": 1.0, "g": 1.0, "b": 1.0},
+          "specular": {"r": 0.0, "g": 0.0, "b": 0.0},
+          "shininess": 10.0,
+          "emissive": {"r": 0.0, "g": 0.0, "b": 0.0},
+          "transparent": true,
+          "opacity": 0.8,
+          "twosided": true
+        }
+      },
+      "graph": {
+        "rootid": "scene",
+        "scene": {
+          "type": "node",
+          "children": {
+            "cube_node": {
+              "type": "noderef",
+              "nodeId": "cube_node"
+            },
+            "sphere_node": {
+              "type": "noderef",
+              "nodeId": "sphere_node"
+            },
+            "trunk_node": {
+              "type": "noderef",
+              "nodeId": "trunk_node"
+            },
+            "candycane_node": {
+              "type": "noderef",
+              "nodeId": "candycane_node"
+            }
+          }
+        },
+        "cube_node": {
+          "type": "node",
+          "castshadows": false,
+          "receiveshadows": true,
+          "transforms": [
+            {"type": "translate", "amount": {"x": 0, "y": 0, "z": 0}},
+            {"type": "scale", "amount": {"x": 5, "y": 5, "z": 5}}
+          ],
+          "materialref": {"materialId": "presentapp"},
+          "children": {
+            "boxprim": {
+              "type": "box",
+              "xyz1": {"x": -2.5, "y": -2.5, "z": -2.5},
+              "xyz2": {"x": 2.5, "y": 2.5, "z": 2.5}
+            }
+          }
+        },
+        "sphere_node": {
+          "type": "node",
+          "castshadows": false,
+          "receiveshadows": true,
+          "transforms": [
+            {"type": "translate", "amount": {"x": 7, "y": 0, "z": 0}},
+            {"type": "scale", "amount": {"x": 3, "y": 3, "z": 3}}
+          ],
+          "materialref": {"materialId": "christmasballapp"},
+          "children": {
+            "sphereprim": {
+              "type": "sphere",
+              "radius": 3,
+              "slices": 32,
+              "stacks": 32
+            }
+          }
+        },
+        "trunk_node": {
+          "type": "node",
+          "castshadows": false,
+          "receiveshadows": true,
+          "transforms": [
+            {"type": "translate", "amount": {"x": 0, "y": 0, "z": 6}},
+            {"type": "scale", "amount": {"x": 1, "y": 5, "z": 1}}
+          ],
+          "materialref": {"materialId": "treetrunkapp"},
+          "children": {
+            "cylinderprim": {
+              "type": "cylinder",
+              "base": 1,
+              "top": 1,
+              "height": 5,
+              "slices": 16,
+              "stacks": 1
+            }
+          }
+        },
+        "candycane_node": {
+          "type": "node",
+          "castshadows": false,
+          "receiveshadows": true,
+          "transforms": [
+            {"type": "translate", "amount": {"x": 7, "y": 0, "z": 7}},
+            {"type": "scale", "amount": {"x": 1, "y": 5, "z": 1}}
+          ],
+          "materialref": {"materialId": "candycaneapp"},
+          "children": {
+            "cylinderprim": {
+              "type": "cylinder",
+              "base": 1,
+              "top": 1,
+              "height": 5,
+              "slices": 16,
+              "stacks": 1
+            }
+          }
+        }
+      }
+    }
+  }

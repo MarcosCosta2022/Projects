@@ -1,0 +1,269 @@
+{
+    "yasf": {
+        "globals": {
+            "background": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0
+            },
+            "ambient": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "intensity": 1.0
+            }
+        },
+        "fog": {
+            "color": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0
+            },
+            "near": 1.0,
+            "far": 100.0
+        },
+        "skybox": {
+            "size": {
+                "x": 1000,
+                "y": 1000,
+                "z": 1000
+            },
+            "center": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "emissive": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
+            "intensity": 0.6,
+            "front" : "starTex",
+            "back" : "starTex",
+            "up" : "starTex",
+            "down" : "starTex",
+            "left" : "starTex",
+            "right" : "starTex"
+        },
+        "textures": {
+            "metalTableTex":{
+                "filepath":"scenes/rodscene/textures/metaltable.jpg",
+                "isVideo":false
+            },
+            "metalTableBumpTex":{
+                "filepath":"scenes/rodscene/textures/metaltablebump.jpg",
+                "isVideo":false
+            },
+            "starTex":{
+                "filepath":"scenes/rodscene/textures/star.jpg",
+                "isVideo":false
+            }
+        },
+        "materials": {
+            "tableApp":{
+                "color":{
+                    "r":1.0,
+                    "g":1.0,
+                    "b":1.0
+                },
+                "specular":{
+                    "r":0.0,
+                    "g":0.0,
+                    "b":0.0
+                },
+                "shininess":0.0,
+                "emissive":{
+                    "r":0.0,
+                    "g":0.0,
+                    "b":0.0
+                },
+                "transparent":false,
+                "opacity":1.0,
+                "textureref":"metalTableTex",
+                "texlength_s":1.0,
+                "texlength_t":1.0,
+                "twosided":false,
+                "bumpref":"metalTableBumpTex",
+                "bumpscale":1.0
+            }
+        },
+        "cameras": {
+            "initial": "cam1",
+            "cam1": {
+                "type": "perspective",
+                "angle": 60,
+                "near": 0.1,
+                "far": 10000,
+                "location": {
+                    "x": 20,
+                    "y": 20,
+                    "z": 4
+                },
+                "target": {
+                    "x": 0,
+                    "y": 10,
+                    "z": 0
+                }
+            }
+        },
+        "graph": {
+            "rootid":"scene",
+            "scene":{
+                "type":"node",
+                "children": {
+                    "table": {
+                        "type":"noderef",
+                        "nodeId":"table"
+                    }
+                }
+            },
+            "table":{
+                "type":"node",
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":0,
+                            "y":10,
+                            "z":0
+                        }
+                    }
+                ],
+                "children":{
+                    "tableTop":{
+                        "type":"noderef",
+                        "nodeId":"tableTop"
+                    },
+                    "tableLeg1":{
+                        "type":"noderef",
+                        "nodeId":"tableLeg1"
+                    },
+                    "tableLeg2":{
+                        "type":"noderef",
+                        "nodeId":"tableLeg2"
+                    },
+                    "tableLeg3":{
+                        "type":"noderef",
+                        "nodeId":"tableLeg3"
+                    },
+                    "tableLeg4":{
+                        "type":"noderef",
+                        "nodeId":"tableLeg4"
+                    }
+                },
+                "materialref":{
+                    "materialId":"tableApp"
+                }
+            },
+            "tableTop":{
+                "type": "node",
+                "children":{
+                    "boxPrim": {
+                        "type": "box",
+                        "xyz1": {
+                            "x": -1,
+                            "y": -0.1,
+                            "z": -2.5
+                        },
+                        "xyz2": {
+                            "x": 1,
+                            "y": 0.1,
+                            "z": 2.5
+                        }
+                    }
+                }
+            },
+            "tableLeg1":{
+                "type": "node",
+                "children":{
+                    "legRef":{
+                        "type": "noderef",
+                        "nodeId":"leg"
+                    }
+                },
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":0.8,
+                            "y":-2.1,
+                            "z":2.3
+                        }
+                    }
+                ]
+            },
+            "tableLeg2":{
+                "type": "node",
+                "children":{
+                    "legRef":{
+                        "type": "noderef",
+                        "nodeId":"leg"
+                    }
+                },
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":0.8,
+                            "y":-2.1,
+                            "z":-2.3
+                        }
+                    }
+                ]
+            },
+            "tableLeg3":{
+                "type": "node",
+                "children":{
+                    "legRef":{
+                        "type": "noderef",
+                        "nodeId":"leg"
+                    }
+                },
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":-0.8,
+                            "y":-2.1,
+                            "z":2.3
+                        }
+                    }
+                ]
+            },
+            "tableLeg4":{
+                "type": "node",
+                "children":{
+                    "legRef":{
+                        "type": "noderef",
+                        "nodeId":"leg"
+                    }
+                },
+                "transforms":[
+                    {
+                        "type":"translate",
+                        "amount":{
+                            "x":-0.8,
+                            "y":-1,
+                            "z":-2.3
+                        }
+                    }
+                ]
+            },
+            "leg":{
+                "type":"node",
+                "children":{
+                    "cylinderPrim":{
+                        "type":"cylinder",
+                        "base" : 0.1,
+                        "top" : 0.1,
+                        "height" : 2,
+                        "slices" : 20,
+                        "stacks" : 20,
+                        "capsclose":true
+                    }
+                }
+            }
+        }
+    }
+}
